@@ -4,7 +4,7 @@ require "google_places/version"
 
 Gem::Specification.new do |s|
   s.name        = "google_places"
-  s.version     = GooglePlaces::VERSION
+  s.version     = '0.0.1'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Marcel de Graaf"]
   s.email       = ["mail@marceldegraaf.net"]
