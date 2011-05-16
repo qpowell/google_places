@@ -22,7 +22,30 @@ And install it with <tt>bundle install</tt>
 
 == Usage
 
+=== The spot
+
+Each of the API methods below returns a <tt>GooglePlaces::Spot</tt> or a collection of those. Each of these
+objects has these attributes:
+
+* Foo
+* Bar
+
 === Retrieving a list of spots
 
+First register a new Client:
+
+  @client = GooglePlaces::Client.new(API_KEY)
+
+Then retrieve a list of spots:
+
+  @client.spots(-33.8670522, 151.1957362)
 
 === Retrieving a single spot
+
+First register a new Client:
+
+  @client = GooglePlaces::Client.new(API_KEY)
+
+Then retrieve the spot:
+
+  @client.spot('CmRYAAA...upoTH3g')
