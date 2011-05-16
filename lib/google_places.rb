@@ -1,8 +1,7 @@
 require 'rubygems'
 require 'httparty'
 
-require 'lib/google_places/version'
-require 'lib/google_places/client'
-require 'lib/google_places/location'
-require 'lib/google_places/request'
-require 'lib/google_places/spot'
+
+%w(version client location request spot).each do |file|
+  require File.join(File.dirname(__FILE__), 'google_places', file)
+end
