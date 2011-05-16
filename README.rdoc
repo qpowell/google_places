@@ -1,0 +1,28 @@
+= Google Places
+
+This gem provides a Ruby wrapper around the Google Places API, using HTTParty. At this moment the gem does
+not support OAuth authentication and will only work with an API key.
+
+
+== Obtaining an API key
+
+To be able to use this gem, you'll need a Google Places API key. To request an API key, point your browser to
+https://code.google.com/apis/console and follow the instructions there. You'll find your API key on the
+*API Access* tab under *Simple API Access*.
+
+
+== Installing the gem
+
+To use this gem, install it with <tt>gem install google_places</tt> or add it to your Gemfile:
+
+  gem 'google_places'
+
+And install it with <tt>bundle install</tt>
+
+
+== Usage
+
+*Retrieving a list of spots*
+
+
+*Retrieving a single spot*

@@ -1,0 +1,130 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://maps.googleapis.com:443/maps/api/place/search/json?reference=CoQBeAAAAO-prCRp9Atcj_rvavsLyv-DnxbGkw8QyRZb6Srm6QHOcww6lqFhIs2c7Ie6fMg3PZ4PhicfJL7ZWlaHaLDTqmRisoTQQUn61WTcSXAAiCOzcm0JDBnafqrskSpFtNUgzGAOx29WGnWSP44jmjtioIsJN9ik8yjK7UxP4buAmMPVEhBXPiCfHXk1CQ6XRuQhpztsGhQU4U6-tWjTHcLSVzjbNxoiuihbaA&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json; charset=UTF-8
+      x-xss-protection: 
+      - 1; mode=block
+      server: 
+      - mafe
+      date: 
+      - Mon, 16 May 2011 18:39:57 GMT
+      cache-control: 
+      - private
+      vary: 
+      - Accept-Language
+    body: |
+      {
+        "status": "INVALID_REQUEST",
+        "results": [ ],
+        "html_attributions": [ ]
+      }
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://maps.googleapis.com:443/maps/api/place/details/json?reference=CoQBeAAAAO-prCRp9Atcj_rvavsLyv-DnxbGkw8QyRZb6Srm6QHOcww6lqFhIs2c7Ie6fMg3PZ4PhicfJL7ZWlaHaLDTqmRisoTQQUn61WTcSXAAiCOzcm0JDBnafqrskSpFtNUgzGAOx29WGnWSP44jmjtioIsJN9ik8yjK7UxP4buAmMPVEhBXPiCfHXk1CQ6XRuQhpztsGhQU4U6-tWjTHcLSVzjbNxoiuihbaA&sensor=false&key=
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json; charset=UTF-8
+      date: 
+      - Mon, 16 May 2011 18:48:48 GMT
+      server: 
+      - mafe
+      x-xss-protection: 
+      - 1; mode=block
+      vary: 
+      - Accept-Language
+      cache-control: 
+      - private
+    body: |
+      {
+        "status": "REQUEST_DENIED",
+        "html_attributions": [ ]
+      }
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://maps.googleapis.com:443/maps/api/place/details/json?reference=CoQBeAAAAO-prCRp9Atcj_rvavsLyv-DnxbGkw8QyRZb6Srm6QHOcww6lqFhIs2c7Ie6fMg3PZ4PhicfJL7ZWlaHaLDTqmRisoTQQUn61WTcSXAAiCOzcm0JDBnafqrskSpFtNUgzGAOx29WGnWSP44jmjtioIsJN9ik8yjK7UxP4buAmMPVEhBXPiCfHXk1CQ6XRuQhpztsGhQU4U6-tWjTHcLSVzjbNxoiuihbaA&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json; charset=UTF-8
+      x-xss-protection: 
+      - 1; mode=block
+      server: 
+      - mafe
+      date: 
+      - Mon, 16 May 2011 18:50:17 GMT
+      cache-control: 
+      - private
+      vary: 
+      - Accept-Language
+    body: |
+      {
+        "status": "OK",
+        "result": {
+          "name": "Strike Bowling Bar Darling Harbour",
+          "vicinity": "The Promenade, Sydney",
+          "types": [ "bar", "establishment" ],
+          "formatted_phone_number": "(02) 9276 7100",
+          "formatted_address": "22 The Promenade, Sydney NSW, Australia",
+          "address_components": [ {
+            "long_name": "22",
+            "short_name": "22",
+            "types": [ "street_number" ]
+          }, {
+            "long_name": "The Promenade",
+            "short_name": "The Promenade",
+            "types": [ "route" ]
+          }, {
+            "long_name": "Sydney",
+            "short_name": "Sydney",
+            "types": [ "locality", "political" ]
+          }, {
+            "long_name": "NSW",
+            "short_name": "NSW",
+            "types": [ "administrative_area_level_1", "political" ]
+          }, {
+            "long_name": "2000",
+            "short_name": "2000",
+            "types": [ "postal_code" ]
+          } ],
+          "geometry": {
+            "location": {
+              "lat": -33.8662990,
+              "lng": 151.2016580
+            }
+          },
+          "url": "http://maps.google.com/maps/place?cid=8959672613212618319",
+          "icon": "http://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+          "reference": "CoQBeAAAAFdg3F57VWoZc_3RolQ_vJX62hEcEMqQYN855TnTA_0nWsR0Dx6pC-LZ5rQmv5whlpTYYW66LEPlJ16VhNSZg1LkYyXi4fVquFaBwV9bYEsqqL26ODzvC5qnVn71Nws1_OiYB9Y80mjxJPFpVPV0ieC558u5SZjUu2tE76iOLEB9EhALTYY_wo5p9AJy9X0FQVA8GhSQfpqXDk0dMSH7bQRF8sX1C7Jzxw",
+          "id": "0a4e24c365f4bd70080f99bb80153c5ba3faced8"
+        },
+        "html_attributions": [ ]
+      }
+
+    http_version: "1.1"

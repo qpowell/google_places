@@ -3,3 +3,5 @@
 Gemfile.lock
 pkg/*
 .rvmrc
+.rspec
+spec/api_key.rb
