@@ -22,7 +22,7 @@ And install it with <tt>bundle install</tt>
 
 == Usage
 
-*Retrieving a list of spots*
+=== Retrieving a list of spots
 
 
-*Retrieving a single spot*
+=== Retrieving a single spot
