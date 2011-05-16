@@ -5,3 +5,5 @@ pkg/*
 .rvmrc
 .rspec
 spec/api_key.rb
+.yardoc/
+doc/
