@@ -33,9 +33,9 @@ describe GooglePlaces::Spot do
       @spot.class.should == GooglePlaces::Spot
     end
 
-    %w(id reference vicinity lat lng name icon).each do |attribute|
+    %w(reference vicinity lat lng name icon).each do |attribute|
       it "should have the attribute: #{attribute}" do
-        @spot.send(attribute).should_not be_nil
+        @spot.send(attribute).to_s.should_not be_empty
       end
     end
   end

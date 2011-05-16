@@ -27,7 +27,6 @@ And install it with <tt>bundle install</tt>
 Each of the API methods below returns a <tt>GooglePlaces::Spot</tt> or a collection of those. Each of these
 objects has these attributes:
 
-* *id*: a unique identifier for this spot
 * *reference*: a token to query the Google Places API for more details about the spot
 * *vicinity*: the street or neighborhood of the spot
 * *lat*: the latitude of the spot
