@@ -2,37 +2,6 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://maps.googleapis.com:443/maps/api/place/search/json?reference=CoQBeAAAAO-prCRp9Atcj_rvavsLyv-DnxbGkw8QyRZb6Srm6QHOcww6lqFhIs2c7Ie6fMg3PZ4PhicfJL7ZWlaHaLDTqmRisoTQQUn61WTcSXAAiCOzcm0JDBnafqrskSpFtNUgzGAOx29WGnWSP44jmjtioIsJN9ik8yjK7UxP4buAmMPVEhBXPiCfHXk1CQ6XRuQhpztsGhQU4U6-tWjTHcLSVzjbNxoiuihbaA&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      content-type: 
-      - application/json; charset=UTF-8
-      date: 
-      - Mon, 16 May 2011 20:56:23 GMT
-      server: 
-      - mafe
-      x-xss-protection: 
-      - 1; mode=block
-      vary: 
-      - Accept-Language
-      cache-control: 
-      - private
-    body: |
-      {
-        "status": "INVALID_REQUEST",
-        "results": [ ],
-        "html_attributions": [ ]
-      }
-
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
     uri: https://maps.googleapis.com:443/maps/api/place/details/json?reference=CoQBeAAAAO-prCRp9Atcj_rvavsLyv-DnxbGkw8QyRZb6Srm6QHOcww6lqFhIs2c7Ie6fMg3PZ4PhicfJL7ZWlaHaLDTqmRisoTQQUn61WTcSXAAiCOzcm0JDBnafqrskSpFtNUgzGAOx29WGnWSP44jmjtioIsJN9ik8yjK7UxP4buAmMPVEhBXPiCfHXk1CQ6XRuQhpztsGhQU4U6-tWjTHcLSVzjbNxoiuihbaA&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0
     body: 
     headers: 
@@ -43,16 +12,16 @@
     headers: 
       content-type: 
       - application/json; charset=UTF-8
-      x-xss-protection: 
-      - 1; mode=block
-      server: 
-      - mafe
       date: 
       - Mon, 16 May 2011 20:56:23 GMT
-      cache-control: 
-      - private
+      server: 
+      - mafe
+      x-xss-protection: 
+      - 1; mode=block
       vary: 
       - Accept-Language
+      cache-control: 
+      - private
     body: |
       {
         "status": "OK",
@@ -94,6 +63,37 @@
           "reference": "CoQBeAAAAAUMe04SUnm6RIGcuqMjKTx-Ic-IUjZvVWd7iAUix9aXSq5zc6HD1qz0eV7WpKw6OYRn8ROXtP30MbsuXA6hwDnqMZP4CCEbuM0wzYxRhQYA8w1u5PhPc68qPYpnJewYgdAn8ABQS4HsAlngvJCzoUvQ3FgvTRtE-AvWiPNfb3QiEhBQr_GLVUynpIk18yxa89eGGhSs16baRJ75DexGyna6FTtzOTS97Q",
           "id": "0a4e24c365f4bd70080f99bb80153c5ba3faced8"
         },
+        "html_attributions": [ ]
+      }
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://maps.googleapis.com:443/maps/api/place/search/json?reference=CoQBeAAAAO-prCRp9Atcj_rvavsLyv-DnxbGkw8QyRZb6Srm6QHOcww6lqFhIs2c7Ie6fMg3PZ4PhicfJL7ZWlaHaLDTqmRisoTQQUn61WTcSXAAiCOzcm0JDBnafqrskSpFtNUgzGAOx29WGnWSP44jmjtioIsJN9ik8yjK7UxP4buAmMPVEhBXPiCfHXk1CQ6XRuQhpztsGhQU4U6-tWjTHcLSVzjbNxoiuihbaA&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json; charset=UTF-8
+      x-xss-protection: 
+      - 1; mode=block
+      server: 
+      - mafe
+      date: 
+      - Tue, 17 May 2011 06:05:29 GMT
+      cache-control: 
+      - private
+      vary: 
+      - Accept-Language
+    body: |
+      {
+        "status": "INVALID_REQUEST",
+        "results": [ ],
         "html_attributions": [ ]
       }
 

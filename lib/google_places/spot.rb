@@ -32,11 +32,11 @@ module GooglePlaces
     end
 
     def initialize(json_result_object)
-      @reference = json_result_object['reference'],
-      @vicinity  = json_result_object['vicinity'],
-      @lat       = json_result_object['geometry']['location']['lat'],
-      @lng       = json_result_object['geometry']['location']['lng'],
-      @name      = json_result_object['name'],
+      @reference = json_result_object['reference']
+      @vicinity  = json_result_object['vicinity']
+      @lat       = json_result_object['geometry']['location']['lat']
+      @lng       = json_result_object['geometry']['location']['lng']
+      @name      = json_result_object['name']
       @icon      = json_result_object['icon']
     end
 
