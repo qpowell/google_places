@@ -54,6 +54,7 @@ Then retrieve the spot:
 
   @client.spot('CmRYAAA...upoTH3g')
 
+
 == Development
 
 You're very welcome to add functionality to this gem. To do so, follow these steps:
@@ -69,3 +70,13 @@ You're very welcome to add functionality to this gem. To do so, follow these ste
 9. PROFIT
 
 Feel free to send me a pull request but please make sure your changes are sufficiently covered by RSpec.
+
+
+== Important Note
+
+The Google Places API documentation states:
+
+  "You can store this token and use it at any time in future to refresh cached data about this Place,
+  but the same token is not guaranteed to be returned for any given Place across different searches."
+
+Please be aware that the <tt>reference</tt> field in spot details mey differ from the <tt>reference</tt> used to retrieve that spot.
