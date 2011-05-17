@@ -79,4 +79,4 @@ Concerning the <tt>reference</tt> field, the Google Places API documentation sta
   "You can store this token and use it at any time in future to refresh cached data about this Place,
   but the same token is not guaranteed to be returned for any given Place across different searches."
 
-Please be aware that the <tt>reference</tt> field in spot details mey differ from the <tt>reference</tt> used to retrieve that spot.
+Please be aware that the <tt>reference</tt> field in spot details may differ from the <tt>reference</tt> used to retrieve that spot.
