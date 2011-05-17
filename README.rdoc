@@ -53,3 +53,9 @@ First register a new Client:
 Then retrieve the spot:
 
   @client.spot('CmRYAAA...upoTH3g')
+
+== Development
+
+You're very welcome to add functionality to this gem. To do so, fork the project, install the dependencies with <tt>bundle install</tt>, copy <tt>spec/api_key.sample.rb</tt> to <tt>spec/api_key.rb</tt> and run the specs with <tt>rspec spec</tt>.
+
+Feel free to send me a pull request but please make sure your changes are sufficiently covered by RSpec.
