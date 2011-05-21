@@ -1,6 +1,6 @@
 module GooglePlaces
   class Spot
-    attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity
+    attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types
 
     def self.list(lat, lng, api_key, options = {})
       radius = options.delete(:radius) || 200
@@ -38,6 +38,7 @@ module GooglePlaces
       @lng       = json_result_object['geometry']['location']['lng']
       @name      = json_result_object['name']
       @icon      = json_result_object['icon']
+      @types     = json_result_object['types']
     end
 
   end
