@@ -33,7 +33,7 @@ describe GooglePlaces::Spot do
       @spot.class.should == GooglePlaces::Spot
     end
 
-    %w(reference vicinity lat lng name icon types id).each do |attribute|
+    %w(reference vicinity lat lng name icon types id formatted_phone_number formatted_address address_components rating url).each do |attribute|
       it "should have the attribute: #{attribute}" do
         @spot.send(attribute).to_s.should_not be_empty
       end
