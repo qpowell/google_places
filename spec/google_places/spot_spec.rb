@@ -12,10 +12,13 @@ describe GooglePlaces::Spot do
 
   context 'List spots' do
     use_vcr_cassette 'list_spots'
+    
+    after(:each) do
+      @collection.map(&:class).uniq.should == [GooglePlaces::Spot]
+    end
 
     it 'should be a collection of Spots' do
       @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor)
-      @collection.map(&:class).uniq.should == [GooglePlaces::Spot]
     end
     
     describe 'with a single type' do
@@ -23,10 +26,6 @@ describe GooglePlaces::Spot do
       
       before(:each) do
         @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor, :types => 'cafe')
-      end
-      
-      it 'should be a collection of Spots' do
-        @collection.map(&:class).uniq.should == [GooglePlaces::Spot]
       end
       
       it 'should have Spots with a specific type' do
@@ -43,11 +42,41 @@ describe GooglePlaces::Spot do
         @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor, :types => ['food','establishment'])
       end
       
-      it 'should be a collection of Spots' do
-        @collection.map(&:class).uniq.should == [GooglePlaces::Spot]
+      it 'should have Spots with specific types' do
+        @collection.each do |spot|
+          spot.types.should include('food','establishment')
+        end
+      end
+    end
+    
+    describe 'searching by name' do
+      use_vcr_cassette 'list_spots_with_name'
+      
+      before(:each) do
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor, :name => 'italian')
       end
       
-      it 'should have Spots with the appropriate type' do
+      it 'should have Spots with a specific name' do
+        @collection.each do |spot|
+          spot.name.downcase.should include('italian')
+        end
+      end
+    end
+    
+    describe 'searching by name and types' do
+      use_vcr_cassette 'list_spots_with_name_and_types'
+      
+      before(:each) do
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor, :types => ['food','establishment'], :name => 'italian')
+      end
+      
+      it 'should have Spots with a specific name' do
+        @collection.each do |spot|
+          spot.name.downcase.should include('italian')
+        end
+      end
+      
+      it 'should have Spots with specific types' do
         @collection.each do |spot|
           spot.types.should include('food','establishment')
         end
