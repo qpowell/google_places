@@ -95,3 +95,99 @@
       }
 
     http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://maps.googleapis.com:443/maps/api/place/search/json?reference=CoQBeAAAAO-prCRp9Atcj_rvavsLyv-DnxbGkw8QyRZb6Srm6QHOcww6lqFhIs2c7Ie6fMg3PZ4PhicfJL7ZWlaHaLDTqmRisoTQQUn61WTcSXAAiCOzcm0JDBnafqrskSpFtNUgzGAOx29WGnWSP44jmjtioIsJN9ik8yjK7UxP4buAmMPVEhBXPiCfHXk1CQ6XRuQhpztsGhQU4U6-tWjTHcLSVzjbNxoiuihbaA&sensor=false&key=AIzaSyCLMybjdDnmUhhLcfangpJnjT3b-AkSyIs
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json; charset=UTF-8
+      vary: 
+      - Accept-Language
+      date: 
+      - Wed, 01 Jun 2011 23:03:42 GMT
+      server: 
+      - mafe
+      cache-control: 
+      - private
+      x-xss-protection: 
+      - 1; mode=block
+    body: |
+      {
+         "html_attributions" : [],
+         "results" : [],
+         "status" : "INVALID_REQUEST"
+      }
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://maps.googleapis.com:443/maps/api/place/details/json?reference=CoQBeAAAAO-prCRp9Atcj_rvavsLyv-DnxbGkw8QyRZb6Srm6QHOcww6lqFhIs2c7Ie6fMg3PZ4PhicfJL7ZWlaHaLDTqmRisoTQQUn61WTcSXAAiCOzcm0JDBnafqrskSpFtNUgzGAOx29WGnWSP44jmjtioIsJN9ik8yjK7UxP4buAmMPVEhBXPiCfHXk1CQ6XRuQhpztsGhQU4U6-tWjTHcLSVzjbNxoiuihbaA&sensor=false&key=AIzaSyCLMybjdDnmUhhLcfangpJnjT3b-AkSyIs
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json; charset=UTF-8
+      vary: 
+      - Accept-Language
+      date: 
+      - Wed, 01 Jun 2011 23:03:42 GMT
+      server: 
+      - mafe
+      cache-control: 
+      - private
+      x-xss-protection: 
+      - 1; mode=block
+    body: |
+      {
+         "html_attributions" : [],
+         "result" : {
+            "address_components" : [
+               {
+                  "long_name" : "Sydney",
+                  "short_name" : "Sydney",
+                  "types" : [ "locality", "political" ]
+               },
+               {
+                  "long_name" : "NSW",
+                  "short_name" : "NSW",
+                  "types" : [ "administrative_area_level_1", "political" ]
+               },
+               {
+                  "long_name" : "2000",
+                  "short_name" : "2000",
+                  "types" : [ "postal_code" ]
+               }
+            ],
+            "formatted_address" : "22 The Promenade, King Street Wharf, Sydney NSW, Australia",
+            "formatted_phone_number" : "(02) 9276 7100",
+            "geometry" : {
+               "location" : {
+                  "lat" : -33.867290,
+                  "lng" : 151.2016020
+               }
+            },
+            "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+            "id" : "0a4e24c365f4bd70080f99bb80153c5ba3faced8",
+            "name" : "Strike Bowling Bar Darling Harbour",
+            "rating" : 3.0,
+            "reference" : "CoQBeAAAAJki5KZqjGLMhaAkc7ICv-b_RJ3oAkdAGUXjmA6nLcJLQoASwgpr5W9bGkczVypvPwJ1r4t-DqYOKUoL9wjmqBnR6TSZh_fNGM7wbZa8Y7zgljw2s3CtMwc_OmWqM5BTraJPQISXW2rVEyoPsEgYjt4Tk_0nQB2qqogKbyUjMfxuEhD0t3FClyu0KnlCVOt_4oGKGhQhBwU3Szp5hi_EutsK3bZCbHNtbA",
+            "types" : [ "bar", "establishment" ],
+            "url" : "http://maps.google.com/maps/place?cid=8959672613212618319",
+            "vicinity" : "Sydney"
+         },
+         "status" : "OK"
+      }
+
+    http_version: "1.1"

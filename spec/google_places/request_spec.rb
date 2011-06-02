@@ -28,7 +28,7 @@ describe GooglePlaces::Request do
     use_vcr_cassette 'single_spot'
 
     it 'should retrieve a single spot' do
-      response = GooglePlaces::Request.spots(
+      response = GooglePlaces::Request.spot(
         :reference => @reference,
         :sensor => @sensor,
         :key => api_key
