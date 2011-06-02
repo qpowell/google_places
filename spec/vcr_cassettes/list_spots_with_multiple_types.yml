@@ -12,16 +12,16 @@
     headers: 
       content-type: 
       - application/json; charset=UTF-8
-      vary: 
-      - Accept-Language
-      date: 
-      - Thu, 02 Jun 2011 01:21:21 GMT
-      server: 
-      - mafe
-      cache-control: 
-      - private
       x-xss-protection: 
       - 1; mode=block
+      server: 
+      - mafe
+      date: 
+      - Thu, 02 Jun 2011 01:21:21 GMT
+      cache-control: 
+      - private
+      vary: 
+      - Accept-Language
     body: |
       {
          "html_attributions" : [
@@ -362,16 +362,16 @@
     headers: 
       content-type: 
       - application/json; charset=UTF-8
-      vary: 
-      - Accept-Language
-      date: 
-      - Thu, 02 Jun 2011 01:27:57 GMT
-      server: 
-      - mafe
-      cache-control: 
-      - private
       x-xss-protection: 
       - 1; mode=block
+      server: 
+      - mafe
+      date: 
+      - Thu, 02 Jun 2011 01:27:57 GMT
+      cache-control: 
+      - private
+      vary: 
+      - Accept-Language
     body: |
       {
          "html_attributions" : [
@@ -712,16 +712,16 @@
     headers: 
       content-type: 
       - application/json; charset=UTF-8
-      vary: 
-      - Accept-Language
-      date: 
-      - Thu, 02 Jun 2011 01:42:16 GMT
-      server: 
-      - mafe
-      cache-control: 
-      - private
       x-xss-protection: 
       - 1; mode=block
+      server: 
+      - mafe
+      date: 
+      - Thu, 02 Jun 2011 01:42:16 GMT
+      cache-control: 
+      - private
+      vary: 
+      - Accept-Language
     body: |
       {
          "html_attributions" : [
@@ -970,16 +970,16 @@
     headers: 
       content-type: 
       - application/json; charset=UTF-8
-      vary: 
-      - Accept-Language
-      date: 
-      - Thu, 02 Jun 2011 01:43:15 GMT
-      server: 
-      - mafe
-      cache-control: 
-      - private
       x-xss-protection: 
       - 1; mode=block
+      server: 
+      - mafe
+      date: 
+      - Thu, 02 Jun 2011 01:43:15 GMT
+      cache-control: 
+      - private
+      vary: 
+      - Accept-Language
     body: |
       {
          "html_attributions" : [
@@ -1228,16 +1228,16 @@
     headers: 
       content-type: 
       - application/json; charset=UTF-8
-      vary: 
-      - Accept-Language
-      date: 
-      - Thu, 02 Jun 2011 02:09:52 GMT
-      server: 
-      - mafe
-      cache-control: 
-      - private
       x-xss-protection: 
       - 1; mode=block
+      server: 
+      - mafe
+      date: 
+      - Thu, 02 Jun 2011 02:09:52 GMT
+      cache-control: 
+      - private
+      vary: 
+      - Accept-Language
     body: |
       {
          "html_attributions" : [
@@ -1578,16 +1578,16 @@
     headers: 
       content-type: 
       - application/json; charset=UTF-8
-      vary: 
-      - Accept-Language
-      date: 
-      - Thu, 02 Jun 2011 02:15:30 GMT
-      server: 
-      - mafe
-      cache-control: 
-      - private
       x-xss-protection: 
       - 1; mode=block
+      server: 
+      - mafe
+      date: 
+      - Thu, 02 Jun 2011 02:15:30 GMT
+      cache-control: 
+      - private
+      vary: 
+      - Accept-Language
     body: |
       {
          "html_attributions" : [],
@@ -1609,16 +1609,16 @@
     headers: 
       content-type: 
       - application/json; charset=UTF-8
-      vary: 
-      - Accept-Language
-      date: 
-      - Thu, 02 Jun 2011 02:16:09 GMT
-      server: 
-      - mafe
-      cache-control: 
-      - private
       x-xss-protection: 
       - 1; mode=block
+      server: 
+      - mafe
+      date: 
+      - Thu, 02 Jun 2011 02:16:09 GMT
+      cache-control: 
+      - private
+      vary: 
+      - Accept-Language
     body: |
       {
          "html_attributions" : [
@@ -1846,6 +1846,264 @@
                "id" : "73b494bfcecf335ded0577d0adf36bb9f09298e8",
                "name" : "Rocket Bar & Caffe",
                "reference" : "CnRpAAAAqNqMJjtmXL1SiNCg4zV2k1J8zIYUi5iBh3GBms0Qm3EsEZcrjGgOGNftNo4toI7GiJhKauHM_HQK3rBnUCWZymr7sSqfB_r4R4gVWVXs8MXsF7QvxRTE0ACynoyQ_WVvUPvhduTB2gPShsdVfjqsIxIQpLGav4SuK-tNWjuwZvUuJxoUH5sCXHqi3eBgBrmYGq-wKEZBAA8",
+               "types" : [ "cafe", "food", "establishment" ],
+               "vicinity" : "Pyrmont Street, Pyrmont"
+            }
+         ],
+         "status" : "OK"
+      }
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://maps.googleapis.com:443/maps/api/place/search/json?radius=200&types=food%7Cestablishment&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&location=-33.8670522%2C151.1957362
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json; charset=UTF-8
+      x-xss-protection: 
+      - 1; mode=block
+      server: 
+      - mafe
+      date: 
+      - Thu, 02 Jun 2011 08:05:24 GMT
+      cache-control: 
+      - private
+      vary: 
+      - Accept-Language
+    body: |
+      {
+         "html_attributions" : [
+            "Listings by \u003ca href=\"http://www.yellowpages.com.au/\"\u003eYellow Pages\u003c/a\u003e"
+         ],
+         "results" : [
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8667010,
+                     "lng" : 151.1973990
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "dd030d236b8ccdc525f7a40893eb492f8fc5d55d",
+               "name" : "Ripples at Sydney Wharf",
+               "reference" : "CnRtAAAAB_nKd1vcxAWc-hArKZc99-UnGqYv1w4RPhupsV6_48nlTLDH8zz2CrgFJ_OOz3HX4CuJ8-gpVRlLoVx3lgWk78M1ZvC3oqytFr7P9elJJYGAtX6RMRfuxIGrmChogpVR6nZEMKG6BHlHHdsY8R_AlxIQW5jEagvA-RhFSyQqNvv2VRoUJ5laQCYjfA10Qajlm2XOG-_DBzw",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Pirrama Road, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8665470,
+                     "lng" : 151.1959410
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "4d716a646c32978aa12d1057dcf9f503a20195c0",
+               "name" : "Signorelli Gastronomia",
+               "reference" : "CnRtAAAALCVhEj7aDsixYVFW1J97nFUEwuonUPZbsiRkSRCdQbdzjmyPt95cTRCGgiSGDJjUpnJ6wxuj-CGEHrDdndXrGH-Wu_2oFr9Wrh8GCe9UgAEXQskxs0D3WJqQBj9RbDUtBOLugoCdaJwOxCQgdE9_BxIQ_dM1Z8pV0Us6w_CNmqnZgxoUV0rwiapKVeJH7fGTefJs14pjQGQ",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Trouton Place, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.86820,
+                     "lng" : 151.1945860
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "bceeb9b6d5ac2f9f2573bbed9e1b3240f1fd0e12",
+               "name" : "Astral",
+               "reference" : "CmRdAAAAB5GELwg2LQENOeBsX7QMetmaWizsGyFl0p2PGEYLUKbtNoYgXHcP01aTNKmtLspQq-K8MqrxLRGyaq9aPmFjf3mNR0RosSQlINZyOtGdln0yzE-Vr3J7G6zv66-lSyJ7EhD1GSPWxoLxmmXptqG9NmbgGhRpxMw-_ES55ujctsGImwp1AM-H2Q",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Pyrmont Street, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.86820,
+                     "lng" : 151.1945860
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "eaf5d4b14ebeae84df661e1f6d593259abac83d4",
+               "name" : "Garden Buffet",
+               "reference" : "CnRkAAAAiy92iM0KF8BuReDIE4bYA8S_ZfbZ62wC5qm_0EJSQNLC79XVMtSd50z825ZFtRf-7kzhqiV7HVd-WPM880qh8BuPJRhlczJ9Tgbm61aD0rOuZTowXGapNspbzlxwL1n7tivg0LP_QfGY-RoQACDXehIQOfzx5H-2Xnxos07rk9vnjhoUPPKJjqrnCvvZl8QyIcAv805QheU",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Pyrmont Street, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.86820,
+                     "lng" : 151.1945860
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "88751426b87d7072ea1acf98f35695d02985addb",
+               "name" : "Seans Kitchen",
+               "reference" : "CnRjAAAASVejj7eTh3h5cC0jGv2Tz97T5xNh4Z1ohA6wIPtS7koYv9KZQ5eg_rF0VLwUM36gwbCmTh-EzXVUwQGumzqst5wFTawdJuddYFNZ0grtFqGbxBZXRW74vxqvD1-xPtxj9ZHI4KqJAaluaeVhqkPZABIQqtdvLDWtpITwYtgbT6PkExoUiyiuh_0HGFBQmPEiS7WcRnSVvEM",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Pyrmont Street, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.86820,
+                     "lng" : 151.1945860
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "ca11a8721d7fa06d9ed6ce80c7e49af70f440fd8",
+               "name" : "Lotus Pond",
+               "reference" : "CnRhAAAAt08pAALx0fyOgNid8q9g4_OOBoTjG0b3y1lzETjuKffbfxa771aHsfiVQ42JG_8pCXmcxqQWmqohbzT7_KkRnwzDQtg7oXeFqomjohAaiJyfshnSDtbgFLF7hqP1n9byT4QGa12QL_q2KAz62JwACBIQ7lijtYTWPywg1oYXMXRASRoUmXDBzkDnkYo6Z5eKRJRTU3OuI6s",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Pyrmont Street, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8681980,
+                     "lng" : 151.1945840
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "ba9494fbebdb7e40f9a646aab93379212763195c",
+               "name" : "Fat Noodle",
+               "reference" : "CmRgAAAAyJX8B0RC_jRQJaFGrsjm2GyhEYz19u1G5StrI2JOZAvoFCPiBPcJLjNL0tgp_HavnNnb995XDt6HDuntPgqj6b-XtZUDGiFz_OL-epEFkyfLy1EZK6fpzEOQ7Wj4J8ytEhB6HrsXbddRtVnPreRbaH_DGhSJrJOY8RZVjAFyMAJRGd2S4zf3lw",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Pyrmont Street, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8676090,
+                     "lng" : 151.1936860
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "00060cf64f16375913ec49d25cbb7829d3e08a88",
+               "name" : "Blue Eye Dragon",
+               "reference" : "CnRlAAAAe115QxZUPXQTi6X9sgqABMOi8ywc8hNIF_3NzemPKdRGl2hxMtOC_yItpBbAWEUB5Mx2mvxZGCqYfrEl_5b3AkLJlvVXfXZ9f6nYxZ_1H4c9BsNzkjZ_dIusYsDFbaMI453L9xD9aBp3Mg5cByMDghIQfRPcBAmfTve4szPnIH1CexoUARNGYMzA2RUf3VnRKcYX-kjNSB4",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Pyrmont Street, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.86820,
+                     "lng" : 151.1945860
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "c59ee010f131efcf1cd728c05ef73215319e52f0",
+               "name" : "Bite Me Burger",
+               "reference" : "CnRkAAAAjgmv839hCQtz_H6afLOQMBseWOizrrieImWBtxa28WdIAS30y_1XN3ptk4q84qkVh9NZyYCzZ9fVNbiHywPOEPkgpoNmZJSkTpfLQVcHhSePKuo6UjkDktbCuF4CCFm_zInb1M_ND28kv41nODbKlRIQ076vqbVjfdECOus6V47L6RoUEHy5Rme6WIgBOSz_YOQAgcai2FA",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Pyrmont Street, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.86820,
+                     "lng" : 151.1945860
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "1cff0e870245b692f2a2524c70eddf8ed685d044",
+               "name" : "Bistro 80",
+               "reference" : "CmRfAAAA56SnzbA_FeRMe2H2CvkNhzc0uh0U_X2hmg3As9ZbhHJfIIGx7oVgFVkf_2-DTRcikCDLSs8CsZc96pLuVjqlLL2eJ7vmPsSMxsr-ows2BKKqOC627oGNoMci272RbgToEhDzW8pRcgYf0f43w-PGLO8vGhTejycDDU--5Gam94BEwmOroBfZ8g",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Pyrmont Street, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8654590,
+                     "lng" : 151.194270
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "593abee4346bf8c91f0c24bddd1b379d34fbbbfe",
+               "name" : "Om Thai Restaurant - Jones Bay Wharf",
+               "reference" : "CoQBewAAAGp8y5nor1175tUof16PYoBapMJbT20OtF5Xj3_zNn4uj_G5fDVayHj6aztKelYrkF2kZrrxy-9rXUdqwgfKsSM_J3MV3Ox5QqUt51QDdcTwW7p1qnOzpemOlBPjaKe_fg5GQV1U0rDHaPlk2DBZMAKL9oXa4XV_xC45HhBDd5auEhA5JG-Na_Ai3rWAHRkgHoLGGhQFfCFXjDIiGj1o_AtIzEmJomxCZg",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8664150,
+                     "lng" : 151.1945890
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "7501fca2fd726963a0f5b79f8e86a8006b48f968",
+               "name" : "Astoria Sydney",
+               "reference" : "CnRlAAAAzNI_JTRLowDzfe_CY2ItqocIimYbYsrPXzIyUmPSbtOPOZ0E6ee4WElLnnP7I7-hg1ISUm0YMQB2GZD8r19xo1w5Wo-0Jz_WvlqUJnqUZpzXuxPVvO3rd7mAqkUvsa-9askqj1lL80ELNz0SqalWhxIQO6UhVVNQOsbv0kmCrHNYlRoU3RrjCOOpRBvvIRnjQSNWqYQGgLo",
+               "types" : [ "cafe", "food", "establishment" ],
+               "vicinity" : "Jones Bay Rd, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.86820,
+                     "lng" : 151.1945860
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "f5c3d0274cdfb53d6ae956d09c945508f661faf9",
+               "name" : "New Zealand Natural",
+               "reference" : "CnRqAAAAKNDuhUEUNd9YIIPjqkqYYHKu7rnVHkjcMvJUM-IMxa5v15TvnKe_3Ygm6wgXHVAFPHppFa2BwceTPg7Xes2p2YpVQj_gzPxcqLaVydyVxMPYnuGfuuGa-YpKY88hN_NpwJXbloQ5JTWds-BWSlyKhBIQZfY7n66zv5vDNQIaYY47TBoUM_KJ7zuva8egLSjHtRSzqDi7ZUc",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Pyrmont Street, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8654260,
+                     "lng" : 151.193510
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "e4852f29324edef0ee320e5572068587086d63c1",
+               "name" : "West End Coffee Lounge & Restaurant",
+               "reference" : "CoQBeQAAAATf8uMLxXlJ0EpPb5SFTEzDhfvRWvtTX317m01Vii2WvLAPoq-ZVfHa1QBfc5n8836eKNsrQlGatpLsvjTZIuqgY3cdimEK69jWbYrtIsa1PUTI2uB3AMjzVciNv4iCe9e_2LSamauRefEsTYWs-KXvIjQCjWceSRC9rayKG9_tEhBJiaHPws4ychXva8BCLW2nGhTqiH5CRjAGNdQV0Ik-P3rIqhXrdw",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : ""
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8667530,
+                     "lng" : 151.193870
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+               "id" : "b003876738d1eee1af732a41d772cdb857af4f81",
+               "name" : "Sydney Mini Mart",
+               "reference" : "CnRmAAAAAA_m7W0Ud1_1FNTMuct5yiy6i8j29biEX5QcFT7tvr921SdU_v-V5I6BIwk4kS_hQNgVIzYqvIU6k2s8sgqt8NIAExZFXf5zpD9lLjJNkZ01w7gO2P3ypKyThl7ohVJqhXrBDcfemobXr-vopT8umRIQ9VqVyNeMDqy76dCrtViZTRoUowasQFMpSfT6wAHiZ9Rc6IB3VQg",
+               "types" : [ "food", "store", "establishment" ],
+               "vicinity" : "Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.86820,
+                     "lng" : 151.1945860
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "73b494bfcecf335ded0577d0adf36bb9f09298e8",
+               "name" : "Rocket Bar & Caffe",
+               "reference" : "CnRoAAAAv3g9yGhKQKAk1UribJXlTRQEhQ_9ZobeDy1xM6QpQoEBbHs4lU2n78EhHfnf7HAYXjYJjJaM2KnD8uAzJ4l0yjTm_Vv0h0jEaelIk7WeDoQ_hUYdPcAwmSSnVsQlCk-Dym_e-PgQTZKqRcsRriRBEhIQ7dhhGpRpYscHvd0ZVcAGgRoUtnDhQOh8ZPq7ZFoj2OSHAKnHC_4",
                "types" : [ "cafe", "food", "establishment" ],
                "vicinity" : "Pyrmont Street, Pyrmont"
             }
