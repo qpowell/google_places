@@ -1,0 +1,63 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://maps.googleapis.com:443/maps/api/place/search/json?location=-33.8670522%2C151.1957362&radius=200&sensor=false&key=AIzaSyCLMybjdDnmUhhLcfangpJnjT3b-AkSyIs&types=cafe
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json; charset=UTF-8
+      vary: 
+      - Accept-Language
+      date: 
+      - Thu, 02 Jun 2011 01:21:20 GMT
+      server: 
+      - mafe
+      cache-control: 
+      - private
+      x-xss-protection: 
+      - 1; mode=block
+    body: |
+      {
+         "html_attributions" : [
+            "Listings by \u003ca href=\"http://www.yellowpages.com.au/\"\u003eYellow Pages\u003c/a\u003e"
+         ],
+         "results" : [
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8664150,
+                     "lng" : 151.1945890
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "7501fca2fd726963a0f5b79f8e86a8006b48f968",
+               "name" : "Astoria Sydney",
+               "reference" : "CnRmAAAAcuEAC9jgdt1PeVZyKg7x-HdBPSjeQ1EGkBqKs9zMfB5qRQmXWCQNIsh4sB5KqM92WkbUl98am9PdbhWIPY2ghrTKkrJ3wQdJCkgfvI7Rqj99__NHQISGGQv6ts9GBJIv6PaF2Z-kXonTn-1h4yLTYBIQdi71MlTguSM4q1LE25G7YxoUFfj4JB_k8Gddzmway-QSvnJxNqo",
+               "types" : [ "cafe", "food", "establishment" ],
+               "vicinity" : "Jones Bay Rd, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.86820,
+                     "lng" : 151.1945860
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "73b494bfcecf335ded0577d0adf36bb9f09298e8",
+               "name" : "Rocket Bar & Caffe",
+               "reference" : "CnRpAAAAEwn9vgJmXUA2zqjAKn0WyfOt-yGYYiu2pu1eLppRy6P06anj7V2Sd3pjAnIjUp_AKpOOaZsL9LNMlZIEbsd4mkvlVcsLBEQ0BNTeDEQePfsiaKQ1BUQGzspzO43u8r-guNXsFaaoTEliOIJjAFI67xIQ3mhp6USrGOzmnooqnAclZBoULhTbTxTgUn4IaIuRQX_XR3rCxW4",
+               "types" : [ "cafe", "food", "establishment" ],
+               "vicinity" : "Pyrmont Street, Pyrmont"
+            }
+         ],
+         "status" : "OK"
+      }
+
+    http_version: "1.1"
