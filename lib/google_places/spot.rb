@@ -5,25 +5,23 @@ module GooglePlaces
     def self.list(lat, lng, api_key, options = {})
       radius = options.delete(:radius) || 200
       sensor = options.delete(:sensor) || false
+      types  = options.delete(:types)
       location = Location.new(lat, lng)
-      
-      # Accept Types as a string or array
-      if not options[:types].blank?
-        if options[:types].is_a?(Array)
-          types = options[:types].join('|')
-        else
-          types = options[:types]
-        end
-      end
 
-      response = Request.spots(
+      options = {
         :location => location.format,
         :radius => radius,
         :sensor => sensor,
         :key => api_key,
-        :types => types
-      )
+      }
 
+      # Accept Types as a string or array
+      if types
+        types = (types.is_a?(Array) ? types.join('|') : types)
+        options.merge!(:types => types)
+      end
+
+      response = Request.spots(options)
       response['results'].map do |result|
         self.new(result)
       end

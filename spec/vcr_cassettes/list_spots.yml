@@ -2,357 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://maps.googleapis.com:443/maps/api/place/search/json?radius=200&sensor=false&location=-33.8670522%2C151.1957362&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      content-type: 
-      - application/json; charset=UTF-8
-      date: 
-      - Tue, 31 May 2011 09:57:03 GMT
-      server: 
-      - mafe
-      x-xss-protection: 
-      - 1; mode=block
-      vary: 
-      - Accept-Language
-      cache-control: 
-      - private
-    body: |
-      {
-         "html_attributions" : [
-            "Listings by \u003ca href=\"http://www.yellowpages.com.au/\"\u003eYellow Pages\u003c/a\u003e"
-         ],
-         "results" : [
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86954560,
-                     "lng" : 151.19454040
-                  },
-                  "viewport" : {
-                     "northeast" : {
-                        "lat" : -33.86028050,
-                        "lng" : 151.21054780
-                     },
-                     "southwest" : {
-                        "lat" : -33.87880970,
-                        "lng" : 151.1785330
-                     }
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
-               "id" : "40840d476baa531e0227a353b1bef70262f66e7e",
-               "name" : "Pyrmont",
-               "reference" : "CnRoAAAAvTHQ3h1Imt5eAGdd7DZeWEYYJS0T2AxGNr-MCWVCU0XBDe1-k8Lwh3QccqYUtj3xITWVlDzP9rUMv2MMcG26whifM0FmrhgxnAShFblLb-Vo2lX2n30lR6ayTxvoztf6jBns5cgPUjjYBfdXcxX5yxIQ20YYwgQDAw8y-7sPCvhsPRoUjIAt7EVqtfcYIR5ai3RrMGKDaXM",
-               "types" : [ "locality", "political" ]
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86820,
-                     "lng" : 151.1945860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
-               "id" : "be880205d64059c306bbf198f908b81cabb9f066",
-               "name" : "Star City",
-               "reference" : "CnRhAAAACtPDcuYtFLu5IVHNFcQYx6bZ1Qn5niJVEYBVSyLs84E_PEsNTRTyH0wBm_zH-BBxoF5_q2lgYJ_nufH6RXNMdUrx1b2-Ov9xNwb9fAV_Yy5dWWlEgkNcrLjlCzGWo9vkJapQFlnmtWBrSIAEzerGjxIQzLLA0HoIutcmFKSEoRrL-hoUALFGXsbYpavC1WZ9tnu0TLLmbjQ",
-               "types" : [ "lodging", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8667010,
-                     "lng" : 151.1973990
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "dd030d236b8ccdc525f7a40893eb492f8fc5d55d",
-               "name" : "Ripples at Sydney Wharf",
-               "reference" : "CnRuAAAAbZJuFy3E6Tedmr2WoDc0U4SfRfKt3gPsa3H0FgWuRara5bRS3FGUqb1GBdjZdy_lnOzU8eaL_U-Gmqju79RrPE6dj3bHLfnfWPjXrTTqsE58cAbM_YAoylfUMeDVYNWyhdy4VmjLZmqclrHmdTf4bxIQr24KHATSM2b4Ee5q2iRX8RoUuqHuNnddEngLHXm1MEJPhEf1kX4",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8669710,
-                     "lng" : 151.1958750
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "4f89212bf76dde31f092cfc14d7506555d85b5c7",
-               "name" : "Google Sydney",
-               "reference" : "CnRlAAAAeYoeIeD6TT-3q6zfxqFO8rCadM8vX05SWwDFzrUHMfBVqWNG47rJGhgEUESUB-P96g1-92DN-y_PQ41SAoj0VD3LyTYhotX4O9J4YuJ90lQLrJlPB1Rz9aEXQaE1t41pnscrOum9OulN3gHGXDAMEBIQ7m85O8RyuUAeYhCQU-Oe5RoUA0bIShksYr343t7yXCxl2LcHqKk",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8665470,
-                     "lng" : 151.1959410
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "4d716a646c32978aa12d1057dcf9f503a20195c0",
-               "name" : "Signorelli Gastronomia",
-               "reference" : "CnRuAAAA-Sl8A2BxmuO9EdfoGYI0VahdpOMYB2HOWUlTax_PVa6b4p_6BkXC2pwoa1hQLS0SINaZZCrnWE48j4Te04RXOOAPQH_B7mubtqxAhwOVozfIHmVqgWinMJh6M_PLT24uT7CiFjK0772YDY3cGsDUjRIQNG2jmfWomV9m8fvGAyMIQRoUOwQF86rj2yvoaqmTy6g2pPsJK9U",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Trouton Place, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8681980,
-                     "lng" : 151.1945840
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "eaf5d4b14ebeae84df661e1f6d593259abac83d4",
-               "name" : "Garden Buffet",
-               "reference" : "CnRlAAAA19YbsRusYEHyedppcscRhf_zO1kD8yVGDtYfNidQGNXPZYcbUbcYPUYm4Z7l8ySJjxNaxdmyx3tbSQH-hwOnvO8ehZk7mMEHR3JBHgnmmD9A8eOzJFc5srWAEzMQOJ7aPW9aQAfvOKbzefB2h_DP7RIQqoeVv7LHKuCtAbpMI8UJZxoUHtp4XS-iQPs_1IS51u9lBVhR6-s",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8681980,
-                     "lng" : 151.1945840
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "bceeb9b6d5ac2f9f2573bbed9e1b3240f1fd0e12",
-               "name" : "Astral",
-               "reference" : "CmReAAAArdtQ-l37OQMFD-A2y2lTPei_MPRL1VqMzt98nmE5xwt6DK3_3zs8oHUFPYD5PJE6P3RFDC_j9Y0vkhQvc702ZGikfR1dQsEJCW3zk07cV9efq5H3c-70vfLnrz-546zWEhA3ftQ4oPMQj7A1CeuhAsTXGhTh5MQ__H573Zdr3qNWxgefOA62fQ",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Sydney"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8670840,
-                     "lng" : 151.195950
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "27e84d1acda19c14b9c7f5271242796891bc9c9e",
-               "name" : "Accenture",
-               "reference" : "CoQBfgAAAA2Rzu22BQcaGkSzOVXSHJWWunx5rvOXnuI-zFwVkP9i_gt7R5ZpdsUAqMirJmJDojpN46sYzqJ0yl_ay3_-_12_2Ed51uo3_VapMsCkIIwi-BUuxsyf3RU7rpZ5ZRAo4GbgYx2qGGzJU1XiaT7k2OvPrwg3vCD8uKG6cDbqhi5kEhB4VeFhnjp8R_R6o-vNzLxmGhTTOtkfItYnZE_3kpjh1uNQR7yXdw",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8654620,
-                     "lng" : 151.1959830
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "3e2826e1b4b4e5cbee354260f687d14938e6068f",
-               "name" : "Fairfax Media",
-               "reference" : "CnRlAAAAs9GRrvLMHfoiK_hwlqK587fogZ6N7zqTzBthS9ZNR743BeNRtJergCPJ1GSh2AMuvP3qr2s18_xunwKYtXTVLSROdiHdZF37kfkEIyuHFoXXDDmEA9ID9obIgHBCbLxhzGeo_pEIW6bd2BWENQ2vIxIQzaDatp2005RADnJMf4YzURoUUyiq2fEDEEhIX4BuwxsB7OrRjt4",
-               "types" : [ "establishment" ],
-               "vicinity" : "Darling Island Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8652490,
-                     "lng" : 151.1961010
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "1f2ddcefca08ffc687247c1ecf209054336aebb8",
-               "name" : "Fairfax Media",
-               "reference" : "CnRkAAAASjOnHnZL0r1bMLmcgoTQlv7Znhup1cQGfCIY4c7tYsh2Ael9Svi4m_DEwCfMqtryz8RrA4HvcPZmD46kpikE0o-3H9mDiPVrF4X4g3jgestlljBl4T8d1glPk82HsVQtEFNxNkTQ9wzC9qlIffzUNRIQOcSjde4IGCxLiNFT6755axoULCjo5tgnrtSjTUiGxtVXkY_tyFk",
-               "types" : [ "establishment" ],
-               "vicinity" : "Darling Island Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8687940,
-                     "lng" : 151.196830
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "61178ac5b42a4045c415fffdf6d474ba9b08d068",
-               "name" : "John Holland",
-               "reference" : "CnRjAAAAjfkYOA9kxwkRI_G6M1kaM-jjrnwoRcEbJ4y6wXTc8Z3iDcMvWS7K40_0VmHReKdJbj0wJQN_YTc8-l-YU9ZKWFnlJc-G20MFD0PUIJYf7fYhmyOaeD1R_5y4Bs9p_2a2GnaXD0Xu2w5kS43lUa0pQhIQCPrPGIqdi9f8-iY5Gh3ZkBoU__HXaCjCb8FrqO0CcSZHVvD71DM",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Rd, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8681980,
-                     "lng" : 151.1945840
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "88751426b87d7072ea1acf98f35695d02985addb",
-               "name" : "Seans Kitchen",
-               "reference" : "CnRkAAAALAdnbH6BF6kOt2KnW79zx4b2cuYgkDFnajh9yv4xAA9vdY43EOUOX1lbw-f11M04tnpe_Smqsrs3_peVWfKMEc24GinfJBhVx8MFL38votq8Dm2ehyOXE-POUZdHjie2M4qkQk26ictUL9Xu6NjUbBIQF9QEdIgogjsMsybTGqBXTxoUnvdD6oHO4N-sgsXZc78T0J0eZfg",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8660710,
-                     "lng" : 151.1944390
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "19cdf89322aa1fc3523c583a74a27645b11430e8",
-               "name" : "Channel Seven",
-               "reference" : "CnRlAAAA8yCqWoM_prhvBn38RIkd61FIClAhUHcDttVmxXNWzn1xyFBMJ-OPpkSEodLuiLkka_k_sQQBufWoNFcIs9adh6NzA7Ge4vvkIT0_1t4KADk_kzADsB60gyfUthvwIGMrF--lUAb0GpWbXGycWG9NgBIQgwvtqo736yWCJxIJqpl4qhoUJVcak4wIBQzw6OJmMtmTnqn3Nhc",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8681980,
-                     "lng" : 151.1945840
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "d559b2e8e491212130cf17c4d0ac595c72b3931f",
-               "name" : "Avis",
-               "reference" : "CmRbAAAALooNmfOWHLem4xcRfwF80QAMWbPCUeE_Y-t0-nkndRg3Tq8z7BOib2FCiQjvNSLhjqAp4SCFqjmq9WR05BluNuBHEBA6cGmi5nRuDkF1SMVZTVCdeLx7id4SoDOI1QWGEhCzi6-CiLr2BVBmBuV5XdaRGhRGbJQHEAqwyB67481Gv__c0U8mcg",
-               "types" : [ "car_rental", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8681980,
-                     "lng" : 151.1945840
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "ca11a8721d7fa06d9ed6ce80c7e49af70f440fd8",
-               "name" : "Lotus Pond",
-               "reference" : "CnRiAAAARWLVzMgF3pIbcsGEKWQr0Oz4USXFbXU2_wVhkqtNqaowrTmcXoKFqgWy7z8B8Ne_X8X2V7ppsvhQDPnwd06BlamhvrUT91YvYaFZYsOwxocLoRdDIDBAgcamPl78Uix5yY3uUcfRO1UAGK6_l_TnDBIQItu8fo8-CLzu3rLI9idmGBoUXwlIiTfnkCv2lfpK_uismkg5v5s",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8681980,
-                     "lng" : 151.1945840
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "c59ee010f131efcf1cd728c05ef73215319e52f0",
-               "name" : "Bite Me Burger",
-               "reference" : "CnRlAAAAeGHrcSiXDLgkMvfSZTCjlV3VQmogP-QGzUwuWgBdOekZhnQzgiFeedJXWsBPWywlV8ZTWqGSROXJPX7Oe1XH1pcrymOqEarG25xmPpNHJ3JsjamxFBmeVjakdHSEsdmANEwAmqD2kPXnZZVjDjAt_hIQIZJVseV3Kj22pgnRLkZi2RoUjV8jQUYgh8DNpXFpCjSvIsOb5Zw",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8660710,
-                     "lng" : 151.1944390
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "6b3cb6af5b5bed3297d96b48aac81a96f95ead4c",
-               "name" : "Fairfax Digital",
-               "reference" : "CnRnAAAA1PFNEnIR4XMjp9mUQwmxzrLE3B2-ecr5D27s2t63rpZDGvkxM8kN3ce9gre2rvPwUpXk9KnuSVdo47Woz-qjT3WFwVUFqOVCD-bRfUpbrSABM93OnFOySfBdAlA3p4KMl9R5idwBk26ZZScu-80DIxIQCtVOXcSL2RXPmDJjBFM8bRoU2Jz71KH9Dr8o75W-vz2o4OOhcD8",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8670520,
-                     "lng" : 151.1957360
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "3ef986cd56bb3408bc1cf394f3dad9657c1d30f6",
-               "name" : "Doltone House - Darling Island Wharf",
-               "reference" : "CoQBfAAAAE0Exmo2aKP3pHd6a1mBuB6_Ddvz8R0u400ygUXQN2D2cxNhTl84RVxOui5KyjBpQ41KEl2RaCoTqwVMpakH_dAbTpfw6M-iSRE0bVmqiQniFzpkQo7iFjyJN5-LbvxTF1jqo1OZGZoWjDkY43SalIioyYpNKTny0tuvXuGK0nH1EhBsU6wrxNry4amX4RQbyM1tGhT6QS3-LTiF6tblP_pWZRi-uOmIWQ",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8660710,
-                     "lng" : 151.1944390
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "22069082ad380a2f09db4675e7474c87e8557f3d",
-               "name" : "Domain.Com.Au",
-               "reference" : "CnRkAAAA37B6_hwqshkuWVbcQsN5nW0hAst7_6nbO6LhAweBJWo-nRb22Rj3Rwc5r3UQ5SNEz6JCwULemnJS8XjsSss2aOfmPPsJsIqxoLca-g6SZv3RhoFyqj7U1ORyvWZQMkxZgfQjLOfBjq-zPRtOHj7zCxIQLWG2JL0rV9R09j7TfPuyJhoUHpbsEKYg1iG8In7Z-W2rn4fydmc",
-               "types" : [ "real_estate_agency", "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8681980,
-                     "lng" : 151.1945840
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "ba9494fbebdb7e40f9a646aab93379212763195c",
-               "name" : "Fat Noodle",
-               "reference" : "CnRhAAAATVjdDhVhWbZ-VqO1ZNyojpWc_HubP58JyxiQgwOWWRoFF-La063pgMbeffuX77dmlmCacOxUcYcCL2x2MxSdfnHAdyvOj13KQ52ml4XARlDgpnZJ0PZUMnqluz0nmZtArzWxVQpknsahzkrO7HsTshIQuzPbHVhOQCiSuFsImo0CsRoU6wDg8YjkAeAbxrt_nmKUCOUtfao",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8676090,
-                     "lng" : 151.1936860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "00060cf64f16375913ec49d25cbb7829d3e08a88",
-               "name" : "Blue Eye Dragon",
-               "reference" : "CnRmAAAAwxxRAdksNNjnvk3Ej7vBa6xgq9xQCjSXTF72vC2aRqpgVrpeGZTTPZlV9K22z5rs8XSnLzL4e_FJNU3mwciu_QxlEBsR39f3Vsbly6UMZDPQgqL2DWKKM9gOCEiw6Zlb3OqLIedoTmO7jlchc1fALhIQc5hLirrO2fCaZFjdl9sYixoUs1FepDXsuOxHH-EzDx5_qf8fmME",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.85171490,
-                     "lng" : 151.19664440
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
-               "id" : "8dbf2c11a8cca5b1457b442e05d006a21969ce22",
-               "name" : "Port Jackson",
-               "reference" : "CnRtAAAA7wuBKqR0YbZMtG2HDlaJbEqN4GZ2yFht5r9L8AaKhz_DGe8zFi9BGELlod8JPOKOYOjr4bBI_qwKjifMc59TxJuXuR-8U0PDlvJPcUcRelxZgGwDId5nc708L-3Oqgf5-13M9xguFzgnPi67g6nmXBIQ_s905EnVgIKnj9V_h0DfZxoUriTaITYa3opQsHgx2F4k7yVMKvk",
-               "types" : [ "locality", "political" ]
-            }
-         ],
-         "status" : "OK"
-      }
-
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://maps.googleapis.com:443/maps/api/place/search/json?location=-33.8670522%2C151.1957362&radius=200&sensor=false&key=AIzaSyCLMybjdDnmUhhLcfangpJnjT3b-AkSyIs
+    uri: https://maps.googleapis.com:443/maps/api/place/search/json?radius=200&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&location=-33.8670522%2C151.1957362
     body: 
     headers: 
   response: !ruby/struct:VCR::Response 
@@ -367,7 +17,7 @@
       server: 
       - mafe
       date: 
-      - Wed, 01 Jun 2011 23:03:41 GMT
+      - Thu, 02 Jun 2011 08:17:49 GMT
       cache-control: 
       - private
       vary: 
@@ -398,7 +48,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
                "id" : "40840d476baa531e0227a353b1bef70262f66e7e",
                "name" : "Pyrmont",
-               "reference" : "CnRnAAAAbDDi8_zr9YwWEkuaMu7Y8q_s5YfTMckqycbSPzlj_q9Wv9INCFb5DwOT4x1trkceH9sHlHgYGwivVe9x2YXBvGzYQHGUz3_ApfhCXAhbwI5_-rSVQsCGT9OZbHNbJAaEz8Nwuvqw6Xlco71ix5yLARIQcYVtqJ-7uC0JRY5eKEyEpxoUWGPKP3rbSYLsGNw_SWgMt0NxgHk",
+               "reference" : "CnRoAAAAdOCXJePedGpHikmr4CZV7zND8nXi0X1z5W7OlnUO3ZIe1h0whNsFo8NGFwQEddpPxEyD89SfJYc3apTmriOIa_rtQS2SohqUa2rDW1G5qjveO3kgTfXQqvo1nKPJJy6W1KTjJFiZ2rKwjgYFvATGUxIQ9FXmThRd5_tuPg14gXqhcRoUgdWBw1lvOAPkaVV6VqnCE6IAuZM",
                "types" : [ "locality", "political" ]
             },
             {
@@ -411,7 +61,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
                "id" : "be880205d64059c306bbf198f908b81cabb9f066",
                "name" : "Star City",
-               "reference" : "CmRgAAAAAVjdXkYGE1qBxVfZiHS2iKqvjMKgYhq9zTe6-WSLgk6gMSnfaHNxyv_M9OjyuRQvtekSX4OIODL8WZh6_R4iGIPJg-peBTsp84YKYLLMI4k1OKYqyL6aJRQcOJYPyFirEhAJzqrkcMoPrfF4w2X7_y5GGhRD8cOPIztXylqkUHjdOWNIE0TAxA",
+               "reference" : "CnRhAAAAWyk0VXedwNPAUo2AOS8ygTOePuOodXEJiJcmTtiWqvOR0bjqIQ3Wb-31JYkakuu2B4jskBkrCPcTU7WxCpUKbGcHjzeTAflGHgGEQLgoO-sGjFhEhodwr0fipmfLKqXkHMAON5hkCLWah2CCPhZCsRIQPZX4dL0btOOWZ2rrsrbDdBoUbHWwgK5ARio_ugKzEAro8ET5VFw",
                "types" : [ "lodging", "establishment" ],
                "vicinity" : "Pyrmont Street, Pyrmont"
             },
@@ -425,7 +75,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
                "id" : "dd030d236b8ccdc525f7a40893eb492f8fc5d55d",
                "name" : "Ripples at Sydney Wharf",
-               "reference" : "CnRtAAAAOO1oU53PJ34f8c4NXds3kv8PZkhwSMwVpBGO3oOg1KhZlcORTygYImk1Dne0ay7oQcxv_eGI54CvNt1vrAau6Ey4zKGAcvnSaRNNfGmAMgN95hX_jSRbr5W5rEn8NTOm26uysQqGCepj_oF7oc-sdhIQSPiYqJZuVMVTTrCndr0O1RoUiaGGsOMDiAsgDWkdMAOPJYTTYJc",
+               "reference" : "CnRuAAAA_ydRlXCq--Ho50fc9KF5VjySOM88vJlxDZXhlhEupT4B6uWuAtPCPcFNBRn1uAJDymNlJBGwniTOwY-ZwnPGbOcE4dgKsYH0xteGr1HMAr-XrdhWsDKKBU7jrl4_sOjDB6534sWCXK-vuu6RCtHWfxIQNcMLpxWmsqrSI75dYJfsAhoUKKwxYhEdCwjCK6lZFc4JK7IKY2A",
                "types" : [ "restaurant", "food", "establishment" ],
                "vicinity" : "Pirrama Road, Pyrmont"
             },
@@ -439,7 +89,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
                "id" : "4f89212bf76dde31f092cfc14d7506555d85b5c7",
                "name" : "Google Sydney",
-               "reference" : "CnRkAAAAnWRv9PiVJHA6HmsIknNzn0fiE73CwKLE3A9xv9YQwD5Eg6dXu0v39oxkNlDqMEvdYo4CwXBNorgpADquBSCVVbahLU3eL-vG3jP_ExUgIy8x72LD1JfZK3SMv8YINOqFugjY-WgSBolIfsSVZyLoDBIQAD6ukf8fq2l0_nI53qmUQhoUn2xQxVNOXjer0gDiqHCVRMl6uYU",
+               "reference" : "CnRlAAAAO5OZamae-MzRZApj_jlACQh81bwBqSFCEhNkwtzkz0xWspIL0IY83I5JxoCDr5KCIm4udJObqM4JEElkyNS4ocMcqRDabHZM9xsp2FCNuEnnNnSgzwvVW_CRJBqrBRo-yZNb2lnB_34JL5MTQiJ2MxIQnhUBaBlSFpjDl4xn8bg6-xoUy97qNrxKKjjJvc0AQM0uHyYr-9M",
                "types" : [ "establishment" ],
                "vicinity" : "Pirrama Road, Pyrmont"
             },
@@ -453,7 +103,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
                "id" : "4d716a646c32978aa12d1057dcf9f503a20195c0",
                "name" : "Signorelli Gastronomia",
-               "reference" : "CnRtAAAArNXxW1TsbSQ8CAChTaFktOtPwJD42eIHusBd-1YGB78TOvUWRh1FD7-WOfE9_IID7PMHSMFN-XQ74I-Jhck38siT2fY4PszTaX_BDBRLC9yiso_FTRPqm7b24vdZwHxToSOtKXAz-NUP9QOBz0A_vxIQUvHNIafgP-1eqNZljheHnhoUKtFr_BfhLmhAoMypiVaf3Sd4iho",
+               "reference" : "CnRuAAAAIAkc-cua3WDgPJkImUHs9S-AcEE8oIihNlYFmzyr8cpHGLb3zI88HM9fAlri77XUeO36WCSx8MC7fsUD6K_5WafYEXvSWrHfCyj8JlUyArIF5lrei3HsWhYuFlU15gI1GhjJu0KHwaFpkq3jFe4NzhIQHsTRJUKEERQ9Lvn3oPmFqRoUa814xmiIb5ftC2V49UyICpbngo4",
                "types" : [ "restaurant", "food", "establishment" ],
                "vicinity" : "Trouton Place, Pyrmont"
             },
@@ -467,7 +117,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
                "id" : "bceeb9b6d5ac2f9f2573bbed9e1b3240f1fd0e12",
                "name" : "Astral",
-               "reference" : "CmRdAAAAfaUr03oM7iRUz1_7xYCv7cFR47Z7WppGVkAafOmOSsdccXWtkwjIaYkQVIfxeMbuGe2d-_babsxPrfEvODTNCbLOMLtoiGpaXrUexS4DJFXW2fDW1kvtWnQZNO03QqdsEhB3Io7fzsliMeJUA9FdhFEBGhRK1kXKzgCaGtjVYHDUZtcACgw2Rg",
+               "reference" : "CmReAAAAQcIWWTCSqxXyVKl52iNGsajTXaxvqiMZcbbZ6LjKGywjPX0KjEdBLmHJC2PxxXUeduisbHJ9so4xPwI_eUP6Ft2hvthaJWRZ1nrl0B0bjOdFUPvCIWdvmKlFqqTco40YEhDL9rYMAyyTexcu9W-ZnxhFGhQLibnw8upzs9ozNnwICiDo4Ln02A",
                "types" : [ "restaurant", "food", "establishment" ],
                "vicinity" : "Pyrmont Street, Pyrmont"
             },
@@ -481,7 +131,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
                "id" : "27e84d1acda19c14b9c7f5271242796891bc9c9e",
                "name" : "Accenture",
-               "reference" : "CoQBfQAAAJzZwv3LPrBuZEMQ8-nRhLW1VmGRd_77O5g3FHEw3bcTYvHfLlzi9LDq-AmC3zxtAcCCbRcec4c7ZdB0JYSO1wwPv_JFusUY-D9AVVI8ibEzem8xfeXkorJbd-6b_FVIJA5G37NrAsvG6eZFGNtDrbiAgISNIUfu82HYNA_alHwKEhARpWnnWj-6VRR6ysXGYk3BGhT5ViFwzhTzGk1OmxmkSoN7u9Wx_g",
+               "reference" : "CoQBfgAAAP-d8BGWTKZiMBGngitAr0kiFQ0tLgb2YpssKtAG8MkbCrAndrZThqDlfiPguI7bMWHHjwILweCIWzIFzWIChc6UqSVRZGSkCbNAGjdSdz-Bpfr4SHe2FUHt1DKIA5Fl_x0EMDPGSyVCRj7yRdNrzkZGZuh2ptEWdZAPMTETdsHnEhBKs4BZ-4Q5Hr0HUswXoAYTGhRmUeRQDeKrmp3YwJ-5E5bNk4-Faw",
                "types" : [ "establishment" ],
                "vicinity" : "Pirrama Road, Pyrmont"
             },
@@ -495,7 +145,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
                "id" : "3e2826e1b4b4e5cbee354260f687d14938e6068f",
                "name" : "Fairfax Media",
-               "reference" : "CnRkAAAA0vx9Gxh-ahmh5MwyO4JRZEqc3HOTXhfJ9LmdvyQcaSue02Y5RONmaZRbEKSfGb6tsEBl6pNsKnLNO4GwqTDLDfxQxsZrOY_sUpzTaoyYTQ-9o4P3mM0-YlfPoRg5eUkGSz64Fe150nkDPKyjkZiUHRIQvvlITj9v-Ha_tDsXja2KDhoUtNEncpQjTdY_PQPI07F6u4CXqgU",
+               "reference" : "CnRlAAAAOlaeWcrh9hhOW5NWa9m8F2PHSZjtVH_yVtAFgjRiPJVVKr9bH0hD5qdx3id-SO0tj97hY-MMs04G8wv_t0YxW0sV41azKmM0kl0cLHYhH4E8SQdqv_VPr9jNq8d0dM9SRyXlNsvv0uwpUzlFX5l0RRIQ6EJ4Is-JI_AG-59UkiDl5RoUi49ksEZXQH5mAxw-UkUaSDsrf9M",
                "types" : [ "establishment" ],
                "vicinity" : "Darling Island Road, Pyrmont"
             },
@@ -509,7 +159,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
                "id" : "1f2ddcefca08ffc687247c1ecf209054336aebb8",
                "name" : "Fairfax Media",
-               "reference" : "CnRjAAAA83R0ZIoDP5f9L336a1fg9mzYrGO_P4_vgdCYYZNgHdNlr117Y1noOzyJcMCIy_WidCYSkIT14mvQjG134gqQM8ktDkka1vktkx4gMRDBrcXGgYq-9BbdDRjWEdTlpddiZQ_WhQD4eRwzll-HBuPmMBIQVpA11FRmos46CKKxSw86QBoUF1nX84rSFUFE5hA3v58xvJ400L4",
+               "reference" : "CnRkAAAAJnh39T5YdN-ZGiuDCaeMQdfs4O3aVqOyHMxebwxWSew8EPQqB3pR781gUOoTtve7ZYsr1o8-Wo-__Ni8ZE7bK_pXLQDkvzmuKw6xwqqbS2mlWGRrQazlgFsUx05-9jq1Ua2xsQNALM5p2mHrZ9wd_BIQh5MgTXZC5RvI1tfTb93I8RoUVP30l152CV-hVKPZmRGyMIY719U",
                "types" : [ "establishment" ],
                "vicinity" : "Darling Island Road, Pyrmont"
             },
@@ -523,7 +173,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
                "id" : "eaf5d4b14ebeae84df661e1f6d593259abac83d4",
                "name" : "Garden Buffet",
-               "reference" : "CnRkAAAA09D1W4e09M6ietohZARyuzgNHqOUUkpWkJpxmePJKy20ij4-iDh-MHkIiDKb3fSPIZdBKwK7eICTAz9r5-_Z82K3K3UtFQf7o7sAzT2PzLovhHAcsno6kEO3xvbvQWpb_NHgU5vXNnFeY1nwNC3iNBIQ1BTbt5hdu4R3YYHP3OPWEhoUnpIFwfysPb0uuzBg5uDz7RKT62I",
+               "reference" : "CnRlAAAAZpIoEhcZyY34S8mXTV2HSMiCJmnHlSNpX9IX_Xa_QvRstBGYiTVFvRK-NqWIsT45olVX7302_95skN2Ayf-Ju1YdUV1JgzRdJKQjdflmEpZhDIr2feDhrGQrEZ0izgk8Be6p5622bw1BQRoNvyC6khIQouSXr5RvRAqPL_yYq65GexoUamcXMFrpNEwRaVkSII77jXwJLic",
                "types" : [ "restaurant", "food", "establishment" ],
                "vicinity" : "Pyrmont Street, Pyrmont"
             },
@@ -537,7 +187,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
                "id" : "61178ac5b42a4045c415fffdf6d474ba9b08d068",
                "name" : "John Holland",
-               "reference" : "CnRiAAAA4WwuWtRXDD_E2nAqS01KFeTb59hKN-GCqXno4Zpr4ujXDP68v8KpaJpqdLzuiqaVm0FGTn4P9kMpOx8yoJY_YGMx2VqcUHoTO6vxNVdqAbSmW-UOP9uX7u5hmdMJImM_KzlxYd3t4htEN3ZfG95GFBIQyZbHPOqM805AQX2Wjf3XQxoUSWN9aMKCYGtxi0mSbgqWqL50y9U",
+               "reference" : "CnRjAAAAZUcwQ4LND4pdntwJxrZLuOIL58qeJ_bjwsNe-IuHwJSXXRkJ6sD44rcShTGUToAt8fUud_dpG7aYUAO7Hna4cuKOf_3eIXWUVuKq5q_3bcUf_v3ZkAFk6bE-hOJXogJpfkUNvIH0_Y6szDA7SrJmVBIQrkTtog5cSd6uDwfUnnkNVBoUHg_GFsGGxpqGju9EMUGYehnKuw0",
                "types" : [ "establishment" ],
                "vicinity" : "Pirrama Rd, Pyrmont"
             },
@@ -551,7 +201,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
                "id" : "88751426b87d7072ea1acf98f35695d02985addb",
                "name" : "Seans Kitchen",
-               "reference" : "CnRjAAAAyk4bLUiesxe2v6Vof85YOpLAl4U3qtuDDJYBd2Jvxyd6iNAN0npjzdSPSOHQ76JLqiL1W01cXPHhvBwP1yScRGpjLgeDG--c5tKlBdIAPSoFuTqVHHB0HkdgxB7ziEELFqIKfxXE3jZE2bfkikqsuBIQWkblwHI3CmWSomp-Y7SbZRoUrXoWULHomOE3YUrsLNsUeXqwlEg",
+               "reference" : "CnRkAAAAIx_Jsl47hIQQCrIl6X0LxNOGMNWMofr6oqf57gcnvcek8qfWWS3xipQocgtABS88_OIcSPckSDeaTbBqUu1CEL5tqQiUwveCOSL2NZIGyp3GrpBzxx-X6EBuvDfkb3vmDBrIVPg1BUxOan5RLYWKUhIQJL1Lxr01Z2Ds__Bz5CBN4xoU6mwePsUzNngcfG7oKrWhu4CRxFs",
                "types" : [ "restaurant", "food", "establishment" ],
                "vicinity" : "Pyrmont Street, Pyrmont"
             },
@@ -565,7 +215,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
                "id" : "19cdf89322aa1fc3523c583a74a27645b11430e8",
                "name" : "Channel Seven",
-               "reference" : "CnRkAAAA-3nebeK-3WawZ5RnGE7G44WJPjOcy3J3G1OfiBKsobclY4vbKHcATIS_dSVtcxB-4w2blKPzfwKvRLNQTh-OL_XgE0d8tAuAwm4ZVQ0W6DRst2KWfDVBInXIlIyIr-u1v4diRBA9GC1EyfXnnMSYyRIQfoAOePGEKeiNwVktf3XUJRoU-sKiGwhtFuIXFB0C02UaNWtrtKk",
+               "reference" : "CnRlAAAAs-lrT5LcHTCUm4fEIa7zNuzAPYD8D3n4b4ye4xwTCHwS9mPmSrjQTfOgwBgoNZJ6Qu7sZ_hfVj4T5XrShIcmkritPZX9l4-WVaoWfLokwnggcqdAh94dkUI9pOBpm3nqIUlzGC8cM1DkruH-SqcUZBIQgWVLyl3G6STkqxO7IigGNhoU81yUmcAJK4K9v6ioB5kS-rqMqyI",
                "types" : [ "establishment" ],
                "vicinity" : "Pirrama Road, Pyrmont"
             },
@@ -579,7 +229,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
                "id" : "d559b2e8e491212130cf17c4d0ac595c72b3931f",
                "name" : "Avis",
-               "reference" : "CmRaAAAADyMuMpJsJe4Gm_xc9BNGAq5R4ArFV8RK-sJmQQSa72-bVDpv8VEWRtAccuBnFmFc5vEfiGJDC48PWShCAJ_uK2ZPWFZpV_WivhXp3S7_pUqfzU9sH7BXDl-AW3L7axwtEhA_ezBSIyeev5VAigOg6J6FGhRmxHCLA0MPAn4AiBBWVCuM0K8gxQ",
+               "reference" : "CmRbAAAAz4wQ1UzN8TDh9ks0ZOYDZ_hCm-jfDmCfPkptJtNBlaJFs5elmq7YO9UC01QGgO5rkegYJdQyBMpfMXOAL5HTHyxOH9GvssU2E73wfzhAqXx_k9p25f-b4xiBTOcaP9FJEhDc-IrV7QPOqwIPV9u7iQ4zGhTQZVQyD0vzCbNjDKup_GcW9ce58A",
                "types" : [ "car_rental", "establishment" ],
                "vicinity" : "Pyrmont Street, Pyrmont"
             },
@@ -593,7 +243,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
                "id" : "ca11a8721d7fa06d9ed6ce80c7e49af70f440fd8",
                "name" : "Lotus Pond",
-               "reference" : "CnRhAAAAgxswXOoj1Xg83tN7yLSV_OSNAcS1VNQt9NnECBEwEqEyLsIy1Xri_-OBP2NVgFIu5Xw2A-6amKXQLYj37r3OD6YTZQq5PaqyzQ9t62PZiHLfi5K78zrliu3TShzWAQA6JR6E9WbU51W5UdF2XYDEuRIQmo8lXHywMng23pU6VbFbYRoUCzMp_0NjZtWFuo9URh-mLRSGLbg",
+               "reference" : "CnRiAAAAszEXT736itzXrxQMpJUliUndvdKqi0tCRDu1QZF1c6bHVfRtj9rTMUAkG8EQH9-ua93N6VRoV8NwjgKHadN30JaM59IAei8wiYSuUjkesvsBlL0Z502EenuhD0EaUDJXF7BNUfyr_Sl3gOA54Wb4xxIQkKHeazSwlOdYxMdruvD8rhoUiI67uU99Xgh7K03N-JLb4L4BqBE",
                "types" : [ "restaurant", "food", "establishment" ],
                "vicinity" : "Pyrmont Street, Pyrmont"
             },
@@ -607,7 +257,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
                "id" : "3ef986cd56bb3408bc1cf394f3dad9657c1d30f6",
                "name" : "Doltone House - Darling Island Wharf",
-               "reference" : "CoQBewAAANYoKq8Jl7YqOeYnLK9dqrxdSv47QyxBNuP4Fm6BKrYaD6r8uCEIuYPMFNAoSQBkcoUPwLb02lYO3J5kO9iDnT81FXO92v64dQumkuE9Ef_pBP0-0ZoEJwMBWs9_qS84ORqnK0fsH1MWM_NmVX_V1IvuCbClYeFVLCWmFkKYPXPzEhA6884dfinkhtgQDsjdCr1NGhTHz6eL7gbugmbhaEFyYUW7yYKbdw",
+               "reference" : "CoQBfAAAAJ6EEUqNKdW3Ewczn3nTHmmULlp-tB0wUkaK65t-4ulQMYULR5X8gzOOrseBbs-gtcbSKYr74x8wMNMzmNoR2HppNKP4dFCUWkR5p3fldQeY17TxeT9b1mT5LKNMLF0Q7vc-vWdpTKgT7_xcFFG6id52aNqHuxvb-HSQGOD2qh7DEhDL0RdD9TyvwiSfw30XSkpnGhTiNFrR4s0fHC-euuBOehrnSnu3zA",
                "types" : [ "establishment" ],
                "vicinity" : "Pirrama Road, Pyrmont"
             },
@@ -621,7 +271,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
                "id" : "ba9494fbebdb7e40f9a646aab93379212763195c",
                "name" : "Fat Noodle",
-               "reference" : "CmRgAAAAIIziYup0NnF9oGTSq3L4Qr-jppKDrmTkrSeyCGrgR5ilOO8-qoR3Vyw212R5g0gUQ1uZfqmQjdF2424seMlzoKnH31OaxkjgnCEpqfqjN4KGdHsqLlM30ACf7qH2UjxMEhAT0NC1EhqDlIJrrcJwQfIFGhQqUNaWmPAWClAQ5xwC_aVkHfHxTg",
+               "reference" : "CnRhAAAAMXbuG_9na2lGXvezeIU1PhtAYYwJgqDpjIEUgwdfnwsAMfswRbwHkSXFR7FUdw9h84w3Gd9NQNuh8NbBqthXR74jJgI_PJ33n-G-HgDLnpQZUR364yrzjnSrixPOZb_w7ztyh4plO6p76P5eJ0oBUBIQcfp688TiLT7ewSR3SuA1MRoUGZ3TuIbQwt6mJxsNeWz9Ac0IjNw",
                "types" : [ "restaurant", "food", "establishment" ],
                "vicinity" : "Pyrmont Street, Pyrmont"
             },
@@ -635,7 +285,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
                "id" : "00060cf64f16375913ec49d25cbb7829d3e08a88",
                "name" : "Blue Eye Dragon",
-               "reference" : "CnRlAAAApZureEigmwG6wO-PEeEkFrI4VlrPIQCd7o34urAqeDFcyNOblLTPBusl6p_PC1sHh3ajGd3dNnXMmfevJ0Mov2qTYti5BqShQY2m3wez-5aWae7t8UND25v7Fp7r0KPMf3iRPRuZ6XVryaWhlMxLKRIQMglf9f5VELytzpiyEqGQvBoUHGoRDvP_by6SEWYL6XalL-z7u5k",
+               "reference" : "CnRmAAAA5C2IhYGe-zm81CabhZ6FryLjwXfLH_I5DCFJ9aJf80vJQsLlqrBrIcuO3bGpYTl3Ue_yOYygvXgoDzjXj4Je0KVoUGcW-ycBNKz0QBn-WKboDTn3jwnlt5EML0d0TfAT7YpoIPeRhkwWW0OgkJer1hIQFl2QKCNsZlPnLRZWuwjbiBoUlTV0mhCM1rc8o1-WeSkzkK-s4D0",
                "types" : [ "restaurant", "food", "establishment" ],
                "vicinity" : "Pyrmont Street, Pyrmont"
             },
@@ -649,7 +299,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/barber-71.png",
                "id" : "3463e262449aeda2b3f1e899a2178fcd42d2c7fe",
                "name" : "Star Spa and Salon",
-               "reference" : "CnRpAAAA0F4G6LpIzXbx8PzeC-9I5KcqEaenN9pEn52LQ4Xf_wfGuCyKgrv158MUP0EK-8CE9xPIZ8epo1GYr9FtkXqEsJPE3FON75Le6EqtwStBMUY9h3pm21JeZ63DEagmNS21nofpP4b4BxooBtw6xZ6WMxIQ64e5NjgOyvBP93coBe6e_BoU6IASiJjtcPh2_bZztk2TziR_naM",
+               "reference" : "CnRqAAAAiBV1W4e5sW2XQueeqKQhbYPTp2YHo--OzoYjRZ1cipIxE1egaaMTRTmXXSu7cX0clqJeZRschdKnT04yphmzZyB9EEZPq2_cdsVMWhTq_RNGHxy_fJmS8PwKPaIA1Ff7GUuDc20rPARZI2E3Jl5b6hIQlubJwYK6eqmLtN9aD81ykRoUhGtk5lVJYH9ybkDy-MPcsOkNXEU",
                "types" : [ "beauty_salon", "establishment" ],
                "vicinity" : "Pyrmont Street, Pyrmont"
             },
@@ -663,7 +313,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
                "id" : "372b98902d4032b2708939131b8bc6bfbce9044c",
                "name" : "Chao Praya City",
-               "reference" : "CnRmAAAAR6tJaKZQNNRte39jHWOFgL5-KYUuribfFqw38aUvq7c0249dybEFrUL67vEGosGI_egzrZJ7mqWD9G8SjY4dKD72Pax3FbayVJa1WedIMrYwupQrh9AS1UvVkw70epTFUb-9NdhhduaQr9H3Jk0PnxIQ3a-kx3lw3j9gYFW79YgJpxoUERjAW5918wxZkI2WU0XHnXrKT1U",
+               "reference" : "CnRnAAAAPelCbs-v86Z7ZQKL02GNFf5KhrssG9FjpYPaGXE7X6O2p5LgC1zJL3gWcIhcqD6enjQsadkgyiaG3pNpExaUzaKwovjxIAaw7zgt6j1Oz9mxErLeFU-taYM46647TAfEaAUI8eE-Rh2SpS-yjFcApBIQxYZ0zPZbuZjoN-583jEM5hoU-ozQg0VeCxjLpVhucYBp3yoPbic",
                "types" : [ "establishment" ],
                "vicinity" : "Pyrmont Street, Pyrmont"
             },
@@ -677,7 +327,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
                "id" : "151958c1816f1ce7f4c8022325792513fba50743",
                "name" : "Kookaburra Sailing School",
-               "reference" : "CnRwAAAAPQwORJW8XGOctb8CV3hV5YuEW5FS2kCtGB238FW3GKlo862zGp-6RJCdy1vMCjknOrQ-ApsdMeYXXtclFBIUC0Z8m3k1Fl6xdo_FnRsORGMvvZhjB6Hq-o_RwPci6WZ8W60Y_luSNCp5iMGFPXeUWRIQVz-UadQsBXu_hXEopK8iuhoU2AEPYHc708yTsG0pFYRyB7Vbeuk",
+               "reference" : "CoQBcQAAABPwF_GY92VOB7GRh8ReqgvbkSofxir1dqfYKJcoD3K_YN8yYgapMmAhPjIBfAjClj02g2V5K-Fw11R9iuTfBiemMAhJOsw2ZN3k3ahWDEfhMMCxic7xI2YXhxCtKFSBUng6K_019EeUQONtyB6Isxay_6w8FBVD8tRUt4vbHxX0EhCfQ225PVne0yyjQ_Mh6okUGhTBkR07lVp0joMIsFrOnyvvyiFnLg",
                "types" : [ "school", "establishment" ],
                "vicinity" : "Pirrama Road, Pyrmont"
             },
@@ -691,707 +341,7 @@
                "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
                "id" : "8dbf2c11a8cca5b1457b442e05d006a21969ce22",
                "name" : "Port Jackson",
-               "reference" : "CnRsAAAAs9p7qK7wVL5G-5tn50bg07LebJi-uPoq83GYRLvzjZZCqjFmFJnkE4gI8KVhogrVl8cTcBIJNJxufW6yZz1XM1hQK4w3ucfY7MecNt8cRVcat4JgBnipyXLY-pSP2o62zC1L6cB1nqLC-c1LX1OsgxIQP8p37tHpuZtlhSbylEasDhoUCAckcDg5_NgxYknst6aUv3oLuSs",
-               "types" : [ "locality", "political" ]
-            }
-         ],
-         "status" : "OK"
-      }
-
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://maps.googleapis.com:443/maps/api/place/search/json?location=-33.8670522%2C151.1957362&radius=200&sensor=false&key=AIzaSyCLMybjdDnmUhhLcfangpJnjT3b-AkSyIs&types=
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      content-type: 
-      - application/json; charset=UTF-8
-      x-xss-protection: 
-      - 1; mode=block
-      server: 
-      - mafe
-      date: 
-      - Thu, 02 Jun 2011 01:21:20 GMT
-      cache-control: 
-      - private
-      vary: 
-      - Accept-Language
-    body: |
-      {
-         "html_attributions" : [
-            "Listings by \u003ca href=\"http://www.yellowpages.com.au/\"\u003eYellow Pages\u003c/a\u003e"
-         ],
-         "results" : [
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86954560,
-                     "lng" : 151.19454040
-                  },
-                  "viewport" : {
-                     "northeast" : {
-                        "lat" : -33.86028050,
-                        "lng" : 151.21054780
-                     },
-                     "southwest" : {
-                        "lat" : -33.87880970,
-                        "lng" : 151.1785330
-                     }
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
-               "id" : "40840d476baa531e0227a353b1bef70262f66e7e",
-               "name" : "Pyrmont",
-               "reference" : "CnRoAAAAPzUMvoZroa5LDbmflbB0XowAXvZUaPXzLvsYk83QYvHKKCQbMghiRS4iUxdG81Z7mcRg7KMgOCUQvGfeBYGnvpuy-d7JtBtmb0OsVTykJiJtJeCa3VirpUmhB4XryyB9I0bNx1TESIiWdnbms4FpfhIQ1a6kPY2B7xs-h9b3OCh7-hoUtSBA7pQhLdtzsZdR8wBkP79p3Ag",
-               "types" : [ "locality", "political" ]
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86820,
-                     "lng" : 151.1945860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
-               "id" : "be880205d64059c306bbf198f908b81cabb9f066",
-               "name" : "Star City",
-               "reference" : "CnRhAAAAX_oN6ClvGygjdtbVsVSMTJzvRHfOYmE7KA_BPuKXxOTmOyVlhXGWvr_x1hj64oN_txp1l_bQCYs-P-VVA3mzOaLIdTVeQMjCABdNgqi22onAnIB3Nh5A7Fo0xqNHiiYIl_y2wBbbrzptGbxsk6X_HhIQB94qXU9UJhkY2wsPojFjGxoUe54EkhkokhOg3c6YGJmuZZdmVDI",
-               "types" : [ "lodging", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8667010,
-                     "lng" : 151.1973990
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "dd030d236b8ccdc525f7a40893eb492f8fc5d55d",
-               "name" : "Ripples at Sydney Wharf",
-               "reference" : "CnRuAAAA1KZacHwkWuGWtpr1s8WhoMws6Ebahvj1-eeUh1rKEStqSMbsxIpDuzswkiE-nEAcyx7_xsLUyRcDIgqEdXhQIZ_fJ1I8tWidFFiMgEjtRF0Pyo9DZNSMp-yZkRWNyEbe_cylle_SqoTMJ3LVysE2JRIQjqbBGFQXxjvDYpiyisAMjRoUck0ZyHITFetajYTRQy4hNfIgqvU",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8669710,
-                     "lng" : 151.1958750
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "4f89212bf76dde31f092cfc14d7506555d85b5c7",
-               "name" : "Google Sydney",
-               "reference" : "CnRlAAAAUibVS6YJHDrRRfnmAKXBvz1KlC35z64gSs5ceD2COKLvVbIr1g0vPLDXPxkcOOhpkC4q_fxcOxkILbxGrb_FOEPhVHgkC3R6xzdNrXJoUE7kIf7SJzu9B7sD-_cU0X24tYLENlV3dLhWq3a15iyEzRIQEAp72JZAJLSprYhrwsCEBhoU9gV4vjzRPLz4KTImXo9mKOzGwjg",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8665470,
-                     "lng" : 151.1959410
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "4d716a646c32978aa12d1057dcf9f503a20195c0",
-               "name" : "Signorelli Gastronomia",
-               "reference" : "CnRuAAAAF0oc-45DX05XBlfjJRFX49SJeErkGXunWq-AC58qJ8HK9zHGHF9vyoOIVumTygVldhhxj-Mqw1wcWQD4xQZGzF_iWVdrMT5FAEAxs0z7E6UCOiYHRtaQWitl39M_tUUA3_Y446tKL8VYdiuLIpSeShIQu-PO5Kjyfkqv38ZqlYsLuhoU21L78QUMCuls87ZqZ-Kps9jU_ds",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Trouton Place, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86820,
-                     "lng" : 151.1945860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "bceeb9b6d5ac2f9f2573bbed9e1b3240f1fd0e12",
-               "name" : "Astral",
-               "reference" : "CmReAAAAsu3q3uL70P2zFdx7wmbwRf9Rd4XWmxGRkpljHxmLeVSeVE6JLkV8MTUqcOYMrqzzOdDgjb02Bo8wKk0bZexhC8VdYT4XImuB-gggJnA23TtnjtpQtHS7b9Ta_noIG6YJEhB0KOMkcC1tua5yzESsGNAwGhQs5yfzo0lAgumeGJnxGV9lsPQa6Q",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8670840,
-                     "lng" : 151.195950
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "27e84d1acda19c14b9c7f5271242796891bc9c9e",
-               "name" : "Accenture",
-               "reference" : "CoQBfgAAAOk218v4LJB2LpZHvTZP3XeGcKWZvqj30uRuxXkC8JfBdj-x_qPswLv0RjPd8MKBAtSWPvkOdlfTM7NdhpiHqGx0eVmbQGLB6FEZ9b7x8wgJ7ZdhiFUo2shFmjZiCqgg59-nd0yoxa7Rbva0LRB1j-zJesUKn0di_C2ZYYUwdbytEhB6zTKVA6iOr6tDZF1ikVr3GhRwa5yZODmIOFhP4q_kt5vS8yTRYA",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8654620,
-                     "lng" : 151.1959830
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "3e2826e1b4b4e5cbee354260f687d14938e6068f",
-               "name" : "Fairfax Media",
-               "reference" : "CnRlAAAAWDOU_Bzs-liAoKuWdixoXVc3yTfJJUam39gfjtE2VpjIDzLw98RAE6tGesLBk2Rcb4VqM3i2BV5SF8yLgzTzEpBuvvXnox7dMOKFvs_Y4e5O6rkuAO_ka6TIEALnuR3cj9fnQKL8GXi4_913k3f0TBIQ_HDsWzzr0lZU0vIpyvGfoRoUuL9-ge54Iro5_7p33wYaxvBQXbQ",
-               "types" : [ "establishment" ],
-               "vicinity" : "Darling Island Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8652490,
-                     "lng" : 151.1961010
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "1f2ddcefca08ffc687247c1ecf209054336aebb8",
-               "name" : "Fairfax Media",
-               "reference" : "CnRkAAAADyvpvz7uYzVovm8jRH6Q6RTQkFgkB_4B1gNU8OX5cYlZfE7lP1dJtopG__UaompuREMoX7FpKsPYBaixnL563fF4N2DuFlp8QVGma-PkOEQ9Idhq2npXm0qZobxNCLlv3xb-PRqGALxz54LrJ8fGihIQ6r7H9vD4XlItYiajrimsaBoUzpdtUEdPvLnpbZZvYDz3EANoOSk",
-               "types" : [ "establishment" ],
-               "vicinity" : "Darling Island Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86820,
-                     "lng" : 151.1945860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "eaf5d4b14ebeae84df661e1f6d593259abac83d4",
-               "name" : "Garden Buffet",
-               "reference" : "CnRlAAAA2_5zW2t8CxaGGfjpm3PQnMa9j4lqDAvy2P-pqLdUsCWx2_Stgi0DlIAReeMZCrYsNsaOIRUCLiL2TnsECeSYd6Au03I7pZxKyAZqokpXzZLOO7vQwP1AcH_K8x1G4IpTW6fr0PIBfLI5PcGjG8xYOBIQ9sLHdst4eFGdAnkTgNKs9BoUZvV7WI60L5Em6vg1ZNqPwGMDjac",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8687940,
-                     "lng" : 151.196830
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "61178ac5b42a4045c415fffdf6d474ba9b08d068",
-               "name" : "John Holland",
-               "reference" : "CnRjAAAAumbEn8q1gCD8Z4X4zi2s7ySD1-_HlAPh9XJk9JnhnK9_ljCeNzNPdOsPgOWnI9PYoyzbygPGbBTm6nZgfoJAAN4066EK4oUCbxR9Vhh4QaHHTT1rZHFZoB7Cu3EFxCucivhnOF58EfxL65OC8jSAkBIQbw8CZA9z8tUNZaqJXefVGxoUiM0BktR-hqCWDg08Qe7WhyB8k3s",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Rd, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86820,
-                     "lng" : 151.1945860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "88751426b87d7072ea1acf98f35695d02985addb",
-               "name" : "Seans Kitchen",
-               "reference" : "CnRkAAAAYYIav_OUgjlLK8H5SMfd67dgs5k8hc9NMPF0y9kZMLeMIHfvbxVyzYgrAcT-UJgcSafmhjxAegmituZ7HMUIfDeipkgCz6io6fj9UniNTj0P_oZQOUT3n-E3T64N5H9JX8lQhifsaUAOLHVvU9Gt-xIQbki1qq-AQrklN8_l-lo0KBoUrhXLJgyMd8n-oK5nr9yMQFsSLGA",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8654190,
-                     "lng" : 151.1943840
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "19cdf89322aa1fc3523c583a74a27645b11430e8",
-               "name" : "Channel Seven",
-               "reference" : "CnRlAAAAYyyRH0aZyniEE-Y4lRy6ZMNkUS2DMQOkc87lQkLkRbM4WiJAg10vcBu6_yo3WwsFVpwEIAFAN1fXOUi95FKiHfwuxM5hPI_moui3Rs1Kv_hq-ZtaKgPoOzCDnCkDHfUx7CSpuaLxPJ5t49aMG6WA0hIQJFCkKTABMgs0IV8kzSGXZRoU6VP99pLCBnXrsPgREmfu0dLg1K0",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86820,
-                     "lng" : 151.1945860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "d559b2e8e491212130cf17c4d0ac595c72b3931f",
-               "name" : "Avis",
-               "reference" : "CmRbAAAAMVYevi7ZkQVkCmVglvNbxhOXa_sY3AT51dE1_b44h9px1k-NnmUik1W77taEfIUbldo99GEKzUxGwvFEzS_1yXhehLadFOB2psL34HUmTI_7LKhfsktNDsyVPGZm1KoUEhCyDe0c0Vp_XUrFzTFU6jCSGhQcRi9rEWXG7YDyk3lYiZ6ud2igkA",
-               "types" : [ "car_rental", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86820,
-                     "lng" : 151.1945860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "ca11a8721d7fa06d9ed6ce80c7e49af70f440fd8",
-               "name" : "Lotus Pond",
-               "reference" : "CnRiAAAAmUea2kywcuFcPOdyj1DeGFps_eth1cyTDx39Z2ukRJIpNPeZYq7BvTHyyNvQIRMTjNEG6D5_mEu2lHnqwh-1zHR65AldFKGona_xtxcqYGQ2AYe8JlnGWXFHvuJzaq0_YqvtbiP5njTDhw3R7jksCRIQcG6rKA7vois_HYgulsG6EhoUf9816UtiXRjp1udI41_Adi8nLMs",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8670520,
-                     "lng" : 151.1957360
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "3ef986cd56bb3408bc1cf394f3dad9657c1d30f6",
-               "name" : "Doltone House - Darling Island Wharf",
-               "reference" : "CoQBfAAAAFamMjpmB7IEC4FJhzT7F0wRjUSGgi26aImeA-35RifrCCqQgejjuVhF2ND-JfKgGeCH7QiTRHvoxpMIrS4cr0IUIBdZmgAVY7ez4GtU_evjEGKo0pXAD64Dfx5PXscWki36ze1Ia8lka3BCqcr1tlcMhDIJAjcl1l5GTCYRoHUfEhAkDIR1jsPDoaPn1r8ULI6hGhTUJkW_IkzDVJui94cqv3UjTF7Bzw",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8681980,
-                     "lng" : 151.1945840
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "ba9494fbebdb7e40f9a646aab93379212763195c",
-               "name" : "Fat Noodle",
-               "reference" : "CnRhAAAANuiIwPaRW1n44JsVF4_CnOWOWYIZJ3a0vmzrRnYSqHpAbDee_53hGWHngx-SBBzDG_Qt2ptaFY_P8sarbYl0wPWWcD3Kdpovf3g6MS1O0Mm4Za4_-2nUciB9gZnSNUWDzLOjiAlbG4qX1twgwNvFgxIQIkwaIYOEjPM9Z5upX79RZRoUIwlvkHCo6labfianth3J5qx95cA",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8676090,
-                     "lng" : 151.1936860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "00060cf64f16375913ec49d25cbb7829d3e08a88",
-               "name" : "Blue Eye Dragon",
-               "reference" : "CnRmAAAAA4ITu4zRe4L_FdPXLX1MnW_-ihrLyWaM_oO71Bb38k_n4rptCJwf-1BvG56qI2q4DGSCoIoYiiJ74HFGcT5y4DmmUeBCIrcgA5hPVOqY1kkNwqbvsSxg0puV4XbeqRndgO4zCR7gJRXnKfnRC42GIRIQ4LbZTvXHQp-KJViaNJ7SmRoUG-2YMgguq2LCpETS95_7I7SfneE",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8676180,
-                     "lng" : 151.1940940
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/barber-71.png",
-               "id" : "3463e262449aeda2b3f1e899a2178fcd42d2c7fe",
-               "name" : "Star Spa and Salon",
-               "reference" : "CnRqAAAAhRERdRfnzjkRL1COLtItTvAnQ0exxYIqQkWl2OipCt8gjsesfl-F15G8x-ne7GpF1-rCChyoqlL9vtbak7_yMWFjYEUEYH_DoyZ6h7NesD-zns1Op8baQhh4bU1yqGaxf6LkHMX1pkijn32s9keSchIQq5-DtftjhCgi-sQbrSbCWxoUwwGkO2gC9YAptEJLaOAPSMYYjGo",
-               "types" : [ "beauty_salon", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86820,
-                     "lng" : 151.1945860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "372b98902d4032b2708939131b8bc6bfbce9044c",
-               "name" : "Chao Praya City",
-               "reference" : "CnRnAAAAnRT0KCnjB0fxwKtSVpaCCJmdjfFRw5qvpaqoBN7d2O4L0mdglZhUpUkvB-tEvkpH0gppQxcYDc3hLKPOrhwz87zbJURS9KqmwH3sEj2kLV6uMd8TqDD3AmfsycSjzHr6VNdv_ng3GmFfgTcEg3yBohIQnkjD7bGsHEVLO9dqXjT88BoUOlOBzTxzIe-V52BN8WkLQj9w7E8",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8653280,
-                     "lng" : 151.1943190
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "151958c1816f1ce7f4c8022325792513fba50743",
-               "name" : "Kookaburra Sailing School",
-               "reference" : "CoQBcQAAACiKQOdMN2BeAdTvt2GChNdijb4JWJohCT036DIyCs3b27jUTTDAyiZvVOWz15OcttFDYL-elkTujC8fFeSClW7HD0514VpZpwk8CEdv0KIsVGMLXPYlzcqJJIWYJGD3ryPhI69pAQ0J0rXVvfXGBlcSsvsGsH3EZZbQ_bCz-0MXEhDEG0ME0OqxpFxmI3Xt4Sr2GhTxFYc8aaGh3lies0H25E_EUVVPjw",
-               "types" : [ "school", "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.85171490,
-                     "lng" : 151.19664440
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
-               "id" : "8dbf2c11a8cca5b1457b442e05d006a21969ce22",
-               "name" : "Port Jackson",
-               "reference" : "CnRtAAAAjUVam9h-5zqRNlFJ7jKIBFPSpH4YnJiCX5h9LxE0T1myrUOl6XMyd64q6KO_Q5yFhS3F3OIctCvodx13yTO_kEHpsQOJdL_JE5KjSTZMjyd8-zmoX0D62gNzGJtWng1Eu8KLbTpjUKpoVJhnU2NGmxIQlcClpHWbJETdRJYzHAnftxoUMy8bPfN34k9B0iL1x4YUOKosdd4",
-               "types" : [ "locality", "political" ]
-            }
-         ],
-         "status" : "OK"
-      }
-
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://maps.googleapis.com:443/maps/api/place/search/json?radius=200&types=&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&location=-33.8670522%2C151.1957362
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      content-type: 
-      - application/json; charset=UTF-8
-      x-xss-protection: 
-      - 1; mode=block
-      server: 
-      - mafe
-      date: 
-      - Thu, 02 Jun 2011 08:05:23 GMT
-      cache-control: 
-      - private
-      vary: 
-      - Accept-Language
-    body: |
-      {
-         "html_attributions" : [
-            "Listings by \u003ca href=\"http://www.yellowpages.com.au/\"\u003eYellow Pages\u003c/a\u003e"
-         ],
-         "results" : [
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86954560,
-                     "lng" : 151.19454040
-                  },
-                  "viewport" : {
-                     "northeast" : {
-                        "lat" : -33.86028050,
-                        "lng" : 151.21054780
-                     },
-                     "southwest" : {
-                        "lat" : -33.87880970,
-                        "lng" : 151.1785330
-                     }
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
-               "id" : "40840d476baa531e0227a353b1bef70262f66e7e",
-               "name" : "Pyrmont",
-               "reference" : "CnRoAAAAIeu_lEmVuWHzdl9KRi5cum3IM_X7OCJXrgq7SIA47tfjK7330GJvomYCRFXRvs5g4lsSDXu3lZzdoc9p_pLQ5Mf0zDih2-uCkpncu35zC8L2bQYbYAfXo2VV1erazkj6j-0ObR1RB2tdEjsYP0exlxIQpQ6jniSmky1ACdfP9A8P8hoUhiRZmcegvFNMfmIOebp1Jkf6mjs",
-               "types" : [ "locality", "political" ]
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86820,
-                     "lng" : 151.1945860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
-               "id" : "be880205d64059c306bbf198f908b81cabb9f066",
-               "name" : "Star City",
-               "reference" : "CnRhAAAAimFjfl1thqgecLJP-9kmUTsGCAKUEO4hlao9lqBC1DgJSc0yUTn_Vs5_FTylu4lWKf7-IGxDEQZJQ25IBU4_8PWd6Rkdy8BrjILALhOyfcx6MX95yan4Tbeh8qg5ifa7P-OYfWvIxfX-rOAGgnvcSBIQQHM5RfwlDLxqBhNiO64l2RoUeEQGO2awFMwvE1PMVQW3oatnBIA",
-               "types" : [ "lodging", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8667010,
-                     "lng" : 151.1973990
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "dd030d236b8ccdc525f7a40893eb492f8fc5d55d",
-               "name" : "Ripples at Sydney Wharf",
-               "reference" : "CnRuAAAAJme-ASH8ksTwe9LMjs5ePUi2hBEsrnPOv_P2UnNAItct77emcTbrWxVUrFj1xysxxm3vhJRGYwf0C34SFYrbJ70sQ7TxnIZmYznNa4QFm-vsq0THqKhKFVCqh50-O7fUApTtfqU-jsuCwWsfSbxyOhIQxGCahyryYtPOgx7C5xZt_xoUpAXvBq4XxmzhPJWWe_Yeqp5fqYI",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8669710,
-                     "lng" : 151.1958750
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "4f89212bf76dde31f092cfc14d7506555d85b5c7",
-               "name" : "Google Sydney",
-               "reference" : "CnRlAAAA-mBevxhpCjYwYfbqYEjGgMKCE1FGAFU-0ILVMDcZUFgEOU2T_EYOz3XPVuDU01W3ieR9lyz0dypraoXulIchHe8R-V1G_FYnMdLDnNHNi0YYVKAEZ9qmxKULGhDlIBb_aYvzoMd3X4XaPftqspTPHxIQL03TfoEBhkggLQ2m4B5AEhoUrhG7r7EHdvKQq_mtMZ_izzhSvbU",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8665470,
-                     "lng" : 151.1959410
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "4d716a646c32978aa12d1057dcf9f503a20195c0",
-               "name" : "Signorelli Gastronomia",
-               "reference" : "CnRuAAAAKWOZPcVnIXdxJ2c-fnDXnW2pFEUezAvPIyo1jonnLAASJX-ghY0NSXCvHXDpceAD2eNNJA3RA-LxqqhrnR7bG-QC5JeufUdX7K8ozwXX-Xgb9jWXC-5hQcKM2FtUNf5So7YKKYc_cydCdsIVOkxMbBIQEkEvb9U1mzF3eoIrnYKznhoU_xBk13detm5ykAlIn3duOBp-VsI",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Trouton Place, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86820,
-                     "lng" : 151.1945860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "bceeb9b6d5ac2f9f2573bbed9e1b3240f1fd0e12",
-               "name" : "Astral",
-               "reference" : "CmReAAAAgUv7Rn0s29pXFoYNnBDwU-E0a0XM4J2sfL_WDPk4m2xe5jyIT43tvoDN-CTwwafIB2Mm5tNvPPEM79XqtJRk8CizxK3MxfdFxR7izWVITftZ0sDKsqEZ9z0Vg1o1gVLGEhCBR9QrCk4-XC_2iTx60lkPGhT_TBhsPzxO6HymXtyonlOFdK-djw",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8670840,
-                     "lng" : 151.195950
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "27e84d1acda19c14b9c7f5271242796891bc9c9e",
-               "name" : "Accenture",
-               "reference" : "CoQBfgAAAGd-50AjAKp4gKx30zfCC-_vcEA_CeKu5-eALC2sC0pJQV81D3ha561MQVdRqs-k9wFL0GqWXD3iTYlqBggS5JhFLKUgRZUwAtEiU89_KYoZHWOIzJJtd_64nbiJXWuTl7w_YpdU4UYKdrLF5lf8yDtg3XqMdJZxkLDFGE9aC8viEhDvtYrsCwpjRFd1pN6sSxE5GhT0Frb4o7R8L3OEeYM3quYL91e_Tw",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8654620,
-                     "lng" : 151.1959830
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "3e2826e1b4b4e5cbee354260f687d14938e6068f",
-               "name" : "Fairfax Media",
-               "reference" : "CnRlAAAAM2XAs_VG75a7p90Yo3vD-MDDn_ze1a0uQwS6GV9YnTOqymUzl41AQBKAZ0dJWB77NTVRwNJgv91kDwy7GSHdTp-2vz4jUZXtRv8n-EDKiDaUH9CGp7LBmKnq7XcBeIoHVUBKHWT1BZyTgy9kkmMnShIQWDafc4jERVBlFRoBhutL5RoUgG0HAx5V3nEwwTZM3UgsYfBSjQc",
-               "types" : [ "establishment" ],
-               "vicinity" : "Darling Island Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8652490,
-                     "lng" : 151.1961010
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "1f2ddcefca08ffc687247c1ecf209054336aebb8",
-               "name" : "Fairfax Media",
-               "reference" : "CnRkAAAAS40rr65_v__iP8BcMU3q_ciBOJhW8REWG4Mo4Jmo5I6jSRfKovlU8eR_5vZ7bgTjQ3rJP7mrQJMsaeCO3o4M4dMUwDd7uuam-K8PnMYIjA4s1iv1tQ5BilGEzttMGB-s-f2uaMwHJqfsLOYjWVhRSxIQ5vK9wwIyJYb5J5zcj0GlGhoUc0FJqhhrsCrhXloOAO2871iZC6Q",
-               "types" : [ "establishment" ],
-               "vicinity" : "Darling Island Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86820,
-                     "lng" : 151.1945860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "eaf5d4b14ebeae84df661e1f6d593259abac83d4",
-               "name" : "Garden Buffet",
-               "reference" : "CnRlAAAATlVBpWpsxm-WBkIDhqpBS8_tPIZIQbLN2wFx_1jU42e8h6ZHGe7u7_dFr5NSj8mHSCH3dKP2SMbr79YoePcMq584hfRA3FR1bKMoHRrqvs6xpfCyx1HRX8IPwMvwODOJI9Q6NDvXAmDHj-9x34SAJhIQa-0R-edJtqGSM2YxjFygIxoUJ_GecLt_BeGP4teTDUR6A1pW2MU",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8687940,
-                     "lng" : 151.196830
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "61178ac5b42a4045c415fffdf6d474ba9b08d068",
-               "name" : "John Holland",
-               "reference" : "CnRjAAAAcJpWphcWlFGPozny3xj23wYMg0u8VwzDU3vld8idgMQPUqIgM-lO_QxrFEp2yskQMF3RHJHeRiPIQkF771Q7aWHXOUFLLJ4Kyxn0Z3prr_AvBbJb-J4SXkEv06i9rrbbwikCp_eJPmRrx0mVTsCzpxIQqn21npZL5FWA5EXdbwhi_hoUbfAOqW6A7yX2JQHqjo1rq8L4Qs4",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Rd, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86820,
-                     "lng" : 151.1945860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "88751426b87d7072ea1acf98f35695d02985addb",
-               "name" : "Seans Kitchen",
-               "reference" : "CnRkAAAAC_UXdikPjtx0-I-7eMHFbKukgIZLk2XB4mj5JkGK76hqL5ZqGJ7eBAZyh_HvmCzsh8ji6YuZubsWwubtO0nofJBTq052mPFAqlcOfk2jlI8fiwZREOvOoL7Ew6OzoasQ_ysI7nj01sz_Cdw7p7MAHBIQ6AVcNgRT67iXHQiWrJxh6xoU9ieLVT8oASCbuuG1GWJJIfSPgLs",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8654190,
-                     "lng" : 151.1943840
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "19cdf89322aa1fc3523c583a74a27645b11430e8",
-               "name" : "Channel Seven",
-               "reference" : "CnRlAAAAuweUEeCsMQMrCL0Qt79ZqgIuNRoaAfZCRn9dInPMFvOs7FpnJaBxJ21po9dNi5m9KEcwOkGBlE-3RQhkyEmQDtyFM9FKjbiWUkJDHZQHVoRlLxG3KBA5s3yqRdhenitXgsho6x3BApgwavhrQ8PfhhIQv7oEdvex39bU6qbRkc-lUhoUJDMcW9tQvdC_pCrOgsU0zPIirF8",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86820,
-                     "lng" : 151.1945860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "d559b2e8e491212130cf17c4d0ac595c72b3931f",
-               "name" : "Avis",
-               "reference" : "CmRbAAAAXR7rBWrvist6u679d47xEzNLV6wflIrs9-TXp37jnBagHEZ_Oq7txtX72UQnSW7Z1BNte18qflmYSmLhTJNqnKjb2eL78vLWPEbXOo9mPKWjSK3WVe5fqJ-O3z1ZB7S8EhD7tMfijQP21MmLftFKwUsMGhReAyrZ3XbjI9mmltSpaC_GnMPLFw",
-               "types" : [ "car_rental", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86820,
-                     "lng" : 151.1945860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "ca11a8721d7fa06d9ed6ce80c7e49af70f440fd8",
-               "name" : "Lotus Pond",
-               "reference" : "CnRiAAAACFmCXyt1aA0oOz2qZBi-By6_gt6FtJCHjb358ftJQBaI4Xsv0JzZkA338ASGfGoMBJOYsLLy_KJaG4Qv36uvwqZtyT39B5-anMUxPBulXw4lQ3rmQ5MPbLIuNA4E9friMxJjgplaY1PebKUcA1Xh6BIQiE7uC4WLxAFSOp4KGAPjRxoUh2UJhsHnsNLQ91nbSQQmA2hB6ao",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8670520,
-                     "lng" : 151.1957360
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "3ef986cd56bb3408bc1cf394f3dad9657c1d30f6",
-               "name" : "Doltone House - Darling Island Wharf",
-               "reference" : "CoQBfAAAANOhfB3gXjTbbNslUEc9vvWfoZr37Bs4Y8Olt4vBeWsWAw6gjNa5S7WcLbkIewlzvJIOkkuruJw8k-SBdauDrOpkKHQlQW5wpJS2tLTUAJh2xxSzVdp2UeJ1_FPXJx28dwujWkC6udZziuzSNd9Ws8PXwdO0rklEYwNyD_gc04j_EhB1ikf8W5pKVDY72e2LAAKUGhQAQDSBAkPjzyk7XugMuALKRj1hRg",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8681980,
-                     "lng" : 151.1945840
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "ba9494fbebdb7e40f9a646aab93379212763195c",
-               "name" : "Fat Noodle",
-               "reference" : "CnRhAAAAwtvN4i_RHvQQUc_Gnj_KjOobYlVuj8aMYclQ3wrNalnScA_TSrV-5L9rqXtnd8Tz1pzEr8k-x9z6Eb2pzsVkJ8EhCyQP9fxRdcPTdh1Tr95xmYMDpyrfviz0lJtxwC_REcLafSWzu0f54XO0Fj4txRIQ63V9R4YGSDkq1d91cHQxqxoUvX9gfCbyhA0Cf3KHg3kVogKUs4A",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8676090,
-                     "lng" : 151.1936860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-               "id" : "00060cf64f16375913ec49d25cbb7829d3e08a88",
-               "name" : "Blue Eye Dragon",
-               "reference" : "CnRmAAAAHCk2N8fUrlzGyBYENeUmiodIyVJCructx1R5-aJ4IYCpH4qflb8sa2cFeq8ayD4EQghFGy4i18kDkLeHQDxy6eEoB5y3Uh2bwdw4B7ENabcIOdg2m_jmkquHU8DUavNvsb5Oxam6O8o_9wSta7RecRIQPjGkfR5Mddn1696SJqPvQhoU9PpfMTsBL_QmniAzBzjkECZy2-I",
-               "types" : [ "restaurant", "food", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8676180,
-                     "lng" : 151.1940940
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/barber-71.png",
-               "id" : "3463e262449aeda2b3f1e899a2178fcd42d2c7fe",
-               "name" : "Star Spa and Salon",
-               "reference" : "CnRqAAAAu7IbU_vPz2cWy9NOK3c_kB4texrj9jS3AyKOEYewYiBY_fRlAnkMHTC-FZfffqQWD9SVF974suhoHRDtH0Wyf9By6dkDgYa4Zhdpe-rDJfBfJCQURLHf-3yxtCtDrTzw5Hpzqp1W455Eej6TnT2GlhIQhPkz0LolgShOww_lQA7bQRoU8qDwtLubrCvWSPiUMdjFg1uQq7Q",
-               "types" : [ "beauty_salon", "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.86820,
-                     "lng" : 151.1945860
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "372b98902d4032b2708939131b8bc6bfbce9044c",
-               "name" : "Chao Praya City",
-               "reference" : "CnRnAAAA2WG0P9FFdl77SnAbFeFXzUKwX6_dphCxEO7nSMqDdIeDWVv0RDrEF43dKznO0ZdUGq_vhLIlMa_DxCgGPduSMT1cKL4RJn6N6ZYkvuRlf7Kjeg8oxea8Px5reiKjb-DV8SaN-hqIXTVCM2BRn_GCwxIQ9Z9fsBmOBOswipqkyWV2BhoUtzlHi4LIIr_0Y5ak4eaIc9vRWG4",
-               "types" : [ "establishment" ],
-               "vicinity" : "Pyrmont Street, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.8653280,
-                     "lng" : 151.1943190
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-               "id" : "151958c1816f1ce7f4c8022325792513fba50743",
-               "name" : "Kookaburra Sailing School",
-               "reference" : "CoQBcQAAAHU_BoKuKJn_OBtcoAMsz4wplv_ITpWoZLLuQBtm4I0k5ltSn7EiuUVoFcsexHMZamlyHeBKDGpRPLT3zh-jRAdG3pzZDxLhhV6YTY0bxYZl4mNiX0ga6XjIP0WZOZvIQ-fvSURPq0azb38yeaGPLgwqSCb3W5uAIyrPz51ZCVqOEhBSjVgtGr1xvfk_McKdESRmGhRFX6mlsK26Q6gh7NFNpWoWg4-pWw",
-               "types" : [ "school", "establishment" ],
-               "vicinity" : "Pirrama Road, Pyrmont"
-            },
-            {
-               "geometry" : {
-                  "location" : {
-                     "lat" : -33.85171490,
-                     "lng" : 151.19664440
-                  }
-               },
-               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
-               "id" : "8dbf2c11a8cca5b1457b442e05d006a21969ce22",
-               "name" : "Port Jackson",
-               "reference" : "CnRtAAAAmCafMNaZRqZohXGqh4cYqMRn4GXI_hzQFTbeox7AySWrdhYb3GbrG8LTOx_eZU1OlyxwFNXwNna0fqewPXHFH9ltOeH0JcTFUpzCrWtltmcalYAofU8R2pzUY4U9r8dYBwUcQwmZlwYUzFpdViWa1RIQxhJSShKtxFjX32HuSHuxBRoURyxNWS6gni2vgF_wdBs1ySvJ-gc",
+               "reference" : "CnRtAAAAQk59MT2KB1fW5SGi7aQU7JT-oi8UiwoVl-_5TkQWMJbOYNCy0ktQ6iMM5Q4mhYRNRH9YtMmORfxaXrH-pHGIkMUYHf406b2FqfYaES3vKn4Vrq_fGUpdje-GXJ6UuL9REncn5EOZYTiQRoEaD3hW-hIQok1MDm4_sqFjLcdYaS1CNRoU190z_p2bHf__I46OFYWwPTfMm9w",
                "types" : [ "locality", "political" ]
             }
          ],
