@@ -13,12 +13,45 @@ describe GooglePlaces::Spot do
   context 'List spots' do
     use_vcr_cassette 'list_spots'
 
-    before :each do
-      @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor)
-    end
-
     it 'should be a collection of Spots' do
+      @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor)
       @collection.map(&:class).uniq.should == [GooglePlaces::Spot]
+    end
+    
+    describe 'with a single type' do
+      use_vcr_cassette 'list_spots_with_single_type'
+      
+      before(:each) do
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor, :types => 'cafe')
+      end
+      
+      it 'should be a collection of Spots' do
+        @collection.map(&:class).uniq.should == [GooglePlaces::Spot]
+      end
+      
+      it 'should have Spots with a specific type' do
+        @collection.each do |spot|
+          spot.types.should include('cafe')
+        end
+      end
+    end
+    
+    describe 'with multiple types' do
+      use_vcr_cassette 'list_spots_with_multiple_types'
+      
+      before(:each) do
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor, :types => ['food','establishment'])
+      end
+      
+      it 'should be a collection of Spots' do
+        @collection.map(&:class).uniq.should == [GooglePlaces::Spot]
+      end
+      
+      it 'should have Spots with the appropriate type' do
+        @collection.each do |spot|
+          spot.types.should include('food','establishment')
+        end
+      end
     end
   end
 
@@ -33,7 +66,7 @@ describe GooglePlaces::Spot do
       @spot.class.should == GooglePlaces::Spot
     end
 
-    %w(reference vicinity lat lng name icon types id formatted_phone_number formatted_address address_components rating url).each do |attribute|
+    %w(reference vicinity lat lng name icon types id formatted_phone_number formatted_address address_components rating url types).each do |attribute|
       it "should have the attribute: #{attribute}" do
         @spot.send(attribute).to_s.should_not be_empty
       end

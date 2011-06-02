@@ -6,12 +6,22 @@ module GooglePlaces
       radius = options.delete(:radius) || 200
       sensor = options.delete(:sensor) || false
       location = Location.new(lat, lng)
+      
+      # Accept Types as a string or array
+      if not options[:types].blank?
+        if options[:types].is_a?(Array)
+          types = options[:types].join('|')
+        else
+          types = options[:types]
+        end
+      end
 
       response = Request.spots(
         :location => location.format,
         :radius => radius,
         :sensor => sensor,
-        :key => api_key
+        :key => api_key,
+        :types => types
       )
 
       response['results'].map do |result|
