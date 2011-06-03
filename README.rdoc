@@ -52,19 +52,19 @@ Then retrieve a list of spots:
 
 Search by a specific type:
 
-	@client.spots(-33.8670522, 151.1957362, :types => 'restaurant')
+  @client.spots(-33.8670522, 151.1957362, :types => 'restaurant')
 	
 Search by multiple types:
 
-	@client.spots(-33.8670522, 151.1957362, :types => ['restaurant','food'])
+  @client.spots(-33.8670522, 151.1957362, :types => ['restaurant','food'])
 	
 Search by name:
 
-	@client.spots(-33.8670522, 151.1957362, :name => 'italian')
+  @client.spots(-33.8670522, 151.1957362, :name => 'italian')
 	
 Search by name *and* type:
 
-	@client.spots(-33.8670522, 151.1957362, :name => 'italian', :types => 'restaurant')
+  @client.spots(-33.8670522, 151.1957362, :name => 'italian', :types => 'restaurant')
 
 === Retrieving a single spot
 
