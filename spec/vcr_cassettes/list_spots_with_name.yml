@@ -1,0 +1,315 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://maps.googleapis.com:443/maps/api/place/search/json?location=-33.8670522%2C151.1957362&radius=200&sensor=false&key=AIzaSyCLMybjdDnmUhhLcfangpJnjT3b-AkSyIs&name=italian
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json; charset=UTF-8
+      vary: 
+      - Accept-Language
+      date: 
+      - Thu, 02 Jun 2011 22:17:21 GMT
+      server: 
+      - mafe
+      cache-control: 
+      - private
+      x-xss-protection: 
+      - 1; mode=block
+    body: |
+      {
+         "html_attributions" : [
+            "Listings by \u003ca href=\"http://www.yellowpages.com.au/\"\u003eYellow Pages\u003c/a\u003e"
+         ],
+         "results" : [
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.86976600000001,
+                     "lng" : 151.1948640
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "97f233524ac260f0862f599d0ddfe75a2d4402af",
+               "name" : "Talentino's Italian Restaurant",
+               "reference" : "CoQBdQAAAKqtytHFrBsFxjD3AM0O8UUc3BHY6dwsNCUivspg8P7dEVg5JMwMy7sk8J4ZD6xMe9gSsRgKS42t1g6LaYLJdfBSopi3Z5oGZJrEyUclpTvWlj02oHxLFcDRH97hoMTMch1ZL_mp0vW_Fec_KXh-3_hR_b-WB8Cx6NWX0z86ErO_EhDlHoIC_NB-wTpRdf1-EOShGhSppCZ84O0fM6ysvzoMM7eeWDcYsg",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Union Street, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8669770,
+                     "lng" : 151.2012720
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "4789044d6351a19d6100ec77c35e70c9f1a13403",
+               "name" : "Casa Di Nico Italian Restaurant",
+               "reference" : "CoQBdgAAAECUvVycFk4lDN1CaVXyOTH6RpagUebL0AICb0o0HjhmRUnHJaTmsYRCtGHrbA5l2ZUKZ2gtnyo7i4_zJ9pTP774b1LY6hFCfFXBih6Au7-7u1hS8Tb6PsEfOg8gZyYssuNGap9tpEcNR5Ztpw9G13ZEbp9vVB6PKsH69_EGeV-8EhAxjrxC22e55lO2vf4UxRMUGhQgRtLwDfLJ9SRkLo3ntC__MpWFgg",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8710340,
+                     "lng" : 151.1962070
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "6481253508cbc119313027e200e8837d750c00c6",
+               "name" : "Libiamo Italian Restaurant",
+               "reference" : "CoQBcQAAAKN6Sgkzlh20fDLR0wvjmxIsXlsDPs7m3KTwP_yRqQ-J4kD7x_Z4FuKgF7IlSorE644PfI3sRqxKboxNgmaUqFAVA1aINzIzjhm8LbyxcvK3Djc7Q5PinhMwKUzRgcabWj8pPi2Ku88J6yF7BlEwxKyLfBFENYHpR_1N4I81XAU-EhDm0wqSPQJ3buSTB432x6h0GhR13n8Ch-TBITXziaAtjFkhGRdScA",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Bunn St, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8666280,
+                     "lng" : 151.1922910
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+               "id" : "954a594077141a5f37fa1fb4340988bada9a93f0",
+               "name" : "Raffinato Italian Restaurant",
+               "reference" : "CoQBdAAAAPjCfAtvpcgWjZBI8hNBYoOZbt_2iVyZ6niz-IIaWlYTs8B7ZooNpc8ItAib04YrMnCxl6w_iVaj1sI-8dqN9j12T8tmLHw7LUp0QlsYC2orD5Ro75sy1k4T5xCBBzykO4jhNvFjwAkjYikhslGac9wWPmVhJf8ndaTp_4AAzXwqEhDHlGyNIxZzmps2Dclwbhg-GhRh-df_YFItClX0tGTXIXe_Vi_oHw",
+               "types" : [ "establishment" ],
+               "vicinity" : "Harris Street, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.871180,
+                     "lng" : 151.1959450
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+               "id" : "56f95e7c803125fb84bc8e91ed4adb71ee8bfc3c",
+               "name" : "Zeffirelli Italian Restaurant",
+               "reference" : "CoQBdQAAAPdEF6-omkN5-fAO_lLgtvoQiTHd9a88ZS5I4X633PASHUfC9aUPcquwynuPLztFIks-M3DfqmyXHN5NxW7kV3GCY5QqK6ef5z5cagYS0c-nzMCCLAYu5bM5JqzC6ergprukcZbYFAIjO-CN58ubO8sXGhHvMMpUnuebYWLIvMyUEhDZ6lvrZd_vfn0gg9TC1oCJGhS0ElAlJBPhg0MsilG1p_9dB4dEnA",
+               "types" : [ "establishment" ],
+               "vicinity" : "Pyrmont Street, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8705940,
+                     "lng" : 151.2057780
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+               "id" : "67d5dd2c676b39ce36cc0978e84fff1b3f0f02a3",
+               "name" : "Italian Chamber of Commerce in Aust",
+               "reference" : "CoQBewAAAFZ-NYNtUoI95WI59uXathXfzUzZP5rNksNlf2iODmbin1k1dyKYIqtH71xHpA9jDgds2gdC9H1mFP0ctTjW09yCJrRiiy4h8_0lHgrvLfz9C5N1fYgq_12fvnThkQDMksIuVQdkCjZUCZLY76HYyRj-5h9pvuIfiv5ufKFMuQP6EhBTLYpO0MBAVKGFtHj9UWkTGhSfUsec1M0HiKcGnuN7gsvkP_MXpw",
+               "types" : [ "establishment" ],
+               "vicinity" : "Market Street, Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8681670,
+                     "lng" : 151.2076320
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+               "id" : "373601f6514769adf4061cdce642d6b8a0648bdd",
+               "name" : "Intermezzo Italian Restaurant",
+               "reference" : "CoQBdAAAAIUZU5w41EQMwFnw1VFttx3bTOfCm0t8VY-kEqw9znSSdHDjQWn046NZ0BhDDXI2qSMrYeK3a0MzGYN7qMsmWvuwnU1ouB48pqM4xbCoRKMgWsTgz7vW2pYWYN3sPNOuCzTl2eZoQvoVBkV8H_oTrv-O9s9WSwbW0cnVpTBh_G3wEhAmshPAQxvZRGhpx0RljV6yGhQddqnd-aK3PFzpHeNfzXqwz8bp8g",
+               "types" : [ "establishment" ],
+               "vicinity" : "Martin Place, Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8707630,
+                     "lng" : 151.2064490
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+               "id" : "6fd9d991538cfb81035bcbce9c39d6987c603db8",
+               "name" : "Italian Government Tourist Office",
+               "reference" : "CoQBeQAAABGFS_s8dg-9tEpFukARn6uwp9IRdMkp6uVx1GKRhI809SD5COZe7x7xRXOVdmqZOIBx0cVe1GrOcO59tKxf2535FPL0sSbfie4_vPAtNStMQtLX6WlMTomCADhsknVcyFroAPO_ccoBqZ2L-mlLFGWZyFQt3NuPg8l2MhQhG_LXEhA2Ghz5XCmkujhEOPtBLT3FGhRNwW9dHJdXHF3tnhcb7z869HuIiA",
+               "types" : [ "establishment" ],
+               "vicinity" : "Market Street, Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8624870,
+                     "lng" : 151.2094260
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "e18dd0d80c53e48bc479afe565d0718f25876e5e",
+               "name" : "Alfredo Authentic Italian Restaurant",
+               "reference" : "CoQBfAAAAHK5Y-lIv6cfx35oiGKAIVpv7a_Rslcp64MI2n0jGF4EyCCyOeo4mOJTUGC2_4W7Mte2hQhPPsbOfLLicBj2mE3HEAPOmi3WUEmEuvACzepfF599umod4Uv6IPXNGceSg-FLakNEDc7f8xetFmhKBD8xcH688JjkMZXtoJfSDpLDEhCjF1U9XjQzUyfiYYeZXGQqGhTb3bGqCc_wswuIFbhHRcrAfgJQqg",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Bulletin Place, Circular Quay, Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.869360,
+                     "lng" : 151.207120
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "eaeaeca1f05368781bf4b97e8d6a0ac30364f9e3",
+               "name" : "The Olive Italian Food Bar",
+               "reference" : "CoQBcQAAAAX7qNisIzKlilXh73RicABRMPpYKU652MGIHXlFahjM_PgmLJ85hmFtcivb3bBCCNzEPONwRLDcvq0fWPKCLfiaeyuFKQWuZvMgRYzVjkjQxMCNSFJ-To2Hc7VB-tsQ75aav5duTr8qRuGemKyGzC_1aMby1oOegTuaVt3OjAocEhAFtJd5pd7a9S0JcYGwpkBRGhRhnCmVqBV0lpKIqfGD0RyIbWvHNA",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8585580,
+                     "lng" : 151.2082920
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "68283f977228dc856ad6927fc3fbad7d58658f29",
+               "name" : "Caminetto Italian Restaurant",
+               "reference" : "CoQBcwAAAJ1LOR9FfE0Y9BNCSZ8am7jAZeKiJbvSWJqC3B4ohEwDmOMsRB14E93pBln2_ROgCFdQf3tCe-uKu-LmC-5acqnJBZk_nbVCjdjQcODEIF8nYPDW2azfZi3eqKORc2cym0T2HZyIJ-EgFWto-c4HNYJjvwx2Ss9ED0-DIW4bmsJCEhC3H-8SaeNtif2laN8I3nj4GhS2JAJ4Hk3bpcmji7H6_bfQkVJYqg",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Playfair Street, Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8572870,
+                     "lng" : 151.2098430
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+               "id" : "19c6eb009c25f6d3fb04f6f3e92b74f140c667f5",
+               "name" : "Italian Village",
+               "reference" : "CnRmAAAA8m-QOwWczt2BsT1LBxWExHgNOXszMzz4GdwKrA8LlJVrGl3Oj-pvjF5vJeiEGKxdJN8sdCOI8bfiwKHAmR3Fv28-kGvzze3C6emDtf2N497MSnWoF29NyYhnhodwQimmj1nUTRO8VEk6VFyKIwnt3RIQMAH6M6Ypxa3JFPbL3iktxxoUYZKaqm-Iv_sfSg8eRSPZTsZMOaQ",
+               "types" : [ "establishment" ],
+               "vicinity" : "Circular Quay W, Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8627190,
+                     "lng" : 151.2102840
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/government-71.png",
+               "id" : "edb263d74ca07238fbcfbe51b54f842fb9378e16",
+               "name" : "Italian Consulate General",
+               "reference" : "CnRwAAAA-46ewjaf3pP9qtxMomoso1rBGYpJOP_VWOR_IMtwWApC7rpoEw4LzAzVDn5Y6b63j6YdwtsIVA4TheivBL56WSB-xvrS5Hokqf1pbaI7fkBWLR8KWnEDay0wqFvK63U0pArtONeGx-MnNyXwjymgYhIQFow8om96acGiURj6_sxX1RoUoz9FbjOQuIehEssQUMYogDq9l1w",
+               "types" : [ "embassy", "establishment" ],
+               "vicinity" : "Macquarie Place, Circular Quay, Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8621010,
+                     "lng" : 151.2097290
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+               "id" : "0693a0294b5eecb55f53a3f8d977278b1c3df039",
+               "name" : "Italian Cultural Institute, Sydney",
+               "reference" : "CoQBegAAAGIcB7orKcj1lPEsTJecEApIfPQUn-st6AHMRd5DHYmNVkiQaOyuhzhU0v2Fu5tzFTKJbokF71ajRUd-2LajO5GsH_CXfsGRY087K5h6vfGziRi0ZFZ4X588XfUCD4Pive-a_HjGehZegFYIh_kwXGn905cL9VdEtCndZ7nTsH5GEhCzD9uWq7H_W3eiXPjozV5IGhTu4GhJm9h9OgKPk9HfOuQGEwGvxQ",
+               "types" : [ "school", "establishment" ],
+               "vicinity" : "Macquarie Place, Circular Quay, Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8698280,
+                     "lng" : 151.2101770
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "7fdb61425f78bb612b470283658c8ca94133b520",
+               "name" : "Campari Italian Restaurant",
+               "reference" : "CoQBcgAAAHa6QHPwbKsI8-Ir8FbVeeYDya8GnJxXh_XjEwS4u6nesAr3C_dWy4Rau_UiFc-FO-kTaMcHGkxMX744JVuFlOTjA9R1sU_pi5N0MpE9MGKMqIk89WBWSXX7yfbzl1UrMm--hDPpBE218csyuUqfFlEevJ2YjIrHEZfgZj_SpjbEEhCLRH4MYubG_9voFo0ryanjGhRapX1xI-mxMSU9Kec9gBpjzgVHrg",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Elizabeth Street, Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.874450,
+                     "lng" : 151.2083420
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+               "id" : "ca910ff6818784511a67696feb992d804a475220",
+               "name" : "Antonio Verago the Italian Tailor by Hejda",
+               "reference" : "CpQBggAAAGyI1EEkuo8KKChcn8ozDwvSXNf_cPMpp321qXH67-25XYTGRBIwrXkODc3P5Lkqy8e0aPRERxJQwR0QPp6M6ljnoiPO48LD0QBgBj11TzSbFQu-p05BlMUFMtq6tr6kgkptYQfrdwili9t0jaSNjhsGB7TiKlKsGtPHzwNEFkJMIvBfCiROLAktzkRWX_4p-RIQXRvW_2_8kKQqEgev22hcfRoUjlwv6KJAZRF3Lg23EpxID5DZDao",
+               "types" : [ "establishment" ],
+               "vicinity" : "Bathurst Street, Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.87940,
+                     "lng" : 151.1959380
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+               "id" : "40b71f2937a97f9d562d8472c6cfbee5e64d4895",
+               "name" : "R & D Italian Jewellery",
+               "reference" : "CnRuAAAAzwRBvGTqrorLU-TH-3KvQAVuGIADKkvzGmheig4Kku3K58kNTPZeq85NvbZVJwunHzpVYp9dDY5cXZjFWPuQR1zcjiMHSUPRd8IqWkLabKVp5qEpAXW6JUXGzv7ksKC10Ax_2onU6PuVK-L8RQN73RIQJU7Ty7rKUrnM4E-VjJpPaBoUlUH8bkO19Pj6GF1zmHQpsX8TyZg",
+               "types" : [ "establishment" ],
+               "vicinity" : "Wattle Street, Ultimo"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8664080,
+                     "lng" : 151.2116690
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+               "id" : "65e1b40227e792feb1991f7ccf7dad64b469ff82",
+               "name" : "Manzzini Italian Menswear",
+               "reference" : "CoQBcQAAAB3ukz-A-HCmKH74zMiitSOHbJea6GcZdekbINhjNDwDQND20rLV_D9Z9CnYkf1hTYuqKlknZumO38evLkD018BLOk2fiBcu1mYrWudKr6gmEPuPpr8dsw1vdOYfC6LSFXAMkfcqb6pjcUvsDcF_nFpbZJ1jKVldy-pCyK-v_rOREhDQQv9g1NP99VvjUz-yDI3sGhSik57uxdeFIHWWELIbze9Vm0bBAw",
+               "types" : [ "clothing_store", "store", "establishment" ],
+               "vicinity" : "Chifley Square, Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.87559299999999,
+                     "lng" : 151.2148490
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "7f5384c5752235c08fee21082fe9bf44cfb1e2f8",
+               "name" : "Italian Restaurant Giardinetto",
+               "reference" : "CoQBdQAAAL5L3Sy3P1b5vBXwmEQlahxkmQ6muw83qS5UcqkJ04Zmg0JkWoi5AdbRcUov6VFTna2Ue2XDt7clvdYbXZBndz4tLMgjXbm92iLXrdQOZ8pv2Z4SrFahHEzIQwBFx_CojJ0P1szqPc8WyH7oRJsC4ZNJ8Y_VM1ZbwHouM6TgLLrnEhBBkxkPxO0n12zaoyqokLJxGhTlK8U9mWFfRDyWYxo4eVIm7dWekQ",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Stanley Street, Darlinghurst"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8769540,
+                     "lng" : 151.2136970
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "445034ac27fafd2fcc708f7f5a2206b63b5aa729",
+               "name" : "La Pesa Trattoria Italian Restaurant",
+               "reference" : "CoQBewAAABvkbdceOlBgBYPdQGyZMcC01R5IJfymmqTdI7L4MQyAvDQho0CpBJAh4NGQpyuZXZxOOZxTUmBGtWUG7pjO1wIFb5d_bbPT2RZAyQpsDCQgEZ3wxT5ufyC695JxXAFljhBdYVdGMgMU92wQZ8Mg_UA8E8E_DlxMJjRLg1GKm1awEhBR7rhSo8VwU7GKGm-77YY6GhQRMfmm4kQEFF6xUFqU3OeflDrkFg",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "- 174 Liverpool Street Darlinghurst, Sydney"
+            }
+         ],
+         "status" : "OK"
+      }
+
+    http_version: "1.1"

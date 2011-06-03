@@ -1,0 +1,315 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://maps.googleapis.com:443/maps/api/place/search/json?location=-33.8670522%2C151.1957362&radius=200&sensor=false&key=AIzaSyCLMybjdDnmUhhLcfangpJnjT3b-AkSyIs&name=italian&types=food%7Cestablishment
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json; charset=UTF-8
+      vary: 
+      - Accept-Language
+      date: 
+      - Thu, 02 Jun 2011 22:27:33 GMT
+      server: 
+      - mafe
+      cache-control: 
+      - private
+      x-xss-protection: 
+      - 1; mode=block
+    body: |
+      {
+         "html_attributions" : [
+            "Listings by \u003ca href=\"http://www.yellowpages.com.au/\"\u003eYellow Pages\u003c/a\u003e"
+         ],
+         "results" : [
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.86976600000001,
+                     "lng" : 151.1948640
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "97f233524ac260f0862f599d0ddfe75a2d4402af",
+               "name" : "Talentino's Italian Restaurant",
+               "reference" : "CoQBdQAAAKlLTON9i0qmM6ag2G5MtHgJDyWX3vp-eJQNESIRTXZIQ5svYI7tioxA79wqOhulsMbMe5kNTfaUJSZkc5C7vgWn7DIhIEhQEip_0ZKazl3dpJSWHITSR3YNt9AVh0-SMzjfaFNaQ4a77NOkB77tMtSQ8CNCoMTGZJBp1f3ekkAOEhAlaGu0bpXroBlZeWwPnI3ZGhS7QFrg_wX-Bz-3--nKqtbSR2H9Sw",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Union Street, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8669770,
+                     "lng" : 151.2012720
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "4789044d6351a19d6100ec77c35e70c9f1a13403",
+               "name" : "Casa Di Nico Italian Restaurant",
+               "reference" : "CoQBdgAAAHkO03r3xS-hdlBCp7k0Ov82UtOY_S4rXjLCgonoDJJyD2PD2GTPaLpaRa-fo3auIevH9TajZJuUIH1BecR7flTnf22HUWnMfp231hPqmWtreH_7B6IaTtYTCE6x5DzKW8iEVHBJUL3yoUwDFYc8vSI2WMBi4nNAd_wwPPcTpwUiEhBNEStrof_U66v6GxzgrzP3GhROVi1olYF5tkyXjCByPWRoVxsGQQ",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8710340,
+                     "lng" : 151.1962070
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "6481253508cbc119313027e200e8837d750c00c6",
+               "name" : "Libiamo Italian Restaurant",
+               "reference" : "CoQBcQAAAHn67N7ldfZFaBX7zJIAOcA2v6hAnX80fM96w0_FCxYvP_NIHiUeAscHRXbe2VGS9qB1d1Lo5a_c_w7Tw2ld6FITx460-dNw-NFJ0ASzNlAU2Bp_6OQsAdSz_gyFbGOgq1m3KsDR8eHdWKjTA4ZlIeFLyvZh9v9hIn81bdecIlRXEhDGe2YS69Q3oDF5wZJIKw_RGhRcJtmvo3TCwG3IIXWqGT2_qh-BHw",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Bunn St, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8624870,
+                     "lng" : 151.2094260
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "e18dd0d80c53e48bc479afe565d0718f25876e5e",
+               "name" : "Alfredo Authentic Italian Restaurant",
+               "reference" : "CoQBfAAAADsjLMnBYUZoH57TR8LqelmwfEuZX8JAxtRzmYN3iNVyZQVxAuhqn5NCmPFlw0vWPgIwhskHmgaISIdhAKMD6RbHZ22_csuMKZk08XLtEZNJWJWbfY7DGM8LAMWSsALJlH2qNTQCsQy6xgVWy65sjuoJ0FsJ2t21U-6_KbfnAgFNEhAp-ZdARLXZU9LzjLaSHokIGhTsFMJj2at2GE8ZaRbpc-qm9JFmlg",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Bulletin Place, Circular Quay, Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.869360,
+                     "lng" : 151.207120
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "eaeaeca1f05368781bf4b97e8d6a0ac30364f9e3",
+               "name" : "The Olive Italian Food Bar",
+               "reference" : "CoQBcQAAALEn4yKBfEPjouk2mVCxOjKpGmBQ3_whRLFWUQdc0WFcB5m_PbhDrJQwNo520xQL_KbMjfbl92Nl-8q0WwNmdoABtdjXqDnHcVCiqpWYi1KsezLd-pq41KDYaPmmfMjYPyXEWoQgrKDDO67HRon7aWn8usY4WaaqC8mJZTmfqRs4EhAOne1gdH_WodsJq_lxUC9ZGhT6Uetq5N6Gc-w9L3mSeGfsr1S_oQ",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8585580,
+                     "lng" : 151.2082920
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "68283f977228dc856ad6927fc3fbad7d58658f29",
+               "name" : "Caminetto Italian Restaurant",
+               "reference" : "CoQBcwAAACCkPFjsWbIAuTrIEA6_rcvQulLLWrTPW-z9PO1010C0meq1SDdOhHUEILgmPNwg5jRFLfvibgvopghZU2BXMzm0DZjjzUEpqXJMiXqki6E2Z9sP3bmzfDshf-sHoxGohn3fWmi8OecWIrB8UM6pWZnOOZmG2iM4pL93V7wquoNrEhAoIrzMMr_cvWo2zNjEhLMwGhQEyPrkxmt3KH9V6-1UFBlyIoYIGQ",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Playfair Street, Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8698280,
+                     "lng" : 151.2101770
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "7fdb61425f78bb612b470283658c8ca94133b520",
+               "name" : "Campari Italian Restaurant",
+               "reference" : "CoQBcgAAAN1Pzx9KjxwoLHJKfKbzxqqqANIaSlB4rcfeAfOJ-B-_JcRp6KjF9Q5f3NJFos4i8o0lFP4BpQJ_2TPvp9U588nKW_OsFrE6o5AVwxVx-gsr8nFAdWLnkCwtzzwlK2DmtTGIICslBVGnxFfS2bI6FFTjF60hO5VC9kepuqhazdrnEhAL3o2TXddZhXV55YiiHaI2GhQmy2zCc1pbEFZQgcwp_br1KSfZrw",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Elizabeth Street, Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8769540,
+                     "lng" : 151.2136970
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "445034ac27fafd2fcc708f7f5a2206b63b5aa729",
+               "name" : "La Pesa Trattoria Italian Restaurant",
+               "reference" : "CoQBewAAAND3xPGLUNjpHz1EpaT3HyqGKyfdHcatY3U633CzPa2GYhpFQOLZPE6Mx7yGDeHT1-hCx7pvP0llhrUdaPRjwkQsQ3a5NlO-iZ7eShv2QoLRT49fkgnouxim3dmcjJFBragr7s4JFC7ELYkB7lQ_nSkNvsASVvjzhY9Mp6tbbg4TEhDamuMvtGg9v_zbzgUr6AwyGhRtCzZ6NQHzpHGbdiaHckniCTHRtQ",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "- 174 Liverpool Street Darlinghurst, Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8783770,
+                     "lng" : 151.2148130
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "e377168e309c7d67cefe5cb7b58c4d96a7d10cb4",
+               "name" : "Burton Italian Restaurant",
+               "reference" : "CoQBcQAAAIfxY3o9HsBgI0cvifBPBmDtHe6wo2FGYkBwF16ARpSkpnZZ2H8fdrnyovEugxsI_eIt4EmGpz6T3_LKVuWso2MaTTtFCXFFpkORB_3or6rVYv4ivGxHmFgESx1A1xA3lXP3RvG2vGNOeJfFAJ8tvHdMmKCEVEvdv85SaMcyT0XGEhDQPjc9c2-thDG9Hk7oX5rxGhQSK63num8yoBQezSeBVSvatUFpkQ",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Burton Street, Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.85689900000001,
+                     "lng" : 151.1788540
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "23172925549339f524dd27349724ea759bb1e6b2",
+               "name" : "Il Cortile Italian Restaurant",
+               "reference" : "CoQBdQAAALYy3dB_MWbk-83uydRx1ewr4JUqWCA7Ri5IeK-RXre-zCxHZvs7_hgWslzPtNhJNg12UzvtbmgQ7qWsd0_IVTIVWNdhDKKL9gBIGFHCTJX_K3MFuRnY4Aj3P4qGQogV367lIdAcydjBV_RUC-kGM3EnOw2XCfDbp5GKoazmepzhEhAgWJ6KX7LF7qWCj4GQG8bGGhQ0g4Z9AujGhnxhaB1EXfaxfZfuKw",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Darling Street, Balmain"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8733440,
+                     "lng" : 151.222370
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "492b97a40c696d7e34ca753b7977cd7d59dc47da",
+               "name" : "Bootleg Bar & Italian Food",
+               "reference" : "CoQBcgAAAHWpKcN0eguGkCdNtqLNZYhMJJwQA39fJj6c8P0kutoXHNsbFW5TfTuft2y1A3aabWSOgbYVWdnTBSWbaM1P9WwSztdmVcvjf9NWPWd1Hi0ZIUYoajNnWY6cyuoEMqw4hPhiOgXoYjh_96xmqiPzkNrCW5ZqZ_2jVnYJG31oraZ-EhCwHvOnUZrTlsPpqh-4ZLH4GhS9ZesUOhvl00EmTkdsT4MIuWc7xA",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Victoria Street, Potts Point"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8446260,
+                     "lng" : 151.2045350
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "2b572ea8ec00f5ab10d774efca77360e3dfcbcdc",
+               "name" : "Giuseppe's Italian Restaurant",
+               "reference" : "CoQBdQAAAPzCecX7zSPECEQPaKzAw4NAQex28e6sO_D9eA-ESsz4uErdz4Ctd-GvPa8IcwOrTiEg8q6rhkrRBFTBdFjgUqGPc6eMor4OiOautzrW8PE8iEi-uKDVcEhSlQ9h0-JTZx7s6urlTT8XglkW0sVtK7tMvW2Wm1K-0aS6zjf1Do9vEhCOWb5nao3bkIUSXB1KzzUyGhRaF41q0eUIruHf9NeoizXXxtMrHQ",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Blues Point Rd, McMahons Point"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8661940,
+                     "lng" : 151.1735190
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "f902ebba26bc5e6cfd43955bf808351a9d72b5b5",
+               "name" : "George's Italian Restaurant",
+               "reference" : "CoQBcgAAAHoFKJpWi4auB7raFV49p4dPcmKEgzXshcxA8aAo2fER3mKvK0RtGxjs6NyMWqmZIVd3ioPKIYw7k1bdNDhz824ia1Me6DWHXUNwK2MOzwYnYtVUlvPXDEdYZ0Kh0g9pO7Wg8cMS0UWDoLlA7lSw50eOfro8ScvVS6NbZrdELzbnEhBu1ub00l3J34Kdq6gv0B7AGhQuK_ZUsD9l6dJQlMQummuxj5qupw",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Victoria Road, Rozelle"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8886950,
+                     "lng" : 151.2134760
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "f46c4715213ee0fefead8a5786cffef329299781",
+               "name" : "Essenza Italian",
+               "reference" : "CnRnAAAASiKX91WNX18CcThaG8i2pIzme6TBJalcFrzi-crzUpb2ePU12ISDE1LG59Go8ecqXAsHczhXORrIKydcHAIPW42HhMvjDCgyQnabBYQ4FLRpGiSKU-d0x5imnl0UYSgLqXVJhfNGxN4ztluCvPJJIxIQGhb93Il7sgVamSIYzyCDAxoUWCHbhIZq5lQc1m5rf6epo9Cda8c",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Crown Street, Surry Hills"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8764240,
+                     "lng" : 151.2278090
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "701352c95bca6a809acc108f4d7d957345b8c5e5",
+               "name" : "Elvis Pizza Italian Restaurant",
+               "reference" : "CoQBdQAAALA22KAr5fsvngzHJsliiWU-Xfwr7eQ0fS5e9pi8khRa1mFAfWlPzHjFIrpYk7vT4vCRS_VyLn1LMNw7QNgUIi4WdpmuTRxdfe3DxGxVRwiswdaT0XkM9l-XGziKfBHr0f4cc18nXR_urPmuzP_UX2MdY-Ov1sqkcKHc7Sr4zE0dEhD9jbvFbFOsGhL6INJi0EwXGhS5EnlnGZ4e1V37INNxFchVinG5yg",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Bayswater Road, Rushcutters Bay"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8926570,
+                     "lng" : 151.1868540
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "801641ff108d790392e04f466bf5ff327596a2ac",
+               "name" : "Rosalina Italian Restaurant",
+               "reference" : "CoQBcgAAAAGpUMRqiRUpMehcYwgR5x4iftHVnVlLSk3y1B0NFmseeafawK2fqiNv0vDa404i1jWxa9NGTl4EzcI7ITytrA527vzz7GD0rNjq9Sw0ELNV02KDICPpWhjfodY7L3hRhQDJiXjFOdADxvaPXjAlpwibZXPqasu12gpg_eSk5FzBEhACEixsv6ayQ2iZDc_CTUH0GhQ19Rb2RJEA5AoxfsGhhgEViN7chg",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Crnr of King St and Queen St, Newtown"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8578640,
+                     "lng" : 151.1830590
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "2037407e814bc8e15eb3f451d155b7cd8b7520f9",
+               "name" : "Gigis Italian Restaurant",
+               "reference" : "CnRvAAAA53vDur89mS4VaGg4CK2nBON0BxGqb8TYWk_Uw4eZ6cYORUVCntpWzOW-1JNRD2thgmg73lkByAXlbVEsAkvDplY-iHqfc6dcg_CHnuIlKvLWbq-XalJShLxnS6CCpj4MIeS61-CPD_XAQXqTazc9ZhIQZo_hwlf5hsqiBNI8prGxChoUNzWe8aBaduFLoZRLD492sXLCBu4",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Darling Street, Balmain"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8349760,
+                     "lng" : 151.2075190
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "acba3a2e6be05c3b464957197fedf1f00dde0ea3",
+               "name" : "L'Incontro Italian Restaurant",
+               "reference" : "CoQBdQAAACd_J4Bzt4dCJDBz35AkhVl0n6xMOaGqaLxIcPowu_Yd8IqLjs1SIQF_BIN77SncWBuKnLHlEGuBaE4dSlmc0d7t87_KECvbeUf5uPfM2vSXHd6pFL1TlwtN_s1OZ6K8O0OM9wrSyG9XNkPnr2WydXsKq5I5z0ETuHRnIIv7PLwYEhC-9olrekfuDEh7taJnCdaXGhQw4B3o2YbXPrwmwVO4UWXzDragmA",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Miller Street, North Sydney"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.895340,
+                     "lng" : 151.1820020
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "a341c9ea53f282d4db59034d039869df685833fd",
+               "name" : "Cicciolina Italian Restaurant",
+               "reference" : "CoQBdAAAAIQoduC1cJPwD-kZ3DtlB1Txtrka2crqO4bA_dDhh06YB1_9qTVugT7U64Rz9yj4A-N3eCKcIXejw0uDK8CMGLSJr6NQNPDQBV2pqwo1ds34yrjZlerJcdUWK-9Yp1KtcGsOxREEe7iA0lFjBBtZh_t43JQ78BvhiGr9LnWML_yVEhA_rK8i5jcCtpVThTZgkDRUGhTwZeTbh0NQQ8ugSL6ClG8X-gHnNw",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "King Street, Newtown"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8849440,
+                     "lng" : 151.2328710
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "63044134624be8cc1a87c0f62eda15383a86d7b5",
+               "name" : "Lucio's Italian Restaurant",
+               "reference" : "CoQBcQAAAEOOhvpInkZjvvXXf79OOWb_pr5SOryjDv_LXOTiK1_94zMMoeq1cagbZ0XgQwaoVxOF6z_E2fbEQJ5DNZipYHKaz6DV_gTqlJ8utIxq9HpYp5P0B4Q17nyzXjKe5oIFO4yPpUajC_UbspWVPUhhraycACEf2RxdjFY6dpRuqomiEhBB9tTP7GVOlOMYFcYhOEVkGhRq39TaTLUlmDL8kuyt3HzEOXB3HA",
+               "types" : [ "restaurant", "food", "establishment" ],
+               "vicinity" : "Windsor Street, Paddington"
+            }
+         ],
+         "status" : "OK"
+      }
+
+    http_version: "1.1"

@@ -33,6 +33,12 @@ objects has these attributes:
 * *lng*: the longitude of the spot
 * *name*: the name of the spot
 * *icon*: a URL to the icon of this spot
+* *types*: array of feature types describing the spot, see list of supported types[http://code.google.com/apis/maps/documentation/places/supported_types.html]
+* *formatted_phone_number*: formatted phone number of the spot (eg (555)555-555)
+* *formatted_address*: the full address of the spot formatted with commas
+* *address_components*: the components (eg street address, city, state) of the spot's address in an array
+* *rating*: the rating of this spot on Google Places
+* *url*: the url of this spot on Google Places
 
 === Retrieving a list of spots
 
@@ -43,6 +49,22 @@ First register a new Client:
 Then retrieve a list of spots:
 
   @client.spots(-33.8670522, 151.1957362)
+
+Search by a specific type:
+
+  @client.spots(-33.8670522, 151.1957362, :types => 'restaurant')
+	
+Search by multiple types:
+
+  @client.spots(-33.8670522, 151.1957362, :types => ['restaurant','food'])
+	
+Search by name:
+
+  @client.spots(-33.8670522, 151.1957362, :name => 'italian')
+	
+Search by name *and* type:
+
+  @client.spots(-33.8670522, 151.1957362, :name => 'italian', :types => 'restaurant')
 
 === Retrieving a single spot
 
