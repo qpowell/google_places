@@ -64,3 +64,68 @@
       }
 
     http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://maps.googleapis.com:443/maps/api/place/details/json?reference=CoQBeAAAAO-prCRp9Atcj_rvavsLyv-DnxbGkw8QyRZb6Srm6QHOcww6lqFhIs2c7Ie6fMg3PZ4PhicfJL7ZWlaHaLDTqmRisoTQQUn61WTcSXAAiCOzcm0JDBnafqrskSpFtNUgzGAOx29WGnWSP44jmjtioIsJN9ik8yjK7UxP4buAmMPVEhBXPiCfHXk1CQ6XRuQhpztsGhQU4U6-tWjTHcLSVzjbNxoiuihbaA&sensor=false&key=AIzaSyCLMybjdDnmUhhLcfangpJnjT3b-AkSyIs
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json; charset=UTF-8
+      vary: 
+      - Accept-Language
+      date: 
+      - Thu, 02 Jun 2011 22:02:09 GMT
+      server: 
+      - mafe
+      cache-control: 
+      - private
+      x-xss-protection: 
+      - 1; mode=block
+    body: |
+      {
+         "html_attributions" : [],
+         "result" : {
+            "address_components" : [
+               {
+                  "long_name" : "Sydney",
+                  "short_name" : "Sydney",
+                  "types" : [ "locality", "political" ]
+               },
+               {
+                  "long_name" : "NSW",
+                  "short_name" : "NSW",
+                  "types" : [ "administrative_area_level_1", "political" ]
+               },
+               {
+                  "long_name" : "2000",
+                  "short_name" : "2000",
+                  "types" : [ "postal_code" ]
+               }
+            ],
+            "formatted_address" : "22 The Promenade, King Street Wharf, Sydney NSW, Australia",
+            "formatted_phone_number" : "(02) 9276 7100",
+            "geometry" : {
+               "location" : {
+                  "lat" : -33.867290,
+                  "lng" : 151.2016020
+               }
+            },
+            "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+            "id" : "0a4e24c365f4bd70080f99bb80153c5ba3faced8",
+            "name" : "Strike Bowling Bar Darling Harbour",
+            "rating" : 3.0,
+            "reference" : "CoQBeAAAAAGj2cAGWfLDpkceNZHwDx1KY0TuvSTb1mOO_qHeswUIUsH6OMm40ol_u4WVnTZA8NWxroxh_xF_JHRHVldulZPfrIGANcj6llXZb9Hd0rMzROgh-3jAxGAl1bTGThTSA6BthTQqO8prHCnfW9yB8gfN_F9x_k5dr-wHOfhHt5_SEhDUlaqRxtRHNjY3YXCLPqy0GhQdwdWJeuXmUeJ9eeVt3LgFx-BVzg",
+            "types" : [ "bar", "establishment" ],
+            "url" : "http://maps.google.com/maps/place?cid=8959672613212618319",
+            "vicinity" : "Sydney"
+         },
+         "status" : "OK"
+      }
+
+    http_version: "1.1"
