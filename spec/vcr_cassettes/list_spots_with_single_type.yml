@@ -12,16 +12,16 @@
     headers: 
       content-type: 
       - application/json; charset=UTF-8
-      vary: 
-      - Accept-Language
-      date: 
-      - Thu, 02 Jun 2011 22:27:32 GMT
-      server: 
-      - mafe
-      cache-control: 
-      - private
       x-xss-protection: 
       - 1; mode=block
+      server: 
+      - mafe
+      date: 
+      - Thu, 02 Jun 2011 22:27:32 GMT
+      cache-control: 
+      - private
+      vary: 
+      - Accept-Language
     body: |
       {
          "html_attributions" : [
@@ -53,6 +53,68 @@
                "id" : "73b494bfcecf335ded0577d0adf36bb9f09298e8",
                "name" : "Rocket Bar & Caffe",
                "reference" : "CnRoAAAARCfC1ddezZL4U19PBcvtW81p4wGR-3EeO66XUfMfKiio87FXtLdSW3jb5vmoq3MWQqRynAMMZb6j2TtpfmGsdFSph9huxpUMKkJW-dFO4-7vNguNbvCdLwumOMxD_VsiSByGsxzvOvmDuoXPKqcLshIQ8ydSBcNF6l1hmL1b40QOUhoUMyUKNiHJgczyRdlEXPrt0S1YQzw",
+               "types" : [ "cafe", "food", "establishment" ],
+               "vicinity" : "Pyrmont Street, Pyrmont"
+            }
+         ],
+         "status" : "OK"
+      }
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://maps.googleapis.com:443/maps/api/place/search/json?radius=200&types=cafe&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&location=-33.8670522%2C151.1957362&name=
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json; charset=UTF-8
+      x-xss-protection: 
+      - 1; mode=block
+      server: 
+      - mafe
+      date: 
+      - Fri, 03 Jun 2011 10:37:06 GMT
+      cache-control: 
+      - private
+      vary: 
+      - Accept-Language
+    body: |
+      {
+         "html_attributions" : [
+            "Listings by \u003ca href=\"http://www.yellowpages.com.au/\"\u003eYellow Pages\u003c/a\u003e"
+         ],
+         "results" : [
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.8664150,
+                     "lng" : 151.1945890
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "7501fca2fd726963a0f5b79f8e86a8006b48f968",
+               "name" : "Astoria Sydney",
+               "reference" : "CnRlAAAA7DE3028hOnuXBohAYTqS60aAJCTAqr8Kf72WKn2cx5Ha7u09e_LrnztYX_Ky0spymsIckUblDa2zl0Hm_FIllMIK3sawWnY9UvHW8lJIOHAUV4FJQOirqvbplFBu96vW1vggKdLp2ht0vLcma3Xg2hIQxWhwDtdDKkmZGzncvcwPmBoUIpwrASc7WTPFwilzXCDPSpg3j1U",
+               "types" : [ "cafe", "food", "establishment" ],
+               "vicinity" : "Jones Bay Rd, Pyrmont"
+            },
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : -33.86820,
+                     "lng" : 151.1945860
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+               "id" : "73b494bfcecf335ded0577d0adf36bb9f09298e8",
+               "name" : "Rocket Bar & Caffe",
+               "reference" : "CnRoAAAABn-m84dqbOq4U9aD_IaUgFqJcDIjErbWC55Y_3A4MBp5sCg4U5zjunEUsVtP8FTwGmp-jU1rp0UVNWoEI2kX0h--anhZJGw0nO0hoJvcVQx26TVFDBL2EQKMCgdkAVpbdUuwjzStA0L9FLDCt0IHlxIQzbpDioHtK-WTUWkfn2yOSRoUCouoKZhn0LXzMEMC8ZiQeMXB5yw",
                "types" : [ "cafe", "food", "establishment" ],
                "vicinity" : "Pyrmont Street, Pyrmont"
             }
