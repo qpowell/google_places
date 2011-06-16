@@ -8,6 +8,9 @@ module GooglePlaces
       types  = options.delete(:types)
       name  = options.delete(:name)
       location = Location.new(lat, lng)
+      exclude = options.delete(:exclude) || []
+
+      exclude = [exclude] unless exclude.is_a?(Array)
 
       options = {
         :location => location.format,
@@ -25,8 +28,8 @@ module GooglePlaces
 
       response = Request.spots(options)
       response['results'].map do |result|
-        self.new(result)
-      end
+        self.new(result) if (result['types'] & exclude) == []
+      end.compact
     end
 
     def self.find(reference, api_key, options = {})

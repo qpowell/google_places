@@ -92,6 +92,28 @@ describe GooglePlaces::Spot do
         end
       end
     end
+
+    describe 'searching by types with exclusion' do
+      use_vcr_cassette 'list_spots_with_types_and_exclusion'
+
+      it 'should exclude spots with type "restaurant"' do
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor, :types => ['food','establishment'], :exclude => 'restaurant')
+
+        @collection.map(&:types).each do |types|
+          types.should_not include('restaurant')
+        end
+      end
+
+      it 'should exclude spots with type "restaurant" and "cafe"' do
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor, :types => ['food','establishment'], :exclude => ['restaurant', 'cafe'])
+
+        @collection.map(&:types).each do |types|
+          types.should_not include('restaurant')
+          types.should_not include('cafe')
+        end
+      end
+    end
+
   end
 
   context 'Find a single spot' do
