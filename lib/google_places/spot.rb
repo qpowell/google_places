@@ -7,6 +7,7 @@ module GooglePlaces
       sensor = options.delete(:sensor) || false
       types  = options.delete(:types)
       name  = options.delete(:name)
+      language  = options.delete(:language)
       location = Location.new(lat, lng)
 
       options = {
@@ -14,7 +15,8 @@ module GooglePlaces
         :radius => radius,
         :sensor => sensor,
         :key => api_key,
-        :name => name
+        :name => name,
+        :language => language
       }
 
       # Accept Types as a string or array
@@ -31,11 +33,13 @@ module GooglePlaces
 
     def self.find(reference, api_key, options = {})
       sensor = options.delete(:sensor) || false
+      language  = options.delete(:language)
 
       response = Request.spot(
         :reference => reference,
         :sensor => sensor,
-        :key => api_key
+        :key => api_key,
+        :language => language
       )
 
       self.new(response['result'])
