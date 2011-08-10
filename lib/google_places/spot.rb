@@ -1,12 +1,13 @@
 module GooglePlaces
   class Spot
-    attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :formatted_address, :address_components, :rating, :url
+    attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :formatted_address, :address_components, :rating, :url, :cid
 
     def self.list(lat, lng, api_key, options = {})
       radius = options.delete(:radius) || 200
       sensor = options.delete(:sensor) || false
       types  = options.delete(:types)
       name  = options.delete(:name)
+      language  = options.delete(:language)
       location = Location.new(lat, lng)
       exclude = options.delete(:exclude) || []
 
@@ -17,7 +18,8 @@ module GooglePlaces
         :radius => radius,
         :sensor => sensor,
         :key => api_key,
-        :name => name
+        :name => name,
+        :language => language
       }
 
       # Accept Types as a string or array
@@ -34,11 +36,13 @@ module GooglePlaces
 
     def self.find(reference, api_key, options = {})
       sensor = options.delete(:sensor) || false
+      language  = options.delete(:language)
 
       response = Request.spot(
         :reference => reference,
         :sensor => sensor,
-        :key => api_key
+        :key => api_key,
+        :language => language
       )
 
       self.new(response['result'])
@@ -58,6 +62,7 @@ module GooglePlaces
       @address_components     = json_result_object['address_components']
       @rating                 = json_result_object['rating']
       @url                    = json_result_object['url']
+      @cid                    = json_result_object['url'].match(/cid=(\d+)/)[1].to_i
     end
 
   end
