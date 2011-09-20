@@ -69,6 +69,7 @@ module GooglePlaces
       @address_components     = json_result_object['address_components']
       @rating                 = json_result_object['rating']
       @url                    = json_result_object['url']
+      @cid                    = !json_result_object['url'].blank? ? json_result_object['url'].match(/cid=(\d+)/)[1].to_i : nil
     end
     
     def refresh
