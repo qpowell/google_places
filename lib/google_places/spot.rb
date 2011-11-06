@@ -7,6 +7,7 @@ module GooglePlaces
       sensor = options.delete(:sensor) || false
       types  = options.delete(:types)
       name  = options.delete(:name)
+      keyword = options.delete(:keyword)
       language  = options.delete(:language)
       location = Location.new(lat, lng)
       exclude = options.delete(:exclude) || []
@@ -19,7 +20,8 @@ module GooglePlaces
         :sensor => sensor,
         :key => api_key,
         :name => name,
-        :language => language
+        :language => language,
+        :keyword => keyword
       }
 
       # Accept Types as a string or array
