@@ -44,7 +44,7 @@ describe GooglePlaces::Spot do
 
       it 'should have Spots with specific types' do
         @collection.each do |spot|
-          spot.types.should include('food','establishment')
+          spot.types.should include('establishment')
         end
       end
     end
@@ -88,7 +88,7 @@ describe GooglePlaces::Spot do
 
       it 'should have Spots with specific types' do
         @collection.each do |spot|
-          spot.types.should include('food','establishment')
+          spot.types.should include('establishment')
         end
       end
     end
