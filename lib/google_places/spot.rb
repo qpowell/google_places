@@ -11,6 +11,7 @@ module GooglePlaces
       language  = options.delete(:language)
       location = Location.new(lat, lng)
       exclude = options.delete(:exclude) || []
+      retry_options = options.delete(:retry_options) || {}
 
       exclude = [exclude] unless exclude.is_a?(Array)
 
@@ -21,7 +22,8 @@ module GooglePlaces
         :key => api_key,
         :name => name,
         :language => language,
-        :keyword => keyword
+        :keyword => keyword,
+        :retry_options => retry_options
       }
 
       # Accept Types as a string or array
@@ -39,12 +41,14 @@ module GooglePlaces
     def self.find(reference, api_key, options = {})
       sensor = options.delete(:sensor) || false
       language  = options.delete(:language)
+      retry_options = options.delete(:retry_options) || {}
 
       response = Request.spot(
         :reference => reference,
         :sensor => sensor,
         :key => api_key,
-        :language => language
+        :language => language,
+        :retry_options => retry_options
       )
 
       self.new(response['result'])
