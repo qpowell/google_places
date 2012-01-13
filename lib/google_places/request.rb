@@ -68,6 +68,8 @@ module GooglePlaces
         raise RequestDeniedError.new(@response)
       when 'INVALID_REQUEST'
         raise InvalidRequestError.new(@response)
+      when 'UNKNOWN_ERROR'
+        raise UnknownError.new(@response)
       end
     end
 

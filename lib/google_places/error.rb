@@ -13,4 +13,7 @@ module GooglePlaces
 
   class RetryTimeoutError < HTTParty::ResponseError
   end
+
+  class UnknownError < HTTParty::ResponseError
+  end
 end
