@@ -7,6 +7,7 @@ module GooglePlaces
 
     SPOTS_LIST_URL = 'https://maps.googleapis.com/maps/api/place/search/json'
     SPOT_URL = 'https://maps.googleapis.com/maps/api/place/details/json'
+    SPOTS_LIST_QUERY_URL = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
 
     def self.spots(options = {})
       # pp options
@@ -17,6 +18,12 @@ module GooglePlaces
     def self.spot(options = {})
       # pp options
       request = new(SPOT_URL, options)
+      request.parsed_response
+    end
+
+    def self.spots_by_query(options = {})
+      # pp options
+      request = new(SPOTS_LIST_QUERY_URL, options)
       request.parsed_response
     end
 

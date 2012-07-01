@@ -116,17 +116,30 @@ describe GooglePlaces::Spot do
 
   end
 
+
+
+
+  context 'List spots by query' do
+    use_vcr_cassette 'list_spots'
+
+    after(:each) do
+      @collection.map(&:class).uniq.should == [GooglePlaces::Spot]
+    end
+
+    it 'should be a collection of Spots' do
+      @collection = GooglePlaces::Spot.list_by_query("Statue of liberty, New York", api_key, :sensor => @sensor)
+    end
+
+  end
+
   context 'Find a single spot' do
     use_vcr_cassette 'single_spot'
-
     before :each do
       @spot = GooglePlaces::Spot.find(@reference, api_key, :sensor => @sensor)
     end
-
     it 'should be a Spot' do
       @spot.class.should == GooglePlaces::Spot
     end
-
     %w(reference vicinity lat lng name icon types id formatted_phone_number international_phone_number formatted_address address_components street_number street city region postal_code country rating url types website).each do |attribute|
       it "should have the attribute: #{attribute}" do
         @spot.respond_to?(attribute).should == true
