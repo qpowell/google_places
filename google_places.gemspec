@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "google_places"
-  s.version     = '0.0.8'
+  s.version     = '0.1.0'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Marcel de Graaf"]
   s.email       = ["mail@marceldegraaf.net"]
