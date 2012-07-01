@@ -54,6 +54,53 @@ module GooglePlaces
       self.new(response['result'])
     end
 
+    def self.list_by_query(query, api_key, options)
+      if options.has_key?(:lat) && options.has_key?(:lng)
+        with_location = true
+      else
+        with_location = false
+      end
+
+      if options.has_key?(:radius)
+        with_radius = true
+      else
+        with_radius = false
+      end
+
+      query = query
+      sensor = options.delete(:sensor) || false
+      location = Location.new(options.delete(:lat), options.delete(:lng)) if with_location
+      radius = options.delete(:radius) if with_radius
+      language = options.delete(:language)
+      types = options.delete(:types)
+      exclude = options.delete(:exclude) || []
+      retry_options = options.delete(:retry_options) || {}
+
+      exclude = [exclude] unless exclude.is_a?(Array)
+
+      options = {
+        :query => query,
+        :sensor => sensor,
+        :key => api_key,
+        :language => language,
+        :retry_options => retry_options
+      }
+
+      options[:location] = location.format if with_location
+      options[:radius] = radius if with_radius
+
+      # Accept Types as a string or array
+      if types
+        types = (types.is_a?(Array) ? types.join('|') : types)
+        options.merge!(:types => types)
+      end
+
+      response = Request.spots_by_query(options)
+      response['results'].map do |result|
+        self.new(result) if (result['types'] & exclude) == []
+      end.compact
+    end
+
     def initialize(json_result_object)
       @reference                  = json_result_object['reference']
       @vicinity                   = json_result_object['vicinity']
@@ -84,7 +131,7 @@ module GooglePlaces
         component.first[address_component_length] unless component.first.nil?
       end
     end
-    
+
     def address_components_of_type(type)
       @address_components.select{ |c| c['types'].include?(type.to_s) } unless @address_components.nil?
     end
