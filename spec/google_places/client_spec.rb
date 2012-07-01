@@ -27,4 +27,11 @@ describe GooglePlaces::Client do
     @client.spot(reference)
   end
 
+  it 'should request spots by query' do
+    query = "Statue of liberty, New York"
+    @client = GooglePlaces::Client.new(api_key)
+    GooglePlaces::Spot.should_receive(:list_by_query).with(query, api_key, {})
+
+    @client.spots_by_query(query)
+  end
 end
