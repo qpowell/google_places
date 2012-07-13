@@ -116,9 +116,6 @@ describe GooglePlaces::Spot do
 
   end
 
-
-
-
   context 'List spots by query' do
     use_vcr_cassette 'list_spots'
 
@@ -143,6 +140,14 @@ describe GooglePlaces::Spot do
     %w(reference vicinity lat lng name icon types id formatted_phone_number international_phone_number formatted_address address_components street_number street city region postal_code country rating url types website).each do |attribute|
       it "should have the attribute: #{attribute}" do
         @spot.respond_to?(attribute).should == true
+      end
+    end
+    it 'should contain 5 reviews' do
+      @spot.reviews.size == 5
+    end
+    %w(rating type author_name author_url text time).each do |attribute|
+      it "should have the review attribute: #{attribute}" do
+        @spot.reviews[0].respond_to?(attribute).should be true
       end
     end
   end

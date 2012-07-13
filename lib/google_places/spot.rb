@@ -1,6 +1,8 @@
+require 'google_places/review'
+
 module GooglePlaces
   class Spot
-    attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website
+    attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews
 
     def self.list(lat, lng, api_key, options = {})
       radius = options.delete(:radius) || 200
@@ -124,6 +126,7 @@ module GooglePlaces
       @url                        = json_result_object['url']
       @cid                        = json_result_object['url'].to_i
       @website                    = json_result_object['website']
+      @reviews                    = reviews_component(json_result_object['reviews'])
     end
 
     def address_component(address_component_type, address_component_length)
@@ -134,6 +137,22 @@ module GooglePlaces
 
     def address_components_of_type(type)
       @address_components.select{ |c| c['types'].include?(type.to_s) } unless @address_components.nil?
+    end
+
+    def reviews_component(json_reviews)
+      if json_reviews
+        json_reviews.map { |r|
+          Review.new(
+              r['aspects'].empty? ? nil : r['aspects'][0]['rating'],
+              r['aspects'].empty? ? nil : r['aspects'][0]['type'],
+              r['author_name'],
+              r['author_url'],
+              r['text'],
+              r['time'].to_i
+          )
+        }
+      else []
+      end
     end
 
   end
