@@ -1,8 +1,8 @@
 module GooglePlaces
   class Location
     def initialize(lat, lng)
-      @lat = lat
-      @lng = lng
+      @lat = ("%.8f"%lat)
+      @lng = ("%.8f"%lng)
     end
 
     def format
