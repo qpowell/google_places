@@ -1,3 +1,4 @@
+require 'ruby-debug'
 module GooglePlaces
   class Client
     # @return [String] the provided api key
@@ -15,7 +16,6 @@ module GooglePlaces
     # @return [Array<Spot>]
     # @param [String,Integer] lat the latitude for the search
     # @param [String,Integer] lng the longitude for the search
-    # @param [String] api_key the provided api key
     # @param [Hash] options
     # @option options [Integer] :radius (200)
     #   Defines the distance (in meters) within which to return Place results.
@@ -48,6 +48,7 @@ module GooglePlaces
     # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def spots(lat, lng, options = {})
+      debugger
       Spot.list(lat, lng, @api_key, @options.merge(options))
     end
 
@@ -55,7 +56,6 @@ module GooglePlaces
     #
     # @return [Spot]
     # @param [String] reference the reference of the spot
-    # @param [String] api_key the provided api key
     # @param [Hash] options
     # @option options [Boolean] :sensor (false)
     #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
@@ -76,7 +76,6 @@ module GooglePlaces
     #
     # @return [Array<Spot>]
     # @param [String] query the query to search for
-    # @param [String] api_key the provided api key
     # @param [Hash] options
     # @option options [String,Integer] lat the latitude for the search
     # @option options [String,Integer] lng the longitude for the search

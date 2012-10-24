@@ -1,6 +1,6 @@
 module GooglePlaces
   class Request
-    # @return [JSON] the retrieved JSON response from the API
+    # @return [HTTParty::Response] the retrieved response from the API
     attr_accessor :response
 
     include ::HTTParty
@@ -198,12 +198,12 @@ module GooglePlaces
       end
     end
 
-    # Parsed the retrieved response from the server
+    # Parse errors from the server respons, if any
     # @raise [OverQueryLimitError] when server response object includes status 'OVER_QUERY_LIMIT'
     # @raise [RequestDeniedError] when server response object includes 'REQUEST_DENIED'
     # @raise [InvalidRequestError] when server response object includes 'INVALID_REQUEST'
     # @raise [UnknownError] when server response object includes 'UNKNOWN_ERROR'
-    # @return [JSON] the response from the server
+    # @return [String] the response from the server as JSON
     def parsed_response
       case @response.parsed_response['status']
       when 'OK', 'ZERO_RESULTS'
