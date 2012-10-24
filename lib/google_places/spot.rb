@@ -75,6 +75,7 @@ module GooglePlaces
       sensor = options.delete(:sensor) || false
       location = Location.new(options.delete(:lat), options.delete(:lng)) if with_location
       radius = options.delete(:radius) if with_radius
+      rankby = options.delete(:rankby)
       language = options.delete(:language)
       types = options.delete(:types)
       exclude = options.delete(:exclude) || []
@@ -86,6 +87,7 @@ module GooglePlaces
         :query => query,
         :sensor => sensor,
         :key => api_key,
+        :rankby => rankby,
         :language => language,
         :retry_options => retry_options
       }
