@@ -6,7 +6,7 @@ module GooglePlaces
 
     def self.list(lat, lng, api_key, options = {})
       rankby = options.delete(:rankby)
-      radius = options.delete(:radius) || 200 if rankby.nil?
+      radius = options.delete(:radius) || 1000 if rankby.nil?
       sensor = options.delete(:sensor) || false
       types  = options.delete(:types)
       name  = options.delete(:name)
