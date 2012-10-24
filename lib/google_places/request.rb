@@ -1,4 +1,5 @@
 module GooglePlaces
+  # This class performs the queries on the API
   class Request
     # @return [HTTParty::Response] the retrieved response from the API
     attr_accessor :response
