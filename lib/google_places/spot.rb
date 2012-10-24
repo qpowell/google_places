@@ -5,9 +5,9 @@ module GooglePlaces
     attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews
 
     def self.list(lat, lng, api_key, options = {})
-      radius = options.delete(:radius) || 200
-      sensor = options.delete(:sensor) || false
       rankby = options.delete(:rankby)
+      radius = options.delete(:radius) || 200 if rankby.nil?
+      sensor = options.delete(:sensor) || false
       types  = options.delete(:types)
       name  = options.delete(:name)
       keyword = options.delete(:keyword)
