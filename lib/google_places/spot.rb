@@ -7,6 +7,7 @@ module GooglePlaces
     def self.list(lat, lng, api_key, options = {})
       radius = options.delete(:radius) || 200
       sensor = options.delete(:sensor) || false
+      rankby = options.delete(:rankby)
       types  = options.delete(:types)
       name  = options.delete(:name)
       keyword = options.delete(:keyword)
@@ -21,6 +22,7 @@ module GooglePlaces
         :location => location.format,
         :radius => radius,
         :sensor => sensor,
+        :rankby => rankby,
         :key => api_key,
         :name => name,
         :language => language,
