@@ -4,6 +4,43 @@ module GooglePlaces
   class Spot
     attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews
 
+    # Search for Spots at the provided location
+    #
+    # @return [Array<Spot>]
+    # @param [String,Integer] lat the latitude for the search
+    # @param [String,Integer] lng the longitude for the search
+    # @param [String] api_key the provided api key
+    # @param [Hash] options
+    # @option options [Integer] :radius (200)
+    #   Defines the distance (in meters) within which to return Place results.
+    #   The maximum allowed radius is 50,000 meters.
+    #   Note that radius must not be included if <b>:rankby</b> is specified
+    #   <b>Note that this is a mandatory parameter</b>
+    # @option options [Boolean] :sensor (false)
+    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
+    #   <b>Note that this is a mandatory parameter</b>
+    # @option options [String,Array] :types
+    #   Restricts the results to Spots matching at least one of the specified types
+    # @option options [String] :name
+    #   A term to be matched against the names of Places.
+    #   Results will be restricted to those containing the passed name value.
+    # @option options [String] :keyword
+    #   A term to be matched against all content that Google has indexed for this Spot,
+    #   including but not limited to name, type, and address,
+    #   as well as customer reviews and other third-party content.
+    # @option options [String] :language
+    #   The language code, indicating in which language the results should be returned, if possible.
+    # @option options [String,Array<String>] :exclude ([])
+    #   A String or an Array of <b>types</b> to exclude from results
+    #
+    # @option options [Hash] :retry_options ({})
+    #   A Hash containing parameters for search retries
+    # @option options [Object] :retry_options[:status] ([])
+    # @option options [Integer] :retry_options[:max] (0) the maximum retries
+    # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
+    #
+    # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
+    # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def self.list(lat, lng, api_key, options = {})
       radius = options.delete(:radius) || 200
       sensor = options.delete(:sensor) || false
@@ -40,6 +77,23 @@ module GooglePlaces
       end.compact
     end
 
+    # Search for a Spot with a reference key
+    #
+    # @return [Spot]
+    # @param [String] reference the reference of the spot
+    # @param [String] api_key the provided api key
+    # @param [Hash] options
+    # @option options [Boolean] :sensor (false)
+    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
+    #   <b>Note that this is a mandatory parameter</b>
+    # @option options [String] :language
+    #   The language code, indicating in which language the results should be returned, if possible.
+    #
+    # @option options [Hash] :retry_options ({})
+    #   A Hash containing parameters for search retries
+    # @option options [Object] :retry_options[:status] ([])
+    # @option options [Integer] :retry_options[:max] (0) the maximum retries
+    # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
     def self.find(reference, api_key, options = {})
       sensor = options.delete(:sensor) || false
       language  = options.delete(:language)
@@ -56,6 +110,39 @@ module GooglePlaces
       self.new(response['result'])
     end
 
+    # Search for Spots with a query
+    #
+    # @return [Array<Spot>]
+    # @param [String] query the query to search for
+    # @param [String] api_key the provided api key
+    # @param [Hash] options
+    # @option options [String,Integer] :lat
+    #   the latitude for the search
+    # @option options [String,Integer] :lng
+    #   the longitude for the search
+    # @option options [Integer] :radius (200)
+    #   Defines the distance (in meters) within which to return Place results.
+    #   The maximum allowed radius is 50,000 meters.
+    #   Note that radius must not be included if <b>:rankby</b> is specified
+    #   <b>Note that this is a mandatory parameter</b>
+    # @option options [Boolean] :sensor (false)
+    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
+    #   <b>Note that this is a mandatory parameter</b>
+    # @option options [String,Array] :types
+    #   Restricts the results to Spots matching at least one of the specified types
+    # @option options [String] :language
+    #   The language code, indicating in which language the results should be returned, if possible.
+    # @option options [String,Array<String>] :exclude ([])
+    #   A String or an Array of <b>types</b> to exclude from results
+    #
+    # @option options [Hash] :retry_options ({})
+    #   A Hash containing parameters for search retries
+    # @option options [Object] :retry_options[:status] ([])
+    # @option options [Integer] :retry_options[:max] (0) the maximum retries
+    # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
+    #
+    # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
+    # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def self.list_by_query(query, api_key, options)
       if options.has_key?(:lat) && options.has_key?(:lng)
         with_location = true
@@ -103,6 +190,8 @@ module GooglePlaces
       end.compact
     end
 
+    # @param [JSON] json_result_object a JSON object to create a Spot from
+    # @return [Spot] a newly created spot
     def initialize(json_result_object)
       @reference                  = json_result_object['reference']
       @vicinity                   = json_result_object['vicinity']
