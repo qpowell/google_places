@@ -4,14 +4,13 @@ module GooglePlaces
   class Spot
     attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews
 
-    def self.list(lat, lng, api_key, options = {})
+    def self.list(lat, lng, api_key, sensor, options = {})
+      location = Location.new(lat, lng)
       radius = options.delete(:radius) || 200
-      sensor = options.delete(:sensor) || false
       types  = options.delete(:types)
       name  = options.delete(:name)
       keyword = options.delete(:keyword)
       language  = options.delete(:language)
-      location = Location.new(lat, lng)
       exclude = options.delete(:exclude) || []
       retry_options = options.delete(:retry_options) || {}
 
@@ -40,8 +39,7 @@ module GooglePlaces
       end.compact
     end
 
-    def self.find(reference, api_key, options = {})
-      sensor = options.delete(:sensor) || false
+    def self.find(reference, api_key, sensor, options = {})
       language  = options.delete(:language)
       retry_options = options.delete(:retry_options) || {}
 
@@ -56,7 +54,7 @@ module GooglePlaces
       self.new(response['result'])
     end
 
-    def self.list_by_query(query, api_key, options)
+    def self.list_by_query(query, api_key, sensor, options = {})
       if options.has_key?(:lat) && options.has_key?(:lng)
         with_location = true
       else
@@ -70,7 +68,7 @@ module GooglePlaces
       end
 
       query = query
-      sensor = options.delete(:sensor) || false
+      sensor = sensor
       location = Location.new(options.delete(:lat), options.delete(:lng)) if with_location
       radius = options.delete(:radius) if with_radius
       language = options.delete(:language)

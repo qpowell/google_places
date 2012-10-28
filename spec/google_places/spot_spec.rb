@@ -18,14 +18,14 @@ describe GooglePlaces::Spot do
     end
 
     it 'should be a collection of Spots' do
-      @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor)
+      @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, @sensor, :radius => @radius)
     end
 
     describe 'with a single type' do
       use_vcr_cassette 'list_spots_with_single_type'
 
       before(:each) do
-        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor, :types => 'cafe')
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, @sensor, :radius => @radius, :types => 'cafe')
       end
 
       it 'should have Spots with a specific type' do
@@ -39,7 +39,7 @@ describe GooglePlaces::Spot do
       use_vcr_cassette 'list_spots_with_multiple_types'
 
       before(:each) do
-        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor, :types => ['food','establishment'])
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, @sensor, :radius => @radius, :types => ['food','establishment'])
       end
 
       it 'should have Spots with specific types' do
@@ -53,7 +53,7 @@ describe GooglePlaces::Spot do
       use_vcr_cassette 'list_spots_with_name'
 
       before(:each) do
-        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor, :name => 'italian')
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, @sensor, :radius => @radius, :name => 'italian')
       end
 
       # Apparently the Google Places API returns spots with
@@ -72,7 +72,7 @@ describe GooglePlaces::Spot do
       use_vcr_cassette 'list_spots_with_name_and_types'
 
       before(:each) do
-        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor, :types => ['food','establishment'], :name => 'italian')
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, @sensor, :radius => @radius, :types => ['food','establishment'], :name => 'italian')
       end
 
       # Apparently the Google Places API returns spots with
@@ -97,7 +97,7 @@ describe GooglePlaces::Spot do
       use_vcr_cassette 'list_spots_with_types_and_exclusion'
 
       it 'should exclude spots with type "restaurant"' do
-        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor, :types => ['food','establishment'], :exclude => 'restaurant')
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, @sensor, :radius => @radius, :types => ['food','establishment'], :exclude => 'restaurant')
 
         @collection.map(&:types).each do |types|
           types.should_not include('restaurant')
@@ -105,7 +105,7 @@ describe GooglePlaces::Spot do
       end
 
       it 'should exclude spots with type "restaurant" and "cafe"' do
-        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :sensor => @sensor, :types => ['food','establishment'], :exclude => ['restaurant', 'cafe'])
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, @sensor, :radius => @radius, :types => ['food','establishment'], :exclude => ['restaurant', 'cafe'])
 
         @collection.map(&:types).each do |types|
           types.should_not include('restaurant')
@@ -124,7 +124,7 @@ describe GooglePlaces::Spot do
     end
 
     it 'should be a collection of Spots' do
-      @collection = GooglePlaces::Spot.list_by_query("Statue of liberty, New York", api_key, :sensor => @sensor)
+      @collection = GooglePlaces::Spot.list_by_query("Statue of liberty, New York", api_key, @sensor)
     end
 
   end
@@ -132,7 +132,7 @@ describe GooglePlaces::Spot do
   context 'Find a single spot' do
     use_vcr_cassette 'single_spot'
     before :each do
-      @spot = GooglePlaces::Spot.find(@reference, api_key, :sensor => @sensor)
+      @spot = GooglePlaces::Spot.find(@reference, api_key, @sensor)
     end
     it 'should be a Spot' do
       @spot.class.should == GooglePlaces::Spot

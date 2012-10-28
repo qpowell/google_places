@@ -1,6 +1,7 @@
 module GooglePlaces
   class Request
     attr_accessor :response
+    attr_reader :options
 
     include ::HTTParty
     format :json
@@ -60,6 +61,10 @@ module GooglePlaces
 
         raise RetryError.new(@response) if retry_options[:status].include?(@response.parsed_response['status'])
       end
+    end
+
+    def execute
+      @response = self.class.get(url, :query => options)
     end
 
     def parsed_response
