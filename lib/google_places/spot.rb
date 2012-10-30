@@ -14,11 +14,20 @@ module GooglePlaces
     #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
     #   <b>Note that this is a mandatory parameter</b>
     # @param [Hash] options
-    # @option options [Integer] :radius (200)
+    # @option options [Integer] :radius (1000)
     #   Defines the distance (in meters) within which to return Place results.
     #   The maximum allowed radius is 50,000 meters.
-    #   Note that radius must not be included if <b>:rankby</b> is specified
+    #   Note that radius must not be included if :rankby => 'distance' (described below) is specified.
     #   <b>Note that this is a mandatory parameter</b>
+    # @option options [String] :rankby
+    #   Specifies the order in which results are listed. Possible values are:
+    #   - prominence (default). This option sorts results based on their importance.
+    #     Ranking will favor prominent places within the specified area.
+    #     Prominence can be affected by a Place's ranking in Google's index,
+    #     the number of check-ins from your application, global popularity, and other factors.
+    #   - distance. This option sorts results in ascending order by their distance from the specified location.
+    #     Ranking results by distance will set a fixed search radius of 50km.
+    #     One or more of keyword, name, or types is required.                                                                                                                                                                                                                                                                                       distance. This option sorts results in ascending order by their distance from the specified location. Ranking results by distance will set a fixed search radius of 50km. One or more of keyword, name, or types is required.
     # @option options [String,Array] :types
     #   Restricts the results to Spots matching at least one of the specified types
     # @option options [String] :name
@@ -43,7 +52,8 @@ module GooglePlaces
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def self.list(lat, lng, api_key, sensor, options = {})
       location = Location.new(lat, lng)
-      radius = options.delete(:radius) || 200
+      rankby = options.delete(:rankby)
+      radius = options.delete(:radius) || 1000 if rankby.nil?
       types  = options.delete(:types)
       name  = options.delete(:name)
       keyword = options.delete(:keyword)
@@ -57,6 +67,7 @@ module GooglePlaces
         :location => location.format,
         :radius => radius,
         :sensor => sensor,
+        :rankby => rankby,
         :key => api_key,
         :name => name,
         :language => language,
@@ -82,7 +93,8 @@ module GooglePlaces
     # @param [String] reference the reference of the spot
     # @param [String] api_key the provided api key
     # @param [Boolean] sensor
-    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
+    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS)
+    #   to determine the location sent in this request.
     #   <b>Note that this is a mandatory parameter</b>
     # @param [Hash] options
     # @option options [String] :language
@@ -114,18 +126,28 @@ module GooglePlaces
     # @param [String] query the query to search for
     # @param [String] api_key the provided api key
     # @param [Boolean] sensor
-    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
+    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS)
+    #   to determine the location sent in this request.
     #   <b>Note that this is a mandatory parameter</b>
     # @param [Hash] options
     # @option options [String,Integer] :lat
     #   the latitude for the search
     # @option options [String,Integer] :lng
     #   the longitude for the search
-    # @option options [Integer] :radius (200)
+    # @option options [Integer] :radius (1000)
     #   Defines the distance (in meters) within which to return Place results.
     #   The maximum allowed radius is 50,000 meters.
-    #   Note that radius must not be included if <b>:rankby</b> is specified
+    #   Note that radius must not be included if :rankby => 'distance' (described below) is specified.
     #   <b>Note that this is a mandatory parameter</b>
+    # @option options [String] :rankby
+    #   Specifies the order in which results are listed. Possible values are:
+    #   - prominence (default). This option sorts results based on their importance.
+    #     Ranking will favor prominent places within the specified area.
+    #     Prominence can be affected by a Place's ranking in Google's index,
+    #     the number of check-ins from your application, global popularity, and other factors.
+    #   - distance. This option sorts results in ascending order by their distance from the specified location.
+    #     Ranking results by distance will set a fixed search radius of 50km.
+    #     One or more of keyword, name, or types is required.
     # @option options [String,Array] :types
     #   Restricts the results to Spots matching at least one of the specified types
     # @option options [String] :language
@@ -158,6 +180,7 @@ module GooglePlaces
       sensor = sensor
       location = Location.new(options.delete(:lat), options.delete(:lng)) if with_location
       radius = options.delete(:radius) if with_radius
+      rankby = options.delete(:rankby)
       language = options.delete(:language)
       types = options.delete(:types)
       exclude = options.delete(:exclude) || []
@@ -169,6 +192,7 @@ module GooglePlaces
         :query => query,
         :sensor => sensor,
         :key => api_key,
+        :rankby => rankby,
         :language => language,
         :retry_options => retry_options
       }

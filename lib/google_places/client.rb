@@ -55,13 +55,23 @@ module GooglePlaces
     # @param [String,Integer] lat the latitude for the search
     # @param [String,Integer] lng the longitude for the search
     # @param [Hash] options
-    # @option options [Integer] :radius (200)
+    # @option options [Integer] :radius (1000)
     #   Defines the distance (in meters) within which to return Place results.
     #   The maximum allowed radius is 50,000 meters.
-    #   Note that radius must not be included if <b>:rankby</b> is specified
+    #   Note that radius must not be included if :rankby => 'distance' (described below) is specified.
     #   <b>Note that this is a mandatory parameter</b>
+    # @option options [String] :rankby
+    #   Specifies the order in which results are listed. Possible values are:
+    #   - prominence (default). This option sorts results based on their importance.
+    #     Ranking will favor prominent places within the specified area.
+    #     Prominence can be affected by a Place's ranking in Google's index,
+    #     the number of check-ins from your application, global popularity, and other factors.
+    #   - distance. This option sorts results in ascending order by their distance from the specified location.
+    #     Ranking results by distance will set a fixed search radius of 50km.
+    #     One or more of keyword, name, or types is required.                                                                                                                                                                                                                                                                                       distance. This option sorts results in ascending order by their distance from the specified location. Ranking results by distance will set a fixed search radius of 50km. One or more of keyword, name, or types is required.
     # @option options [Boolean] :sensor (false)
-    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
+    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS)
+    #   to determine the location sent in this request.
     #   <b>Note that this is a mandatory parameter</b>
     # @option options [String,Array] :types
     #   Restricts the results to Spots matching at least one of the specified types
@@ -116,11 +126,20 @@ module GooglePlaces
     # @param [Hash] options
     # @option options [String,Integer] lat the latitude for the search
     # @option options [String,Integer] lng the longitude for the search
-    # @option options [Integer] :radius (200)
+    # @option options [Integer] :radius (1000)
     #   Defines the distance (in meters) within which to return Place results.
     #   The maximum allowed radius is 50,000 meters.
-    #   Note that radius must not be included if <b>:rankby</b> is specified
+    #   Note that radius must not be included if :rankby => 'distance' (described below) is specified.
     #   <b>Note that this is a mandatory parameter</b>
+    # @option options [String] :rankby
+    #   Specifies the order in which results are listed. Possible values are:
+    #   - prominence (default). This option sorts results based on their importance.
+    #     Ranking will favor prominent places within the specified area.
+    #     Prominence can be affected by a Place's ranking in Google's index,
+    #     the number of check-ins from your application, global popularity, and other factors.
+    #   - distance. This option sorts results in ascending order by their distance from the specified location.
+    #     Ranking results by distance will set a fixed search radius of 50km.
+    #     One or more of keyword, name, or types is required.                                                                                                                                                                                                                                                                                       distance. This option sorts results in ascending order by their distance from the specified location. Ranking results by distance will set a fixed search radius of 50km. One or more of keyword, name, or types is required.
     # @option options [Boolean] :sensor (false)
     #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
     #   <b>Note that this is a mandatory parameter</b>
