@@ -8,3 +8,4 @@ spec/api_key.rb
 .yardoc/
 doc/
 spec/vcr_cassettes/*
+.idea
