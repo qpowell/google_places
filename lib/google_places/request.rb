@@ -5,22 +5,22 @@ module GooglePlaces
     include ::HTTParty
     format :json
 
-    SPOTS_LIST_URL = 'https://maps.googleapis.com/maps/api/place/search/json'
-    SPOT_URL = 'https://maps.googleapis.com/maps/api/place/details/json'
-    SPOTS_LIST_QUERY_URL = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
+    NEARBY_SEARCH_URL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json'
+    DETAILS_URL       = 'https://maps.googleapis.com/maps/api/place/details/json'
+    TEXT_SEARCH_URL   = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
 
     def self.spots(options = {})
-      request = new(SPOTS_LIST_URL, options)
+      request = new(NEARBY_SEARCH_URL, options)
       request.parsed_response
     end
 
     def self.spot(options = {})
-      request = new(SPOT_URL, options)
+      request = new(DETAILS_URL, options)
       request.parsed_response
     end
 
     def self.spots_by_query(options = {})
-      request = new(SPOTS_LIST_QUERY_URL, options)
+      request = new(TEXT_SEARCH_URL, options)
       request.parsed_response
     end
 
