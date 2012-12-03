@@ -34,10 +34,11 @@ module GooglePlaces
         options.merge!(:types => types)
       end
 
-      response = Request.spots(options)
-      response['results'].map do |result|
-        self.new(result) if (result['types'] & exclude) == []
-      end.compact
+      results = []
+      self.multi_pages_request(:spots, options) do |result|
+        results << self.new(result) if (result['types'] & exclude) == []
+      end
+      results
     end
 
     def self.find(reference, api_key, options = {})
@@ -97,10 +98,34 @@ module GooglePlaces
         options.merge!(:types => types)
       end
 
-      response = Request.spots_by_query(options)
-      response['results'].map do |result|
-        self.new(result) if (result['types'] & exclude) == []
-      end.compact
+      results = []
+      self.multi_pages_request(:spots_by_query, options) do |result|
+        results << self.new(result) if (result['types'] & exclude) == []
+      end
+      results
+    end
+
+    def self.multi_pages_request(method, options)
+      begin
+
+        response = Request.send(method, options)
+        response['results'].each do |result|
+          yield(result)
+        end
+
+        # request the next page if presence of a "next_page" token
+        next_page = false
+        unless response["next_page_token"].nil?
+          options = {
+            pagetoken: response["next_page_token"],
+            key: options[:key],
+            sensor: options[:sensor]
+          }
+          sleep(2) # the time the token is issued, else InvalidRequestError
+          next_page = true
+        end
+
+      end while (next_page)
     end
 
     def initialize(json_result_object)
