@@ -226,9 +226,9 @@ module GooglePlaces
         next_page = false
         unless response["next_page_token"].nil?
           options = {
-            pagetoken: response["next_page_token"],
-            key: options[:key],
-            sensor: options[:sensor]
+            :pagetoken => response["next_page_token"],
+            :key => options[:key],
+            :sensor => options[:sensor]
           }
           sleep(2) # the time the token is issued, else InvalidRequestError
           next_page = true
