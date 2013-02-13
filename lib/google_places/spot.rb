@@ -231,6 +231,10 @@ module GooglePlaces
             :sensor => options[:sensor]
           }
           sleep(2) # the time the token is issued, else InvalidRequestError
+          # There is a short delay between when a next_page_token is issued, and when it will become valid.
+          # If requested too early, it will result in InvalidRequestError.
+          # See: https://developers.google.com/places/documentation/search#PlaceSearchPaging
+          sleep(2)
           next_page = true
         end
 
