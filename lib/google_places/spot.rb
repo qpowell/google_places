@@ -60,7 +60,7 @@ module GooglePlaces
       language  = options.delete(:language)
       exclude = options.delete(:exclude) || []
       retry_options = options.delete(:retry_options) || {}
-
+      zagat_selected = options.delete(:zagat_selected) || false
       exclude = [exclude] unless exclude.is_a?(Array)
 
       options = {
@@ -72,7 +72,8 @@ module GooglePlaces
         :name => name,
         :language => language,
         :keyword => keyword,
-        :retry_options => retry_options
+        :retry_options => retry_options,
+        :zagat_selected => zagat_selected
       }
 
       # Accept Types as a string or array
@@ -262,6 +263,9 @@ module GooglePlaces
       @url                        = json_result_object['url']
       @cid                        = json_result_object['url'].to_i
       @website                    = json_result_object['website']
+      @zagat_reviewed             = json_result_object['zagat_reviewed'] || false
+      @zagat_selected             = json_result_object['zagat_selected'] || false
+      @aspects                    = aspects_component(json_result_object['aspects'])
       @reviews                    = reviews_component(json_result_object['reviews'])
     end
 
@@ -291,5 +295,8 @@ module GooglePlaces
       end
     end
 
+    def aspects_component(json_aspects)
+      json_aspects.to_a.map{ |r| { :type => r['type'], :rating => r['rating'] } }
+    end
   end
 end
