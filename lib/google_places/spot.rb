@@ -231,7 +231,7 @@ module GooglePlaces
             :sensor => options[:sensor]
           }
           sleep(2) # the time the token is issued, else InvalidRequestError
-          next_page = true
+          #next_page = true
         end
 
       end while (next_page)
