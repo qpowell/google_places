@@ -2,7 +2,7 @@ require 'google_places/review'
 
 module GooglePlaces
   class Spot
-    attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :zagat_selected
+    attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos
 
     # Search for Spots at the provided location
     #
@@ -110,12 +110,14 @@ module GooglePlaces
     def self.find(reference, api_key, sensor, options = {})
       language  = options.delete(:language)
       retry_options = options.delete(:retry_options) || {}
+      extensions = options.delete(:review_summary) ? 'review_summary' : nil
 
       response = Request.spot(
         :reference => reference,
         :sensor => sensor,
         :key => api_key,
         :language => language,
+        :extensions => extensions,
         :retry_options => retry_options
       )
 
@@ -263,9 +265,11 @@ module GooglePlaces
       @url                        = json_result_object['url']
       @cid                        = json_result_object['url'].to_i
       @website                    = json_result_object['website']
-      @zagat_reviewed             = json_result_object['zagat_reviewed'] || false
-      @zagat_selected             = json_result_object['zagat_selected'] || false
+      @zagat_reviewed             = json_result_object['zagat_reviewed']
+      @zagat_selected             = json_result_object['zagat_selected']
       @aspects                    = aspects_component(json_result_object['aspects'])
+      @review_summary             = json_result_object['review_summary']
+      @photos                     = photos_component(json_result_object['photos'])
       @reviews                    = reviews_component(json_result_object['reviews'])
     end
 
@@ -297,6 +301,10 @@ module GooglePlaces
 
     def aspects_component(json_aspects)
       json_aspects.to_a.map{ |r| { :type => r['type'], :rating => r['rating'] } }
+    end
+
+    def photos_component(json_photos)
+      json_photos.to_a.map{ |r| { :width => r['width'], :height => r['height'], :width => r['width'], :photo_reference => r['photo_reference'], :html_attributions => r['html_attributions'] } }
     end
   end
 end
