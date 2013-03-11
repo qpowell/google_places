@@ -73,8 +73,9 @@ module GooglePlaces
         :language => language,
         :keyword => keyword,
         :retry_options => retry_options,
-        :zagat_selected => zagat_selected
       }
+
+      options[:zagatselected] = zagat_selected if zagat_selected
 
       # Accept Types as a string or array
       if types
