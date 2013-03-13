@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/details/json?reference=CnRsAAAASc4grenwL0h3X5VPNp5fkDNfqbjt3iQtWIPlKS-3ms9GbnCxR_FLHO0B0ZKCgJSg19qymkeHagjQFB4aUL87yhp4mhFTc17DopK1oiYDaeGthztSjERic8TmFNe-6zOpKSdiZWKE6xlQvcbSiWIJchIQOEYZqunSSZqNDoBSs77bWRoUJcMMVANtSlhy0llKI0MI6VcC7DU&sensor=false&key=DUMMY_KEY&language=&extensions=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      vary:
+      - Accept-Language
+      date:
+      - Wed, 13 Mar 2013 13:30:34 GMT
+      server:
+      - mafe
+      cache-control:
+      - private
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - SAMEORIGIN
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "{\n   \"html_attributions\" : [],\n   \"result\" : {\n      \"address_components\"
+        : [\n         {\n            \"long_name\" : \"48\",\n            \"short_name\"
+        : \"48\",\n            \"types\" : [ \"street_number\" ]\n         },\n         {\n
+        \           \"long_name\" : \"Pirrama Road\",\n            \"short_name\"
+        : \"Pirrama Road\",\n            \"types\" : [ \"route\" ]\n         },\n
+        \        {\n            \"long_name\" : \"Pyrmont\",\n            \"short_name\"
+        : \"Pyrmont\",\n            \"types\" : [ \"locality\", \"political\" ]\n
+        \        },\n         {\n            \"long_name\" : \"NSW\",\n            \"short_name\"
+        : \"NSW\",\n            \"types\" : [ \"administrative_area_level_1\", \"political\"
+        ]\n         },\n         {\n            \"long_name\" : \"AU\",\n            \"short_name\"
+        : \"AU\",\n            \"types\" : [ \"country\", \"political\" ]\n         },\n
+        \        {\n            \"long_name\" : \"2009\",\n            \"short_name\"
+        : \"2009\",\n            \"types\" : [ \"postal_code\" ]\n         }\n      ],\n
+        \     \"aspects\" : [\n         {\n            \"rating\" : 26,\n            \"type\"
+        : \"overall\"\n         }\n      ],\n      \"formatted_address\" : \"5/48
+        Pirrama Road, Pyrmont NSW, Australia\",\n      \"formatted_phone_number\"
+        : \"(02) 9374 4000\",\n      \"geometry\" : {\n         \"location\" : {\n
+        \           \"lat\" : -33.8669750,\n            \"lng\" : 151.1956770\n         }\n
+        \     },\n      \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
+        \     \"id\" : \"4f89212bf76dde31f092cfc14d7506555d85b5c7\",\n      \"international_phone_number\"
+        : \"+61 2 9374 4000\",\n      \"name\" : \"Google Sydney\",\n      \"photos\"
+        : [\n         {\n            \"height\" : 1536,\n            \"html_attributions\"
+        : [ \"From a Google User\" ],\n            \"photo_reference\" : \"CoQBdQAAAOpjjMaphr6pD5-JwovK8-I9NKWe-JNO1SugARrTg8RitWztB_THOQY0MN6AJkRoGjsMqCyoyeB5bP_KLrVsJawrImMFf5AsqWmlmgE6lqMkxUCfdfHX6bvNCgmfdyw9nvIawcWHmeSXK-QlshyXPqf0ivgXPRiNGL1n0KGYXcOIEhCGooI3XdTgGkcqNtE2IuRnGhQpFtsRL8EkhVAkwvETMdWhKpK1sw\",\n
+        \           \"width\" : 2048\n         },\n         {\n            \"height\"
+        : 480,\n            \"html_attributions\" : [ \"From a Google User\" ],\n
+        \           \"photo_reference\" : \"CnRqAAAAA-PmKqecx0gTWr-8oJ_-3m-3rryseHducvarDymXzStokD0y1nwYu9yR5GzZUrl0hUG02Jes7Ygv2JDodgP0PuioJFl9yRN6ilyIAEhuSqLwmz93M_NnFh0AE2MMEtGXzwtGL1UyGr7E3_HZ-hVcfBIQdAq8C9bymgbghTUH52CHsxoUEGa9FtFJhkB-APRDeHMVY7RUqWY\",\n
+        \           \"width\" : 640\n         }\n      ],\n      \"rating\" : 4.60,\n
+        \     \"reference\" : \"CnRsAAAAekNhjWYzXAZlVE5tm1jMeFlu_nuR_Z9ezqs-0fN50C0fRiNFuAS1co7ol0AvJia8HvBGMW9zriFkmq2dqaW9A4D3axu7jqmTeF3Nv7MeY2vAFtL-eBMRWCKrEWV_czTytz-_rgD3Q3yayKSrSXyclRIQzFJ6XsMSJvMpJ-o43V5KuBoUjv_GD46tYDJcp8CzQSGchlxaUdY\",\n
+        \     \"reviews\" : [\n         {\n            \"aspects\" : [\n               {\n
+        \                 \"rating\" : 3,\n                  \"type\" : \"quality\"\n
+        \              }\n            ],\n            \"author_name\" : \"Albert Mai\",\n
+        \           \"author_url\" : \"https://plus.google.com/106558367962383756670\",\n
+        \           \"text\" : \"All Googlers are so nice and friendly. They will
+        always answer your questions, open to questions and willing to help you with
+        their best. The office locates at a very strategic place - in CBD and has
+        wonderful view over the harbor. Really enjoy having lunch outside to enjoy
+        the wind and fresh air for inspiration (but watch out for flying dishes because
+        of strong wind). However, food is kinda lack of the variety comparing to other
+        offices. The plus is food station is almost everywhere which feed you very
+        well (be careful of gaining so much weight). There will usually be surprise
+        when you work here: Ice Cream, Nexus 7, Chrome notebook, Nexus and many other
+        swags. There are a lot of trees inside the building which I really like it
+        - so fresh !\",\n            \"time\" : 1358249804\n         },\n         {\n
+        \           \"aspects\" : [\n               {\n                  \"rating\"
+        : 3,\n                  \"type\" : \"quality\"\n               }\n            ],\n
+        \           \"author_name\" : \"David Webb\",\n            \"author_url\"
+        : \"https://plus.google.com/115578224090485355580\",\n            \"text\"
+        : \"Awesome company! Great culture and food. A fantastic office indeed. Definitely
+        deserves the title &quot;Best place to work&quot;.\",\n            \"time\"
+        : 1358233693\n         },\n         {\n            \"aspects\" : [\n               {\n
+        \                 \"rating\" : 3,\n                  \"type\" : \"quality\"\n
+        \              }\n            ],\n            \"author_name\" : \"Lachlan
+        Archibald\",\n            \"author_url\" : \"https://plus.google.com/115671446961475717459\",\n
+        \           \"text\" : \"Awesome building; many interesting and unique internal
+        structures and rooms. There are also a number of facilities including coffee
+        machines, rest and relaxation areas and research areas. Staff are extremely
+        friendly and willing to answer questions and engage in conversation.\",\n
+        \           \"time\" : 1361349581\n         },\n         {\n            \"aspects\"
+        : [\n               {\n                  \"rating\" : 3,\n                  \"type\"
+        : \"quality\"\n               }\n            ],\n            \"author_name\"
+        : \"Cindy Huang\",\n            \"author_url\" : \"https://plus.google.com/107550491878142658504\",\n
+        \           \"text\" : \"There are few workplaces more desirable to work in
+        than Google. The facilities are incredible, and reflect the company&#39;s
+        dedication to innovation, inspiration and improvement. The interior design
+        is fun, flexible and definitely the ideal platform for employers and employees
+        alike to foster the great ideas of tomorrow. Should the opportunity arise,
+        I would definitely recommend everyone to seize the chance to experience Google
+        (and get a tour through those amazing and incredibly thoughtful micro kitchens).\",\n
+        \           \"time\" : 1361360490\n         },\n         {\n            \"aspects\"
+        : [\n               {\n                  \"rating\" : 3,\n                  \"type\"
+        : \"quality\"\n               }\n            ],\n            \"author_name\"
+        : \"Jared Winter\",\n            \"author_url\" : \"https://plus.google.com/103549082258031873774\",\n
+        \           \"text\" : \"A brilliant atmosphere and welcoming people a great
+        place to visit or work. Definitely take a look at their unique reception with
+        the tyre swing and fernery.\",\n            \"time\" : 1361349311\n         }\n
+        \     ],\n      \"types\" : [ \"establishment\" ],\n      \"url\" : \"https://plus.google.com/111840715355681175070/about?hl=en-US\",\n
+        \     \"utc_offset\" : 660,\n      \"vicinity\" : \"5/48 Pirrama Road, Pyrmont\",\n
+        \     \"website\" : \"http://www.google.com.au/\"\n   },\n   \"status\" :
+        \"OK\"\n}\n"
+    http_version: '1.1'
+  recorded_at: Wed, 13 Mar 2013 13:30:34 GMT

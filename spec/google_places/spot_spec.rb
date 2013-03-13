@@ -114,6 +114,28 @@ describe GooglePlaces::Spot do
       end
     end
 
+    describe 'working with premium data' do
+      use_vcr_cassette 'premium_list_spots_with_data'
+
+      it 'should return data with zagat_selected flag only' do
+        # hardcoded coordinates & options to get non-zero results count
+        @collection = GooglePlaces::Spot.list('39.60049820', '-106.52202606', 'DUMMY_KEY', @sensor, :radius => @radius, :zagat_selected => true, :types => ['restaurant','cafe'], :radius => 20000)
+
+        @collection.map(&:zagat_selected).uniq.should eq [true]
+
+
+        @collection.map(&:zagat_reviewed).uniq.should eq [true]
+      end
+
+      it 'should return data with zagat_selected flag only' do
+        # hardcoded coordinates & options to get non-zero results count
+        @collection = GooglePlaces::Spot.list('39.60049820', '-106.52202606', 'DUMMY_KEY', @sensor, :radius => @radius, :zagat_selected => true, :types => ['restaurant','cafe'], :radius => 20000)
+
+        item = @collection.detect {|item| item.zagat_reviewed == true}
+        item = GooglePlaces::Spot.find(item.reference, 'DUMMY_KEY', @sensor, :review_summary => true)
+        item.review_summary.should_not eq nil
+      end
+    end
   end
 
   context 'List spots by query' do

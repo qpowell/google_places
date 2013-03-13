@@ -1,0 +1,443 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.60049820%2C-106.52202606&radius=20000&sensor=false&rankby=&key=DUMMY_KEY&name=&language=&keyword=&zagatselected=true&types=restaurant%7Ccafe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      vary:
+      - Accept-Language
+      date:
+      - Wed, 13 Mar 2013 13:42:50 GMT
+      server:
+      - mafe
+      cache-control:
+      - private
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - SAMEORIGIN
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "{\n   \"html_attributions\" : [],\n   \"results\" : [\n      {\n
+        \        \"aspects\" : [\n            {\n               \"rating\" : 28,\n
+        \              \"type\" : \"food\"\n            }\n         ],\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 39.6406840,\n
+        \              \"lng\" : -106.3748440\n            }\n         },\n         \"icon\"
+        : \"http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png\",\n
+        \        \"id\" : \"196f1e491655350f21c23fa4ab54326bd66d65d1\",\n         \"name\"
+        : \"Sweet Basil\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : false\n         },\n         \"price_level\" : 3,\n         \"rating\" :
+        4.50,\n         \"reference\" : \"CnRpAAAAhpyrLL36QODbvtq5TCkJYiEmvERhrg_slkSrLBgoh_7e196CxAG4abOlD8_YQkrbePwc6NQCYI14Hz5TuI0vDnMgha5dXedKVXKLw8125Qvk2DLOl2vYZlOdNdniGpXD1UxoaA-neTQsWSyittG_XBIQEXOrpxY8A7KUek2dRTT69RoUZMep0CZwtXWoA1E4E-oWQtl0m7s\",\n
+        \        \"types\" : [ \"restaurant\", \"food\", \"establishment\" ],\n         \"vicinity\"
+        : \"193 Gore Creek Drive #201, Vail\",\n         \"zagat_reviewed\" : true,\n
+        \        \"zagat_selected\" : true\n      },\n      {\n         \"aspects\"
+        : [\n            {\n               \"rating\" : 26,\n               \"type\"
+        : \"food\"\n            }\n         ],\n         \"geometry\" : {\n            \"location\"
+        : {\n               \"lat\" : 39.6391660,\n               \"lng\" : -106.3694410\n
+        \           }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png\",\n
+        \        \"id\" : \"e184aede3a644c221d8034d6a48985f34be4b459\",\n         \"name\"
+        : \"Larkspur Restaurant\",\n         \"photos\" : [\n            {\n               \"height\"
+        : 968,\n               \"html_attributions\" : [ \"From a Google User\" ],\n
+        \              \"photo_reference\" : \"CnRwAAAA4aNyeLpDCDAr-fiN-OS6AArajpG1Phu_iUf6KQofdJywATbmHAQlTc7OXw5KenqWKpqOFJU89libucmPLRy55weC0MQCPOIcvUM4Go8Kstm7ihW5gfYatOGpCC63T2HVjQ4ij_U7HxzhuzUdswTOzRIQGCssbLs4pxg9Cr7U_pcfTxoUX46F6bI3GoF0p1_4SO_d87UHEa0\",\n
+        \              \"width\" : 1296\n            }\n         ],\n         \"price_level\"
+        : 3,\n         \"rating\" : 4.50,\n         \"reference\" : \"CoQBcgAAAAwUhC0dXgvElncVXmrypXtA_A1zJUSt-XpMRx4VMKs4kCnm_dzAeWwY8mJdjV27JBIvpfCsfxj1WG0TB7DffZmb9W-bGvvIoSVwYIJNYgrvrtH5rNEgcDJ-27DlfGeruDZPgu7bVJ2UtjzEJQircQ5djoqxnHCzjcDKEl9CoPZ2EhBrYVIwM7NCZ2LU0ZO6ms5xGhT9Qt6NeZ-U8kSe5o3V1cSrHMTU6A\",\n
+        \        \"types\" : [ \"restaurant\", \"food\", \"establishment\" ],\n         \"vicinity\"
+        : \"458 Vail Valley Drive, Vail\",\n         \"zagat_reviewed\" : true,\n
+        \        \"zagat_selected\" : true\n      },\n      {\n         \"aspects\"
+        : [\n            {\n               \"rating\" : 22,\n               \"type\"
+        : \"food\"\n            }\n         ],\n         \"geometry\" : {\n            \"location\"
+        : {\n               \"lat\" : 39.6422290,\n               \"lng\" : -106.3771050\n
+        \           }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png\",\n
+        \        \"id\" : \"3a053148ec43c519510efca86241632bbb58eb8d\",\n         \"name\"
+        : \"Campo De Fiori\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : false\n         },\n         \"price_level\" : 3,\n         \"rating\" :
+        4.10,\n         \"reference\" : \"CnRsAAAAZMtmUNasWQ5vi3wvIPx86vJC2zUz-blsU5iEMgKBV9HVpMteTz2YX3TAtatqg_kU8F2lkyGnh8DAAhRDjsgKp9sWxphsLNABzRn1ohaF6vpTtGtw8ro_1QCXw8qkcCocu1TAHETleepu5kAja4bI6BIQSejKUwfsJlCaltjIcohFdBoUSSo3CtXd-NCf-2mccpHwl54GG5o\",\n
+        \        \"types\" : [ \"restaurant\", \"food\", \"establishment\" ],\n         \"vicinity\"
+        : \"100 East Meadow Drive #24, Vail\",\n         \"zagat_reviewed\" : true,\n
+        \        \"zagat_selected\" : true\n      },\n      {\n         \"aspects\"
+        : [\n            {\n               \"rating\" : 26,\n               \"type\"
+        : \"food\"\n            }\n         ],\n         \"geometry\" : {\n            \"location\"
+        : {\n               \"lat\" : 39.6428930,\n               \"lng\" : -106.3779990\n
+        \           }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png\",\n
+        \        \"id\" : \"2e5845de12fbac27db8ba0fa0cfec991c963584f\",\n         \"name\"
+        : \"Kelly Liken\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : false\n         },\n         \"price_level\" : 2,\n         \"rating\" :
+        4.40,\n         \"reference\" : \"CnRqAAAAN12N6ug9_IIyU5IQcETVvp9NpvYJvCfKbLnR-90KiPjY0d5aiOJ2HvG8QrIxBcSOW1AxLMGoArIgVPNhjq4pJsXhZUHviuVeQYjrvJKLgrqBGiyJYXc72i025V5cvw2LN7VnGKUHpQ_cnTvaHPC11hIQAiu7nso54ag29iKVca4FVxoUuK1Z0sVzQiMaeHp79nhG5qRH81s\",\n
+        \        \"types\" : [ \"restaurant\", \"food\", \"establishment\" ],\n         \"vicinity\"
+        : \"12 Vail Road #100, Vail\",\n         \"zagat_reviewed\" : true,\n         \"zagat_selected\"
+        : true\n      },\n      {\n         \"aspects\" : [\n            {\n               \"rating\"
+        : 25,\n               \"type\" : \"food\"\n            }\n         ],\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 39.641910,\n               \"lng\"
+        : -106.3752040\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png\",\n
+        \        \"id\" : \"f5c06cc48a5bac940fdff39568894ad548f0d46f\",\n         \"name\"
+        : \"La Tour\",\n         \"opening_hours\" : {\n            \"open_now\" :
+        false\n         },\n         \"photos\" : [\n            {\n               \"height\"
+        : 850,\n               \"html_attributions\" : [],\n               \"photo_reference\"
+        : \"CoQBdwAAAE_mz1GwF_JLqU_QYD32pO3BpUMwympBBrfekb9p1yoF6fX-u5IHj0gZHNVvdShd0Kvf2O1KKkQbgq0WwjFe2Y54hPIiEGDj9IZGBfCCgCtbjYj_cxuMNzwnVJbwbY5F9ycpii_WoSeOaLMaxDGtTePABP9EttwV6km8-Y0iWgPNEhAGNUFoWCFgSuJcyxVeW-e0GhS3MtBn5ll6rxIFFbOUB6N3YTuWAA\",\n
+        \              \"width\" : 949\n            }\n         ],\n         \"price_level\"
+        : 2,\n         \"rating\" : 4.50,\n         \"reference\" : \"CnRlAAAAclM1-NKjt52bNfBqDU6pSKdv-9cKIweOwYxekPuRlKytQmGpnvcjeBu1C-DBjgPKl4BqgAU5UiNMJDwDLH7dQSNpZ8_VHUTBmOD_qOXOo0jhBoS0P-4BAPCqr51np9TXNtyTiQ90Ear-huL4BY5cDhIQcFjjzFRVsAVNzY5DoJ_K-BoUG65X2qQikmKWEAuhda0-jNnW69Q\",\n
+        \        \"types\" : [ \"bar\", \"restaurant\", \"food\", \"establishment\"
+        ],\n         \"vicinity\" : \"122 East Meadow Drive, Vail\",\n         \"zagat_reviewed\"
+        : true,\n         \"zagat_selected\" : true\n      },\n      {\n         \"aspects\"
+        : [\n            {\n               \"rating\" : 26,\n               \"type\"
+        : \"food\"\n            }\n         ],\n         \"geometry\" : {\n            \"location\"
+        : {\n               \"lat\" : 39.6063240,\n               \"lng\" : -106.5208330\n
+        \           }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png\",\n
+        \        \"id\" : \"2e8e27b226d32ce201b99bab35251a2d6abcd8a2\",\n         \"name\"
+        : \"Grouse Mountain Grill\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : false\n         },\n         \"price_level\" : 2,\n         \"rating\" :
+        4.50,\n         \"reference\" : \"CoQBcwAAAL7PYhY6VbIOjfLtxGW_xZSRZ7iIruyc5eTxfPx3st87COBfFyExtl07_QYNX4H-h3WsQezZuiQFlqMjWRcJwWiTw8ZPFOOuBjsJWC9nB0EAPGg8p2A-dOpVrYKjdG37wo1UvE9MgLH0cpbwslGFzS6khTBbEc8nWj0YGSbJ_6fuEhAmx9S-XJcFLuiyx-6HWir6GhTYfA-03mQCpRIPSUm8tXXWqN8hzg\",\n
+        \        \"types\" : [ \"restaurant\", \"food\", \"establishment\" ],\n         \"vicinity\"
+        : \"141 Scott Hill Road, Avon\",\n         \"zagat_reviewed\" : true,\n         \"zagat_selected\"
+        : true\n      },\n      {\n         \"aspects\" : [\n            {\n               \"rating\"
+        : 25,\n               \"type\" : \"food\"\n            }\n         ],\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 39.6408920,\n
+        \              \"lng\" : -106.3753360\n            }\n         },\n         \"icon\"
+        : \"http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png\",\n
+        \        \"id\" : \"5b837ad65d37cd3201c4843c1b1bba90b7017eae\",\n         \"name\"
+        : \"The Left Bank Restaurant\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : false\n         },\n         \"photos\" : [\n            {\n               \"height\"
+        : 864,\n               \"html_attributions\" : [],\n               \"photo_reference\"
+        : \"CoQBfAAAAP1SHSOXOYWfXUerg9XX9EcM7wPuC7IpZybyFt4mG9w9gcnNvvOo_TAJsS0vbML9t3bbhdI_dKgLBvudySmDcwTNx_f40xdzJ_tBnM6SeNwc8t59fDVhIh5aqpk4kMOZbyIdPTxG5tTlX3iVW8vgxUArRj-kKtKU_hxnl4Txx-LCEhC4EK9p_ol4KZt-FVFPzSmLGhR9GV6Y8pxP7vswjCGpzhe9LwDeDA\",\n
+        \              \"width\" : 585\n            }\n         ],\n         \"price_level\"
+        : 3,\n         \"rating\" : 4.30,\n         \"reference\" : \"CoQBdwAAAMc2lgAGp3ia9pc744iEztbWZqx5M1_fcGzv1wvV1-GR5EZSUbiuO_bsODDE7pN9VFIXD9ITBJ3K32bo0OxEfHlZuIxHfjRbVm-GqDfZK9DjvUYNTthR3t9id26NtFfZ7sc5Opjd5CFiFUA2aJ6bpuhtCM3dpM3usXOoDUmfgkFVEhDwaz4eHLu7FpjJLQEbcJPUGhTS3PRB6XnZ_i_KyOX0GPmqpeUJQA\",\n
+        \        \"types\" : [ \"restaurant\", \"food\", \"establishment\" ],\n         \"vicinity\"
+        : \"183 Gore Creek Drive, Vail\",\n         \"zagat_reviewed\" : true,\n         \"zagat_selected\"
+        : true\n      },\n      {\n         \"aspects\" : [\n            {\n               \"rating\"
+        : 26,\n               \"type\" : \"food\"\n            }\n         ],\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 39.6438460,\n
+        \              \"lng\" : -106.5917260\n            }\n         },\n         \"icon\"
+        : \"http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png\",\n
+        \        \"id\" : \"ba60d497ccba77e9afe481d1fc1cf8acb88003f3\",\n         \"name\"
+        : \"Juniper Restaurant\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : false\n         },\n         \"photos\" : [\n            {\n               \"height\"
+        : 600,\n               \"html_attributions\" : [],\n               \"photo_reference\"
+        : \"CnRvAAAAq1ioZVmWOVTorPFInmA-SXrChY4cJz5_OF5_IUkxtWyw0SGHj13SONMSVikaCLHnmcIfYU71NFqNYxMDoS_6QxBYEhNUureWTv9thbFOss_TW1tB3t4gQGwSR6bHaXTRs_RIjskckNvD2I7pdsY2ZBIQfmNwN1yp7YfOSJoMfjdZkBoUoCYKbOyMFaPCaxCirKY79K4URQ0\",\n
+        \              \"width\" : 600\n            }\n         ],\n         \"price_level\"
+        : 2,\n         \"rating\" : 4.30,\n         \"reference\" : \"CnRwAAAAGXtH9iEWVFj0VxZzdbp7pDADkysBUr08tjLTdi9QylzQPiMO3d_TYd7-iNdSh6-euP8L_qCVWGhAS020oGCbCO0kxL5S9HTYAOv1-ExlPg90XgWivoGdI_6guya8iCMa8_OcdeX6zDvJSSTTitlB3BIQnE72P3lUFRax1AHM-oJzhBoUh4aqeFzi4GsD1lv7kJbFCj28cO0\",\n
+        \        \"types\" : [ \"restaurant\", \"food\", \"establishment\" ],\n         \"vicinity\"
+        : \"97 Main Street, Edwards\",\n         \"zagat_reviewed\" : true,\n         \"zagat_selected\"
+        : true\n      },\n      {\n         \"aspects\" : [\n            {\n               \"rating\"
+        : 23,\n               \"type\" : \"food\"\n            }\n         ],\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 39.6435780,\n
+        \              \"lng\" : -106.5943150\n            }\n         },\n         \"icon\"
+        : \"http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png\",\n
+        \        \"id\" : \"116baa87a7dcfdd4a1fc0f71e97feafe15f443fd\",\n         \"name\"
+        : \"Dish\",\n         \"opening_hours\" : {\n            \"open_now\" : false\n
+        \        },\n         \"price_level\" : 1,\n         \"rating\" : 4.30,\n
+        \        \"reference\" : \"CnRjAAAA4JztY-AgPVPDwztmkkTIGmdHummeZq-g0OalKN8Wb7dKyPxnKdT7KHQ-m_z-_r3VqaJk5qqSN6q0LWayZjf6uQStU18BB7DAjFQ16963WEVe5Pg2Ana-mDDPKxVCmkPfTbkpi80a-_oD97NQErDXiBIQhO7yE8eyaQgvwWbC-K90cBoUX9AQ7Tvo6M2eu-gWYHKooTw7MBg\",\n
+        \        \"types\" : [ \"restaurant\", \"food\", \"establishment\" ],\n         \"vicinity\"
+        : \"56 Edwards Village Boulevard, Edwards\",\n         \"zagat_reviewed\"
+        : true,\n         \"zagat_selected\" : true\n      },\n      {\n         \"aspects\"
+        : [\n            {\n               \"rating\" : 21,\n               \"type\"
+        : \"food\"\n            }\n         ],\n         \"geometry\" : {\n            \"location\"
+        : {\n               \"lat\" : 39.6482410,\n               \"lng\" : -106.567340\n
+        \           }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png\",\n
+        \        \"id\" : \"fb0042518ced73fd1da56ca944275d06fa960e94\",\n         \"name\"
+        : \"Balata\",\n         \"price_level\" : 2,\n         \"rating\" : 4.10,\n
+        \        \"reference\" : \"CnRkAAAAEkNrBBrX0YX5SQCFEaPG1GDmitHVqfcrvFqdc19uL-7qJQqEVuafU1zZzLMeS1Iwwn5TYkKlqeBIeT5NjuWJB3DXjFjQSq4Y0FMKL3DdL8ZlLj_xY7WD9e2jl49iGfj8fF2G9FXleZgJEXdqfmKrEBIQGm3jtqzcR1I2_JJFcEA4DBoURgoBduY6-v8a_pxfUGJ8YRjZLkI\",\n
+        \        \"types\" : [ \"restaurant\", \"food\", \"establishment\" ],\n         \"vicinity\"
+        : \"1265 Berry Creek Road, Edwards\",\n         \"zagat_reviewed\" : true,\n
+        \        \"zagat_selected\" : true\n      },\n      {\n         \"aspects\"
+        : [\n            {\n               \"rating\" : 20,\n               \"type\"
+        : \"food\"\n            }\n         ],\n         \"geometry\" : {\n            \"location\"
+        : {\n               \"lat\" : 39.6031390,\n               \"lng\" : -106.5175360\n
+        \           }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png\",\n
+        \        \"id\" : \"14463028e8d93195dd5846c6790be8b306b25ac4\",\n         \"name\"
+        : \"Foxnut\",\n         \"opening_hours\" : {\n            \"open_now\" :
+        false\n         },\n         \"photos\" : [\n            {\n               \"height\"
+        : 3240,\n               \"html_attributions\" : [ \"From a Google User\" ],\n
+        \              \"photo_reference\" : \"CoQBcgAAAMsMZxyxcghmrQTJoMpZvf0ut-LwzbPUj7PHmmwSt7UBVUi_vfdcWgMG4K15qb3aqRdCZfcu8ujSo1aOfpH_VYCO0yYtNRPM3-u0eGrt19QKvupzTFx4rvmfq6FEAU6lCeVKf_QCZ30YrnKOllr6h9CVnKTly5ddR4PLfDINpV2EEhCAYZy6smGOjlvCpYsVN-sNGhRgxT0qvRo8PXsgRpx_Eg7lcgMJIg\",\n
+        \              \"width\" : 4320\n            }\n         ],\n         \"price_level\"
+        : 2,\n         \"rating\" : 4.30,\n         \"reference\" : \"CnRkAAAAs0ORUk9EW8eV0Bx6QfXNm4BQEdoZwvKS42CMQxJ-32OMSMGHBongruxHxpCU8mPxZxfBOptz9B5ZuKe8dbeYemt_wrHDY9CmyZEn0NGGDCmq0tPngrdBDFAQ3QWr9FU29vFQozckZZ3S5HZGOUIrkhIQqr4kNBabFAdi6kIjhU0zAxoU-q6tyKKvps_0WyTthZtdUT3iJAw\",\n
+        \        \"types\" : [ \"restaurant\", \"food\", \"establishment\" ],\n         \"vicinity\"
+        : \"15 West Thomas Place, Beaker Creek\",\n         \"zagat_reviewed\" : true,\n
+        \        \"zagat_selected\" : true\n      },\n      {\n         \"aspects\"
+        : [\n            {\n               \"rating\" : 22,\n               \"type\"
+        : \"food\"\n            }\n         ],\n         \"geometry\" : {\n            \"location\"
+        : {\n               \"lat\" : 39.6044120,\n               \"lng\" : -106.5168780\n
+        \           }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png\",\n
+        \        \"id\" : \"071f072af166090f81b3ab2bf4391e0fea9a8427\",\n         \"name\"
+        : \"The Golden Eagle Inn Restaurant\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : false\n         },\n         \"photos\" : [\n            {\n               \"height\"
+        : 426,\n               \"html_attributions\" : [],\n               \"photo_reference\"
+        : \"CqQBnAAAAHROPTw1jm-YTQPuCjiLHB6WqYNV7xzNrCXmc8NlN9Bfq2vXZMq6Uq8-MbHd9dDEMXcfgQyWRMx0NQ4Kdhn2BIkoRVOvmZJQ9Rpwl7HgZ-xv2Hbs4zPZOQCvQHiCPc29U3X4c-mU3kXAjwX1jjjqsOm2CisaB9OvzM0MQMWIBbvHQmVgN2RfBOiNeazN9b3qy9b9V6OMpexbhWVdF5tSSR4SEGeSZR_2eOSIES3hrZXvIm4aFG0ZRoExXWB9lvZIlEzIMPXoT-sX\",\n
+        \              \"width\" : 491\n            }\n         ],\n         \"price_level\"
+        : 3,\n         \"rating\" : 4.30,\n         \"reference\" : \"CoQBfgAAAJFe7dQgNE3Qhdrgb3eX_UkQWcf5BU6fbs4lfuD9ql0AI15c-1ERvSe_H0jUzLkxsGKtUMtIjJfM8UkrLvNQvDocTycr5UW0bSRpJXb-0dPv6gnwP_88GKmInWG-mD_Jje-P9lISxRDjvDeht-qCiHLq1xMWLKRekz-MhMbe0IrjEhCkG4lIncXEaVX9cF5GnPp1GhSUhRjFEF9QWubgSu4-E3oY-aV_sA\",\n
+        \        \"types\" : [ \"restaurant\", \"food\", \"establishment\" ],\n         \"vicinity\"
+        : \"118 Beaver Creek Plaza, Beaver Creek\",\n         \"zagat_reviewed\" :
+        true,\n         \"zagat_selected\" : true\n      },\n      {\n         \"aspects\"
+        : [\n            {\n               \"rating\" : 25,\n               \"type\"
+        : \"food\"\n            }\n         ],\n         \"geometry\" : {\n            \"location\"
+        : {\n               \"lat\" : 39.6232020,\n               \"lng\" : -106.5416710\n
+        \           }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png\",\n
+        \        \"id\" : \"9926d17ac7ec50dc1438c460c7b35783aac755e2\",\n         \"name\"
+        : \"Spago\",\n         \"reference\" : \"CnRiAAAACTn9W3smzdlUcVn8F6mObrw12y_4wdFHwoZZEScYgdoEpQOeiOOERVap_WlxR0gLpSq6dZQVBabiS-_1my6ZRTYG88J98vLvWCCVmToeRobJ_uAtnjC-_XRGmgmd7m4Y6ws0ct7-MajFfOysaYrTFxIQxGi8xOUi0KDBEfMWeF7tmBoUi9KaJOraFeGPvNFGJ0ddMXnacSc\",\n
+        \        \"types\" : [ \"restaurant\", \"food\", \"establishment\" ],\n         \"vicinity\"
+        : \"130 Daybreak Ridge, Avon, CO 81620, USA, Daybreak Ridge Road\",\n         \"zagat_reviewed\"
+        : true,\n         \"zagat_selected\" : true\n      },\n      {\n         \"aspects\"
+        : [\n            {\n               \"rating\" : 21,\n               \"type\"
+        : \"food\"\n            }\n         ],\n         \"geometry\" : {\n            \"location\"
+        : {\n               \"lat\" : 39.604820,\n               \"lng\" : -106.5153910\n
+        \           }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png\",\n
+        \        \"id\" : \"d5713b52ea7efdc3bc24fe0dee68459aa8f067b4\",\n         \"name\"
+        : \"8100 Mountainside Bar and Grill\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : true\n         },\n         \"price_level\" : 2,\n         \"rating\" :
+        4.30,\n         \"reference\" : \"CoQBfQAAAAqAf4Tz_34E-LRZXI09XrwAabpV_IG6ISwyz3bE458GDcTQQL2uyrbo6_21RiNn9NdGBtaFrnmqyeBK0X-ZXuOrc5q1rHOEVp5eIommqZZsSuPvRo6jh1j_SXGkvVH_1Bfrjd3KA0kd31rqBYp9l9pSFBy4gEH9e8kpiq1KPaU_EhBjCFXqBdu_WNcldNeHQOsIGhQoCuQxvKATTIbA4n9BEAt4X6VO5A\",\n
+        \        \"types\" : [ \"bar\", \"restaurant\", \"food\", \"establishment\"
+        ],\n         \"vicinity\" : \"136 East Thomas Place, Avon\",\n         \"zagat_reviewed\"
+        : true,\n         \"zagat_selected\" : true\n      },\n      {\n         \"aspects\"
+        : [\n            {\n               \"rating\" : 29,\n               \"type\"
+        : \"food\"\n            }\n         ],\n         \"geometry\" : {\n            \"location\"
+        : {\n               \"lat\" : 39.6048720,\n               \"lng\" : -106.5211950\n
+        \           }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png\",\n
+        \        \"id\" : \"c10bf5bb5310e17270dad4230e7b7879fcf827a3\",\n         \"name\"
+        : \"Splendido At The Chateau\",\n         \"opening_hours\" : {\n            \"open_now\"
+        : false\n         },\n         \"photos\" : [\n            {\n               \"height\"
+        : 240,\n               \"html_attributions\" : [],\n               \"photo_reference\"
+        : \"CoQBfwAAAKl0iWzju3x7Yr7rQcrEYfIS3tS8c94Extsukb1Vf9W3lbRNPYJkrDkuLPURQpOKLeTLgDMkhkHBz5Nve57FHUY9k5xu0oaK1Ld0AQhgAbak0xmI0FZnL71Dw_g258XVijnxAbEzLX4K-ojsnH4a2Sj-Q_hahNSSB9zwqr8KdwnfEhBmZ7iaETXpWmACPUidpHarGhSpioZ8RsxC87ZSi1YxckwHkTNF9w\",\n
+        \              \"width\" : 360\n            }\n         ],\n         \"price_level\"
+        : 3,\n         \"rating\" : 4.70,\n         \"reference\" : \"CoQBdgAAAHp2g4wlpG4OsCD4W6Il4czKEAc4DfNT0ItYWDfVj_kVyvqtO5xbUPlUX_-QyaBUSPcRWVhwU0vtAoLqjVkenkwwBda3-TBPjSC-PcwiQ48_nG3o2XwCQwm2no9hMFLfJKNdjuaIMAch4VqvGTqJOnFZpZ8D6JbxuvIT_EgrmbarEhBLenbQbT8QWWheSFz95EAfGhSPGveOSW3k7kY5YcHcVtZ-uIqCuA\",\n
+        \        \"types\" : [ \"restaurant\", \"food\", \"establishment\" ],\n         \"vicinity\"
+        : \"17 Chateau Lane, Beaver Creek\",\n         \"zagat_reviewed\" : true,\n
+        \        \"zagat_selected\" : true\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+    http_version: '1.1'
+  recorded_at: Wed, 13 Mar 2013 13:42:50 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/details/json?reference=CnRpAAAAhpyrLL36QODbvtq5TCkJYiEmvERhrg_slkSrLBgoh_7e196CxAG4abOlD8_YQkrbePwc6NQCYI14Hz5TuI0vDnMgha5dXedKVXKLw8125Qvk2DLOl2vYZlOdNdniGpXD1UxoaA-neTQsWSyittG_XBIQEXOrpxY8A7KUek2dRTT69RoUZMep0CZwtXWoA1E4E-oWQtl0m7s&sensor=false&key=DUMMY_KEY&language=&extensions=review_summary
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      vary:
+      - Accept-Language
+      date:
+      - Wed, 13 Mar 2013 13:42:51 GMT
+      server:
+      - mafe
+      cache-control:
+      - private
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - SAMEORIGIN
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICAiaHRtbF9hdHRyaWJ1dGlvbnMiIDogW10sCiAgICJyZXN1bHQiIDog
+        ewogICAgICAiYWRkcmVzc19jb21wb25lbnRzIiA6IFsKICAgICAgICAgewog
+        ICAgICAgICAgICAibG9uZ19uYW1lIiA6ICIxOTMiLAogICAgICAgICAgICAi
+        c2hvcnRfbmFtZSIgOiAiMTkzIiwKICAgICAgICAgICAgInR5cGVzIiA6IFsg
+        InN0cmVldF9udW1iZXIiIF0KICAgICAgICAgfSwKICAgICAgICAgewogICAg
+        ICAgICAgICAibG9uZ19uYW1lIiA6ICJHb3JlIENyZWVrIERyaXZlIiwKICAg
+        ICAgICAgICAgInNob3J0X25hbWUiIDogIkdvcmUgQ3JlZWsgRHJpdmUiLAog
+        ICAgICAgICAgICAidHlwZXMiIDogWyAicm91dGUiIF0KICAgICAgICAgfSwK
+        ICAgICAgICAgewogICAgICAgICAgICAibG9uZ19uYW1lIiA6ICJWYWlsIiwK
+        ICAgICAgICAgICAgInNob3J0X25hbWUiIDogIlZhaWwiLAogICAgICAgICAg
+        ICAidHlwZXMiIDogWyAibG9jYWxpdHkiLCAicG9saXRpY2FsIiBdCiAgICAg
+        ICAgIH0sCiAgICAgICAgIHsKICAgICAgICAgICAgImxvbmdfbmFtZSIgOiAi
+        Q08iLAogICAgICAgICAgICAic2hvcnRfbmFtZSIgOiAiQ08iLAogICAgICAg
+        ICAgICAidHlwZXMiIDogWyAiYWRtaW5pc3RyYXRpdmVfYXJlYV9sZXZlbF8x
+        IiwgInBvbGl0aWNhbCIgXQogICAgICAgICB9LAogICAgICAgICB7CiAgICAg
+        ICAgICAgICJsb25nX25hbWUiIDogIlVTIiwKICAgICAgICAgICAgInNob3J0
+        X25hbWUiIDogIlVTIiwKICAgICAgICAgICAgInR5cGVzIiA6IFsgImNvdW50
+        cnkiLCAicG9saXRpY2FsIiBdCiAgICAgICAgIH0sCiAgICAgICAgIHsKICAg
+        ICAgICAgICAgImxvbmdfbmFtZSIgOiAiODE2NTciLAogICAgICAgICAgICAi
+        c2hvcnRfbmFtZSIgOiAiODE2NTciLAogICAgICAgICAgICAidHlwZXMiIDog
+        WyAicG9zdGFsX2NvZGUiIF0KICAgICAgICAgfQogICAgICBdLAogICAgICAi
+        YXNwZWN0cyIgOiBbCiAgICAgICAgIHsKICAgICAgICAgICAgInJhdGluZyIg
+        OiAyOCwKICAgICAgICAgICAgInR5cGUiIDogImZvb2QiCiAgICAgICAgIH0s
+        CiAgICAgICAgIHsKICAgICAgICAgICAgInJhdGluZyIgOiAyNSwKICAgICAg
+        ICAgICAgInR5cGUiIDogImRlY29yIgogICAgICAgICB9LAogICAgICAgICB7
+        CiAgICAgICAgICAgICJyYXRpbmciIDogMjYsCiAgICAgICAgICAgICJ0eXBl
+        IiA6ICJzZXJ2aWNlIgogICAgICAgICB9CiAgICAgIF0sCiAgICAgICJmb3Jt
+        YXR0ZWRfYWRkcmVzcyIgOiAiMTkzIEdvcmUgQ3JlZWsgRHJpdmUgIzIwMSwg
+        VmFpbCwgQ08sIFVuaXRlZCBTdGF0ZXMiLAogICAgICAiZm9ybWF0dGVkX3Bo
+        b25lX251bWJlciIgOiAiKDk3MCkgNDc2LTAxMjUiLAogICAgICAiZ2VvbWV0
+        cnkiIDogewogICAgICAgICAibG9jYXRpb24iIDogewogICAgICAgICAgICAi
+        bGF0IiA6IDM5LjY0MDY4NDAsCiAgICAgICAgICAgICJsbmciIDogLTEwNi4z
+        NzQ4NDQwCiAgICAgICAgIH0KICAgICAgfSwKICAgICAgImljb24iIDogImh0
+        dHA6Ly9tYXBzLmdzdGF0aWMuY29tL21hcGZpbGVzL3BsYWNlX2FwaS9pY29u
+        cy9yZXN0YXVyYW50LTcxLnBuZyIsCiAgICAgICJpZCIgOiAiMTk2ZjFlNDkx
+        NjU1MzUwZjIxYzIzZmE0YWI1NDMyNmJkNjZkNjVkMSIsCiAgICAgICJpbnRl
+        cm5hdGlvbmFsX3Bob25lX251bWJlciIgOiAiKzEgOTcwLTQ3Ni0wMTI1IiwK
+        ICAgICAgIm5hbWUiIDogIlN3ZWV0IEJhc2lsIiwKICAgICAgIm9wZW5pbmdf
+        aG91cnMiIDogewogICAgICAgICAib3Blbl9ub3ciIDogZmFsc2UsCiAgICAg
+        ICAgICJwZXJpb2RzIiA6IFsKICAgICAgICAgICAgewogICAgICAgICAgICAg
+        ICAiY2xvc2UiIDogewogICAgICAgICAgICAgICAgICAiZGF5IiA6IDAsCiAg
+        ICAgICAgICAgICAgICAgICJ0aW1lIiA6ICIyMjAwIgogICAgICAgICAgICAg
+        ICB9LAogICAgICAgICAgICAgICAib3BlbiIgOiB7CiAgICAgICAgICAgICAg
+        ICAgICJkYXkiIDogMCwKICAgICAgICAgICAgICAgICAgInRpbWUiIDogIjEx
+        MzAiCiAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSwKICAgICAgICAg
+        ICAgewogICAgICAgICAgICAgICAiY2xvc2UiIDogewogICAgICAgICAgICAg
+        ICAgICAiZGF5IiA6IDEsCiAgICAgICAgICAgICAgICAgICJ0aW1lIiA6ICIy
+        MjAwIgogICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAib3BlbiIg
+        OiB7CiAgICAgICAgICAgICAgICAgICJkYXkiIDogMSwKICAgICAgICAgICAg
+        ICAgICAgInRpbWUiIDogIjExMzAiCiAgICAgICAgICAgICAgIH0KICAgICAg
+        ICAgICAgfSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAiY2xvc2Ui
+        IDogewogICAgICAgICAgICAgICAgICAiZGF5IiA6IDIsCiAgICAgICAgICAg
+        ICAgICAgICJ0aW1lIiA6ICIyMjAwIgogICAgICAgICAgICAgICB9LAogICAg
+        ICAgICAgICAgICAib3BlbiIgOiB7CiAgICAgICAgICAgICAgICAgICJkYXki
+        IDogMiwKICAgICAgICAgICAgICAgICAgInRpbWUiIDogIjExMzAiCiAgICAg
+        ICAgICAgICAgIH0KICAgICAgICAgICAgfSwKICAgICAgICAgICAgewogICAg
+        ICAgICAgICAgICAiY2xvc2UiIDogewogICAgICAgICAgICAgICAgICAiZGF5
+        IiA6IDMsCiAgICAgICAgICAgICAgICAgICJ0aW1lIiA6ICIyMjAwIgogICAg
+        ICAgICAgICAgICB9LAogICAgICAgICAgICAgICAib3BlbiIgOiB7CiAgICAg
+        ICAgICAgICAgICAgICJkYXkiIDogMywKICAgICAgICAgICAgICAgICAgInRp
+        bWUiIDogIjExMzAiCiAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSwK
+        ICAgICAgICAgICAgewogICAgICAgICAgICAgICAiY2xvc2UiIDogewogICAg
+        ICAgICAgICAgICAgICAiZGF5IiA6IDQsCiAgICAgICAgICAgICAgICAgICJ0
+        aW1lIiA6ICIyMjAwIgogICAgICAgICAgICAgICB9LAogICAgICAgICAgICAg
+        ICAib3BlbiIgOiB7CiAgICAgICAgICAgICAgICAgICJkYXkiIDogNCwKICAg
+        ICAgICAgICAgICAgICAgInRpbWUiIDogIjExMzAiCiAgICAgICAgICAgICAg
+        IH0KICAgICAgICAgICAgfSwKICAgICAgICAgICAgewogICAgICAgICAgICAg
+        ICAiY2xvc2UiIDogewogICAgICAgICAgICAgICAgICAiZGF5IiA6IDUsCiAg
+        ICAgICAgICAgICAgICAgICJ0aW1lIiA6ICIyMjAwIgogICAgICAgICAgICAg
+        ICB9LAogICAgICAgICAgICAgICAib3BlbiIgOiB7CiAgICAgICAgICAgICAg
+        ICAgICJkYXkiIDogNSwKICAgICAgICAgICAgICAgICAgInRpbWUiIDogIjEx
+        MzAiCiAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSwKICAgICAgICAg
+        ICAgewogICAgICAgICAgICAgICAiY2xvc2UiIDogewogICAgICAgICAgICAg
+        ICAgICAiZGF5IiA6IDYsCiAgICAgICAgICAgICAgICAgICJ0aW1lIiA6ICIy
+        MjAwIgogICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAib3BlbiIg
+        OiB7CiAgICAgICAgICAgICAgICAgICJkYXkiIDogNiwKICAgICAgICAgICAg
+        ICAgICAgInRpbWUiIDogIjExMzAiCiAgICAgICAgICAgICAgIH0KICAgICAg
+        ICAgICAgfQogICAgICAgICBdCiAgICAgIH0sCiAgICAgICJwcmljZV9sZXZl
+        bCIgOiAzLAogICAgICAicmF0aW5nIiA6IDQuNTAsCiAgICAgICJyZWZlcmVu
+        Y2UiIDogIkNuUnBBQUFBeXZQRzFXVGtYLWdFM1pxSGtGOG1wUjA4bTFSTXhq
+        TDktS3lzTXFPOGJrVV9yTlBvMzd4dGV0ZkRaTVVoazdoeHpkTTlWQnhUV2RV
+        UFI5UTZrTWF5RDZSOGdmVE1lYzhka191ZFJRVEVMal9rczlWZ0E4WS1YbWtW
+        R1B0c19LcExtSzV6MThsM0h6aTdLRlhoODJEMll4SVF1QWNIMFNGTkdTeUVv
+        N1FadklOR254b1VWa25IWXc2VHRNT3hRcGdkQ1REbjFQV0dyM1UiLAogICAg
+        ICAicmV2aWV3X3N1bW1hcnkiIDogIlN0aWxsIHRoZSBcImdvbGQgc3RhbmRh
+        cmRcIiBpbiBWYWlsLCB0aGlzIFwicGlvbmVlclwiIG9mIFwiZm9yd2FyZC10
+        aGlua2luZ1wiIFwibHV4dXJ5XCIgcHJlc2VudHMgXCJmYWJcIiwgXCJjdXR0
+        aW5nLWVkZ2VcIiBOZXcgQW1lcmljYW4gY3Vpc2luZSBhbmQgXCJwYW1wZXJp
+        bmdcIiBzZXJ2aWNlIGluIGFuIFwiZW5lcmdpemluZ1wiLCBcInNleHlcIiBz
+        ZXR0aW5nIHdpdGggXCJzcGFya2xpbmcgdmlld3NcIiBvZiBHb3JlIENyZWVr
+        IHRocm91Z2ggXCJwaWN0dXJlIHdpbmRvd3NcIjsgXCJza3ktaGlnaCBwcmlj
+        ZXNcIiBhcmUgbm8gaXNzdWUgZm9yIHRoZSBcImdsaXR6eVwiIFwibW91bnRh
+        aW5lZXJzXCIgd2hvIGZyZXF1ZW50IGl0IOKAkyBpbiBmYWN0LCBcInRoZSBv
+        bmx5IGRvd25zaWRlIGlzIGl0cyBwb3B1bGFyaXR5XCIgKGl0J3MgXCJhY2hp
+        bmdseSBub2lzeVwiKS4iLAogICAgICAicmV2aWV3cyIgOiBbCiAgICAgICAg
+        IHsKICAgICAgICAgICAgImFzcGVjdHMiIDogWwogICAgICAgICAgICAgICB7
+        CiAgICAgICAgICAgICAgICAgICJyYXRpbmciIDogMywKICAgICAgICAgICAg
+        ICAgICAgInR5cGUiIDogImZvb2QiCiAgICAgICAgICAgICAgIH0sCiAgICAg
+        ICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgInJhdGluZyIgOiAyLAog
+        ICAgICAgICAgICAgICAgICAidHlwZSIgOiAiZGVjb3IiCiAgICAgICAgICAg
+        ICAgIH0sCiAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgInJh
+        dGluZyIgOiAxLAogICAgICAgICAgICAgICAgICAidHlwZSIgOiAic2Vydmlj
+        ZSIKICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAg
+        ICAiYXV0aG9yX25hbWUiIDogImphbWVzIGhhbGwiLAogICAgICAgICAgICAi
+        YXV0aG9yX3VybCIgOiAiaHR0cHM6Ly9wbHVzLmdvb2dsZS5jb20vMTAyNDE3
+        ODIwMDc3MzgxNDY4MTc4IiwKICAgICAgICAgICAgInRleHQiIDogIkV2ZXJ5
+        b25lIGZvdW5kIHRoZSBmb29kIGRlbGljaW91cyBhbmQgdGhlIG1lbnUgaXMg
+        Y3JlYXRpdmUuIE1vcmUgdmVnZXRhcmlhbiBvcHRpb25zIHdvdWxkIGJlIG5p
+        Y2UuIFRoZSBzZXJ2aWNlIHdhcyBnb29kIGRlc3BpdGUgYmVpbmcgYml0IHBy
+        ZXRlbnRpb3VzLiBJIHdvdWxkIHJhdGUgaXQgdmVyeSBnb29kIGJ1dCB3ZSBl
+        eHBlcmllbmNlZCBhIG1pbm9yIHNlcnZlciBrbm93bGVkZ2UgcHJvYmxlbS4i
+        LAogICAgICAgICAgICAidGltZSIgOiAxMzQ4NDEyODcxCiAgICAgICAgIH0s
+        CiAgICAgICAgIHsKICAgICAgICAgICAgImFzcGVjdHMiIDogWwogICAgICAg
+        ICAgICAgICB7CiAgICAgICAgICAgICAgICAgICJyYXRpbmciIDogMCwKICAg
+        ICAgICAgICAgICAgICAgInR5cGUiIDogIm92ZXJhbGwiCiAgICAgICAgICAg
+        ICAgIH0KICAgICAgICAgICAgXSwKICAgICAgICAgICAgImF1dGhvcl9uYW1l
+        IiA6ICJBIEdvb2dsZSBVc2VyIiwKICAgICAgICAgICAgInRleHQiIDogIk9u
+        ZSBvZiB0aGUgbW9zdCBwcmV0ZW50aW91cyByZXN0YXVyYW50cyBJJiMzOTt2
+        ZSBldmVyIGJlZW4gdG8uLi4uSXQmIzM5O3Mgb25lIHRoaW5nIHRvIGJlIGNv
+        Y2t5IGlmIHlvdSBoYXZlIHRoZSBmb29kIGFuZCB0YWxlbnQgdG8gYmFjayBp
+        dCB1cC4uLlRoaXMgcGxhY2UgaGFzIG5laXRoZXIuIEFwcGV0aXplcnMgY2Ft
+        ZSBvdXQgbHVrZSB3YXJtIGFuZCB0dXJuZWQgY29sZCB3aXRoaW4gNSBtaW51
+        dGVzLiBIZWNrLCBldmVuIERlbm55JiMzOTtzIGhlYXRzIHRoZWlyIHBsYXRl
+        cyB1cC4gRW50cmVlJiMzOTtzIHdlcmUgbm90aGluZyBzcGVjaWFsLi4uLkkg
+        Y291bGQgaGF2ZSBwcmVwYXJlZCBhIGJldHRlciBtZWFsIGFuZCBJJiMzOTt2
+        ZSBuZXZlciBiZWVuIHRvIGN1bGluYXJ5IHNjaG9vbC4gSXQmIzM5O3MgYW1h
+        emluZyB0aGF0IHJlc3RhdXJhbnRzIGxpa2UgdGhpcyBtYW5hZ2UgdG8ga2Vl
+        cCB0aGVpciBkb29ycyBvcGVuLiIsCiAgICAgICAgICAgICJ0aW1lIiA6IDEz
+        MzY3NTM2NjUKICAgICAgICAgfSwKICAgICAgICAgewogICAgICAgICAgICAi
+        YXNwZWN0cyIgOiBbCiAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAg
+        ICAgInJhdGluZyIgOiAwLAogICAgICAgICAgICAgICAgICAidHlwZSIgOiAi
+        b3ZlcmFsbCIKICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAg
+        ICAgICAgICAiYXV0aG9yX25hbWUiIDogIkEgR29vZ2xlIFVzZXIiLAogICAg
+        ICAgICAgICAidGV4dCIgOiAiSSBoYXZlIGJlZW4gZ29pbmcgdG8gU3dlZXQg
+        QmFzaWwgZm9yIHllYXJzIGFuZCB0aGlzIHBsYWNlIGhhcyBjZXJ0YWlubHkg
+        YmVjb21lIG1lZGlvY3JlIGF0IGJlc3QuIE91ciBmb29kIHdhcyBsdWtlIHdh
+        cm0gYW5kIG15IHdpZmUmIzM5O3MgZHVjayB3YXMgY29tcGxldGVseSByYXcg
+        ZGVzcGl0ZSBhc2tpbmcgZm9yIHdlbGwgZG9uZSEgTXkgYmVlZiB3YXMgbm90
+        aGluZyBzcGVjaWFsLiBUaGlzIHJlc3RhdXJhbnQgaXMgb3ZlcnByaWNlZCBm
+        b3Igd2hhdCB5b3UgZ2V0LiBJIGZvdW5kIHRoZSBzdGFmZiBydWRlIGFuZCBj
+        b21wbGFjZW50LiBUaGUgcnVkZXN0IHBlb3BsZSBJIGhhdmUgZW5jb3VudGVy
+        ZWQgaW4gcXVpdGUgc29tZSB0aW1lLiBTb21lIHNlcmlvdXMgZWdvIGlzc3Vl
+        cyBoZXJlLiBXZSB3aWxsIG5vdCBiZSByZXR1cm5pbmcuIEkgdGhpbmsgdGhl
+        eSBuZWVkIHRvIGNsZWFyIHRoZSBkZWNrIGFuZCBoaXJlIGEgbmV3IHRlYW0u
+        IiwKICAgICAgICAgICAgInRpbWUiIDogMTMyMTI5MzgzMAogICAgICAgICB9
+        LAogICAgICAgICB7CiAgICAgICAgICAgICJhc3BlY3RzIiA6IFsKICAgICAg
+        ICAgICAgICAgewogICAgICAgICAgICAgICAgICAicmF0aW5nIiA6IDAsCiAg
+        ICAgICAgICAgICAgICAgICJ0eXBlIiA6ICJvdmVyYWxsIgogICAgICAgICAg
+        ICAgICB9CiAgICAgICAgICAgIF0sCiAgICAgICAgICAgICJhdXRob3JfbmFt
+        ZSIgOiAiQSBHb29nbGUgVXNlciIsCiAgICAgICAgICAgICJ0ZXh0IiA6ICJX
+        ZSBoZWFyZCBhIGxvdCBvZiBncmVhdCB0aGluZ3MgYWJvdXQgU3dlZXQgQmFz
+        aWwgYnV0IHdlcmUgcmVhbGx5IGRpc2FwcG9pbnRlZC4gVGhlIGZvb2Qgd2Fz
+        IG9rYXkgYnV0IGZvciB0aGUgcHJpY2Ugc2hvdWxkIGhhdmUgYmVlbiBleGNl
+        cHRpb25hbC4gVGhleSB3ZXJlIGluZmxleGlibGUgd2l0aCBzaWRlIHN1YnN0
+        aXR1dGlvbnMgYW5kIHRoZSBzZXJ2aWNlIHdhcyBtZWRpb2NyZS4gT3ZlcmFs
+        bCBleHBlcmllbmNlIHdhcyBmYWlyLiBXb3VsZCB0cnkgc29tZXdoZXJlIGVs
+        c2UgbmV4dCB0aW1lLiIsCiAgICAgICAgICAgICJ0aW1lIiA6IDEzMTMzMzkx
+        NzIKICAgICAgICAgfSwKICAgICAgICAgewogICAgICAgICAgICAiYXNwZWN0
+        cyIgOiBbCiAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgInJh
+        dGluZyIgOiAzLAogICAgICAgICAgICAgICAgICAidHlwZSIgOiAib3ZlcmFs
+        bCIKICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAg
+        ICAiYXV0aG9yX25hbWUiIDogIkEgR29vZ2xlIFVzZXIiLAogICAgICAgICAg
+        ICAidGV4dCIgOiAiR3JlYXQgZXhwZXJpZW5jZSEgTXkgd2lmZSBhbmQgSSBz
+        dG9wcGVkIGJ5IFN3ZWV0IEJhc2lsIGJ5IGFjY2lkZW50IG9uIG91ciB3YXkg
+        YmFjayB0byBEZW52ZXIgZnJvbSBCZWF2ZXIgQ3JlZWsuIFdlIGRpZG4mIzM5
+        O3Qga25vdyB0aGUgYXJlYSBhbmQgaGFwcGVuZWQgdG8gc2VlIHRoZSByZXN0
+        YXVyYW50LiBXZSBzYXQgYXQgdGhlIGJhciBhbmQgd2VyZSBwcm92aWRlZCBn
+        cmVhdCBzZXJ2aWNlIGJ5IE5pY2ssIHRoZSBiYXJ0ZW5kZXIuIFRoZSB0dW5h
+        IGFwcGV0aXplciBhbmQgc3R1ZmZlZCBjaGlsZSB3ZXJlIHNlbnNhdGlvbmFs
+        LiBHcmVhdCBkcmlua3MgYXMgd2VsbC4gTG90cyBvZiBwZW9wbGUgY29taW5n
+        IGluIHNlZW1lZCB0byBrbm93IE5pY2sgYXMgaGUgbWFrZXMgcGVvcGxlIGZl
+        ZWwgd2VsY29tZS4gVGhlIHByaWNlIHNlZW1lZCBhYm91dCByaWdodCBjb21w
+        YXJlZCB0byBvdGhlciByZXN0YXVyYW50cyBpbiBhIHJlc29ydCB0b3duLiIs
+        CiAgICAgICAgICAgICJ0aW1lIiA6IDEzMjczMzQ2NTIKICAgICAgICAgfQog
+        ICAgICBdLAogICAgICAidHlwZXMiIDogWyAicmVzdGF1cmFudCIsICJmb29k
+        IiwgImVzdGFibGlzaG1lbnQiIF0sCiAgICAgICJ1cmwiIDogImh0dHBzOi8v
+        cGx1cy5nb29nbGUuY29tLzExMjY0MTI1NjAwMTU3MTE3ODM4My9hYm91dD9o
+        bD1lbi1VUyIsCiAgICAgICJ1dGNfb2Zmc2V0IiA6IC0zNjAsCiAgICAgICJ2
+        aWNpbml0eSIgOiAiMTkzIEdvcmUgQ3JlZWsgRHJpdmUgIzIwMSwgVmFpbCIs
+        CiAgICAgICJ3ZWJzaXRlIiA6ICJodHRwOi8vd3d3LnN3ZWV0YmFzaWwtdmFp
+        bC5jb20vIiwKICAgICAgInphZ2F0X3JldmlldyIgOiAiU3RpbGwgdGhlIFwi
+        Z29sZCBzdGFuZGFyZFwiIGluIFZhaWwsIHRoaXMgXCJwaW9uZWVyXCIgb2Yg
+        XCJmb3J3YXJkLXRoaW5raW5nXCIgXCJsdXh1cnlcIiBwcmVzZW50cyBcImZh
+        YlwiLCBcImN1dHRpbmctZWRnZVwiIE5ldyBBbWVyaWNhbiBjdWlzaW5lIGFu
+        ZCBcInBhbXBlcmluZ1wiIHNlcnZpY2UgaW4gYW4gXCJlbmVyZ2l6aW5nXCIs
+        IFwic2V4eVwiIHNldHRpbmcgd2l0aCBcInNwYXJrbGluZyB2aWV3c1wiIG9m
+        IEdvcmUgQ3JlZWsgdGhyb3VnaCBcInBpY3R1cmUgd2luZG93c1wiOyBcInNr
+        eS1oaWdoIHByaWNlc1wiIGFyZSBubyBpc3N1ZSBmb3IgdGhlIFwiZ2xpdHp5
+        XCIgXCJtb3VudGFpbmVlcnNcIiB3aG8gZnJlcXVlbnQgaXQg4oCTIGluIGZh
+        Y3QsIFwidGhlIG9ubHkgZG93bnNpZGUgaXMgaXRzIHBvcHVsYXJpdHlcIiAo
+        aXQncyBcImFjaGluZ2x5IG5vaXN5XCIpLiIsCiAgICAgICJ6YWdhdF9zZWxl
+        Y3RlZCIgOiB0cnVlCiAgIH0sCiAgICJzdGF0dXMiIDogIk9LIgp9Cg==
+    http_version: '1.1'
+  recorded_at: Wed, 13 Mar 2013 13:42:51 GMT
+recorded_with: VCR 2.2.5

@@ -172,6 +172,8 @@ module GooglePlaces
       retry_options[:status] = [retry_options[:status]] unless retry_options[:status].is_a?(Array)
 
       @response = self.class.get(url, :query => options)
+      # puts "@response.request.last_uri.to_s"
+      # puts @response.request.last_uri.to_s
 
       return unless retry_options[:max] > 0 && retry_options[:status].include?(@response.parsed_response['status'])
 
