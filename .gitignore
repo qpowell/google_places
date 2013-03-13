@@ -7,5 +7,5 @@ pkg/*
 spec/api_key.rb
 .yardoc/
 doc/
-spec/vcr_cassettes/*
+spec/vcr_cassettes/list_spots*
 .idea
