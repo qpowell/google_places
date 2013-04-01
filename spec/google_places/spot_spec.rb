@@ -138,6 +138,26 @@ describe GooglePlaces::Spot do
     end
   end
 
+  context 'Multiple page request' do
+    use_vcr_cassette 'multiple_page_request'
+
+    it 'should return >20 results when :multipage_request is true' do
+      @collection = GooglePlaces::Spot.list_by_query("wolfgang", api_key, @sensor, :lat => "40.808235", :lng => "-73.948733", :radius => @radius, :multipage => true)
+      @collection.should have_at_least(21).places
+    end
+
+    it 'should return at most 20 results when :multipage is false' do
+      @collection = GooglePlaces::Spot.list_by_query("wolfgang", api_key, @sensor, :lat => "40.808235", :lng => "-73.948733", :radius => @radius, :multipage => false)
+      @collection.should have_at_most(20).places
+    end
+
+
+    it 'should return at most 20 results when :multipage is not present' do
+      @collection = GooglePlaces::Spot.list_by_query("wolfgang", api_key, @sensor, :lat => "40.808235", :lng => "-73.948733", :radius => @radius)
+      @collection.should have_at_most(20).places
+    end
+  end
+
   context 'List spots by query' do
     use_vcr_cassette 'list_spots'
 
@@ -173,5 +193,4 @@ describe GooglePlaces::Spot do
       end
     end
   end
-
 end
