@@ -161,5 +161,23 @@ module GooglePlaces
     def spots_by_query(query, options = {})
       Spot.list_by_query(query, @api_key, @sensor, @options.merge(options))
     end
+
+    # Search for Spots with a pagetoken
+    #
+    # @return [Array<Spot>]
+    # @param [String] pagetoken the next page token to search for
+    # @param [Hash] options
+    # @option options [String,Array<String>] :exclude ([])
+    #   A String or an Array of <b>types</b> to exclude from results
+    # @option options [Hash] :retry_options ({})
+    #   A Hash containing parameters for search retries
+    # @option options [Object] :retry_options[:status] ([])
+    # @option options [Integer] :retry_options[:max] (0) the maximum retries
+    # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
+    #
+    # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
+    def spots_by_pagetoken(pagetoken, options = {})
+      Spot.list_by_pagetoken(pagetoken, @api_key, @sensor, @options.merge(options))
+    end
   end
 end

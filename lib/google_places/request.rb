@@ -11,6 +11,7 @@ module GooglePlaces
     NEARBY_SEARCH_URL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json'
     DETAILS_URL       = 'https://maps.googleapis.com/maps/api/place/details/json'
     TEXT_SEARCH_URL   = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
+    PAGETOKEN_URL     = 'https://maps.googleapis.com/maps/api/place/search/json'
 
     # Search for Spots at the provided location
     #
@@ -118,6 +119,26 @@ module GooglePlaces
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def self.spots_by_query(options = {})
       request = new(TEXT_SEARCH_URL, options)
+      request.parsed_response
+    end
+
+    # Search for Spots with a page token
+    #
+    # @return [Array<Spot>]
+    # @param [String] pagetoken the next page token to search for
+    # @param [String] api_key the provided api key
+    # @param [Hash] options
+    # @option options [String,Array<String>] :exclude ([])
+    #   A String or an Array of <b>types</b> to exclude from results
+    # @option options [Hash] :retry_options ({})
+    #   A Hash containing parameters for search retries
+    # @option options [Object] :retry_options[:status] ([])
+    # @option options [Integer] :retry_options[:max] (0) the maximum retries
+    # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
+    #
+    # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
+    def self.spots_by_pagetoken(options = {})
+      request = new(PAGETOKEN_URL, options)
       request.parsed_response
     end
 

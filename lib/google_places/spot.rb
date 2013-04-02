@@ -2,7 +2,7 @@ require 'google_places/review'
 
 module GooglePlaces
   class Spot
-    attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary
+    attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary, :nextpagetoken
 
     # Search for Spots at the provided location
     #
@@ -122,6 +122,26 @@ module GooglePlaces
       self.new(response['result'])
     end
 
+    # Search for Spots with a pagetoken
+    #
+    # @return [Array<Spot>]
+    # @param [String] pagetoken the token to find next results
+    # @param [String] api_key the provided api key
+    # @param [Boolean] sensor
+    # @param [Hash] options
+    def self.list_by_pagetoken(pagetoken, api_key, sensor, options = {})
+      exclude = options.delete(:exclude) || []
+      exclude = [exclude] unless exclude.is_a?(Array)
+
+      options = {
+          :pagetoken => pagetoken,
+          :sensor => sensor,
+          :key => api_key
+      }
+
+      request(:spots_by_pagetoken, false, exclude, options)
+    end
+
     # Search for Spots with a query
     #
     # @return [Array<Spot>]
@@ -226,6 +246,10 @@ module GooglePlaces
       begin
         response = Request.send(method, options)
         response['results'].each do |result|
+          if !multipage_request && !response["next_page_token"].nil? && result == response['results'].last
+            # add next page token on the last result
+            result.merge!("nextpagetoken" => response["next_page_token"])
+          end
           yield(result)
         end
 
@@ -280,6 +304,7 @@ module GooglePlaces
       @review_summary             = json_result_object['review_summary']
       @photos                     = photos_component(json_result_object['photos'])
       @reviews                    = reviews_component(json_result_object['reviews'])
+      @nextpagetoken              = json_result_object['nextpagetoken']
     end
 
     def address_component(address_component_type, address_component_length)

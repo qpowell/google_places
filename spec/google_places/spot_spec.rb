@@ -8,6 +8,7 @@ describe GooglePlaces::Spot do
     @radius = 200
     @sensor = false
     @reference = "CnRsAAAASc4grenwL0h3X5VPNp5fkDNfqbjt3iQtWIPlKS-3ms9GbnCxR_FLHO0B0ZKCgJSg19qymkeHagjQFB4aUL87yhp4mhFTc17DopK1oiYDaeGthztSjERic8TmFNe-6zOpKSdiZWKE6xlQvcbSiWIJchIQOEYZqunSSZqNDoBSs77bWRoUJcMMVANtSlhy0llKI0MI6VcC7DU"
+    @pagetoken = "CmRVAAAAqKK43TjXKnyEx4-XTWd4bC-iBq88Olspwga_JQbEpznYpfwXYbWBrxmb-1QYD4DMtq8gym5YruCEVjByOlKn8PWKQO5fHvuYD8rWKHUeBvMleM7k3oh9TUG8zqcyuhPmEhCG_C2XuypmkQ20hRvxro4sGhQN3nbWCjgpjyG_E_ayjVIoTGbViw"
   end
 
   context 'List spots' do
@@ -151,11 +152,21 @@ describe GooglePlaces::Spot do
       @collection.should have_at_most(20).places
     end
 
-
     it 'should return at most 20 results when :multipage is not present' do
       @collection = GooglePlaces::Spot.list_by_query("wolfgang", api_key, @sensor, :lat => "40.808235", :lng => "-73.948733", :radius => @radius)
       @collection.should have_at_most(20).places
     end
+
+    it 'should return a pagetoken when there is more than 20 results and :multipage is false' do
+      @collection = GooglePlaces::Spot.list_by_query("wolfgang", api_key, @sensor, :lat => "40.808235", :lng => "-73.948733", :radius => @radius, :multipage => false)
+      @collection.last.nextpagetoken.should_not be_nil
+    end
+
+    it 'should return some results when :pagetoken is present' do
+      @collection = GooglePlaces::Spot.list_by_pagetoken(@pagetoken, api_key, @sensor)
+      @collection.should have_at_least(1).places
+    end
+
   end
 
   context 'List spots by query' do
