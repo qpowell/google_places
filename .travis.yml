@@ -1,8 +1,6 @@
 language: ruby
 rvm:
-  - 1.8.7
   - 1.9.3
-  - ree
 script: bundle exec rspec
 before_script: cp spec/api_key.travis.rb spec/api_key.rb
 after_script: rm spec/api_key.rb
