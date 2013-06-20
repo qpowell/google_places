@@ -232,6 +232,7 @@ module GooglePlaces
     # @raise [RequestDeniedError] when server response object includes 'REQUEST_DENIED'
     # @raise [InvalidRequestError] when server response object includes 'INVALID_REQUEST'
     # @raise [UnknownError] when server response object includes 'UNKNOWN_ERROR'
+    # @raise [NotFoundError] when server response object includes 'NOT_FOUND'
     # @return [String] the response from the server as JSON
     def parsed_response
       case @response.parsed_response['status']
@@ -245,6 +246,8 @@ module GooglePlaces
         raise InvalidRequestError.new(@response)
       when 'UNKNOWN_ERROR'
         raise UnknownError.new(@response)
+      when 'NOT_FOUND'
+        raise NotFoundError.new(@response)
       end
     end
 
