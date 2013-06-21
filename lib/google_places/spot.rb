@@ -2,7 +2,7 @@ require 'google_places/review'
 
 module GooglePlaces
   class Spot
-    attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary, :nextpagetoken
+    attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary, :nextpagetoken, :price_level
 
     # Search for Spots at the provided location
     #
@@ -298,6 +298,7 @@ module GooglePlaces
       @postal_code                = address_component(:postal_code, 'long_name')
       @country                    = address_component(:country, 'long_name')
       @rating                     = json_result_object['rating']
+      @price_level                = json_result_object['price_level']
       @url                        = json_result_object['url']
       @cid                        = json_result_object['url'].to_i
       @website                    = json_result_object['website']
