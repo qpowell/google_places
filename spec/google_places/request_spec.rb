@@ -8,6 +8,7 @@ describe GooglePlaces::Request do
     @radius = 200
     @sensor = false
     @reference = "CnRsAAAASc4grenwL0h3X5VPNp5fkDNfqbjt3iQtWIPlKS-3ms9GbnCxR_FLHO0B0ZKCgJSg19qymkeHagjQFB4aUL87yhp4mhFTc17DopK1oiYDaeGthztSjERic8TmFNe-6zOpKSdiZWKE6xlQvcbSiWIJchIQOEYZqunSSZqNDoBSs77bWRoUJcMMVANtSlhy0llKI0MI6VcC7DU"
+    @reference_not_found = "CnRpAAAAlO2WvF_4eOqp02TAWKsXpPSCFz8KxBjraWhB4MSvdUPqXN0yCpxQgblam1LeRENcWZF-9-2CEfUwlHUli61PaYe0e7dUPAU302tk6KkalnKqx7nv07iFA1Ca_Y1WoCLH9adEWwkxKMITlbGhUUz9-hIQPxQ4Bp_dz5nHloUFkj3rkBoUDSPqy2smqMnPEo4ayfbDupeKEZY"
   end
 
   context 'Listing spots' do
@@ -170,6 +171,17 @@ describe GooglePlaces::Request do
           :key => api_key
         )
         response['result'].should_not be_empty
+      end
+      context 'with reference not found' do
+        it 'should raise not found error' do
+          lambda {
+            GooglePlaces::Request.spot(
+              :reference => @reference_not_found,
+              :sensor => @sensor,
+              :key => api_key
+            )
+          }.should raise_error GooglePlaces::NotFoundError
+        end
       end
     end
     context 'with missing sensor' do
