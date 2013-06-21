@@ -74,6 +74,14 @@ Search by name *and* type:
 
   @client.spots(-33.8670522, 151.1957362, :name => 'italian', :types => 'restaurant')
 
+Search in a radius (in meters):
+
+  @client.spots(-33.8670522, 151.1957362, :radius => 100)
+
+Get results in specific language:
+
+  @client.spots(-33.8670522, 151.1957362, :language => 'en')
+
 === Retrieving a single spot
 
 First register a new Client:
