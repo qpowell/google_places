@@ -236,7 +236,10 @@ module GooglePlaces
       results = []
 
       self.multi_pages_request(method, multipage_request, options) do |result|
-        results << self.new(result) if (result['types'] & exclude) == []
+      	# Some places returned by Google do not have a 'types' property. If the user specified 'types', then 
+      	# this is a non-issue because those places will not be returned. However, if the user did not specify 
+      	# 'types', then we do not want to filter out places with a missing 'types' property from the results set.
+        results << self.new(result) if result['types'].nil? || (result['types'] & exclude) == []
       end
 
       results
