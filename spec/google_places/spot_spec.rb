@@ -190,7 +190,7 @@ describe GooglePlaces::Spot do
     it 'should be a Spot' do
       @spot.class.should == GooglePlaces::Spot
     end
-    %w(reference vicinity lat lng name icon types id formatted_phone_number international_phone_number formatted_address address_components street_number street city region postal_code country rating url types website).each do |attribute|
+    %w(reference vicinity lat lng name icon types id formatted_phone_number international_phone_number formatted_address address_components street_number street city region postal_code country rating url types website price_level).each do |attribute|
       it "should have the attribute: #{attribute}" do
         @spot.respond_to?(attribute).should == true
       end
