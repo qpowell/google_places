@@ -194,6 +194,14 @@ describe GooglePlaces::Spot do
       it "should have the attribute: #{attribute}" do
         @spot.respond_to?(attribute).should == true
       end
+
+      it "should respond to ['#{attribute}']" do
+        expect { @spot[attribute] }.to_not raise_error
+      end
+
+      it "should respond to [:#{attribute}]" do
+        expect { @spot[attribute.to_sym] }.to_not raise_error
+      end
     end
     it 'should contain 5 reviews' do
       @spot.reviews.size == 5
