@@ -311,6 +311,10 @@ module GooglePlaces
       @nextpagetoken              = json_result_object['nextpagetoken']
     end
 
+    def [] (key)
+      send(key)
+    end
+
     def address_component(address_component_type, address_component_length)
       if component = address_components_of_type(address_component_type)
         component.first[address_component_length] unless component.first.nil?
