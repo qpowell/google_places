@@ -494,4 +494,40 @@ http_interactions:
         \"OK\"\n}\n"
     http_version: '1.1'
   recorded_at: Fri, 22 Mar 2013 11:00:08 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/details/json?reference=CnRpAAAAlO2WvF_4eOqp02TAWKsXpPSCFz8KxBjraWhB4MSvdUPqXN0yCpxQgblam1LeRENcWZF-9-2CEfUwlHUli61PaYe0e7dUPAU302tk6KkalnKqx7nv07iFA1Ca_Y1WoCLH9adEWwkxKMITlbGhUUz9-hIQPxQ4Bp_dz5nHloUFkj3rkBoUDSPqy2smqMnPEo4ayfbDupeKEZY&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Mon, 08 Jul 2013 09:53:59 GMT
+      expires:
+      - Mon, 08 Jul 2013 09:58:59 GMT
+      cache-control:
+      - public, max-age=300
+      vary:
+      - Accept-Language
+      server:
+      - mafe
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - SAMEORIGIN
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "{\n   \"debug_info\" : [],\n   \"html_attributions\" : [],\n   \"status\"
+        : \"NOT_FOUND\"\n}\n"
+    http_version: '1.1'
+  recorded_at: Mon, 08 Jul 2013 09:54:02 GMT
 recorded_with: VCR 2.2.5
