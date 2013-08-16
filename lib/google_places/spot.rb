@@ -2,7 +2,7 @@ require 'google_places/review'
 
 module GooglePlaces
   class Spot
-    attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary, :nextpagetoken, :price_level
+    attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours
 
     # Search for Spots at the provided location
     #
@@ -236,8 +236,8 @@ module GooglePlaces
       results = []
 
       self.multi_pages_request(method, multipage_request, options) do |result|
-      	# Some places returned by Google do not have a 'types' property. If the user specified 'types', then 
-      	# this is a non-issue because those places will not be returned. However, if the user did not specify 
+      	# Some places returned by Google do not have a 'types' property. If the user specified 'types', then
+      	# this is a non-issue because those places will not be returned. However, if the user did not specify
       	# 'types', then we do not want to filter out places with a missing 'types' property from the results set.
         results << self.new(result) if result['types'].nil? || (result['types'] & exclude) == []
       end
@@ -299,6 +299,7 @@ module GooglePlaces
       @country                    = address_component(:country, 'long_name')
       @rating                     = json_result_object['rating']
       @price_level                = json_result_object['price_level']
+      @opening_hours              = json_result_object['opening_hours']
       @url                        = json_result_object['url']
       @cid                        = json_result_object['url'].to_i
       @website                    = json_result_object['website']
