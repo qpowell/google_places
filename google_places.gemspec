@@ -3,13 +3,14 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "google_places"
-  s.version     = '0.17.0'
+  s.version     = '0.18.0'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Marcel de Graaf"]
   s.email       = ["mail@marceldegraaf.net"]
   s.homepage    = "https://github.com/marceldegraaf/google_places"
   s.summary     = %q{A Ruby wrapper around the Google Places API.}
   s.description = %q{This gem provides a Ruby wrapper around the Google Places API for use in your own project. Please note that this gem does not provide OAuth authentication.}
+  s.license     = 'MIT'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
