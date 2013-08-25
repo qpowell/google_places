@@ -10,6 +10,7 @@ module GooglePlaces
 
     NEARBY_SEARCH_URL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json'
     DETAILS_URL       = 'https://maps.googleapis.com/maps/api/place/details/json'
+    PHOTO_URL         = 'https://maps.googleapis.com/maps/api/place/photo'
     TEXT_SEARCH_URL   = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
     PAGETOKEN_URL     = 'https://maps.googleapis.com/maps/api/place/search/json'
 
@@ -142,6 +143,33 @@ module GooglePlaces
       request.parsed_response
     end
 
+    # Search for a Photo's URL with a reference key
+    #
+    # @return [URL]
+    # @param [Hash] options
+    # @option options [String] :key
+    #   the provided api key.
+    #   <b>Note that this is a mandatory parameter</b>
+    # @option options [Integer] :maxwidth
+    #   The maximum width of the photo url to be returned
+    #   <b>Note that this is a mandatory parameter</b>
+    # @option options [String] :photoreference
+    #   The reference of a already retrieved Photo
+    #   <b>Note that this is a mandatory parameter</b>
+    # @option options [Boolean] :sensor
+    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
+    #   <b>Note that this is a mandatory parameter</b>
+    #
+    # @option options [Hash] :retry_options ({})
+    #   A Hash containing parameters for search retries
+    # @option options [Object] :retry_options[:status] ([])
+    # @option options [Integer] :retry_options[:max] (0) the maximum retries
+    # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
+    def self.photo_url(options = {})
+      request = new(PHOTO_URL, options, false)
+      request.parsed_response
+    end
+
     # Create a new Request for a given uri and the provided params
     #
     # @return [Request]
@@ -183,7 +211,7 @@ module GooglePlaces
     #
     # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
-    def initialize(url, options)
+    def initialize(url, options, follow_redirects = true)
       retry_options = options.delete(:retry_options) || {}
 
       retry_options[:status] ||= []
@@ -191,8 +219,8 @@ module GooglePlaces
       retry_options[:delay]  ||= 5
 
       retry_options[:status] = [retry_options[:status]] unless retry_options[:status].is_a?(Array)
+      @response = self.class.get(url, :query => options, :follow_redirects => follow_redirects)
 
-      @response = self.class.get(url, :query => options)
       # puts "@response.request.last_uri.to_s"
       # puts @response.request.last_uri.to_s
 
@@ -202,7 +230,7 @@ module GooglePlaces
         for i in (1..retry_options[:max])
           sleep(retry_options[:delay])
 
-          @response = self.class.get(url, :query => options)
+          @response = self.class.get(url, :query => options, :follow_redirects => follow_redirects)
 
           break unless retry_options[:status].include?(@response.parsed_response['status'])
         end
@@ -224,7 +252,7 @@ module GooglePlaces
     end
 
     def execute
-      @response = self.class.get(url, :query => options)
+      @response = self.class.get(url, :query => options, :follow_redirects => follow_redirects)
     end
 
     # Parse errors from the server respons, if any
@@ -235,6 +263,7 @@ module GooglePlaces
     # @raise [NotFoundError] when server response object includes 'NOT_FOUND'
     # @return [String] the response from the server as JSON
     def parsed_response
+      return @response.headers["location"] if @response.code >= 300 and @response.code < 400
       case @response.parsed_response['status']
       when 'OK', 'ZERO_RESULTS'
         @response.parsed_response
