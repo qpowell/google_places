@@ -12,6 +12,7 @@ module GooglePlaces
     DETAILS_URL       = 'https://maps.googleapis.com/maps/api/place/details/json'
     TEXT_SEARCH_URL   = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
     PAGETOKEN_URL     = 'https://maps.googleapis.com/maps/api/place/search/json'
+    RADAR_SEARCH_URL  = 'https://maps.googleapis.com/maps/api/place/radarsearch/json'
 
     # Search for Spots at the provided location
     #
@@ -81,6 +82,53 @@ module GooglePlaces
     # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
     def self.spot(options = {})
       request = new(DETAILS_URL, options)
+      request.parsed_response
+    end
+
+    # @param [Hash] options
+    # @option options [String] :key
+    #   the provided api key.
+    #   <b>Note that this is a mandatory parameter</b>
+    # @option options [String] :location
+    #   the lat, lng for the search
+    # @option options [Boolean] :sensor
+    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
+    #   <b>Note that this is a mandatory parameter</b>
+    # @option options [Integer] :radius (1000)
+    #   Defines the distance (in meters) within which to return Place results.
+    #   The maximum allowed radius is 50,000 meters.
+    #   <b>Note that this is a mandatory parameter</b>
+    # @option options [String,Array] :types
+    #   Restricts the results to Spots matching at least one of the specified types
+    # @option options [String] :name
+    #   A term to be matched against the names of Places.
+    #   Results will be restricted to those containing the passed name value.
+    # @option options [String] :keyword
+    #   A term to be matched against all content that Google has indexed for this Spot,
+    #   including but not limited to name, type, and address,
+    #   as well as customer reviews and other third-party content.
+    # @option options [Integer] :minprice
+    #   Restricts results to only those places within the specified price range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive.
+    # @option options [Integer] :maxprice
+    #   Restricts results to only those places within the specified price range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive.
+    # @option options [Boolean] :opennow
+    #   Retricts results to those Places that are open for business at the time the query is sent. 
+    #   Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query. 
+    #   Setting openNow to false has no effect.
+    # @option options [Boolean] :zagatselected
+    #   Restrict your search to only those locations that are Zagat selected businesses. 
+    #   This parameter does not require a true or false value, simply including the parameter in the request is sufficient to restrict your search. 
+    #   The zagatselected parameter is experimental, and only available to Places API enterprise customers.
+    # @option options [Hash] :retry_options ({})
+    #   A Hash containing parameters for search retries
+    # @option options [Object] :retry_options[:status] ([])
+    # @option options [Integer] :retry_options[:max] (0) the maximum retries
+    # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
+    #
+    # @see https://developers.google.com/places/documentation/search#RadarSearchRequests Radar Search
+    # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
+    def self.spots_by_radar(options = {})
+      request = new(RADAR_SEARCH_URL, options)
       request.parsed_response
     end
 

@@ -179,5 +179,43 @@ module GooglePlaces
     def spots_by_pagetoken(pagetoken, options = {})
       Spot.list_by_pagetoken(pagetoken, @api_key, @sensor, @options.merge(options))
     end
+
+    # Radar Search Service allows you to search for up to 200 Places at once, but with less detail than is typically returned from a Text Search or Nearby Search request. The search response will include up to 200 Places, identified only by their geographic coordinates and reference. You can send a Place Details request for more information about any of them.
+    # 
+    # @return [Array<Spot>]
+    # @param [String,Integer] lat the latitude for the search
+    # @param [String,Integer] lng the longitude for the search
+    # @param [Hash] options
+    # @option options [Integer] :radius (1000)
+    #   Defines the distance (in meters) within which to return Place results.
+    #   The maximum allowed radius is 50,000 meters.
+    #   <b>Note that this is a mandatory parameter</b>
+    # @option options [String,Array] :types
+    #   Restricts the results to Spots matching at least one of the specified types
+    # @option options [String] :name
+    #   A term to be matched against the names of Places.
+    #   Results will be restricted to those containing the passed name value.
+    # @option options [String] :keyword
+    #   A term to be matched against all content that Google has indexed for this Spot,
+    #   including but not limited to name, type, and address,
+    #   as well as customer reviews and other third-party content.
+    # @option options [Integer] :minprice
+    #   Restricts results to only those places within the specified price range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive.
+    # @option options [Integer] :maxprice
+    #   Restricts results to only those places within the specified price range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive.
+    # @option options [Boolean] :opennow
+    #   Retricts results to those Places that are open for business at the time the query is sent. 
+    #   Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query. 
+    #   Setting openNow to false has no effect.
+    # @option options [Boolean] :zagatselected
+    #   Restrict your search to only those locations that are Zagat selected businesses. 
+    #   This parameter does not require a true or false value, simply including the parameter in the request is sufficient to restrict your search. 
+    #   The zagatselected parameter is experimental, and only available to Places API enterprise customers.
+    #
+    # @see https://developers.google.com/places/documentation/search#RadarSearchRequests
+    def spots_by_radar(lat, lng, options = {})
+      Spot.list_by_radar(lat, lng, @api_key, @sensor, @options.merge(options))
+    end
+
   end
 end
