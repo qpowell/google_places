@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe GooglePlaces::Client do
 
-  it 'should not initialize without an api_key' do
-    lambda { GooglePlaces::Client.new }.should raise_error
-  end
+  # it 'should not initialize without an api_key' do
+  #   lambda { GooglePlaces::Client.new }.should raise_error
+  # end
 
   it 'should initialize with an api_key' do
     @client = GooglePlaces::Client.new(api_key)
