@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CnRtAAAACQQXR83Jc3Pffxt1Zx7QbCe6AfY2negSNzkk2IeSf0q5nxHgartLzkr1fltSlkEDSS-EZqswWAW2eQDbiOl12J-V4Rmn_JNko9e9gSnMwxHBdmScu_84NMSe-0RwB9BM6AEqE8sENXQ8cpWaiEsC_RIQLzIJxpRdoqSPrPtrjTrOhxoUWb8uwObkV4duXfKIiNB20gfnu88&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      date:
+      - Fri, 18 Oct 2013 10:27:29 GMT
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      cache-control:
+      - no-cache, must-revalidate
+      location:
+      - https://lh4.googleusercontent.com/-1wzlVdxiW14/USSFZnhNqxI/AAAAAAAABGw/YpdANqaoGh4/s1600-w400/Google%2BSydney
+      content-type:
+      - text/html; charset=UTF-8
+      server:
+      - mafe
+      content-length:
+      - '306'
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - SAMEORIGIN
+      alternate-protocol:
+      - 443:quic
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh4.googleusercontent.com/-1wzlVdxiW14/USSFZnhNqxI/AAAAAAAABGw/YpdANqaoGh4/s1600-w400/Google%2BSydney\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version: '1.1'
+  recorded_at: Fri, 18 Oct 2013 10:27:29 GMT
+recorded_with: VCR 2.2.5
