@@ -43,8 +43,9 @@ module GooglePlaces
     #
     # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
-    def initialize(api_key, sensor = false, options = {})
-      @api_key = api_key
+
+    def initialize(api_key = @api_key, sensor = false, options = {})
+      api_key ? @api_key = api_key : @api_key = GooglePlaces.api_key
       @sensor = sensor
       @options = options
     end
