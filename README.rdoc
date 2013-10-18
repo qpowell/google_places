@@ -92,6 +92,20 @@ Then retrieve the spot:
 
   @client.spot('CmRYAAA...upoTH3g')
 
+=== Retrieving a single photo's url
+
+First register a new Client:
+
+  @client = GooglePlaces::Client.new(API_KEY)
+
+Then retrieve the spot:
+
+  @spot = @client.spot('CmRYAAA...upoTH3g')
+
+Then request one of the photos url with a max width:
+  
+  url = @spot.photos[0].fetch_url(800)
+
 
 == Development
 

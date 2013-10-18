@@ -119,7 +119,7 @@ module GooglePlaces
         :retry_options => retry_options
       )
 
-      self.new(response['result'])
+      self.new(response['result'], api_key, sensor)
     end
 
     # Search for Spots with a pagetoken
@@ -239,7 +239,7 @@ module GooglePlaces
       	# Some places returned by Google do not have a 'types' property. If the user specified 'types', then
       	# this is a non-issue because those places will not be returned. However, if the user did not specify
       	# 'types', then we do not want to filter out places with a missing 'types' property from the results set.
-        results << self.new(result) if result['types'].nil? || (result['types'] & exclude) == []
+        results << self.new(result, options[:key], options[:sensor]) if result['types'].nil? || (result['types'] & exclude) == []
       end
 
       results
@@ -278,7 +278,7 @@ module GooglePlaces
 
     # @param [JSON] json_result_object a JSON object to create a Spot from
     # @return [Spot] a newly created spot
-    def initialize(json_result_object)
+    def initialize(json_result_object, api_key, sensor)
       @reference                  = json_result_object['reference']
       @vicinity                   = json_result_object['vicinity']
       @lat                        = json_result_object['geometry']['location']['lat']
@@ -307,7 +307,7 @@ module GooglePlaces
       @zagat_selected             = json_result_object['zagat_selected']
       @aspects                    = aspects_component(json_result_object['aspects'])
       @review_summary             = json_result_object['review_summary']
-      @photos                     = photos_component(json_result_object['photos'])
+      @photos                     = photos_component(json_result_object['photos'], api_key, sensor)
       @reviews                    = reviews_component(json_result_object['reviews'])
       @nextpagetoken              = json_result_object['nextpagetoken']
     end
@@ -346,8 +346,20 @@ module GooglePlaces
       json_aspects.to_a.map{ |r| { :type => r['type'], :rating => r['rating'] } }
     end
 
-    def photos_component(json_photos)
-      json_photos.to_a.map{ |r| { :width => r['width'], :height => r['height'], :width => r['width'], :photo_reference => r['photo_reference'], :html_attributions => r['html_attributions'] } }
+    def photos_component(json_photos, api_key, sensor)
+      if json_photos
+        json_photos.map{ |p| 
+          Photo.new(
+            p['width'], 
+            p['height'],
+            p['photo_reference'],
+            p['html_attributions'], 
+            api_key, 
+            sensor
+          )
+        }
+      else []
+      end
     end
   end
 end
