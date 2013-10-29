@@ -34,4 +34,16 @@ describe GooglePlaces::Client do
 
     @client.spots_by_query(query)
   end
+
+  it 'should request spots by radar' do
+    keywords = "landmarks"
+    lat, lng = '51.511627', '-0.183778'
+    radius = 5000
+    @client = GooglePlaces::Client.new(api_key)
+    GooglePlaces::Spot.should_receive(:list_by_radar).with(lat, lng, api_key, false, {:radius=> radius, :keyword =>  keywords})
+
+    @client.spots_by_radar(lat, lng, :radius => radius, :keyword =>  keywords)
+  end
+
+
 end
