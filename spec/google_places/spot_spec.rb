@@ -182,6 +182,19 @@ describe GooglePlaces::Spot do
 
   end
 
+  context 'List spots by radar' do
+    use_vcr_cassette 'list_spots_by_radar'
+
+    after(:each) do
+      @collection.map(&:class).uniq.should == [GooglePlaces::Spot]
+    end
+
+    it 'should be a collection of Spots' do
+      @collection = GooglePlaces::Spot.list_by_radar('48.8567', '2.3508', api_key, @sensor, :radius => @radius, :keyword => 'attractions')
+    end
+
+  end
+
   context 'Find a single spot' do
     use_vcr_cassette 'single_spot'
     before :each do

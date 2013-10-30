@@ -9,6 +9,7 @@ describe GooglePlaces::Request do
     @sensor = false
     @reference = "CnRsAAAASc4grenwL0h3X5VPNp5fkDNfqbjt3iQtWIPlKS-3ms9GbnCxR_FLHO0B0ZKCgJSg19qymkeHagjQFB4aUL87yhp4mhFTc17DopK1oiYDaeGthztSjERic8TmFNe-6zOpKSdiZWKE6xlQvcbSiWIJchIQOEYZqunSSZqNDoBSs77bWRoUJcMMVANtSlhy0llKI0MI6VcC7DU"
     @reference_not_found = "CnRpAAAAlO2WvF_4eOqp02TAWKsXpPSCFz8KxBjraWhB4MSvdUPqXN0yCpxQgblam1LeRENcWZF-9-2CEfUwlHUli61PaYe0e7dUPAU302tk6KkalnKqx7nv07iFA1Ca_Y1WoCLH9adEWwkxKMITlbGhUUz9-hIQPxQ4Bp_dz5nHloUFkj3rkBoUDSPqy2smqMnPEo4ayfbDupeKEZY"
+    @keyword = "attractions"
   end
 
   context 'Listing spots' do
@@ -225,6 +226,107 @@ describe GooglePlaces::Request do
           it do
             lambda {
               GooglePlaces::Request.spot(
+                :sensor => @sensor,
+                :key => api_key,
+                :retry_options => {
+                  :max => 3,
+                  :status => 'INVALID_REQUEST',
+                  :delay => 10,
+                  :timeout => 1
+                }
+              )
+            }.should raise_error GooglePlaces::RetryTimeoutError
+          end
+        end
+      end
+    end
+  end
+
+
+
+  context 'Listing spots by radar' do
+    use_vcr_cassette 'list_spots_by_radar'
+
+    context 'with valid options' do
+      context 'with keyword' do
+        it do
+          response = GooglePlaces::Request.spots_by_radar(
+            :location => @location,
+            :keyword => @keyword,
+            :radius => @radius,
+            :sensor => @sensor,
+            :key => api_key
+          ) 
+          response['results'].should_not be_empty
+        end
+      end
+      
+      context 'with name' do
+        it do
+          response = GooglePlaces::Request.spots_by_radar(
+            :location => @location,
+            :name => 'park',
+            :radius => @radius,
+            :sensor => @sensor,
+            :key => api_key
+          )
+          response['results'].should_not be_empty
+        end
+      end
+    end
+
+    context 'with missing sensor' do
+      it do
+        lambda {
+          GooglePlaces::Request.spots_by_radar(
+            :location => @location,
+            :keyword => @keyword,
+            :radius => @radius,
+            :key => api_key
+          )
+        }.should raise_error GooglePlaces::RequestDeniedError
+      end
+    end
+
+   context 'without keyword' do
+      context 'without retry options' do
+        it do
+          lambda {
+            GooglePlaces::Request.spots_by_radar(
+              :location => @location,
+              :radius => @radius,
+              :sensor => @sensor,
+              :key => api_key
+            )
+          }.should raise_error GooglePlaces::InvalidRequestError
+        end
+      end
+
+      context 'with retry options' do
+        context 'without timeout' do
+          it do
+            lambda {
+              GooglePlaces::Request.spots_by_radar(
+                :location => @location,
+                :radius => @radius,
+                :sensor => @sensor,
+                :key => api_key,
+                :retry_options => {
+                  :max => 3,
+                  :status => 'INVALID_REQUEST',
+                  :delay => 1
+                }
+              )
+            }.should raise_error GooglePlaces::RetryError
+          end
+        end
+
+        context 'with timeout' do
+          it do
+            lambda {
+              GooglePlaces::Request.spots_by_radar(
+                :location => @location,
+                :radius => @radius,
                 :sensor => @sensor,
                 :key => api_key,
                 :retry_options => {
