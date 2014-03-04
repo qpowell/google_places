@@ -1,0 +1,134 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/autocomplete/json?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Fri, 28 Feb 2014 14:24:18 GMT
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      cache-control:
+      - no-cache, must-revalidate
+      vary:
+      - Accept-Language
+      server:
+      - mafe
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - SAMEORIGIN
+      alternate-protocol:
+      - 443:quic
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "{\n   \"predictions\" : [],\n   \"status\" : \"REQUEST_DENIED\"\n}\n"
+    http_version: '1.1'
+  recorded_at: Fri, 28 Feb 2014 14:24:17 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/autocomplete/json?input=query&sensor=false&key=abc123
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Fri, 28 Feb 2014 14:28:31 GMT
+      expires:
+      - Fri, 28 Feb 2014 14:28:31 GMT
+      cache-control:
+      - private, max-age=300
+      vary:
+      - Accept-Language
+      server:
+      - mafe
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - SAMEORIGIN
+      alternate-protocol:
+      - 443:quic
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "{\n   \"predictions\" : [\n      {\n         \"description\" : \"Query
+        Tom LPC, Old Roswell Lakes Parkway, Roswell, GA, United States\",\n         \"id\"
+        : \"7298c121d5c7078d61ef2615b3bddf48d48deb35\",\n         \"matched_substrings\"
+        : [\n            {\n               \"length\" : 5,\n               \"offset\"
+        : 0\n            }\n         ],\n         \"reference\" : \"CmRTAAAAY2DWFTLIpwtBGTt94gOr3kd5AjS9KDpwWYyFPYK-feRCCZWuBTkw6X-sKQVYE2YOqNZcbz3raatOaqdfFIoHWsHmbIKo9pgi4zo7hQM88HPtazcQ3nlXlBAmnaqt0N9VEhBrafsrusT0e5bk4kTFxkv2GhSsiuejhMmnTadKBzCqSmo1XK3zGw\",\n
+        \        \"terms\" : [\n            {\n               \"offset\" : 0,\n               \"value\"
+        : \"Query Tom LPC\"\n            },\n            {\n               \"offset\"
+        : 15,\n               \"value\" : \"Old Roswell Lakes Parkway\"\n            },\n
+        \           {\n               \"offset\" : 42,\n               \"value\" :
+        \"Roswell\"\n            },\n            {\n               \"offset\" : 51,\n
+        \              \"value\" : \"GA\"\n            },\n            {\n               \"offset\"
+        : 55,\n               \"value\" : \"United States\"\n            }\n         ],\n
+        \        \"types\" : [ \"establishment\" ]\n      },\n      {\n         \"description\"
+        : \"Query Street, New Bedford, MA, United States\",\n         \"id\" : \"7ec01a04e7ff7a326e0de7e787c5fd03de916371\",\n
+        \        \"matched_substrings\" : [\n            {\n               \"length\"
+        : 5,\n               \"offset\" : 0\n            }\n         ],\n         \"reference\"
+        : \"CjQwAAAAmxA5br5rwSM9m5lbch9NrRt4vkRzPgbSvpN_7gKVOstGG-MK4XK6eDYtYWmOvCEjEhAEy4XBgPhiXgojlnhh-Tw8GhQQcY2jmE3y-XY6vPhe8k2y3XXt1A\",\n
+        \        \"terms\" : [\n            {\n               \"offset\" : 0,\n               \"value\"
+        : \"Query Street\"\n            },\n            {\n               \"offset\"
+        : 14,\n               \"value\" : \"New Bedford\"\n            },\n            {\n
+        \              \"offset\" : 27,\n               \"value\" : \"MA\"\n            },\n
+        \           {\n               \"offset\" : 31,\n               \"value\" :
+        \"United States\"\n            }\n         ],\n         \"types\" : [ \"route\",
+        \"geocode\" ]\n      },\n      {\n         \"description\" : \"Query Mill
+        Road, North Potomac, MD, United States\",\n         \"id\" : \"684b9d636594b43a973e1d259ec5d35ee61117d8\",\n
+        \        \"matched_substrings\" : [\n            {\n               \"length\"
+        : 5,\n               \"offset\" : 0\n            }\n         ],\n         \"reference\"
+        : \"CkQ1AAAAHFz1JyliBiYM9pT0QzNmnl5-9atNRH3K-EyD54mtbNELnYEbpDY2zOoXYnlo9LJmovaEWp28lpN4FIuaamGEHBIQ4czNWiOTRLIvM0fzCiPNtxoUy1qRYZxp6lVsjwqEuCdzwtjKFBM\",\n
+        \        \"terms\" : [\n            {\n               \"offset\" : 0,\n               \"value\"
+        : \"Query Mill Road\"\n            },\n            {\n               \"offset\"
+        : 17,\n               \"value\" : \"North Potomac\"\n            },\n            {\n
+        \              \"offset\" : 32,\n               \"value\" : \"MD\"\n            },\n
+        \           {\n               \"offset\" : 36,\n               \"value\" :
+        \"United States\"\n            }\n         ],\n         \"types\" : [ \"route\",
+        \"geocode\" ]\n      },\n      {\n         \"description\" : \"Query, Surat,
+        Gujarat, India\",\n         \"id\" : \"a276d5603f70845637ba995668bf471ec34ef87b\",\n
+        \        \"matched_substrings\" : [\n            {\n               \"length\"
+        : 5,\n               \"offset\" : 0\n            }\n         ],\n         \"reference\"
+        : \"CjQrAAAAF1ohxL2YvWAt-QMVw1YvG87-u-eRPHUFRbtnCTSX_sG90zhctdMgJOBZen6fxjD7EhBJDdmr5lnms87apQA5AXcKGhQSbHbk4i-3VnQkvSk3xfkJlKMsaA\",\n
+        \        \"terms\" : [\n            {\n               \"offset\" : 0,\n               \"value\"
+        : \"Query\"\n            },\n            {\n               \"offset\" : 7,\n
+        \              \"value\" : \"Surat\"\n            },\n            {\n               \"offset\"
+        : 14,\n               \"value\" : \"Gujarat\"\n            },\n            {\n
+        \              \"offset\" : 23,\n               \"value\" : \"India\"\n            }\n
+        \        ],\n         \"types\" : [ \"establishment\" ]\n      },\n      {\n
+        \        \"description\" : \"Query Ln, Woodbridge, VA, United States\",\n
+        \        \"id\" : \"e4830c290c5dfe6506acca4c25e2c28008f3ca80\",\n         \"matched_substrings\"
+        : [\n            {\n               \"length\" : 5,\n               \"offset\"
+        : 0\n            }\n         ],\n         \"reference\" : \"CjQrAAAApysK0GhLziqNjd-QkI3TRzPCmvo2OsIFKHSM60kyyVk6RfSvYV2Kcdsyp1gzUO6WEhCfi2xEfhxUjDJrx2y1TYydGhSFT0h8wHDfhy2cDidU9P3RhzKX1A\",\n
+        \        \"terms\" : [\n            {\n               \"offset\" : 0,\n               \"value\"
+        : \"Query Ln\"\n            },\n            {\n               \"offset\" :
+        10,\n               \"value\" : \"Woodbridge\"\n            },\n            {\n
+        \              \"offset\" : 22,\n               \"value\" : \"VA\"\n            },\n
+        \           {\n               \"offset\" : 26,\n               \"value\" :
+        \"United States\"\n            }\n         ],\n         \"types\" : [ \"route\",
+        \"geocode\" ]\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+    http_version: '1.1'
+  recorded_at: Fri, 28 Feb 2014 14:28:30 GMT
+recorded_with: VCR 2.2.5
