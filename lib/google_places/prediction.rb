@@ -29,6 +29,8 @@ module GooglePlaces
     #   <b>Note that this is a mandatory parameter</b>
     # @option options [String,Array] :types
     #   Restricts the results to Spots matching at least one of the specified types
+    # @option options [String] :language
+    #   The language code, indicating in which language the results should be returned, if possible.
     # @option options [Hash] :retry_options ({})
     #   A Hash containing parameters for search retries
     # @option options [Object] :retry_options[:status] ([])
@@ -37,6 +39,7 @@ module GooglePlaces
     def self.list_by_input(input, api_key, options = {})
       lat = options.delete(:lat)
       lng = options.delete(:lng)
+      language = options.delete(:language)
       radius = options.delete(:radius) || DEFAULT_RADIUS
       retry_options = options.delete(:retry_options) || {}
       sensor = options.delete(:sensor) || DEFAULT_SENSOR
@@ -58,6 +61,10 @@ module GooglePlaces
       if types
         types = (types.is_a?(Array) ? types.join('|') : types)
         options[:types] = types
+      end
+
+      if language
+        options[:language] = language
       end
 
       request(:predictions_by_input, options)

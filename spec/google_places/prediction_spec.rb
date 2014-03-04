@@ -55,6 +55,14 @@ describe GooglePlaces::Prediction, '.list_by_input' do
       GooglePlaces::Prediction.list_by_input('query', api_key, types: '(cities)')
     end
 
+    it "initiates a request with `language`" do
+      GooglePlaces::Request.should_receive(:predictions_by_input).with do |options|
+        options[:language].should eq('es')
+      end
+
+      GooglePlaces::Prediction.list_by_input('query', api_key, language: 'es')
+    end
+
     it "initiates a request with `types` joind by |" do
       GooglePlaces::Request.should_receive(:predictions_by_input).with do |options|
         options[:types].should eq('establishment|geocode')

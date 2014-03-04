@@ -235,6 +235,8 @@ module GooglePlaces
     #   <b>Note that this is a mandatory parameter</b>
     # @option options [String,Array] :types
     #   Restricts the results to Spots matching at least one of the specified types
+    # @option options [String] :language
+    #   The language code, indicating in which language the results should be returned, if possible.
     #
     # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
