@@ -82,6 +82,14 @@ Get results in specific language:
 
   @client.spots(-33.8670522, 151.1957362, :language => 'en')
 
+=== Retrieving spots based on query
+  
+  @client.spots_by_query('Pizza near Miami Florida')
+
+Search by multiple types and exclude multiple types
+
+  @client.spots_by_query('Pizza near Miami Florida', :types => ['restaurant', 'food'], :exclude => ['cafe', 'establishment'])
+
 === Retrieving a single spot
 
 First register a new Client:
