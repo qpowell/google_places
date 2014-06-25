@@ -415,8 +415,8 @@ module GooglePlaces
       if json_reviews
         json_reviews.map { |r|
           Review.new(
-              r['aspects'].empty? ? nil : r['aspects'][0]['rating'],
-              r['aspects'].empty? ? nil : r['aspects'][0]['type'],
+              r['rating'],
+              r['type'],
               r['author_name'],
               r['author_url'],
               r['text'],
