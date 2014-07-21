@@ -2,7 +2,7 @@ require 'google_places/review'
 
 module GooglePlaces
   class Spot
-    attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours, :events, :utc_offset
+    attr_accessor :lat, :lng, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours, :events, :utc_offset, :place_id
 
     # Search for Spots at the provided location
     #
@@ -27,7 +27,7 @@ module GooglePlaces
     #     the number of check-ins from your application, global popularity, and other factors.
     #   - distance. This option sorts results in ascending order by their distance from the specified location.
     #     Ranking results by distance will set a fixed search radius of 50km.
-    #     One or more of keyword, name, or types is required.                                                                                                                                                                                                                                                                                       distance. This option sorts results in ascending order by their distance from the specified location. Ranking results by distance will set a fixed search radius of 50km. One or more of keyword, name, or types is required.
+    #     One or more of keyword, name, or types is required.
     # @option options [String,Array] :types
     #   Restricts the results to Spots matching at least one of the specified types
     # @option options [String] :name
@@ -363,6 +363,7 @@ module GooglePlaces
     # @return [Spot] a newly created spot
     def initialize(json_result_object, api_key, sensor)
       @reference                  = json_result_object['reference']
+      @place_id                   = json_result_object['place_id']
       @vicinity                   = json_result_object['vicinity']
       @lat                        = json_result_object['geometry']['location']['lat']
       @lng                        = json_result_object['geometry']['location']['lng']
