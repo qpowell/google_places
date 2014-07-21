@@ -32,15 +32,29 @@ http_interactions:
       - Sat, 14 Jul 2012 04:45:02 GMT
     body:
       encoding: UTF-8
-      string: ! "{\n   \"html_attributions\" : [\n      \"Listings by \\u003ca href=\\\"http://www.yellowpages.com.au/\\\"\\u003eYellow
-        Pages\\u003c/a\\u003e\"\n   ],\n   \"results\" : [\n      {\n         \"geometry\"
-        : {\n            \"location\" : {\n               \"lat\" : -33.8666690,\n
-        \              \"lng\" : 151.1922820\n            }\n         },\n         \"icon\"
-        : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
-        \        \"id\" : \"954a594077141a5f37fa1fb4340988bada9a93f0\",\n         \"name\"
-        : \"Raffinato Italian Restaurant\",\n         \"reference\" : \"CoQBewAAAAa1LEKw4ZEH7YFpMUwPeZNUWxli0xqwnEBQjqVnroC9Q-oIUWg7j7pDvckKSNN1Kj8LpL2OhLZnUEo7de2oHDeTRhpfPUanzItigDBuxzY2D1joXcLb0XH9p0UD8HknzBRwu4vnrIEfY4BWpcoJs5g2KgAlfwwi9PaPoGgrFV3XEhBDD1RWBMqa1dbtiFi60CMIGhRBhD3W0AeNRrMmRqbSnGsiuzR0_A\",\n
-        \        \"types\" : [ \"establishment\" ],\n         \"vicinity\" : \"46
-        Harris Street, Pyrmont\"\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+      string: |
+        {
+           "html_attributions" : [
+              "Listings by \u003ca href=\"http://www.yellowpages.com.au/\"\u003eYellow Pages\u003c/a\u003e"
+           ],
+           "results" : [
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8666690,
+                       "lng" : 151.1922820
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+                 "id" : "954a594077141a5f37fa1fb4340988bada9a93f0",
+                 "name" : "Raffinato Italian Restaurant",
+                 "reference" : "CoQBewAAAAa1LEKw4ZEH7YFpMUwPeZNUWxli0xqwnEBQjqVnroC9Q-oIUWg7j7pDvckKSNN1Kj8LpL2OhLZnUEo7de2oHDeTRhpfPUanzItigDBuxzY2D1joXcLb0XH9p0UD8HknzBRwu4vnrIEfY4BWpcoJs5g2KgAlfwwi9PaPoGgrFV3XEhBDD1RWBMqa1dbtiFi60CMIGhRBhD3W0AeNRrMmRqbSnGsiuzR0_A",
+                 "types" : [ "establishment" ],
+                 "vicinity" : "46 Harris Street, Pyrmont"
+              }
+           ],
+           "status" : "OK"
+        }
     http_version: '1.1'
   recorded_at: Sat, 14 Jul 2012 04:45:15 GMT
 - request:
@@ -75,21 +89,43 @@ http_interactions:
       - close
     body:
       encoding: US-ASCII
-      string: ! "{\n   \"html_attributions\" : [\n      \"Listings by \\u003ca href=\\\"http://www.yellowpages.com.au/\\\"\\u003eYellow
-        Pages\\u003c/a\\u003e\"\n   ],\n   \"results\" : [\n      {\n         \"geometry\"
-        : {\n            \"location\" : {\n               \"lat\" : -33.8673760,\n
-        \              \"lng\" : 151.1938680\n            }\n         },\n         \"icon\"
-        : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
-        \        \"id\" : \"56f95e7c803125fb84bc8e91ed4adb71ee8bfc3c\",\n         \"name\"
-        : \"Zeffirelli\",\n         \"reference\" : \"CpQBjgAAACHgRQdrIS-dD1XTXBLwEJLFYcuICfOk1wZEfULG6HWH95_V6Mgqve8L5GRH50HbuDr3ffPXrqYaoMtJYtItEbGRoZ6njkn-cW1IjbfKLZnlftZl4ZLjtz1-1VxqCWfJ40i0rsRG31v2YjWWMyiPQndtxiLERRWAVVFNJQpwxivOdJmIj-LOUlo_zTdULmXw5hIQjTGBjwKw3zIfKD2DwGgqiRoUqKB7RRCmgVRJm5JvdqioV2aamH0\",\n
-        \        \"types\" : [ \"establishment\" ],\n         \"vicinity\" : \"02009/14
-        Pyrmont Street, Pyrmont\"\n      },\n      {\n         \"geometry\" : {\n
-        \           \"location\" : {\n               \"lat\" : -33.8666690,\n               \"lng\"
-        : 151.1922820\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
-        \        \"id\" : \"954a594077141a5f37fa1fb4340988bada9a93f0\",\n         \"name\"
-        : \"Raffinato Italian Restaurant\",\n         \"reference\" : \"CpQBhgAAAIPJIUcPpiYzcgT5-zqYjvIlmNEmEiRak__2BKzlxLeZ6e59Unvh7bo-glE3KAQge8xeGnIwINFvlQI84qzhVXrD4v6yYDOKzryaQopbNM2P3NppwYc0-mwH-GYP2GTRdv9ImSZ4prANksEB3hSY5ZtEsQZa7P_BCicB9976Wm3dcvOO4TBVzyfxjDQLa5GLhRIQrB7OF2LNK7potVDMyyrBWxoUCQilj521TXBx8nefpw6uF6DGAHM\",\n
-        \        \"types\" : [ \"establishment\" ],\n         \"vicinity\" : \"46
-        Harris Street, Pyrmont\"\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+      string: |
+        {
+           "html_attributions" : [
+              "Listings by \u003ca href=\"http://www.yellowpages.com.au/\"\u003eYellow Pages\u003c/a\u003e"
+           ],
+           "results" : [
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8673760,
+                       "lng" : 151.1938680
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+                 "id" : "56f95e7c803125fb84bc8e91ed4adb71ee8bfc3c",
+                 "name" : "Zeffirelli",
+                 "reference" : "CpQBjgAAACHgRQdrIS-dD1XTXBLwEJLFYcuICfOk1wZEfULG6HWH95_V6Mgqve8L5GRH50HbuDr3ffPXrqYaoMtJYtItEbGRoZ6njkn-cW1IjbfKLZnlftZl4ZLjtz1-1VxqCWfJ40i0rsRG31v2YjWWMyiPQndtxiLERRWAVVFNJQpwxivOdJmIj-LOUlo_zTdULmXw5hIQjTGBjwKw3zIfKD2DwGgqiRoUqKB7RRCmgVRJm5JvdqioV2aamH0",
+                 "types" : [ "establishment" ],
+                 "vicinity" : "02009/14 Pyrmont Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8666690,
+                       "lng" : 151.1922820
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+                 "id" : "954a594077141a5f37fa1fb4340988bada9a93f0",
+                 "name" : "Raffinato Italian Restaurant",
+                 "reference" : "CpQBhgAAAIPJIUcPpiYzcgT5-zqYjvIlmNEmEiRak__2BKzlxLeZ6e59Unvh7bo-glE3KAQge8xeGnIwINFvlQI84qzhVXrD4v6yYDOKzryaQopbNM2P3NppwYc0-mwH-GYP2GTRdv9ImSZ4prANksEB3hSY5ZtEsQZa7P_BCicB9976Wm3dcvOO4TBVzyfxjDQLa5GLhRIQrB7OF2LNK7potVDMyyrBWxoUCQilj521TXBx8nefpw6uF6DGAHM",
+                 "types" : [ "establishment" ],
+                 "vicinity" : "46 Harris Street, Pyrmont"
+              }
+           ],
+           "status" : "OK"
+        }
     http_version: '1.1'
   recorded_at: Mon, 03 Dec 2012 14:32:21 GMT
 - request:
@@ -124,21 +160,43 @@ http_interactions:
       - close
     body:
       encoding: US-ASCII
-      string: ! "{\n   \"html_attributions\" : [\n      \"Listings by \\u003ca href=\\\"http://www.yellowpages.com.au/\\\"\\u003eYellow
-        Pages\\u003c/a\\u003e\"\n   ],\n   \"results\" : [\n      {\n         \"geometry\"
-        : {\n            \"location\" : {\n               \"lat\" : -33.8673760,\n
-        \              \"lng\" : 151.1938680\n            }\n         },\n         \"icon\"
-        : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
-        \        \"id\" : \"56f95e7c803125fb84bc8e91ed4adb71ee8bfc3c\",\n         \"name\"
-        : \"Zeffirelli\",\n         \"reference\" : \"CpQBjgAAAEB7_g1-zjbh4FWwSzawP4tQE9G7nWHvAtEDlJg1EY09nBZZ6sRz2-UKWVUfm_KZ1g8oPTnP-XzKpoc9IGyl6xiv8R2t0weADMxSbCdG3ZdNpFBZ9vc4DFj2vTSMO3FjDIiWVKqtwAVXRclZnGFeIdI_mdy3shPNJzv2WHpCBG2I_HyMbqoqAa8v-2tL5AJdMBIQQaUHERF1PlsmuctzbfNvCxoUo3dHMFxzB8n1V02pZ0t6G7iHSnQ\",\n
-        \        \"types\" : [ \"establishment\" ],\n         \"vicinity\" : \"02009/14
-        Pyrmont Street, Pyrmont\"\n      },\n      {\n         \"geometry\" : {\n
-        \           \"location\" : {\n               \"lat\" : -33.8666690,\n               \"lng\"
-        : 151.1922820\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
-        \        \"id\" : \"954a594077141a5f37fa1fb4340988bada9a93f0\",\n         \"name\"
-        : \"Raffinato Italian Restaurant\",\n         \"reference\" : \"CpQBhgAAAN9G8ZZNZLompVUgbiH5wYhJUTG0Vm33T3PMhVRGquhCrRWtBgaALQK0kD7R9B4AbNRnU2e-eiaYUdc55CeigclJX60JUtTn7cXjuc5TjCLqYVNMqWi19k6XsSjp2pPRWCADuy-XWp4RwUVeJSFk6KH-q1jQgHO4NZbtT8BCtLVzbxaaGmmM94TUwY19wNeI9xIQWuXbzlZ__z2KlId48Mld4BoUcN1q0W8o-Ql6CKSC6HRyoTQkFpc\",\n
-        \        \"types\" : [ \"establishment\" ],\n         \"vicinity\" : \"46
-        Harris Street, Pyrmont\"\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+      string: |
+        {
+           "html_attributions" : [
+              "Listings by \u003ca href=\"http://www.yellowpages.com.au/\"\u003eYellow Pages\u003c/a\u003e"
+           ],
+           "results" : [
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8673760,
+                       "lng" : 151.1938680
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+                 "id" : "56f95e7c803125fb84bc8e91ed4adb71ee8bfc3c",
+                 "name" : "Zeffirelli",
+                 "reference" : "CpQBjgAAAEB7_g1-zjbh4FWwSzawP4tQE9G7nWHvAtEDlJg1EY09nBZZ6sRz2-UKWVUfm_KZ1g8oPTnP-XzKpoc9IGyl6xiv8R2t0weADMxSbCdG3ZdNpFBZ9vc4DFj2vTSMO3FjDIiWVKqtwAVXRclZnGFeIdI_mdy3shPNJzv2WHpCBG2I_HyMbqoqAa8v-2tL5AJdMBIQQaUHERF1PlsmuctzbfNvCxoUo3dHMFxzB8n1V02pZ0t6G7iHSnQ",
+                 "types" : [ "establishment" ],
+                 "vicinity" : "02009/14 Pyrmont Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8666690,
+                       "lng" : 151.1922820
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+                 "id" : "954a594077141a5f37fa1fb4340988bada9a93f0",
+                 "name" : "Raffinato Italian Restaurant",
+                 "reference" : "CpQBhgAAAN9G8ZZNZLompVUgbiH5wYhJUTG0Vm33T3PMhVRGquhCrRWtBgaALQK0kD7R9B4AbNRnU2e-eiaYUdc55CeigclJX60JUtTn7cXjuc5TjCLqYVNMqWi19k6XsSjp2pPRWCADuy-XWp4RwUVeJSFk6KH-q1jQgHO4NZbtT8BCtLVzbxaaGmmM94TUwY19wNeI9xIQWuXbzlZ__z2KlId48Mld4BoUcN1q0W8o-Ql6CKSC6HRyoTQkFpc",
+                 "types" : [ "establishment" ],
+                 "vicinity" : "46 Harris Street, Pyrmont"
+              }
+           ],
+           "status" : "OK"
+        }
     http_version: '1.1'
   recorded_at: Mon, 03 Dec 2012 14:35:10 GMT
 - request:
@@ -171,21 +229,43 @@ http_interactions:
       - close
     body:
       encoding: US-ASCII
-      string: ! "{\n   \"html_attributions\" : [\n      \"Listings by \\u003ca href=\\\"http://www.yellowpages.com.au/\\\"\\u003eYellow
-        Pages\\u003c/a\\u003e\"\n   ],\n   \"results\" : [\n      {\n         \"geometry\"
-        : {\n            \"location\" : {\n               \"lat\" : -33.8673760,\n
-        \              \"lng\" : 151.1938680\n            }\n         },\n         \"icon\"
-        : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
-        \        \"id\" : \"56f95e7c803125fb84bc8e91ed4adb71ee8bfc3c\",\n         \"name\"
-        : \"Zeffirelli\",\n         \"reference\" : \"CpQBjwAAAEBvjLqa6xM7y5uCIhLoiSQzaQU-SjEqUKdqFBPvqFr208D_6SefxkgqnIzA0bUnH2c6fMXfSLIhaoiTOR0T07gNVZkoXY008F4ZXFc9c11yXJYxSzw-TOjjg5OicQb_8Ekm5bZbBVfBROu6KVGuXCIQeDmYXTkNahHsH3qrC2iL6uhHwSnuz8F2L5yzQl1CPxIQVmB9tjs6R4I9a4UNeyvBcxoUoxPfR92NBZLDb0yh0W8ms34d3Bc\",\n
-        \        \"types\" : [ \"establishment\" ],\n         \"vicinity\" : \"02009/14
-        Pyrmont Street, Pyrmont\"\n      },\n      {\n         \"geometry\" : {\n
-        \           \"location\" : {\n               \"lat\" : -33.8666690,\n               \"lng\"
-        : 151.1922820\n            }\n         },\n         \"icon\" : \"http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png\",\n
-        \        \"id\" : \"954a594077141a5f37fa1fb4340988bada9a93f0\",\n         \"name\"
-        : \"Raffinato Italian Restaurant\",\n         \"reference\" : \"CpQBhwAAAHsfKEv6kH1AALPGz9-FaQGPWzQClk_acBXlTqaDel39d-5mQ667pAq_1IJruoR0Rv_AGt63ez5ooybkFhrAASCM9Uckvj1qh2ksRDKLJpJlW1ZXkGTKDjbpR68ozLsv3XgFVOyRCvfNKSDoRpVjLWe5iF8yRD-IC7mYF62mJtm4kreMK81M39XsvEXNLFhxsxIQEQ0JQn1dYbBYW6JsNLmZXxoUxpheTLMouYkbc0bIvgbn7_WlBJU\",\n
-        \        \"types\" : [ \"establishment\" ],\n         \"vicinity\" : \"46
-        Harris Street, Pyrmont\"\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+      string: |
+        {
+           "html_attributions" : [
+              "Listings by \u003ca href=\"http://www.yellowpages.com.au/\"\u003eYellow Pages\u003c/a\u003e"
+           ],
+           "results" : [
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8673760,
+                       "lng" : 151.1938680
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+                 "id" : "56f95e7c803125fb84bc8e91ed4adb71ee8bfc3c",
+                 "name" : "Zeffirelli",
+                 "reference" : "CpQBjwAAAEBvjLqa6xM7y5uCIhLoiSQzaQU-SjEqUKdqFBPvqFr208D_6SefxkgqnIzA0bUnH2c6fMXfSLIhaoiTOR0T07gNVZkoXY008F4ZXFc9c11yXJYxSzw-TOjjg5OicQb_8Ekm5bZbBVfBROu6KVGuXCIQeDmYXTkNahHsH3qrC2iL6uhHwSnuz8F2L5yzQl1CPxIQVmB9tjs6R4I9a4UNeyvBcxoUoxPfR92NBZLDb0yh0W8ms34d3Bc",
+                 "types" : [ "establishment" ],
+                 "vicinity" : "02009/14 Pyrmont Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8666690,
+                       "lng" : 151.1922820
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+                 "id" : "954a594077141a5f37fa1fb4340988bada9a93f0",
+                 "name" : "Raffinato Italian Restaurant",
+                 "reference" : "CpQBhwAAAHsfKEv6kH1AALPGz9-FaQGPWzQClk_acBXlTqaDel39d-5mQ667pAq_1IJruoR0Rv_AGt63ez5ooybkFhrAASCM9Uckvj1qh2ksRDKLJpJlW1ZXkGTKDjbpR68ozLsv3XgFVOyRCvfNKSDoRpVjLWe5iF8yRD-IC7mYF62mJtm4kreMK81M39XsvEXNLFhxsxIQEQ0JQn1dYbBYW6JsNLmZXxoUxpheTLMouYkbc0bIvgbn7_WlBJU",
+                 "types" : [ "establishment" ],
+                 "vicinity" : "46 Harris Street, Pyrmont"
+              }
+           ],
+           "status" : "OK"
+        }
     http_version: '1.1'
   recorded_at: Mon, 03 Dec 2012 14:42:29 GMT
 - request:
@@ -218,8 +298,87 @@ http_interactions:
       - close
     body:
       encoding: US-ASCII
-      string: ! "{\n   \"html_attributions\" : [],\n   \"results\" : [],\n   \"status\"
-        : \"REQUEST_DENIED\"\n}\n"
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [],
+           "status" : "REQUEST_DENIED"
+        }
     http_version: '1.1'
   recorded_at: Fri, 22 Mar 2013 10:47:55 GMT
-recorded_with: VCR 2.2.5
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&keyword=&language=&location=-33.86705220,151.19573620&name=italian&radius=200&rankby=&sensor=false&types=food%7Cestablishment
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 21 Jul 2014 11:28:59 GMT
+      Expires:
+      - Mon, 21 Jul 2014 11:33:59 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 443:quic
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.866669,
+                       "lng" : 151.192282
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+                 "id" : "954a594077141a5f37fa1fb4340988bada9a93f0",
+                 "name" : "Raffinato Italian Restaurant",
+                 "place_id" : "ChIJIRtr0TWuEmsRq_tQAbxShPg",
+                 "reference" : "CoQBfgAAANvNmHyB3WlaL3BG1YqvtJIEpcrLkrIAFQwNPgEFBk06MK3013zLa2hwwl9VpgGhBd9o37vo5yh1RlQGZjyO7EVyoK3J99Re8-Y3328oc4VI06-hIkduFXZf7q3Vo-bhl2PdUCPvC5NdGRuFFk2thOAuiDO49397puegzn7Pwxu2EhCcSCYlE8QNkehCq_fV9J1dGhQLJYlz9jl4m4qN3WGUPCaBl7eHZA",
+                 "scope" : "GOOGLE",
+                 "types" : [ "restaurant", "food", "establishment" ],
+                 "vicinity" : "46 Harris St, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.86771,
+                       "lng" : 151.191917
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+                 "id" : "2e2a9c116f1110a816d6f78585018c73663218d4",
+                 "name" : "Italian Kitchen Express",
+                 "place_id" : "ChIJN97jOjSuEmsRQN_2Q36vGbY",
+                 "reference" : "CoQBeQAAADIw9DsbDDoFbFYNOP_MYp3C0fFCI_GLCS5A5GiaRisEpBKeRIQaROkEG-3PPkkIXtrsBaNEkKQBXH1yZ1cA1O7N15bI-eENl4Xp9AhgTJDptlM3lPiBaic_DSuj3HDe1hbLF5jLiG-JPlmtrdtSzS_3IOXeCXp3SgISsyYSzzG4EhDte7AcYJStaKDBS0_9nOFxGhRvyk3BU2MIDHJiMTlUfiQmih4QWw",
+                 "scope" : "GOOGLE",
+                 "types" : [ "restaurant", "home_goods_store", "store", "food", "establishment" ],
+                 "vicinity" : "6/45-55 Harris St, Pyrmont"
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Mon, 21 Jul 2014 11:28:59 GMT
+recorded_with: VCR 2.9.2

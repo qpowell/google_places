@@ -45,38 +45,10 @@ describe GooglePlaces::Spot do
       end
     end
 
-    describe 'searching by name', vcr: { cassette_name: 'list_spots_with_name' } do
-      before(:each) do
-        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, @sensor, :radius => @radius, :name => 'italian')
-      end
-
-      # Apparently the Google Places API returns spots with
-      # other names than "italian" as well. Disabled this
-      # test for now.
-      it 'should have Spots with a specific name' do
-        pending 'Disabled due to unpredictable API results'
-
-        #@collection.each do |spot|
-        #  spot.name.downcase.should include('italian')
-        #end
-      end
-    end
-
     describe 'searching by name and types', vcr: { cassette_name: 'list_spots_with_name_and_types' } do
 
       before(:each) do
         @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, @sensor, :radius => @radius, :types => ['food','establishment'], :name => 'italian')
-      end
-
-      # Apparently the Google Places API returns spots with
-      # other names than "italian" as well. Disabled this
-      # test for now.
-      it 'should have Spots with a specific name' do
-        pending 'Disabled due to unpredictable API results'
-
-        #@collection.each do |spot|
-        #  spot.name.downcase.should include('italian')
-        #end
       end
 
       it 'should have Spots with specific types' do
@@ -105,43 +77,23 @@ describe GooglePlaces::Spot do
         end
       end
     end
-
-    describe 'working with premium data', vcr: { cassette_name: 'premium_list_spots_with_data' } do
-
-      it 'should return data with zagat_selected flag only' do
-        # hardcoded coordinates & options to get non-zero results count
-        @collection = GooglePlaces::Spot.list('39.60049820', '-106.52202606', 'DUMMY_KEY', @sensor, :radius => @radius, :zagat_selected => true, :types => ['restaurant','cafe'], :radius => 20000)
-
-        expect(@collection.map(&:zagat_selected).uniq).to eq([true])
-        expect(@collection.map(&:zagat_reviewed).uniq).to eq([true])
-      end
-
-      it 'should return data with zagat_selected flag only' do
-        # hardcoded coordinates & options to get non-zero results count
-        @collection = GooglePlaces::Spot.list('39.60049820', '-106.52202606', 'DUMMY_KEY', @sensor, :radius => @radius, :zagat_selected => true, :types => ['restaurant','cafe'], :radius => 20000)
-
-        item = @collection.detect {|item| item.zagat_reviewed == true}
-        item = GooglePlaces::Spot.find(item.reference, 'DUMMY_KEY', @sensor, :review_summary => true)
-        expect(item.review_summary).to_not eq(nil)
-      end
-    end
   end
 
   context 'Multiple page request', vcr: { cassette_name: 'multiple_page_request' } do
 
     it 'should return >20 results when :multipage_request is true' do
       @collection = GooglePlaces::Spot.list_by_query('wolfgang', api_key, @sensor, :lat => '40.808235', :lng => '-73.948733', :radius => @radius, :multipage => true)
-      @collection.should have_at_least(21).places
+      expect(@collection.size).to be >= 21
     end
 
     it 'should return at most 20 results when :multipage is false' do
       @collection = GooglePlaces::Spot.list_by_query('wolfgang', api_key, @sensor, :lat => '40.808235', :lng => '-73.948733', :radius => @radius, :multipage => false)
-      @collection.should have_at_most(20).places
+      expect(@collection.size).to be <= 20
     end
 
     it 'should return at most 20 results when :multipage is not present' do
       @collection = GooglePlaces::Spot.list_by_query('wolfgang', api_key, @sensor, :lat => '40.808235', :lng => '-73.948733', :radius => @radius)
-      @collection.should have_at_most(20).places
+      expect(@collection.size).to be <= 20
     end
 
     it 'should return a pagetoken when there is more than 20 results and :multipage is false' do
@@ -151,7 +103,7 @@ describe GooglePlaces::Spot do
 
     it 'should return some results when :pagetoken is present' do
       @collection = GooglePlaces::Spot.list_by_pagetoken(@pagetoken, api_key, @sensor)
-      @collection.should have_at_least(1).places
+      expect(@collection.size).to be >= 1
     end
 
   end
