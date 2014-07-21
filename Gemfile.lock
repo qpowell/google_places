@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    google_places (0.21.0)
-      httparty
+    google_places (0.22.0)
+      httparty (~> 0.13.1)
 
 GEM
   remote: http://rubygems.org/
@@ -39,6 +39,6 @@ PLATFORMS
 
 DEPENDENCIES
   google_places!
-  rspec
-  vcr
-  webmock
+  rspec (~> 3.0.0)
+  vcr (~> 2.9.2)
+  webmock (~> 1.18.0)
