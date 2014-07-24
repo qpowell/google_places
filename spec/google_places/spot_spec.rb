@@ -139,7 +139,7 @@ describe GooglePlaces::Spot do
     it 'should be a Spot' do
       expect(@spot.class).to eq(GooglePlaces::Spot)
     end
-    %w(reference vicinity lat lng name icon types id formatted_phone_number international_phone_number formatted_address address_components street_number street city region postal_code country rating url types website price_level opening_hours events utc_offset place_id).each do |attribute|
+    %w(reference vicinity lat lng viewport name icon types id formatted_phone_number international_phone_number formatted_address address_components street_number street city region postal_code country rating url types website price_level opening_hours events utc_offset place_id).each do |attribute|
       it "should have the attribute: #{attribute}" do
         expect(@spot.respond_to?(attribute)).to eq(true)
       end
