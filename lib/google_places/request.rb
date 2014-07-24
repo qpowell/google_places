@@ -60,15 +60,17 @@ module GooglePlaces
       request.parsed_response
     end
 
-    # Search for a Spot with a reference key
+    # Search for a Spot with a place_id key
     #
     # @return [Spot]
     # @param [Hash] options
     # @option options [String] :key
     #   the provided api key.
     #   <b>Note that this is a mandatory parameter</b>
-    # @option options [String] :reference
-    #   The reference of a already retrieved Spot
+    # @option options [String] :place_id
+    #   The place_id of the Spot. This parameter should be sent as placeid
+    #   in requests but is snake_cased in responses (place_id)
+    #   @see: https://developers.google.com/places/documentation/details
     #   <b>Note that this is a mandatory parameter</b>
     # @option options [Boolean] :sensor
     #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.

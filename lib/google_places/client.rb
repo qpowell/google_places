@@ -103,7 +103,7 @@ module GooglePlaces
     # Search for a Spot with a reference key
     #
     # @return [Spot]
-    # @param [String] reference the reference of the spot
+    # @param [String] place_id the place_id of the spot
     # @param [Hash] options
     # @option options [Boolean] :sensor (false)
     #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
@@ -116,8 +116,8 @@ module GooglePlaces
     # @option options [Object] :retry_options[:status] ([])
     # @option options [Integer] :retry_options[:max] (0) the maximum retries
     # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
-    def spot(reference, options = {})
-      Spot.find(reference, @api_key, @sensor, @options.merge(options))
+    def spot(place_id, options = {})
+      Spot.find(place_id, @api_key, @sensor, @options.merge(options))
     end
 
     # Search for Spots with a query

@@ -15,12 +15,12 @@ describe GooglePlaces::Client do
     @client.spots(lat, lng)
   end
 
-  it 'should request a single spot' do
-    reference = 'CoQBeAAAAO-prCRp9Atcj_rvavsLyv-DnxbGkw8QyRZb6Srm6QHOcww6lqFhIs2c7Ie6fMg3PZ4PhicfJL7ZWlaHaLDTqmRisoTQQUn61WTcSXAAiCOzcm0JDBnafqrskSpFtNUgzGAOx29WGnWSP44jmjtioIsJN9ik8yjK7UxP4buAmMPVEhBXPiCfHXk1CQ6XRuQhpztsGhQU4U6-tWjTHcLSVzjbNxoiuihbaA'
+  it 'should request a single spot by place_id' do
+    place_id = 'ChIJu46S-ZZhLxMROG5lkwZ3D7k'
     @client = GooglePlaces::Client.new(api_key)
-    expect(GooglePlaces::Spot).to receive(:find).with(reference, api_key, false, {})
+    expect(GooglePlaces::Spot).to receive(:find).with(place_id, api_key, false, {})
 
-    @client.spot(reference)
+    @client.spot(place_id)
   end
 
   it 'should request spots by query' do
