@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    google_places (0.22.0)
+    google_places (0.24.0)
       httparty (~> 0.13.1)
 
 GEM
