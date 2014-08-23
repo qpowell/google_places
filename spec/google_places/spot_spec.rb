@@ -7,8 +7,8 @@ describe GooglePlaces::Spot do
     @lng = '151.1957362'
     @radius = 200
     @sensor = false
-    @reference = 'CnRsAAAASc4grenwL0h3X5VPNp5fkDNfqbjt3iQtWIPlKS-3ms9GbnCxR_FLHO0B0ZKCgJSg19qymkeHagjQFB4aUL87yhp4mhFTc17DopK1oiYDaeGthztSjERic8TmFNe-6zOpKSdiZWKE6xlQvcbSiWIJchIQOEYZqunSSZqNDoBSs77bWRoUJcMMVANtSlhy0llKI0MI6VcC7DU'
     @pagetoken = 'CmRVAAAAqKK43TjXKnyEx4-XTWd4bC-iBq88Olspwga_JQbEpznYpfwXYbWBrxmb-1QYD4DMtq8gym5YruCEVjByOlKn8PWKQO5fHvuYD8rWKHUeBvMleM7k3oh9TUG8zqcyuhPmEhCG_C2XuypmkQ20hRvxro4sGhQN3nbWCjgpjyG_E_ayjVIoTGbViw'
+    @place_id = 'ChIJN1t_tDeuEmsRUsoyG83frY4'
   end
 
   context 'List spots', vcr: { cassette_name: 'list_spots' } do
@@ -134,7 +134,7 @@ describe GooglePlaces::Spot do
 
   context 'Find a single spot', vcr: { cassette_name: 'single_spot' } do
     before :each do
-      @spot = GooglePlaces::Spot.find(@reference, api_key, @sensor)
+      @spot = GooglePlaces::Spot.find(@place_id, api_key, @sensor)
     end
     it 'should be a Spot' do
       expect(@spot.class).to eq(GooglePlaces::Spot)
