@@ -1,12 +1,10 @@
 require 'spec_helper'
 
-describe GooglePlaces::Prediction, '.list_by_input' do
-  use_vcr_cassette 'list_predictions'
-
+describe GooglePlaces::Prediction, vcr: { cassette_name: 'list_predictions'}  do
   it "should be a collection of Prediction" do
     collection = GooglePlaces::Prediction.list_by_input('query', api_key)
 
-    collection.map(&:class).uniq.should == [GooglePlaces::Prediction]
+    expect(collection.map(&:class).uniq).to eq [GooglePlaces::Prediction]
   end
 
   describe 'requests' do
@@ -15,68 +13,67 @@ describe GooglePlaces::Prediction, '.list_by_input' do
     end
 
     it "initiates a request with `location` and a default `radius`" do
-      GooglePlaces::Request.should_receive(:predictions_by_input).with do |options|
-        options[:location].should eq('1.00000000,2.00000000')
-        options[:radius].should eq(GooglePlaces::Prediction::DEFAULT_RADIUS)
-      end
+      options = request_params(location: "1.00000000,2.00000000", radius: GooglePlaces::Prediction::DEFAULT_RADIUS)
+      expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
 
       GooglePlaces::Prediction.list_by_input('query', api_key, lat: 1.00000000, lng: 2.00000000)
     end
 
     it "initiates a request with `radius`" do
-      GooglePlaces::Request.should_receive(:predictions_by_input).with do |options|
-        options[:radius].should eq(20)
-      end
+      options = request_params(radius: 20, location: "1.00000000,2.00000000")
+      expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
 
       GooglePlaces::Prediction.list_by_input('query', api_key, lat: 1, lng: 2, radius: 20)
     end
 
     it "initiates a request with `sensor`" do
-      GooglePlaces::Request.should_receive(:predictions_by_input).with do |options|
-        options[:sensor].should be_true
-      end
+      options = request_params(sensor: true)
+      expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
 
       GooglePlaces::Prediction.list_by_input('query', api_key, sensor: true)
     end
 
     it "initiates a request with a default `sensor`" do
-      GooglePlaces::Request.should_receive(:predictions_by_input).with do |options|
-        options[:sensor].should be_false
-      end
+      expect(GooglePlaces::Request).to receive(:predictions_by_input).with(request_params)
 
       GooglePlaces::Prediction.list_by_input('query', api_key)
     end
 
     it "initiates a request with `types`" do
-      GooglePlaces::Request.should_receive(:predictions_by_input).with do |options|
-        options[:types].should eq('(cities)')
-      end
+      options = request_params(types: '(cities)')
+      expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
 
       GooglePlaces::Prediction.list_by_input('query', api_key, types: '(cities)')
     end
 
     it "initiates a request with `language`" do
-      GooglePlaces::Request.should_receive(:predictions_by_input).with do |options|
-        options[:language].should eq('es')
-      end
+      options = request_params(language: 'es')
+      expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
 
       GooglePlaces::Prediction.list_by_input('query', api_key, language: 'es')
     end
 
     it "initiates a request with `types` joind by |" do
-      GooglePlaces::Request.should_receive(:predictions_by_input).with do |options|
-        options[:types].should eq('establishment|geocode')
-      end
+      options = request_params(types: 'establishment|geocode')
+      expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
 
       GooglePlaces::Prediction.list_by_input('query', api_key, types: ['establishment', 'geocode'])
     end
 
     it "initiates a request with `retry_options`" do
-      GooglePlaces::Request.should_receive(:predictions_by_input).with do |options|
-        options[:retry_options].should eq(max: 10, delay: 15)
-      end
+      options = request_params(retry_options: { max: 10, delay: 15 })
+      expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
 
       GooglePlaces::Prediction.list_by_input('query', api_key, retry_options: { max: 10, delay: 15 })
     end
+  end
+
+  def request_params(options = {})
+    {
+      input: "query",
+      key: api_key,
+      retry_options: {},
+      sensor: false
+    }.merge(options)
   end
 end
