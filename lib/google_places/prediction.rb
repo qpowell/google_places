@@ -5,14 +5,12 @@ module GooglePlaces
 
     attr_accessor(
       :description,
-      :id,
-      :reference,
+      :place_id,
     )
 
     def initialize(json_result_object)
       @description = json_result_object['description']
-      @id = json_result_object['id']
-      @reference = json_result_object['reference']
+      @place_id = json_result_object['place_id']
     end
 
     # Query for Predictions (optionally at the provided location)
