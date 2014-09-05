@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe GooglePlaces::Client do
-
   it 'should initialize with an api_key' do
     @client = GooglePlaces::Client.new(api_key)
     expect(@client.api_key).to eq(api_key)
@@ -41,5 +40,11 @@ describe GooglePlaces::Client do
     @client.spots_by_radar(lat, lng, :radius => radius, :keyword =>  keywords)
   end
 
+  it 'should request predictions by input' do
+    input = 'Atlanta'
+    @client = GooglePlaces::Client.new(api_key)
+    expect(GooglePlaces::Prediction).to receive(:list_by_input).with(input, api_key, {})
 
+    @client.predictions_by_input(input)
+  end
 end

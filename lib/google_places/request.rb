@@ -14,6 +14,7 @@ module GooglePlaces
     TEXT_SEARCH_URL   = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
     PAGETOKEN_URL     = 'https://maps.googleapis.com/maps/api/place/search/json'
     RADAR_SEARCH_URL  = 'https://maps.googleapis.com/maps/api/place/radarsearch/json'
+    AUTOCOMPLETE_URL  = 'https://maps.googleapis.com/maps/api/place/autocomplete/json'
 
     # Search for Spots at the provided location
     #
@@ -115,12 +116,12 @@ module GooglePlaces
     # @option options [Integer] :maxprice
     #   Restricts results to only those places within the specified price range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive.
     # @option options [Boolean] :opennow
-    #   Retricts results to those Places that are open for business at the time the query is sent. 
-    #   Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query. 
+    #   Retricts results to those Places that are open for business at the time the query is sent.
+    #   Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query.
     #   Setting openNow to false has no effect.
     # @option options [Boolean] :zagatselected
-    #   Restrict your search to only those locations that are Zagat selected businesses. 
-    #   This parameter does not require a true or false value, simply including the parameter in the request is sufficient to restrict your search. 
+    #   Restrict your search to only those locations that are Zagat selected businesses.
+    #   This parameter does not require a true or false value, simply including the parameter in the request is sufficient to restrict your search.
     #   The zagatselected parameter is experimental, and only available to Places API enterprise customers.
     # @option options [Hash] :retry_options ({})
     #   A Hash containing parameters for search retries
@@ -190,6 +191,25 @@ module GooglePlaces
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def self.spots_by_pagetoken(options = {})
       request = new(PAGETOKEN_URL, options)
+      request.parsed_response
+    end
+
+    # Query for Place Predictions
+    #
+    # @return [Array<Prediction>]
+    # @param [String] api_key the provided api key
+    # @param [Hash] options
+    # @option options [String,Array<String>] :exclude ([])
+    #   A String or an Array of <b>types</b> to exclude from results
+    # @option options [Hash] :retry_options ({})
+    #   A Hash containing parameters for search retries
+    # @option options [Object] :retry_options[:status] ([])
+    # @option options [Integer] :retry_options[:max] (0) the maximum retries
+    # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
+    #
+    # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
+    def self.predictions_by_input(options = {})
+      request = new(AUTOCOMPLETE_URL, options)
       request.parsed_response
     end
 
@@ -271,7 +291,6 @@ module GooglePlaces
       retry_options[:status] = [retry_options[:status]] unless retry_options[:status].is_a?(Array)
       @response = self.class.get(url, :query => options, :follow_redirects => follow_redirects)
 
-      # puts "@response.request.last_uri.to_s"
       # puts @response.request.last_uri.to_s
 
       return unless retry_options[:max] > 0 && retry_options[:status].include?(@response.parsed_response['status'])

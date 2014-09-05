@@ -83,7 +83,7 @@ Get results in specific language:
   @client.spots(-33.8670522, 151.1957362, :language => 'en')
 
 === Retrieving spots based on query
-  
+
   @client.spots_by_query('Pizza near Miami Florida')
 
 Search by multiple types and exclude multiple types
@@ -111,9 +111,35 @@ Then retrieve the spot:
   @spot = @client.spot('CmRYAAA...upoTH3g')
 
 Then request one of the photos url with a max width:
-  
+
   url = @spot.photos[0].fetch_url(800)
 
+=== Places Autocomplete
+
+https://developers.google.com/places/documentation/autocomplete
+
+<em>Note:</em> Autocomplete is often used and better suited on client side (browser/javascript). The Autocomplete API is rate limited, so make sure you check the usage limits before deciding on whether to call the API server/client side.
+
+https://developers.google.com/maps/documentation/business/articles/usage_limits
+
+==== Example usage
+
+Register a new Client:
+
+  @client = GooglePlaces::Client.new(API_KEY)
+
+Then request a prediction based on partial match:
+
+  @client.predictions_by_input(
+      'San F',
+      lat: 0.0,
+      lng: 0.0,
+      radius: 20000000,
+      types: 'geocode',
+      language: I18n.locale,
+  )
+
+The response will be an array of predictions.
 
 == Development
 
