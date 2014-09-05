@@ -114,9 +114,17 @@ Then request one of the photos url with a max width:
 
   url = @spot.photos[0].fetch_url(800)
 
-=== Place Autocomplete Requests
+=== Places Autocomplete
 
-First register a new Client:
+https://developers.google.com/places/documentation/autocomplete
+
+<em>Note:</em> Autocomplete is often used and better suited on client side (browser/javascript). The Autocomplete API is rate limited, so make sure you check the usage limits before deciding on whether to call the API server/client side.
+
+https://developers.google.com/maps/documentation/business/articles/usage_limits
+
+==== Example usage
+
+Register a new Client:
 
   @client = GooglePlaces::Client.new(API_KEY)
 
