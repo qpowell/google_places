@@ -10,9 +10,6 @@ module GooglePlaces
     # @param [String,Integer] lat the latitude for the search
     # @param [String,Integer] lng the longitude for the search
     # @param [String] api_key the provided api key
-    # @param [Boolean] sensor
-    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
-    #   <b>Note that this is a mandatory parameter</b>
     # @param [Hash] options
     # @option options [Integer] :radius (1000)
     #   Defines the distance (in meters) within which to return Place results.
@@ -50,7 +47,7 @@ module GooglePlaces
     #
     # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
-    def self.list(lat, lng, api_key, sensor, options = {})
+    def self.list(lat, lng, api_key, options = {})
       location = Location.new(lat, lng)
       multipage_request = !!options.delete(:multipage)
       rankby = options.delete(:rankby)
@@ -67,7 +64,6 @@ module GooglePlaces
       options = {
         :location => location.format,
         :radius => radius,
-        :sensor => sensor,
         :rankby => rankby,
         :key => api_key,
         :name => name,
@@ -93,9 +89,6 @@ module GooglePlaces
     # @param [String,Integer] lat the latitude for the search
     # @param [String,Integer] lng the longitude for the search
     # @param [String] api_key the provided api key
-    # @param [Boolean] sensor
-    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
-    #   <b>Note that this is a mandatory parameter</b>
     # @param [Hash] options
      # @option options [Integer] :radius (1000)
     #   Defines the distance (in meters) within which to return Place results.
@@ -115,12 +108,12 @@ module GooglePlaces
     # @option options [Integer] :maxprice
     #   Restricts results to only those places within the specified price range. Valid values range between 0 (most affordable) to 4 (most expensive), inclusive.
     # @option options [Boolean] :opennow
-    #   Retricts results to those Places that are open for business at the time the query is sent. 
-    #   Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query. 
+    #   Retricts results to those Places that are open for business at the time the query is sent.
+    #   Places that do not specify opening hours in the Google Places database will not be returned if you include this parameter in your query.
     #   Setting openNow to false has no effect.
     # @option options [Boolean] :zagatselected
-    #   Restrict your search to only those locations that are Zagat selected businesses. 
-    #   This parameter does not require a true or false value, simply including the parameter in the request is sufficient to restrict your search. 
+    #   Restrict your search to only those locations that are Zagat selected businesses.
+    #   This parameter does not require a true or false value, simply including the parameter in the request is sufficient to restrict your search.
     #   The zagatselected parameter is experimental, and only available to Places API enterprise customers.
     # @option options [Hash] :retry_options ({})
     #   A Hash containing parameters for search retries
@@ -130,10 +123,10 @@ module GooglePlaces
     #
     # @see https://developers.google.com/places/documentation/search#RadarSearchRequests Radar Search
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
-    def self.list_by_radar(lat, lng, api_key, sensor, options = {})
+    def self.list_by_radar(lat, lng, api_key, options = {})
       location = Location.new(lat, lng)
       multipage_request = !!options.delete(:multipage)
-      radius = options.delete(:radius) || 1000 
+      radius = options.delete(:radius) || 1000
       types  = options.delete(:types)
       name  = options.delete(:name)
       keyword = options.delete(:keyword)
@@ -147,7 +140,6 @@ module GooglePlaces
       options = {
         :location => location.format,
         :radius => radius,
-        :sensor => sensor,
         :key => api_key,
         :name => name,
         :keyword => keyword,
@@ -175,10 +167,6 @@ module GooglePlaces
     # @return [Spot]
     # @param [String] place_id the place_id of the spot
     # @param [String] api_key the provided api key
-    # @param [Boolean] sensor
-    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS)
-    #   to determine the location sent in this request.
-    #   <b>Note that this is a mandatory parameter</b>
     # @param [Hash] options
     # @option options [String] :language
     #   The language code, indicating in which language the results should be returned, if possible.
@@ -188,21 +176,20 @@ module GooglePlaces
     # @option options [Object] :retry_options[:status] ([])
     # @option options [Integer] :retry_options[:max] (0) the maximum retries
     # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
-    def self.find(place_id, api_key, sensor, options = {})
+    def self.find(place_id, api_key, options = {})
       language  = options.delete(:language)
       retry_options = options.delete(:retry_options) || {}
       extensions = options.delete(:review_summary) ? 'review_summary' : nil
 
       response = Request.spot(
         :placeid => place_id,
-        :sensor => sensor,
         :key => api_key,
         :language => language,
         :extensions => extensions,
         :retry_options => retry_options
       )
 
-      self.new(response['result'], api_key, sensor)
+      self.new(response['result'], api_key)
     end
 
     # Search for Spots with a pagetoken
@@ -210,15 +197,13 @@ module GooglePlaces
     # @return [Array<Spot>]
     # @param [String] pagetoken the token to find next results
     # @param [String] api_key the provided api key
-    # @param [Boolean] sensor
     # @param [Hash] options
-    def self.list_by_pagetoken(pagetoken, api_key, sensor, options = {})
+    def self.list_by_pagetoken(pagetoken, api_key, options = {})
       exclude = options.delete(:exclude) || []
       exclude = [exclude] unless exclude.is_a?(Array)
 
       options = {
           :pagetoken => pagetoken,
-          :sensor => sensor,
           :key => api_key
       }
 
@@ -230,10 +215,6 @@ module GooglePlaces
     # @return [Array<Spot>]
     # @param [String] query the query to search for
     # @param [String] api_key the provided api key
-    # @param [Boolean] sensor
-    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS)
-    #   to determine the location sent in this request.
-    #   <b>Note that this is a mandatory parameter</b>
     # @param [Hash] options
     # @option options [String,Integer] :lat
     #   the latitude for the search
@@ -268,7 +249,7 @@ module GooglePlaces
     #
     # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
-    def self.list_by_query(query, api_key, sensor, options = {})
+    def self.list_by_query(query, api_key, options = {})
       if options.has_key?(:lat) && options.has_key?(:lng)
         with_location = true
       else
@@ -282,7 +263,6 @@ module GooglePlaces
       end
 
       query = query
-      sensor = sensor
       multipage_request = !!options.delete(:multipage)
       location = Location.new(options.delete(:lat), options.delete(:lng)) if with_location
       radius = options.delete(:radius) if with_radius
@@ -296,7 +276,6 @@ module GooglePlaces
 
       options = {
         :query => query,
-        :sensor => sensor,
         :key => api_key,
         :rankby => rankby,
         :language => language,
@@ -322,7 +301,7 @@ module GooglePlaces
       	# Some places returned by Google do not have a 'types' property. If the user specified 'types', then
       	# this is a non-issue because those places will not be returned. However, if the user did not specify
       	# 'types', then we do not want to filter out places with a missing 'types' property from the results set.
-        results << self.new(result, options[:key], options[:sensor]) if result['types'].nil? || (result['types'] & exclude) == []
+        results << self.new(result, options[:key]) if result['types'].nil? || (result['types'] & exclude) == []
       end
 
       results
@@ -344,8 +323,7 @@ module GooglePlaces
         if multipage_request && !response["next_page_token"].nil?
           options = {
             :pagetoken => response["next_page_token"],
-            :key => options[:key],
-            :sensor => options[:sensor]
+            :key => options[:key]
           }
 
           # There is a short delay between when a next_page_token is issued, and when it will become valid.
@@ -361,7 +339,7 @@ module GooglePlaces
 
     # @param [JSON] json_result_object a JSON object to create a Spot from
     # @return [Spot] a newly created spot
-    def initialize(json_result_object, api_key, sensor)
+    def initialize(json_result_object, api_key)
       @reference                  = json_result_object['reference']
       @place_id                   = json_result_object['place_id']
       @vicinity                   = json_result_object['vicinity']
@@ -392,7 +370,7 @@ module GooglePlaces
       @zagat_selected             = json_result_object['zagat_selected']
       @aspects                    = aspects_component(json_result_object['aspects'])
       @review_summary             = json_result_object['review_summary']
-      @photos                     = photos_component(json_result_object['photos'], api_key, sensor)
+      @photos                     = photos_component(json_result_object['photos'], api_key)
       @reviews                    = reviews_component(json_result_object['reviews'])
       @nextpagetoken              = json_result_object['nextpagetoken']
       @events                     = events_component(json_result_object['events'])
@@ -433,16 +411,15 @@ module GooglePlaces
       json_aspects.to_a.map{ |r| { :type => r['type'], :rating => r['rating'] } }
     end
 
-    def photos_component(json_photos, api_key, sensor)
+    def photos_component(json_photos, api_key)
       if json_photos
-        json_photos.map{ |p| 
+        json_photos.map{ |p|
           Photo.new(
-            p['width'], 
+            p['width'],
             p['height'],
             p['photo_reference'],
-            p['html_attributions'], 
-            api_key, 
-            sensor
+            p['html_attributions'],
+            api_key
           )
         }
       else []

@@ -36,12 +36,16 @@ http_interactions:
       - close
     body:
       encoding: US-ASCII
-      string: ! "{\n   \"predictions\" : [],\n   \"status\" : \"REQUEST_DENIED\"\n}\n"
+      string: |
+        {
+           "predictions" : [],
+           "status" : "REQUEST_DENIED"
+        }
     http_version: '1.1'
   recorded_at: Fri, 28 Feb 2014 14:24:17 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/autocomplete/json?input=query&sensor=false&key=abc123
+    uri: https://maps.googleapis.com/maps/api/place/autocomplete/json?input=query&key=abc123
     body:
       encoding: US-ASCII
       string: ''
@@ -73,62 +77,367 @@ http_interactions:
       - close
     body:
       encoding: US-ASCII
-      string: ! "{\n   \"predictions\" : [\n      {\n         \"description\" : \"Query
-        Tom LPC, Old Roswell Lakes Parkway, Roswell, GA, United States\",\n         \"id\"
-        : \"7298c121d5c7078d61ef2615b3bddf48d48deb35\",\n         \"matched_substrings\"
-        : [\n            {\n               \"length\" : 5,\n               \"offset\"
-        : 0\n            }\n         ],\n         \"reference\" : \"CmRTAAAAY2DWFTLIpwtBGTt94gOr3kd5AjS9KDpwWYyFPYK-feRCCZWuBTkw6X-sKQVYE2YOqNZcbz3raatOaqdfFIoHWsHmbIKo9pgi4zo7hQM88HPtazcQ3nlXlBAmnaqt0N9VEhBrafsrusT0e5bk4kTFxkv2GhSsiuejhMmnTadKBzCqSmo1XK3zGw\",\n
-        \        \"terms\" : [\n            {\n               \"offset\" : 0,\n               \"value\"
-        : \"Query Tom LPC\"\n            },\n            {\n               \"offset\"
-        : 15,\n               \"value\" : \"Old Roswell Lakes Parkway\"\n            },\n
-        \           {\n               \"offset\" : 42,\n               \"value\" :
-        \"Roswell\"\n            },\n            {\n               \"offset\" : 51,\n
-        \              \"value\" : \"GA\"\n            },\n            {\n               \"offset\"
-        : 55,\n               \"value\" : \"United States\"\n            }\n         ],\n
-        \        \"types\" : [ \"establishment\" ]\n      },\n      {\n         \"description\"
-        : \"Query Street, New Bedford, MA, United States\",\n         \"id\" : \"7ec01a04e7ff7a326e0de7e787c5fd03de916371\",\n
-        \        \"matched_substrings\" : [\n            {\n               \"length\"
-        : 5,\n               \"offset\" : 0\n            }\n         ],\n         \"reference\"
-        : \"CjQwAAAAmxA5br5rwSM9m5lbch9NrRt4vkRzPgbSvpN_7gKVOstGG-MK4XK6eDYtYWmOvCEjEhAEy4XBgPhiXgojlnhh-Tw8GhQQcY2jmE3y-XY6vPhe8k2y3XXt1A\",\n
-        \        \"terms\" : [\n            {\n               \"offset\" : 0,\n               \"value\"
-        : \"Query Street\"\n            },\n            {\n               \"offset\"
-        : 14,\n               \"value\" : \"New Bedford\"\n            },\n            {\n
-        \              \"offset\" : 27,\n               \"value\" : \"MA\"\n            },\n
-        \           {\n               \"offset\" : 31,\n               \"value\" :
-        \"United States\"\n            }\n         ],\n         \"types\" : [ \"route\",
-        \"geocode\" ]\n      },\n      {\n         \"description\" : \"Query Mill
-        Road, North Potomac, MD, United States\",\n         \"id\" : \"684b9d636594b43a973e1d259ec5d35ee61117d8\",\n
-        \        \"matched_substrings\" : [\n            {\n               \"length\"
-        : 5,\n               \"offset\" : 0\n            }\n         ],\n         \"reference\"
-        : \"CkQ1AAAAHFz1JyliBiYM9pT0QzNmnl5-9atNRH3K-EyD54mtbNELnYEbpDY2zOoXYnlo9LJmovaEWp28lpN4FIuaamGEHBIQ4czNWiOTRLIvM0fzCiPNtxoUy1qRYZxp6lVsjwqEuCdzwtjKFBM\",\n
-        \        \"terms\" : [\n            {\n               \"offset\" : 0,\n               \"value\"
-        : \"Query Mill Road\"\n            },\n            {\n               \"offset\"
-        : 17,\n               \"value\" : \"North Potomac\"\n            },\n            {\n
-        \              \"offset\" : 32,\n               \"value\" : \"MD\"\n            },\n
-        \           {\n               \"offset\" : 36,\n               \"value\" :
-        \"United States\"\n            }\n         ],\n         \"types\" : [ \"route\",
-        \"geocode\" ]\n      },\n      {\n         \"description\" : \"Query, Surat,
-        Gujarat, India\",\n         \"id\" : \"a276d5603f70845637ba995668bf471ec34ef87b\",\n
-        \        \"matched_substrings\" : [\n            {\n               \"length\"
-        : 5,\n               \"offset\" : 0\n            }\n         ],\n         \"reference\"
-        : \"CjQrAAAAF1ohxL2YvWAt-QMVw1YvG87-u-eRPHUFRbtnCTSX_sG90zhctdMgJOBZen6fxjD7EhBJDdmr5lnms87apQA5AXcKGhQSbHbk4i-3VnQkvSk3xfkJlKMsaA\",\n
-        \        \"terms\" : [\n            {\n               \"offset\" : 0,\n               \"value\"
-        : \"Query\"\n            },\n            {\n               \"offset\" : 7,\n
-        \              \"value\" : \"Surat\"\n            },\n            {\n               \"offset\"
-        : 14,\n               \"value\" : \"Gujarat\"\n            },\n            {\n
-        \              \"offset\" : 23,\n               \"value\" : \"India\"\n            }\n
-        \        ],\n         \"types\" : [ \"establishment\" ]\n      },\n      {\n
-        \        \"description\" : \"Query Ln, Woodbridge, VA, United States\",\n
-        \        \"id\" : \"e4830c290c5dfe6506acca4c25e2c28008f3ca80\",\n         \"matched_substrings\"
-        : [\n            {\n               \"length\" : 5,\n               \"offset\"
-        : 0\n            }\n         ],\n         \"reference\" : \"CjQrAAAApysK0GhLziqNjd-QkI3TRzPCmvo2OsIFKHSM60kyyVk6RfSvYV2Kcdsyp1gzUO6WEhCfi2xEfhxUjDJrx2y1TYydGhSFT0h8wHDfhy2cDidU9P3RhzKX1A\",\n
-        \        \"terms\" : [\n            {\n               \"offset\" : 0,\n               \"value\"
-        : \"Query Ln\"\n            },\n            {\n               \"offset\" :
-        10,\n               \"value\" : \"Woodbridge\"\n            },\n            {\n
-        \              \"offset\" : 22,\n               \"value\" : \"VA\"\n            },\n
-        \           {\n               \"offset\" : 26,\n               \"value\" :
-        \"United States\"\n            }\n         ],\n         \"types\" : [ \"route\",
-        \"geocode\" ]\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+      string: |
+        {
+           "predictions" : [
+              {
+                 "description" : "Query Tom LPC, Old Roswell Lakes Parkway, Roswell, GA, United States",
+                 "id" : "7298c121d5c7078d61ef2615b3bddf48d48deb35",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "reference" : "CmRTAAAAY2DWFTLIpwtBGTt94gOr3kd5AjS9KDpwWYyFPYK-feRCCZWuBTkw6X-sKQVYE2YOqNZcbz3raatOaqdfFIoHWsHmbIKo9pgi4zo7hQM88HPtazcQ3nlXlBAmnaqt0N9VEhBrafsrusT0e5bk4kTFxkv2GhSsiuejhMmnTadKBzCqSmo1XK3zGw",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Tom LPC"
+                    },
+                    {
+                       "offset" : 15,
+                       "value" : "Old Roswell Lakes Parkway"
+                    },
+                    {
+                       "offset" : 42,
+                       "value" : "Roswell"
+                    },
+                    {
+                       "offset" : 51,
+                       "value" : "GA"
+                    },
+                    {
+                       "offset" : 55,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "establishment" ]
+              },
+              {
+                 "description" : "Query Street, New Bedford, MA, United States",
+                 "id" : "7ec01a04e7ff7a326e0de7e787c5fd03de916371",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "reference" : "CjQwAAAAmxA5br5rwSM9m5lbch9NrRt4vkRzPgbSvpN_7gKVOstGG-MK4XK6eDYtYWmOvCEjEhAEy4XBgPhiXgojlnhh-Tw8GhQQcY2jmE3y-XY6vPhe8k2y3XXt1A",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Street"
+                    },
+                    {
+                       "offset" : 14,
+                       "value" : "New Bedford"
+                    },
+                    {
+                       "offset" : 27,
+                       "value" : "MA"
+                    },
+                    {
+                       "offset" : 31,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              },
+              {
+                 "description" : "Query Mill Road, North Potomac, MD, United States",
+                 "id" : "684b9d636594b43a973e1d259ec5d35ee61117d8",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "reference" : "CkQ1AAAAHFz1JyliBiYM9pT0QzNmnl5-9atNRH3K-EyD54mtbNELnYEbpDY2zOoXYnlo9LJmovaEWp28lpN4FIuaamGEHBIQ4czNWiOTRLIvM0fzCiPNtxoUy1qRYZxp6lVsjwqEuCdzwtjKFBM",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Mill Road"
+                    },
+                    {
+                       "offset" : 17,
+                       "value" : "North Potomac"
+                    },
+                    {
+                       "offset" : 32,
+                       "value" : "MD"
+                    },
+                    {
+                       "offset" : 36,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              },
+              {
+                 "description" : "Query, Surat, Gujarat, India",
+                 "id" : "a276d5603f70845637ba995668bf471ec34ef87b",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "reference" : "CjQrAAAAF1ohxL2YvWAt-QMVw1YvG87-u-eRPHUFRbtnCTSX_sG90zhctdMgJOBZen6fxjD7EhBJDdmr5lnms87apQA5AXcKGhQSbHbk4i-3VnQkvSk3xfkJlKMsaA",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query"
+                    },
+                    {
+                       "offset" : 7,
+                       "value" : "Surat"
+                    },
+                    {
+                       "offset" : 14,
+                       "value" : "Gujarat"
+                    },
+                    {
+                       "offset" : 23,
+                       "value" : "India"
+                    }
+                 ],
+                 "types" : [ "establishment" ]
+              },
+              {
+                 "description" : "Query Ln, Woodbridge, VA, United States",
+                 "id" : "e4830c290c5dfe6506acca4c25e2c28008f3ca80",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "reference" : "CjQrAAAApysK0GhLziqNjd-QkI3TRzPCmvo2OsIFKHSM60kyyVk6RfSvYV2Kcdsyp1gzUO6WEhCfi2xEfhxUjDJrx2y1TYydGhSFT0h8wHDfhy2cDidU9P3RhzKX1A",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Ln"
+                    },
+                    {
+                       "offset" : 10,
+                       "value" : "Woodbridge"
+                    },
+                    {
+                       "offset" : 22,
+                       "value" : "VA"
+                    },
+                    {
+                       "offset" : 26,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              }
+           ],
+           "status" : "OK"
+        }
     http_version: '1.1'
   recorded_at: Fri, 28 Feb 2014 14:28:30 GMT
-recorded_with: VCR 2.2.5
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/autocomplete/json?input=query&key=AIzaSyATDpXAyvequDQBzYjHucOXGEn7fXtikVo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 14 Oct 2014 18:48:44 GMT
+      Expires:
+      - Tue, 14 Oct 2014 18:48:44 GMT
+      Cache-Control:
+      - private, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 443:quic,p=0.01
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "predictions" : [
+              {
+                 "description" : "Queryable Corporation, 5th Street, San Francisco, CA, United States",
+                 "id" : "d6c6617e22aec493f3476b1fb3cf8be56a43ed98",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "ChIJMW0rboCAhYARJ4wb2742Aog",
+                 "reference" : "CmRSAAAAJrVq9MEffCoF9FbTMzoMyWCoyBPKMHXKYdgKGUIMSHbNGecdDe4FkH3lB7H-amz6Ftq7tlum50Go0oqjdm9rYnIDNWkKzzrt0S1Exw9jHvlHyDac9HbTn0YpzNV2IilUEhA0G9g-427F7IoIdSlFwRMoGhTRECeBBv9AyCTnBUiHCZGY2S6lRw",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Queryable Corporation"
+                    },
+                    {
+                       "offset" : 23,
+                       "value" : "5th Street"
+                    },
+                    {
+                       "offset" : 35,
+                       "value" : "San Francisco"
+                    },
+                    {
+                       "offset" : 50,
+                       "value" : "CA"
+                    },
+                    {
+                       "offset" : 54,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "establishment" ]
+              },
+              {
+                 "description" : "Query Street, New Bedford, MA, United States",
+                 "id" : "7ec01a04e7ff7a326e0de7e787c5fd03de916371",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "EixRdWVyeSBTdHJlZXQsIE5ldyBCZWRmb3JkLCBNQSwgVW5pdGVkIFN0YXRlcw",
+                 "reference" : "CjQwAAAAdF_t51rX-1MlTNQjTuTU8VLMsgDNo-tEGLr1DE1jE8cRsvtVy7slv89hQq8Dx3EQEhASm1vRaiecflxCGEqlWBZ1GhSknfzascyavExdhZmwpwT5xutxGQ",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Street"
+                    },
+                    {
+                       "offset" : 14,
+                       "value" : "New Bedford"
+                    },
+                    {
+                       "offset" : 27,
+                       "value" : "MA"
+                    },
+                    {
+                       "offset" : 31,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              },
+              {
+                 "description" : "Query Ln, Woodbridge, VA, United States",
+                 "id" : "e4830c290c5dfe6506acca4c25e2c28008f3ca80",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "EidRdWVyeSBMbiwgV29vZGJyaWRnZSwgVkEsIFVuaXRlZCBTdGF0ZXM",
+                 "reference" : "CjQrAAAAdEzK1ogpk_mBYObZjikmtjUccwBkTEe0LSxSGz3YvdF_6uC80Bop9IsMRRT9cocKEhCTNdY7w46CtaFt_vKJZ9S8GhQsTSrtaRpsSh3gbO98zBtPGwGwZA",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Ln"
+                    },
+                    {
+                       "offset" : 10,
+                       "value" : "Woodbridge"
+                    },
+                    {
+                       "offset" : 22,
+                       "value" : "VA"
+                    },
+                    {
+                       "offset" : 26,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              },
+              {
+                 "description" : "Query Mill Road, North Potomac, MD, United States",
+                 "id" : "684b9d636594b43a973e1d259ec5d35ee61117d8",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "EjFRdWVyeSBNaWxsIFJvYWQsIE5vcnRoIFBvdG9tYWMsIE1ELCBVbml0ZWQgU3RhdGVz",
+                 "reference" : "CkQ1AAAAbXi1_6K2pcAjDPes9MGqf7CZm0MvA1dkLAzLiZDV2A14twY102E99e45kX27TwP3i1PSjhAnvNRCUBJwDceOYBIQNIe3uka_FouLLl1LwDCvPRoUc05dS1wuND3nnz491eN_yj6WpPU",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Mill Road"
+                    },
+                    {
+                       "offset" : 17,
+                       "value" : "North Potomac"
+                    },
+                    {
+                       "offset" : 32,
+                       "value" : "MD"
+                    },
+                    {
+                       "offset" : 36,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              },
+              {
+                 "description" : "Query Way, Pittsburgh, PA, United States",
+                 "id" : "cb84236549d829cb3ba540bd955ac6d24be823c2",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "EihRdWVyeSBXYXksIFBpdHRzYnVyZ2gsIFBBLCBVbml0ZWQgU3RhdGVz",
+                 "reference" : "CjQsAAAAwanJHmHsVwQlYTyjwvyB7PJbAqvn2b0qqd_O7AGZwFoM8yd86jlKGpBvmrffkCGgEhAsFqZAr-5fbKBmw1PXews0GhQ4WEpkEp5Lh7Ho4ONfmWpSrU72hQ",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Way"
+                    },
+                    {
+                       "offset" : 11,
+                       "value" : "Pittsburgh"
+                    },
+                    {
+                       "offset" : 23,
+                       "value" : "PA"
+                    },
+                    {
+                       "offset" : 27,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Tue, 14 Oct 2014 18:48:44 GMT
+recorded_with: VCR 2.9.2

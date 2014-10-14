@@ -7,7 +7,6 @@ module GooglePlaces
   # This can be the case when:
   # - querying the SPOT_LIST_URL <b>without</b> the following parameters:
   # - - key
-  # - - sensor
   class RequestDeniedError < HTTParty::ResponseError
   end
 
