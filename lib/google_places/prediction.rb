@@ -1,6 +1,5 @@
 module GooglePlaces
   class Prediction
-    DEFAULT_RADIUS = 1000
 
     attr_accessor(
       :description,
@@ -20,7 +19,6 @@ module GooglePlaces
     #   Defines the distance (in meters) within which to return Place results.
     #   The maximum allowed radius is 50,000 meters.
     #   Note that radius must not be included if :rankby => 'distance' (described below) is specified.
-    #   <b>Note that this is a mandatory parameter</b>
     # @option options [String,Array] :types
     #   Restricts the results to Spots matching at least one of the specified types
     # @option options [String] :language
@@ -34,7 +32,7 @@ module GooglePlaces
       lat = options.delete(:lat)
       lng = options.delete(:lng)
       language = options.delete(:language)
-      radius = options.delete(:radius) || DEFAULT_RADIUS
+      radius = options.delete(:radius)
       retry_options = options.delete(:retry_options) || {}
       types  = options.delete(:types)
 
@@ -46,7 +44,7 @@ module GooglePlaces
 
       if lat && lng
         options[:location] = Location.new(lat, lng).format
-        options[:radius] = radius
+        options[:radius] = radius if radius
       end
 
       # Accept Types as a string or array
