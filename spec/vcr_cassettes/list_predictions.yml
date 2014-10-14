@@ -641,4 +641,205 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 14 Oct 2014 21:08:33 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/autocomplete/json?input=query&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 14 Oct 2014 22:20:37 GMT
+      Expires:
+      - Tue, 14 Oct 2014 22:20:37 GMT
+      Cache-Control:
+      - private, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 443:quic,p=0.01
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "predictions" : [
+              {
+                 "description" : "Query Street, New Bedford, MA, United States",
+                 "id" : "7ec01a04e7ff7a326e0de7e787c5fd03de916371",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "EixRdWVyeSBTdHJlZXQsIE5ldyBCZWRmb3JkLCBNQSwgVW5pdGVkIFN0YXRlcw",
+                 "reference" : "CjQwAAAAF5Kg81xaMCvrXzlfw3rDMFuk97L3zeOi-Ivtbqt3MiCr3_K1BgKWM2yAs3eBVXT2EhD6n8XOH3v0JbotH7lN7q5fGhTc9gUCi3bhLXsSbEQPpW01VNpwpw",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Street"
+                    },
+                    {
+                       "offset" : 14,
+                       "value" : "New Bedford"
+                    },
+                    {
+                       "offset" : 27,
+                       "value" : "MA"
+                    },
+                    {
+                       "offset" : 31,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              },
+              {
+                 "description" : "Query Ln, Woodbridge, VA, United States",
+                 "id" : "e4830c290c5dfe6506acca4c25e2c28008f3ca80",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "EidRdWVyeSBMbiwgV29vZGJyaWRnZSwgVkEsIFVuaXRlZCBTdGF0ZXM",
+                 "reference" : "CjQrAAAAEyCiNVNbyFXnpFetL8eCIuOVVJffU1eAHRFsn7aGeSqSMjk9_z15qptiguqhKrKYEhBJIqvxeMfWpuwV6iPMCummGhQrJBORoMOhNaTHkg6JJsZqPC5hcA",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Ln"
+                    },
+                    {
+                       "offset" : 10,
+                       "value" : "Woodbridge"
+                    },
+                    {
+                       "offset" : 22,
+                       "value" : "VA"
+                    },
+                    {
+                       "offset" : 26,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              },
+              {
+                 "description" : "Query Mill Road, North Potomac, MD, United States",
+                 "id" : "684b9d636594b43a973e1d259ec5d35ee61117d8",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "EjFRdWVyeSBNaWxsIFJvYWQsIE5vcnRoIFBvdG9tYWMsIE1ELCBVbml0ZWQgU3RhdGVz",
+                 "reference" : "CkQ1AAAAdTk3MLhJalJNhpuXx7rgkQrm6CQABnigX-rGkKoSxhWRr8YCCWINZlGgAj3tbdQ_rRXQ1_URC0yufke-BGTTbBIQo9_98ukUYtjduvZ-aoUAthoU36nUe_iQqRVgWYUZhKvT5N__Qaw",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Mill Road"
+                    },
+                    {
+                       "offset" : 17,
+                       "value" : "North Potomac"
+                    },
+                    {
+                       "offset" : 32,
+                       "value" : "MD"
+                    },
+                    {
+                       "offset" : 36,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              },
+              {
+                 "description" : "Query Creative, Colonial Drive, New Paltz, NY, United States",
+                 "id" : "098bc70569127b5c4032e94ebede1e902c589a30",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "ChIJ47dWLoAi3YkRa2id-qqIjfY",
+                 "reference" : "ClRLAAAA78ASJtkctSdQ8UgAywhx4zpQwguDHQ7TH30V2TGYqQI0JfMDxpdk7SUiIPqd2f23r2P8tqkmZU3B0M9kdKL_W5ouiKJaJoexXRXVN0twEFESEGtX_kyTfWz_dH22ONMJTy4aFEbiM2uVfD2Ra77ZLM5xt1biR0oz",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Creative"
+                    },
+                    {
+                       "offset" : 16,
+                       "value" : "Colonial Drive"
+                    },
+                    {
+                       "offset" : 32,
+                       "value" : "New Paltz"
+                    },
+                    {
+                       "offset" : 43,
+                       "value" : "NY"
+                    },
+                    {
+                       "offset" : 47,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "establishment" ]
+              },
+              {
+                 "description" : "Query Way, Pittsburgh, PA, United States",
+                 "id" : "cb84236549d829cb3ba540bd955ac6d24be823c2",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "EihRdWVyeSBXYXksIFBpdHRzYnVyZ2gsIFBBLCBVbml0ZWQgU3RhdGVz",
+                 "reference" : "CjQsAAAAA6sZNPnM1x_4zKWqRNubhkNfWQeBGjqjs1M_oERYtI2zn954k7IFf1t9NE92t8mfEhDWFx7xEANEXth0ZIxeJQN0GhRTqWP0QonwFIcV0V4OVWtYnPTALw",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Way"
+                    },
+                    {
+                       "offset" : 11,
+                       "value" : "Pittsburgh"
+                    },
+                    {
+                       "offset" : 23,
+                       "value" : "PA"
+                    },
+                    {
+                       "offset" : 27,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Tue, 14 Oct 2014 22:20:37 GMT
 recorded_with: VCR 2.9.2

@@ -9,7 +9,7 @@ describe GooglePlaces::Prediction, vcr: { cassette_name: 'list_predictions'}  do
 
   describe 'requests' do
     before(:each) do
-      GooglePlaces::Request.stub(:predictions_by_input).and_return('predictions' => [])
+      allow(GooglePlaces::Request).to receive(:predictions_by_input).and_return('predictions' => [])
     end
 
     it "initiates a request with `location` and a default `radius`" do
