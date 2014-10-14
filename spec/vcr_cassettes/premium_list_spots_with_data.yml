@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.60049820%2C-106.52202606&radius=20000&sensor=false&rankby=&key=DUMMY_KEY&name=&language=&keyword=&zagatselected=true&types=restaurant%7Ccafe
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.60049820%2C-106.52202606&radius=20000&rankby=&key=DUMMY_KEY&name=&language=&keyword=&zagatselected=true&types=restaurant%7Ccafe
     body:
       encoding: US-ASCII
       string: ''
@@ -491,7 +491,7 @@ http_interactions:
   recorded_at: Wed, 13 Mar 2013 13:42:50 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/details/json?reference=CnRpAAAAhpyrLL36QODbvtq5TCkJYiEmvERhrg_slkSrLBgoh_7e196CxAG4abOlD8_YQkrbePwc6NQCYI14Hz5TuI0vDnMgha5dXedKVXKLw8125Qvk2DLOl2vYZlOdNdniGpXD1UxoaA-neTQsWSyittG_XBIQEXOrpxY8A7KUek2dRTT69RoUZMep0CZwtXWoA1E4E-oWQtl0m7s&sensor=false&key=DUMMY_KEY&language=&extensions=review_summary
+    uri: https://maps.googleapis.com/maps/api/place/details/json?reference=CnRpAAAAhpyrLL36QODbvtq5TCkJYiEmvERhrg_slkSrLBgoh_7e196CxAG4abOlD8_YQkrbePwc6NQCYI14Hz5TuI0vDnMgha5dXedKVXKLw8125Qvk2DLOl2vYZlOdNdniGpXD1UxoaA-neTQsWSyittG_XBIQEXOrpxY8A7KUek2dRTT69RoUZMep0CZwtXWoA1E4E-oWQtl0m7s&key=DUMMY_KEY&language=&extensions=review_summary
     body:
       encoding: US-ASCII
       string: ''
@@ -716,7 +716,7 @@ http_interactions:
   recorded_at: Wed, 13 Mar 2013 13:42:51 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=DUMMY_KEY&keyword=&language=&location=39.60049820,-106.52202606&name=&radius=20000&rankby=&sensor=false&types=restaurant%7Ccafe&zagatselected=true
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=DUMMY_KEY&keyword=&language=&location=39.60049820,-106.52202606&name=&radius=20000&rankby=&types=restaurant%7Ccafe&zagatselected=true
     body:
       encoding: US-ASCII
       string: ''

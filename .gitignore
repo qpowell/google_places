@@ -8,3 +8,7 @@ spec/api_key.rb
 .yardoc/
 doc/
 .idea
+*.swp
+*.swo
+.ruby-version
+.ruby-gemset

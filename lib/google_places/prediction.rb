@@ -1,7 +1,5 @@
 module GooglePlaces
   class Prediction
-    DEFAULT_RADIUS = 1000
-    DEFAULT_SENSOR = false
 
     attr_accessor(
       :description,
@@ -15,16 +13,12 @@ module GooglePlaces
 
     # Query for Predictions (optionally at the provided location)
     #
-    # @option [Boolean] :sensor
-    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
-    #   <b>Note that this is a mandatory parameter</b>
     # @option [String,Integer] :lat the latitude for the search
     # @option [String,Integer] :lng the longitude for the search
     # @option options [Integer] :radius (1000)
     #   Defines the distance (in meters) within which to return Place results.
     #   The maximum allowed radius is 50,000 meters.
     #   Note that radius must not be included if :rankby => 'distance' (described below) is specified.
-    #   <b>Note that this is a mandatory parameter</b>
     # @option options [String,Array] :types
     #   Restricts the results to Spots matching at least one of the specified types
     # @option options [String] :language
@@ -38,21 +32,19 @@ module GooglePlaces
       lat = options.delete(:lat)
       lng = options.delete(:lng)
       language = options.delete(:language)
-      radius = options.delete(:radius) || DEFAULT_RADIUS
+      radius = options.delete(:radius)
       retry_options = options.delete(:retry_options) || {}
-      sensor = options.delete(:sensor) || DEFAULT_SENSOR
       types  = options.delete(:types)
 
       options = {
         :input => input,
         :key => api_key,
-        :retry_options => retry_options,
-        :sensor => sensor
+        :retry_options => retry_options
       }
 
       if lat && lng
         options[:location] = Location.new(lat, lng).format
-        options[:radius] = radius
+        options[:radius] = radius if radius
       end
 
       # Accept Types as a string or array

@@ -28,9 +28,6 @@ module GooglePlaces
     #   The maximum allowed radius is 50,000 meters.
     #   Note that radius must not be included if <b>:rankby</b> is specified
     #   <b>Note that this is a mandatory parameter</b>
-    # @option options [Boolean] :sensor
-    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
-    #   <b>Note that this is a mandatory parameter</b>
     # @option options [(Integer,Integer),String] :location
     #   The latitude/longitude around which to retrieve Spot information. This must be specified as latitude,longitude
     #   <b>Note that this is a mandatory parameter</b>
@@ -73,9 +70,6 @@ module GooglePlaces
     #   in requests but is snake_cased in responses (place_id)
     #   @see: https://developers.google.com/places/documentation/details
     #   <b>Note that this is a mandatory parameter</b>
-    # @option options [Boolean] :sensor
-    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
-    #   <b>Note that this is a mandatory parameter</b>
     # @option options [String] :language
     #   The language code, indicating in which language the results should be returned, if possible.
     #
@@ -95,9 +89,6 @@ module GooglePlaces
     #   <b>Note that this is a mandatory parameter</b>
     # @option options [String] :location
     #   the lat, lng for the search
-    # @option options [Boolean] :sensor
-    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
-    #   <b>Note that this is a mandatory parameter</b>
     # @option options [Integer] :radius (1000)
     #   Defines the distance (in meters) within which to return Place results.
     #   The maximum allowed radius is 50,000 meters.
@@ -150,9 +141,6 @@ module GooglePlaces
     #   Defines the distance (in meters) within which to return Place results.
     #   The maximum allowed radius is 50,000 meters.
     #   Note that radius must not be included if <b>:rankby</b> is specified
-    #   <b>Note that this is a mandatory parameter</b>
-    # @option options [Boolean] :sensor
-    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
     #   <b>Note that this is a mandatory parameter</b>
     # @option options [String,Array] :types
     #   Restricts the results to Spots matching at least one of the specified types
@@ -226,10 +214,6 @@ module GooglePlaces
     # @option options [String] :photoreference
     #   The reference of a already retrieved Photo
     #   <b>Note that this is a mandatory parameter</b>
-    # @option options [Boolean] :sensor
-    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
-    #   <b>Note that this is a mandatory parameter</b>
-    #
     # @option options [Hash] :retry_options ({})
     #   A Hash containing parameters for search retries
     # @option options [Object] :retry_options[:status] ([])
@@ -252,9 +236,6 @@ module GooglePlaces
     #   Defines the distance (in meters) within which to return Place results.
     #   The maximum allowed radius is 50,000 meters.
     #   Note that radius must not be included if <b>:rankby</b> is specified
-    #   <b>Note that this is a mandatory parameter</b>
-    # @option options [Boolean] :sensor
-    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
     #   <b>Note that this is a mandatory parameter</b>
     # @option options [(Integer,Integer),String] :location
     #   The latitude/longitude around which to retrieve Spot information. This must be specified as latitude,longitude

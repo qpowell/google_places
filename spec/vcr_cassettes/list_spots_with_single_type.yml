@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/search/json?radius=200&location=-33.8670522%2C151.1957362&sensor=false&types=cafe&name=&keyword=&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&language=
+    uri: https://maps.googleapis.com/maps/api/place/search/json?radius=200&location=-33.8670522%2C151.1957362&types=cafe&name=&keyword=&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&language=
     body:
       encoding: UTF-8
       string: ''
@@ -223,7 +223,7 @@ http_interactions:
   recorded_at: Sat, 14 Jul 2012 04:45:12 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&radius=200&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=&language=&keyword=&types=cafe
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&radius=200&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=&language=&keyword=&types=cafe
     body:
       encoding: US-ASCII
       string: ''
@@ -469,7 +469,7 @@ http_interactions:
   recorded_at: Mon, 03 Dec 2012 14:32:20 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=&language=&keyword=&types=cafe
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=&language=&keyword=&types=cafe
     body:
       encoding: US-ASCII
       string: ''
@@ -715,7 +715,7 @@ http_interactions:
   recorded_at: Mon, 03 Dec 2012 14:35:09 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&sensor=false&rankby=&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=&language=&keyword=&types=cafe
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&rankby=&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=&language=&keyword=&types=cafe
     body:
       encoding: US-ASCII
       string: ''
@@ -959,7 +959,7 @@ http_interactions:
   recorded_at: Mon, 03 Dec 2012 14:42:28 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&sensor=false&rankby=&key=abc123&name=&language=&keyword=&types=cafe
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&rankby=&key=abc123&name=&language=&keyword=&types=cafe
     body:
       encoding: US-ASCII
       string: ''
@@ -997,7 +997,7 @@ http_interactions:
   recorded_at: Fri, 22 Mar 2013 10:47:54 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&keyword=&language=&location=-33.86705220,151.19573620&name=&radius=200&rankby=&sensor=false&types=cafe
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&keyword=&language=&location=-33.86705220,151.19573620&name=&radius=200&rankby=&types=cafe
     body:
       encoding: US-ASCII
       string: ''
@@ -1268,4 +1268,321 @@ http_interactions:
         }
     http_version: 
   recorded_at: Mon, 21 Jul 2014 11:28:58 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyATDpXAyvequDQBzYjHucOXGEn7fXtikVo&keyword=&language=&location=-33.86705220,151.19573620&name=&radius=200&rankby=&types=cafe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 14 Oct 2014 18:49:11 GMT
+      Expires:
+      - Tue, 14 Oct 2014 18:54:11 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 443:quic,p=0.01
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.868204,
+                       "lng" : 151.194636
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+                 "id" : "a6e36e20e63dfff2f8d5ef4dfa7c55f2c32d524c",
+                 "name" : "Adriano Zumbo at the Star",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "photos" : [
+                    {
+                       "height" : 160,
+                       "html_attributions" : [],
+                       "photo_reference" : "CnRnAAAAxw_hoH4pSEI27-0BF8xoFY7MfcyRF1MxZoHZzNLxLHMRMNilXzTnf0rWPOCO7z2QM2mhkKkukemmDLxw2ozTZBwuGOS8ASid_LlfHiSEtr80gArro11Tv9Zavx1Th3CPhTdCPgqsVojKrV1QbIWLghIQPZYwm3RByvnc03LBdAljNRoU3kvsNtZZB6hPS3o4X-2qzTem2yw",
+                       "width" : 200
+                    }
+                 ],
+                 "place_id" : "ChIJ1-v38TauEmsRco4bALTgoMo",
+                 "rating" : 4.4,
+                 "reference" : "CoQBewAAAOmnpnTxMZAjxRAm6yb3F_MqXUKEgZUebJbel6_xH4Z4pV_KDRWJGqc5nLcU6QNIEbnXPoyxhLhFQ4IM7TOaOZU3VsDLR5Su35_2S3Lb7g6WrTxbmLU8t_l8VdtPVvrYv3PdU21xpvRVKmnIXdETT_GhwdHQJwWEG5VxsYgnd8S7EhDDzS11iwpSrfBjP57UV_IXGhSRyHQoDyHCqI_LTJp6LoOp0RYfKA",
+                 "scope" : "GOOGLE",
+                 "types" : [ "bakery", "store", "cafe", "food", "establishment" ],
+                 "vicinity" : "Shop 1, Cafe Court, The Star/80 Pyrmont Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.867093,
+                       "lng" : 151.195961
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "7eaf747a3f6dc078868cd65efc8d3bc62fff77d7",
+                 "name" : "Biaggio Cafe - Pyrmont",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "photos" : [
+                    {
+                       "height" : 600,
+                       "html_attributions" : [],
+                       "photo_reference" : "CnRnAAAA_Pg0ihDeycjRDxbkdq_910940DPm-eo1IXPwYXgsePBHkBRE7MBw_mCFu_wNZJ6fUclKDdHP1GPj5JKwTqJnblg96DRKSmq1PbdmUJ4cqLHyDu0wQqq8XwOxf-g3acVPA5NxFDz8XyooE8ZIZgdfBBIQuDqAhEmLnBq9i4hraSd8hxoUnpSObn0lwCD3IkOuHPliV1K0EP4",
+                       "width" : 900
+                    }
+                 ],
+                 "place_id" : "ChIJIfBAsjeuEmsRdgu9Pl1Ps48",
+                 "price_level" : 1,
+                 "rating" : 3.3,
+                 "reference" : "CoQBeAAAAHtjbG3iRZ5WutBH7HMC4teY_q9OFG265mdr5_DELOsY81_JWeyu_5h3R0XG6bqdh7gRn67QVpJJjBRNp8rMBqvHyAOSqqcO43xS-N0uIJnkwwuqXAwsGNMowSCW8EWZtA7cwTayP2tlmTg2ChLa6X7v0GpAurrSc703wW89srB6EhAwJwqjyq2adMaHnldCBQv1GhQ2eZ3lk7IHMDDBIu4AYDjldI-Xfg",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "bar", "restaurant", "food", "establishment" ],
+                 "vicinity" : "48 Pirrama Road, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.868207,
+                       "lng" : 151.194672
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "b4a4e9d4f9643172bf1a1899acdb7315dd26c5ba",
+                 "name" : "Antidote",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "photos" : [
+                    {
+                       "height" : 648,
+                       "html_attributions" : [ "From a Google User" ],
+                       "photo_reference" : "CnRmAAAAMDp7gRu55mv4jUAJ_3my_TTFtg8r-KEsd72C6lPTFiCp4dHhKs55zQqhansbT_5HXf2hsJr0PXJempTWOV7LMhRKomcXrYQ-srbRyS-99fuj-U0LgGlBu-6Oahud9VAcq-2wkWUBapolr8xhTeLL7BIQWBqHg-9TAmmW2MjYJt1tShoU9U91QKWwoYmiBUW0onrsHSh5XC0",
+                       "width" : 486
+                    }
+                 ],
+                 "place_id" : "ChIJ1-v38TauEmsRzUP4C3m6_do",
+                 "rating" : 4.1,
+                 "reference" : "CnRqAAAADnI_BqBeGgr-sHASm9IiCYB-FFGdpnVd9vj6GL02tMGSwoZMT-KWMr456Ht4s2LN75qtooatQUH9F1fXjs2WeYRGveN5RRIbY1Ue9rCKyhfjn5XrkcHZJz1aB8ViQaCLkSN_g-P2wbLw783_7h9CLBIQH-CCCfWpogcb8UaVLra7xBoUCn3kWaAIZ1Hx5TvP46zXkZNc62o",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "food", "establishment" ],
+                 "vicinity" : "The Star Pyrmont St, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.868283,
+                       "lng" : 151.194422
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "0761a21e23eda2598330d428413cb59431316a61",
+                 "name" : "Lobby Lounge",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "photos" : [
+                    {
+                       "height" : 324,
+                       "html_attributions" : [],
+                       "photo_reference" : "CnRnAAAAY4eTAsJXAUcTgcg4Ukq8jP1o6JKPstPdOeKLKgiNv8-yxbcgS4gawVuf75SBd0cjKhmSOLS6CA5xpvXUQIb03AtLBOUfhiI_fcprZHHdOnU8gNvPP6hDL-_jvVplOElOaHDoVM35qxkY4BTgL3_MJBIQW85JeeNrPNrwNG9QST3QPBoUY21y9WHkQL7jEC9CqudvmuHT4jE",
+                       "width" : 512
+                    }
+                 ],
+                 "place_id" : "ChIJ1-v38TauEmsRHbUt24abGq8",
+                 "rating" : 4.2,
+                 "reference" : "CnRuAAAAeCS2ZoqSg_fw_qlfe_HziN9a9ZL79v07X40HI6CE7ZSUfDbisJ6azwTIxET8mQXdZmp9x2tZ3CAIMi8AmVrS7e2tGolNTHOhvbZYuLe8tB7jUk2vgv0UnbQDOQ1dAyqlLodcerRtM2Id1u65hU1kdhIQgfi71cMkYT0dH0goLwMIPBoUq4qDo8p2bHzr3sjjhOeSVS0fyYA",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "bar", "food", "establishment" ],
+                 "vicinity" : "80 Pyrmont St, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.868283,
+                       "lng" : 151.194422
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "5895b175f4c2a8535294f5587fe089fc7d5135ea",
+                 "name" : "Pulse Express",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "photos" : [
+                    {
+                       "height" : 992,
+                       "html_attributions" : [],
+                       "photo_reference" : "CnRnAAAAWxJ3_8Wp-7jXsJ7PBOH17D8fFZc3jVwJuu2qfZfOo63IIKN1wdwKcoQEF8A8EyaS3XwY_JJOWSNhksKEz9xKqJsPD8z6QmxXra3Xwl9MamQV8GvmRuqkcC7YdHCvRKefk8njO77GqXDnZgzNsuOGpxIQpRgcd9EExZ8XvMK6Rgp0LxoUhwBl_T5P81YNBcyFyBLTnWRPAg0",
+                       "width" : 1618
+                    }
+                 ],
+                 "place_id" : "ChIJ1-v38TauEmsRJxe1QBBHBGU",
+                 "reference" : "CnRuAAAAGWns4wlufHTLobtYcbKgj_zq_qKdcfGlCDdtJtA-fa2re823NsFSxBS3dIyu3Uc3MSuWIZzBtCsnZGpxflos5PnJvDfZ7oeHqr8xUYIxZLuROMPTuchQoduZP5-tyeJVzdffWQGK8M6iBbkXu9DIvRIQSl8IXfIIDOFQd6UcBQlU9RoUaJWl2LMUICDH7H5jQqfF4jMGpiE",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "restaurant", "food", "establishment" ],
+                 "vicinity" : "80 Pyrmont St, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.866415,
+                       "lng" : 151.194589
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "7501fca2fd726963a0f5b79f8e86a8006b48f968",
+                 "name" : "Astoria Sydney",
+                 "opening_hours" : {
+                    "open_now" : true
+                 },
+                 "photos" : [
+                    {
+                       "height" : 2136,
+                       "html_attributions" : [ "From a Google User" ],
+                       "photo_reference" : "CnRqAAAAoeDpwSnHW85ZobLI5ToRUOcRAvcjb5mWcUDCU2ZfLfqfGcHlxNS6KHIfYyj_I-ZK1S8MOSkE23_A8bdc9rTGrnRszvFRndHqF0DM16t7eHDiNFXv11vvrHoTiAfMG7jQE0GUlNuqH18vGs7htc18YRIQetZJ1clOOgCY9CoC0SWaKxoUB_Ah41mpduzo-e5FtgiLeqUtJrs",
+                       "width" : 2848
+                    }
+                 ],
+                 "place_id" : "ChIJhRs1RzauEmsRLE2K9do7mcg",
+                 "reference" : "CnRwAAAA80FtYdEF2KCHTOWlDYZ1tGrRfUN7de-Xz7PXKR2SKt5J8qRDhYTxmTQ1KhynIRRRJjES4U5qZVuN5mg6wMjF6JAoYvl-KUK3dah0pZ-dMztqQ-mlHnLVPxH0pNRpHX54q53Hl72pBFvgpfeJzPvAJxIQZmCB-LN3FO0C53wecR0YkxoUwNuA3rm4E858_0yz0BrZMGaakos",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "food", "establishment" ],
+                 "vicinity" : "8 Jones Bay Rd, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.868283,
+                       "lng" : 151.194422
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+                 "id" : "df8498c40e304679e2e066fb9f47b8e6ab578b48",
+                 "name" : "Food Quarter",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "photos" : [
+                    {
+                       "height" : 440,
+                       "html_attributions" : [],
+                       "photo_reference" : "CnRnAAAA31cmGx5I6RttIh_hglIslTDeRglZb0i1vCAyIijUCi1AOdx4JSg7foJqT0Hm8MvFdQjHq_KbuBlx178NGcExu4tIEreCfaz2opCYlCnjXgXpt-GJzfG9NGlYwq6-Mk4eR_TAr6Rpsy-RQU_s71XfqRIQreccp4JLL4BPbhve35ot0hoUlQ8rqCwZyIIVxT7Pqcxkswbzj3c",
+                       "width" : 700
+                    }
+                 ],
+                 "place_id" : "ChIJ1-v38TauEmsRP8ap8MBE1Bs",
+                 "reference" : "CnRtAAAA6rMlNYA7GStZ4lnru4Or90-ChktQmH0dFhbSHU2oj3-IFLBdSx7MAaMJ9-TSpjvBBCKmbEcqIO93KjibmjvVaMfNoea4-1jS71L9nkHcEcHCiEQkv_w9Eo0h3YkAifsJYwYY1N-Ikwbow-DXKwTa1xIQHQ753hfj-45d1SUDWUBIIRoUn5SOuc2EYV2gSHvmGKvm1DMK3RE",
+                 "scope" : "GOOGLE",
+                 "types" : [ "bakery", "store", "cafe", "restaurant", "food", "establishment" ],
+                 "vicinity" : "80 Pyrmont St, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.868173,
+                       "lng" : 151.194652
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "dcc2d5fcdc143f1b328dbcb823357b4f2b74998a",
+                 "name" : "Cafe Court",
+                 "place_id" : "ChIJ1-v38TauEmsRCO5mmZZfvXs",
+                 "reference" : "CnRrAAAAfGLm9KD77cskxL0wtqpPXthQnIsNgveVUxLBeh-6BLjLwv4rAouQeww7WiF8Gm3TilgKOjAVKH_EjupAcP5dj7EA68JZHO5y7pf74Tdx6wKLi8GaTSJ3y-24Rf4MixzAtcoJ43Y5EpdMGZG-5PRBDxIQv6HbHf_SXzywmDszjcZnWBoUze1rqv5JcMXmIGIdCrDyctpTWoE",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "restaurant", "food", "establishment" ],
+                 "vicinity" : "80 Pyrmont St, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.866511,
+                       "lng" : 151.196064
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "91509349e192972859b886e62f11827e5bd0072f",
+                 "name" : "Esky Cafe",
+                 "place_id" : "ChIJm3d7yTeuEmsRC2wYUB24q9I",
+                 "reference" : "CnRrAAAAU1IewFxhLC8uVXyu7aP2VZchxZKURiSRnLE55hMrwzsC5WvW-kldrQ0Z0qA09mcfNOh2HNaXwyYk5JwI_99EW0NEhmS0y5Faz2WEbtV8CMmrzxXvQ5X2CxjY5kDOxF8JPsgYBJtBFc_X6mRWLL3QHRIQof6qLj4qY8KPjF09qdEuDRoUg74yc0oZjYKTajtyi35RUnybCx0",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "restaurant", "food", "establishment" ],
+                 "vicinity" : "48 Pirrama Rd, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.868274,
+                       "lng" : 151.196309
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "003482fdacacd82b58523069512b453e7f5ab539",
+                 "name" : "Karima Brassiere & Cafe Bar",
+                 "place_id" : "ChIJ1-v38TauEmsRbMuLkvV78Q0",
+                 "reference" : "CoQBfAAAAKY0NbumZQHElAntQXg2Gh3cccleFyqXkoZC6KDUZE6ukT88o3N9F07GnRsQ9-YhI8zqsdld9_rL3iBwx1XYVcxrqtLnyTy5suDP_uA7-O8R9yyOLtHK3c6A09iWnLBylAmmIgA5Qj36CpRSr8LhoD9L9KsWeiEWViLAWeUW7ZMaEhAaHB-Lkb8ke-tMSVwsnE2FGhTdwM5R_3SQqMYZDNQwnQuDn8cPEg",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "bar", "restaurant", "food", "establishment" ],
+                 "vicinity" : "Star City Casino Parking, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.865275,
+                       "lng" : 151.19628
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "5c1b8cea5ae2c785c2e3d562fbcec77cb115d290",
+                 "name" : "Cafe Laneway",
+                 "place_id" : "ChIJuTruKEiuEmsRvpSrD719U-M",
+                 "reference" : "CnRuAAAAfO86iXOH-z9JSIHoh5fuei07FPE7sk4TFg38JhnsNCTg06WtUafia53yDsEZXLvLT1ufdVNv19frMLHPuIt7GD_T7TZt-5HC2f89a1CFFHaRd4Ag8JB9kymA3_4nh84BzxADPGwBCvagfTIGMFTeAhIQ2xD1JSwLKb4fO-nJWJTLoRoUhYUNaL9H6ZJrwwsGXKqvz9veVlM",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "restaurant", "food", "establishment" ],
+                 "vicinity" : "1 Darling Island Rd, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.868796,
+                       "lng" : 151.196834
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "7b47b9946dacf4fd712cf70f3b169d07b78f2689",
+                 "name" : "The Bay Cafe",
+                 "place_id" : "ChIJEav2DTeuEmsRCj-XJGB5ewg",
+                 "reference" : "CnRtAAAA1h91ADDjOpSpPeEGWK8SRXICQ9DemlciN5wyLRa42H_IVsL6jvIowJczcN2rVuNOQ4k7e_hghhjc4Ed_N8kDZdN3hkTG7_XsmKKjBrQS-9YgR9OxPP6OAmhyF_FBi7j9R0CgdjQ67UW-fT2dM0Ku4hIQIyJ34ssH77HyHIK43oEnCRoUFGOuVusp7zFo8As1u9jmhypsoiY",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "food", "establishment" ],
+                 "vicinity" : "65 Pirrama Rd, Pyrmont"
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Tue, 14 Oct 2014 18:49:11 GMT
 recorded_with: VCR 2.9.2

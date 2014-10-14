@@ -12,31 +12,11 @@ describe GooglePlaces::Prediction, vcr: { cassette_name: 'list_predictions'}  do
       GooglePlaces::Request.stub(:predictions_by_input).and_return('predictions' => [])
     end
 
-    it "initiates a request with `location` and a default `radius`" do
-      options = request_params(location: "1.00000000,2.00000000", radius: GooglePlaces::Prediction::DEFAULT_RADIUS)
-      expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
-
-      GooglePlaces::Prediction.list_by_input('query', api_key, lat: 1.00000000, lng: 2.00000000)
-    end
-
     it "initiates a request with `radius`" do
       options = request_params(radius: 20, location: "1.00000000,2.00000000")
       expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
 
       GooglePlaces::Prediction.list_by_input('query', api_key, lat: 1, lng: 2, radius: 20)
-    end
-
-    it "initiates a request with `sensor`" do
-      options = request_params(sensor: true)
-      expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
-
-      GooglePlaces::Prediction.list_by_input('query', api_key, sensor: true)
-    end
-
-    it "initiates a request with a default `sensor`" do
-      expect(GooglePlaces::Request).to receive(:predictions_by_input).with(request_params)
-
-      GooglePlaces::Prediction.list_by_input('query', api_key)
     end
 
     it "initiates a request with `types`" do
@@ -72,8 +52,7 @@ describe GooglePlaces::Prediction, vcr: { cassette_name: 'list_predictions'}  do
     {
       input: "query",
       key: api_key,
-      retry_options: {},
-      sensor: false
+      retry_options: {}
     }.merge(options)
   end
 end
