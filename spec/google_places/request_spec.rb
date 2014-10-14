@@ -6,7 +6,6 @@ describe GooglePlaces::Request do
     @location = GooglePlaces::Location.new('-33.8670522', '151.1957362').format
     @query = 'Statue of liberty, New York'
     @radius = 200
-    @sensor = false
     @reference = 'CnRsAAAASc4grenwL0h3X5VPNp5fkDNfqbjt3iQtWIPlKS-3ms9GbnCxR_FLHO0B0ZKCgJSg19qymkeHagjQFB4aUL87yhp4mhFTc17DopK1oiYDaeGthztSjERic8TmFNe-6zOpKSdiZWKE6xlQvcbSiWIJchIQOEYZqunSSZqNDoBSs77bWRoUJcMMVANtSlhy0llKI0MI6VcC7DU'
     @reference_not_found = 'CnRpAAAAlO2WvF_4eOqp02TAWKsXpPSCFz8KxBjraWhB4MSvdUPqXN0yCpxQgblam1LeRENcWZF-9-2CEfUwlHUli61PaYe0e7dUPAU302tk6KkalnKqx7nv07iFA1Ca_Y1WoCLH9adEWwkxKMITlbGhUUz9-hIQPxQ4Bp_dz5nHloUFkj3rkBoUDSPqy2smqMnPEo4ayfbDupeKEZY'
     @keyword = 'attractions'
@@ -18,7 +17,6 @@ describe GooglePlaces::Request do
         response = GooglePlaces::Request.spots(
           :location => @location,
           :radius => @radius,
-          :sensor => @sensor,
           :key => api_key
         )
         expect(response['results']).to_not be_empty
@@ -30,7 +28,6 @@ describe GooglePlaces::Request do
           expect(lambda {
             GooglePlaces::Request.spots(
               :radius => @radius,
-              :sensor => @sensor,
               :key => api_key
             )
           }).to raise_error GooglePlaces::InvalidRequestError
@@ -42,7 +39,6 @@ describe GooglePlaces::Request do
             expect(lambda {
               GooglePlaces::Request.spots(
                 :radius => @radius,
-                :sensor => @sensor,
                 :key => api_key,
                 :retry_options => {
                   :max => 3,
@@ -58,7 +54,6 @@ describe GooglePlaces::Request do
             expect(lambda {
               GooglePlaces::Request.spots(
                 :radius => @radius,
-                :sensor => @sensor,
                 :key => api_key,
                 :retry_options => {
                   :max => 3,
@@ -81,7 +76,6 @@ describe GooglePlaces::Request do
       it 'should retrieve a list of spots' do
         response = GooglePlaces::Request.spots_by_query(
           :query => @query,
-          :sensor => @sensor,
           :key => api_key
         )
 
@@ -94,7 +88,6 @@ describe GooglePlaces::Request do
         it do
           expect(lambda {
             GooglePlaces::Request.spots_by_query(
-              :sensor => @sensor,
               :key => api_key
             )
           }).to raise_error GooglePlaces::InvalidRequestError
@@ -106,7 +99,6 @@ describe GooglePlaces::Request do
           it do
             expect(lambda {
               GooglePlaces::Request.spots_by_query(
-                :sensor => @sensor,
                 :key => api_key,
                 :retry_options => {
                   :max => 3,
@@ -122,7 +114,6 @@ describe GooglePlaces::Request do
           it do
             expect(lambda {
               GooglePlaces::Request.spots_by_query(
-                :sensor => @sensor,
                 :key => api_key,
                 :retry_options => {
                   :max => 3,
@@ -143,7 +134,6 @@ describe GooglePlaces::Request do
       it 'should retrieve a single spot' do
         response = GooglePlaces::Request.spot(
           :reference => @reference,
-          :sensor => @sensor,
           :key => api_key
         )
         expect(response['result']).to_not be_empty
@@ -153,7 +143,6 @@ describe GooglePlaces::Request do
           expect(lambda {
             GooglePlaces::Request.spot(
               :reference => @reference_not_found,
-              :sensor => @sensor,
               :key => api_key
             )
           }).to raise_error GooglePlaces::NotFoundError
@@ -165,7 +154,6 @@ describe GooglePlaces::Request do
         it do
           expect(lambda {
             GooglePlaces::Request.spot(
-              :sensor => @sensor,
               :key => api_key
             )
           }).to raise_error GooglePlaces::InvalidRequestError
@@ -176,7 +164,6 @@ describe GooglePlaces::Request do
           it do
             expect(lambda {
               GooglePlaces::Request.spot(
-                :sensor => @sensor,
                 :key => api_key,
                 :retry_options => {
                   :max => 3,
@@ -191,7 +178,6 @@ describe GooglePlaces::Request do
           it do
             expect(lambda {
               GooglePlaces::Request.spot(
-                :sensor => @sensor,
                 :key => api_key,
                 :retry_options => {
                   :max => 3,
@@ -218,7 +204,6 @@ describe GooglePlaces::Request do
             :location => @location,
             :keyword => @keyword,
             :radius => @radius,
-            :sensor => @sensor,
             :key => api_key
           ) 
           expect(response['results']).to_not be_empty
@@ -231,7 +216,6 @@ describe GooglePlaces::Request do
             :location => @location,
             :name => 'park',
             :radius => @radius,
-            :sensor => @sensor,
             :key => api_key
           )
           expect(response['results']).to_not be_empty
@@ -246,7 +230,6 @@ describe GooglePlaces::Request do
             GooglePlaces::Request.spots_by_radar(
               :location => @location,
               :radius => @radius,
-              :sensor => @sensor,
               :key => api_key
             )
           }).to raise_error GooglePlaces::InvalidRequestError
@@ -260,7 +243,6 @@ describe GooglePlaces::Request do
               GooglePlaces::Request.spots_by_radar(
                 :location => @location,
                 :radius => @radius,
-                :sensor => @sensor,
                 :key => api_key,
                 :retry_options => {
                   :max => 3,
@@ -278,7 +260,6 @@ describe GooglePlaces::Request do
               GooglePlaces::Request.spots_by_radar(
                 :location => @location,
                 :radius => @radius,
-                :sensor => @sensor,
                 :key => api_key,
                 :retry_options => {
                   :max => 3,

@@ -19,19 +19,6 @@ describe GooglePlaces::Prediction, vcr: { cassette_name: 'list_predictions'}  do
       GooglePlaces::Prediction.list_by_input('query', api_key, lat: 1, lng: 2, radius: 20)
     end
 
-    it "initiates a request with `sensor`" do
-      options = request_params(sensor: true)
-      expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
-
-      GooglePlaces::Prediction.list_by_input('query', api_key, sensor: true)
-    end
-
-    it "initiates a request with a default `sensor`" do
-      expect(GooglePlaces::Request).to receive(:predictions_by_input).with(request_params)
-
-      GooglePlaces::Prediction.list_by_input('query', api_key)
-    end
-
     it "initiates a request with `types`" do
       options = request_params(types: '(cities)')
       expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
@@ -65,8 +52,7 @@ describe GooglePlaces::Prediction, vcr: { cassette_name: 'list_predictions'}  do
     {
       input: "query",
       key: api_key,
-      retry_options: {},
-      sensor: false
+      retry_options: {}
     }.merge(options)
   end
 end

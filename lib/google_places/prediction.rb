@@ -1,6 +1,5 @@
 module GooglePlaces
   class Prediction
-    DEFAULT_SENSOR = false
 
     attr_accessor(
       :description,
@@ -14,9 +13,6 @@ module GooglePlaces
 
     # Query for Predictions (optionally at the provided location)
     #
-    # @option [Boolean] :sensor
-    #   Indicates whether or not the Place request came from a device using a location sensor (e.g. a GPS) to determine the location sent in this request.
-    #   <b>Note that this is a mandatory parameter</b>
     # @option [String,Integer] :lat the latitude for the search
     # @option [String,Integer] :lng the longitude for the search
     # @option options [Integer] :radius (1000)
@@ -38,14 +34,12 @@ module GooglePlaces
       language = options.delete(:language)
       radius = options.delete(:radius)
       retry_options = options.delete(:retry_options) || {}
-      sensor = options.delete(:sensor) || DEFAULT_SENSOR
       types  = options.delete(:types)
 
       options = {
         :input => input,
         :key => api_key,
-        :retry_options => retry_options,
-        :sensor => sensor
+        :retry_options => retry_options
       }
 
       if lat && lng

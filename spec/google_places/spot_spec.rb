@@ -6,7 +6,6 @@ describe GooglePlaces::Spot do
     @lat = '-33.8670522'
     @lng = '151.1957362'
     @radius = 200
-    @sensor = false
     @pagetoken = 'CmRVAAAAqKK43TjXKnyEx4-XTWd4bC-iBq88Olspwga_JQbEpznYpfwXYbWBrxmb-1QYD4DMtq8gym5YruCEVjByOlKn8PWKQO5fHvuYD8rWKHUeBvMleM7k3oh9TUG8zqcyuhPmEhCG_C2XuypmkQ20hRvxro4sGhQN3nbWCjgpjyG_E_ayjVIoTGbViw'
     @place_id = 'ChIJN1t_tDeuEmsRUsoyG83frY4'
   end
@@ -18,12 +17,12 @@ describe GooglePlaces::Spot do
     end
 
     it 'should be a collection of Spots' do
-      @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, @sensor, :radius => @radius)
+      @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius)
     end
 
     describe 'with a single type', vcr: { cassette_name: 'list_spots_with_single_type' } do
       before(:each) do
-        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, @sensor, :radius => @radius, :types => 'cafe')
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :types => 'cafe')
       end
 
       it 'should have Spots with a specific type' do
@@ -35,7 +34,7 @@ describe GooglePlaces::Spot do
 
     describe 'with multiple types', vcr: { cassette_name: 'list_spots_with_multiple_types' } do
       before(:each) do
-        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, @sensor, :radius => @radius, :types => ['food','establishment'])
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :types => ['food','establishment'])
       end
 
       it 'should have Spots with specific types' do
@@ -48,7 +47,7 @@ describe GooglePlaces::Spot do
     describe 'searching by name and types', vcr: { cassette_name: 'list_spots_with_name_and_types' } do
 
       before(:each) do
-        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, @sensor, :radius => @radius, :types => ['food','establishment'], :name => 'italian')
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :types => ['food','establishment'], :name => 'italian')
       end
 
       it 'should have Spots with specific types' do
@@ -61,7 +60,7 @@ describe GooglePlaces::Spot do
     describe 'searching by types with exclusion', vcr: { cassette_name: 'list_spots_with_types_and_exclusion' } do
 
       it 'should exclude spots with type "restaurant"' do
-        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, @sensor, :radius => @radius, :types => ['food','establishment'], :exclude => 'restaurant')
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :types => ['food','establishment'], :exclude => 'restaurant')
 
         @collection.map(&:types).each do |types|
           expect(types).to_not include('restaurant')
@@ -69,7 +68,7 @@ describe GooglePlaces::Spot do
       end
 
       it 'should exclude spots with type "restaurant" and "cafe"' do
-        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, @sensor, :radius => @radius, :types => ['food','establishment'], :exclude => ['restaurant', 'cafe'])
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :types => ['food','establishment'], :exclude => ['restaurant', 'cafe'])
 
         @collection.map(&:types).each do |types|
           expect(types).to_not include('restaurant')
@@ -82,27 +81,27 @@ describe GooglePlaces::Spot do
   context 'Multiple page request', vcr: { cassette_name: 'multiple_page_request' } do
 
     it 'should return >20 results when :multipage_request is true' do
-      @collection = GooglePlaces::Spot.list_by_query('wolfgang', api_key, @sensor, :lat => '40.808235', :lng => '-73.948733', :radius => @radius, :multipage => true)
+      @collection = GooglePlaces::Spot.list_by_query('wolfgang', api_key, :lat => '40.808235', :lng => '-73.948733', :radius => @radius, :multipage => true)
       expect(@collection.size).to be >= 21
     end
 
     it 'should return at most 20 results when :multipage is false' do
-      @collection = GooglePlaces::Spot.list_by_query('wolfgang', api_key, @sensor, :lat => '40.808235', :lng => '-73.948733', :radius => @radius, :multipage => false)
+      @collection = GooglePlaces::Spot.list_by_query('wolfgang', api_key, :lat => '40.808235', :lng => '-73.948733', :radius => @radius, :multipage => false)
       expect(@collection.size).to be <= 20
     end
 
     it 'should return at most 20 results when :multipage is not present' do
-      @collection = GooglePlaces::Spot.list_by_query('wolfgang', api_key, @sensor, :lat => '40.808235', :lng => '-73.948733', :radius => @radius)
+      @collection = GooglePlaces::Spot.list_by_query('wolfgang', api_key, :lat => '40.808235', :lng => '-73.948733', :radius => @radius)
       expect(@collection.size).to be <= 20
     end
 
     it 'should return a pagetoken when there is more than 20 results and :multipage is false' do
-      @collection = GooglePlaces::Spot.list_by_query('wolfgang', api_key, @sensor, :lat => '40.808235', :lng => '-73.948733', :radius => @radius, :multipage => false)
+      @collection = GooglePlaces::Spot.list_by_query('wolfgang', api_key, :lat => '40.808235', :lng => '-73.948733', :radius => @radius, :multipage => false)
       expect(@collection.last.nextpagetoken).to_not be_nil
     end
 
     it 'should return some results when :pagetoken is present' do
-      @collection = GooglePlaces::Spot.list_by_pagetoken(@pagetoken, api_key, @sensor)
+      @collection = GooglePlaces::Spot.list_by_pagetoken(@pagetoken, api_key)
       expect(@collection.size).to be >= 1
     end
 
@@ -115,7 +114,7 @@ describe GooglePlaces::Spot do
     end
 
     it 'should be a collection of Spots' do
-      @collection = GooglePlaces::Spot.list_by_query('Statue of liberty, New York', api_key, @sensor)
+      @collection = GooglePlaces::Spot.list_by_query('Statue of liberty, New York', api_key)
     end
 
   end
@@ -127,14 +126,14 @@ describe GooglePlaces::Spot do
     end
 
     it 'should be a collection of Spots' do
-      @collection = GooglePlaces::Spot.list_by_radar('48.8567', '2.3508', api_key, @sensor, :radius => @radius, :keyword => 'attractions')
+      @collection = GooglePlaces::Spot.list_by_radar('48.8567', '2.3508', api_key, :radius => @radius, :keyword => 'attractions')
     end
 
   end
 
   context 'Find a single spot', vcr: { cassette_name: 'single_spot' } do
     before :each do
-      @spot = GooglePlaces::Spot.find(@place_id, api_key, @sensor)
+      @spot = GooglePlaces::Spot.find(@place_id, api_key)
     end
     it 'should be a Spot' do
       expect(@spot.class).to eq(GooglePlaces::Spot)
