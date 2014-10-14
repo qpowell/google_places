@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/search/json?radius=200&location=-33.8670522%2C151.1957362&sensor=false&types=food%7Cestablishment&name=italian&keyword=&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&language=
+    uri: https://maps.googleapis.com/maps/api/place/search/json?radius=200&location=-33.8670522%2C151.1957362&types=food%7Cestablishment&name=italian&keyword=&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&language=
     body:
       encoding: UTF-8
       string: ''
@@ -59,7 +59,7 @@ http_interactions:
   recorded_at: Sat, 14 Jul 2012 04:45:15 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&radius=200&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=italian&language=&keyword=&types=food%7Cestablishment
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&radius=200&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=italian&language=&keyword=&types=food%7Cestablishment
     body:
       encoding: US-ASCII
       string: ''
@@ -130,7 +130,7 @@ http_interactions:
   recorded_at: Mon, 03 Dec 2012 14:32:21 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=italian&language=&keyword=&types=food%7Cestablishment
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=italian&language=&keyword=&types=food%7Cestablishment
     body:
       encoding: US-ASCII
       string: ''
@@ -201,7 +201,7 @@ http_interactions:
   recorded_at: Mon, 03 Dec 2012 14:35:10 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&sensor=false&rankby=&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=italian&language=&keyword=&types=food%7Cestablishment
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&rankby=&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=italian&language=&keyword=&types=food%7Cestablishment
     body:
       encoding: US-ASCII
       string: ''
@@ -270,7 +270,7 @@ http_interactions:
   recorded_at: Mon, 03 Dec 2012 14:42:29 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&sensor=false&rankby=&key=abc123&name=italian&language=&keyword=&types=food%7Cestablishment
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&rankby=&key=abc123&name=italian&language=&keyword=&types=food%7Cestablishment
     body:
       encoding: US-ASCII
       string: ''
@@ -308,7 +308,7 @@ http_interactions:
   recorded_at: Fri, 22 Mar 2013 10:47:55 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&keyword=&language=&location=-33.86705220,151.19573620&name=italian&radius=200&rankby=&sensor=false&types=food%7Cestablishment
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&keyword=&language=&location=-33.86705220,151.19573620&name=italian&radius=200&rankby=&types=food%7Cestablishment
     body:
       encoding: US-ASCII
       string: ''
@@ -381,4 +381,154 @@ http_interactions:
         }
     http_version: 
   recorded_at: Mon, 21 Jul 2014 11:28:59 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyATDpXAyvequDQBzYjHucOXGEn7fXtikVo&keyword=&language=&location=-33.86705220,151.19573620&name=italian&radius=200&rankby=&types=food%7Cestablishment
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 14 Oct 2014 18:49:12 GMT
+      Expires:
+      - Tue, 14 Oct 2014 18:54:12 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 443:quic,p=0.01
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.866669,
+                       "lng" : 151.192282
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+                 "id" : "954a594077141a5f37fa1fb4340988bada9a93f0",
+                 "name" : "Raffinato Italian Restaurant",
+                 "place_id" : "ChIJIRtr0TWuEmsRq_tQAbxShPg",
+                 "reference" : "CoQBfwAAAPPghK61nnPN5DN94wwVqsCGbes3tkEvPWwxRhObGK74kmbQlN488-qAeIjZ8uwMuVZqGx5dITvdZu77AkYs492Xk8luyssuzM8a4q5wVvCBOmgwgXK3bTTOWoyh1DseMXUzG7LOy4cOwsgPGARr1n5kY-QHKWYTiGtx1LtppCSOEhDpZ6cvV0R8oH9givbCANYbGhR_JaqSUwMaYil0M1EBEhr0eThWeg",
+                 "scope" : "GOOGLE",
+                 "types" : [ "restaurant", "food", "establishment" ],
+                 "vicinity" : "46 Harris St, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.86771,
+                       "lng" : 151.191917
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+                 "id" : "2e2a9c116f1110a816d6f78585018c73663218d4",
+                 "name" : "Italian Kitchen Express",
+                 "place_id" : "ChIJN97jOjSuEmsRQN_2Q36vGbY",
+                 "reference" : "CoQBegAAAGvJhBFybbMei6q4ITC8Ms0iwjsiUGKINzxIwe9Tq6rJ1Ar-KV_8ogsT7qAw6hDVqOaLzrUmePFsKmaBFeY32DvcN-fVlbT2zuQ0cw77bZzK8r0ZV3YezJwq9xEC2it1SjG6SvRQj70TcvGdTETP7DpIa4lazuFHtOqow3wld4SsEhAhQ2eZFwASrvv59aa6JDTrGhTj2zT71WuzByzGvDwkxn78NrQ7pQ",
+                 "scope" : "GOOGLE",
+                 "types" : [ "restaurant", "home_goods_store", "store", "food", "establishment" ],
+                 "vicinity" : "6/45-55 Harris St, Pyrmont"
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Tue, 14 Oct 2014 18:49:12 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyCJ0NiNmva8TTlxDoU-BWvxW27zGAichFk&keyword=&language=&location=-33.86705220,151.19573620&name=italian&radius=200&rankby=&types=food%7Cestablishment
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 14 Oct 2014 21:09:02 GMT
+      Expires:
+      - Tue, 14 Oct 2014 21:14:02 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 443:quic,p=0.01
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.866669,
+                       "lng" : 151.192282
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+                 "id" : "954a594077141a5f37fa1fb4340988bada9a93f0",
+                 "name" : "Raffinato Italian Restaurant",
+                 "place_id" : "ChIJIRtr0TWuEmsRq_tQAbxShPg",
+                 "reference" : "CoQBfgAAAEZ1Dalw8iqu9szq5GD9GlchGq7addKhAvhcmBHAacxyt-wycJu-_WW-pygsyt6vhiCyfLFfRocuO18qpuXlCucWvUewlGMTET9-WOMB4FBY04jTW716w67cgPYctZj2u15AqLBcA9U7mJAeu7D2zgvz1gbU3wzgArfFP60B6SeyEhC21dVNdq2fvsS0S49RJe9gGhT1Om26NOATrJ5K-1B6sfTxKrqZfA",
+                 "scope" : "GOOGLE",
+                 "types" : [ "restaurant", "food", "establishment" ],
+                 "vicinity" : "46 Harris St, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.86771,
+                       "lng" : 151.191917
+                    }
+                 },
+                 "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+                 "id" : "2e2a9c116f1110a816d6f78585018c73663218d4",
+                 "name" : "Italian Kitchen Express",
+                 "place_id" : "ChIJN97jOjSuEmsRQN_2Q36vGbY",
+                 "reference" : "CoQBeQAAACVGkQz2OeacsOGgQvVyUYoDQmTpB-Z75EFF6ddNBzjLGMkv4gt1zIVSEOHNPQijyONToD4BGoTxB9bMPE0QEnA2gz4HYSFXWmZw2ky0lwe3UZEVZA5umnl4CPIrZnRvr6k2guZ4tK3wjfDNvG2vGN4dqzyHnkR8HotPC6gyg4yOEhDysqsfgcwQn6y0MS--Y4cIGhRUm1EdHvi0FAO_YfdLWvKLGyWyVQ",
+                 "scope" : "GOOGLE",
+                 "types" : [ "restaurant", "home_goods_store", "store", "food", "establishment" ],
+                 "vicinity" : "6/45-55 Harris St, Pyrmont"
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Tue, 14 Oct 2014 21:09:03 GMT
 recorded_with: VCR 2.9.2

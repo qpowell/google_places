@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/search/json?radius=200&location=-33.8670522%2C151.1957362&sensor=false&name=italian&keyword=&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&language=
+    uri: https://maps.googleapis.com/maps/api/place/search/json?radius=200&location=-33.8670522%2C151.1957362&name=italian&keyword=&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&language=
     body:
       encoding: UTF-8
       string: ''
@@ -59,7 +59,7 @@ http_interactions:
   recorded_at: Sat, 14 Jul 2012 04:45:14 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&radius=200&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=italian&language=&keyword=
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&radius=200&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=italian&language=&keyword=
     body:
       encoding: US-ASCII
       string: ''
@@ -130,7 +130,7 @@ http_interactions:
   recorded_at: Mon, 03 Dec 2012 14:32:21 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&sensor=false&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=italian&language=&keyword=
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=italian&language=&keyword=
     body:
       encoding: US-ASCII
       string: ''
@@ -201,7 +201,7 @@ http_interactions:
   recorded_at: Mon, 03 Dec 2012 14:35:10 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&sensor=false&rankby=&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=italian&language=&keyword=
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&rankby=&key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&name=italian&language=&keyword=
     body:
       encoding: US-ASCII
       string: ''
@@ -270,7 +270,7 @@ http_interactions:
   recorded_at: Mon, 03 Dec 2012 14:42:29 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&sensor=false&rankby=&key=abc123&name=italian&language=&keyword=
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.86705220%2C151.19573620&radius=200&rankby=&key=abc123&name=italian&language=&keyword=
     body:
       encoding: US-ASCII
       string: ''
@@ -308,7 +308,7 @@ http_interactions:
   recorded_at: Fri, 22 Mar 2013 10:47:55 GMT
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&keyword=&language=&location=-33.86705220,151.19573620&name=italian&radius=200&rankby=&sensor=false
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyATGBjcfrRXQtNEMMyt8Fw7tSGEY8PQwv0&keyword=&language=&location=-33.86705220,151.19573620&name=italian&radius=200&rankby=
     body:
       encoding: US-ASCII
       string: ''
