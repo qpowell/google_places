@@ -10,3 +10,5 @@ doc/
 .idea
 *.swp
 *.swo
+.ruby-version
+.ruby-gemset

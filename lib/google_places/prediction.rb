@@ -1,7 +1,5 @@
 module GooglePlaces
   class Prediction
-    DEFAULT_RADIUS = 1000
-    DEFAULT_SENSOR = false
 
     attr_accessor(
       :description,
