@@ -3,13 +3,12 @@ require 'spec_helper'
 describe GooglePlaces::Photo do
   before :each do
     @max_width = 400
-    @sensor = false
     @photo_reference = "CnRtAAAACQQXR83Jc3Pffxt1Zx7QbCe6AfY2negSNzkk2IeSf0q5nxHgartLzkr1fltSlkEDSS-EZqswWAW2eQDbiOl12J-V4Rmn_JNko9e9gSnMwxHBdmScu_84NMSe-0RwB9BM6AEqE8sENXQ8cpWaiEsC_RIQLzIJxpRdoqSPrPtrjTrOhxoUWb8uwObkV4duXfKIiNB20gfnu88"
   end
 
   context 'Photo', vcr: { cassette_name: 'photo'} do
     before :each do
-      @photo = GooglePlaces::Photo.new(400, 400, @photo_reference, [], api_key, @sensor)
+      @photo = GooglePlaces::Photo.new(400, 400, @photo_reference, [], api_key)
     end
 
     it 'should be a Photo' do
