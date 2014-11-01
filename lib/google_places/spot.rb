@@ -51,7 +51,7 @@ module GooglePlaces
       location = Location.new(lat, lng)
       multipage_request = !!options.delete(:multipage)
       rankby = options.delete(:rankby)
-      radius = options.delete(:radius) || 1000 if rankby.nil?
+      radius = options.delete(:radius) || 1000 if rankby.nil? || rankby =~ /prominence/
       types  = options.delete(:types)
       name  = options.delete(:name)
       keyword = options.delete(:keyword)

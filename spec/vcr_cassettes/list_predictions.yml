@@ -842,4 +842,197 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 14 Oct 2014 22:20:37 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/autocomplete/json?input=query&key=AIzaSyDnfdcHZkxkytfKJTIiLeJgWl3EJxwI6Ro
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sat, 01 Nov 2014 22:53:55 GMT
+      Expires:
+      - Sat, 01 Nov 2014 22:53:55 GMT
+      Cache-Control:
+      - private, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 443:quic,p=0.01
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "predictions" : [
+              {
+                 "description" : "Query Street, New Bedford, MA, United States",
+                 "id" : "7ec01a04e7ff7a326e0de7e787c5fd03de916371",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "EixRdWVyeSBTdHJlZXQsIE5ldyBCZWRmb3JkLCBNQSwgVW5pdGVkIFN0YXRlcw",
+                 "reference" : "CjQwAAAAk9x-IZ1GbKZrNtRD4pikIJt3dpGM_m_DoOfoa0vk1WLzBJ_tZt3wLoxOJEWS09h6EhCcxc0hO2cBRWb1QzMKd2iIGhSImKNcNh96cr0YErCm1mSgJt4W8A",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Street"
+                    },
+                    {
+                       "offset" : 14,
+                       "value" : "New Bedford"
+                    },
+                    {
+                       "offset" : 27,
+                       "value" : "MA"
+                    },
+                    {
+                       "offset" : 31,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              },
+              {
+                 "description" : "Query Ln, Woodbridge, VA, United States",
+                 "id" : "e4830c290c5dfe6506acca4c25e2c28008f3ca80",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "EidRdWVyeSBMbiwgV29vZGJyaWRnZSwgVkEsIFVuaXRlZCBTdGF0ZXM",
+                 "reference" : "CjQrAAAAzdzR-7zXg2CnKJMjlFtJxDSgubydlb7pqomUSEwxosdjtX0BwwbT36QlsHdgx5r4EhBV7OnKS3wBhJ5izfGh09FDGhTue4o26dPnhT9y27tGNryuV0wRCw",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Ln"
+                    },
+                    {
+                       "offset" : 10,
+                       "value" : "Woodbridge"
+                    },
+                    {
+                       "offset" : 22,
+                       "value" : "VA"
+                    },
+                    {
+                       "offset" : 26,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              },
+              {
+                 "description" : "Query Mill Road, North Potomac, MD, United States",
+                 "id" : "684b9d636594b43a973e1d259ec5d35ee61117d8",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "EjFRdWVyeSBNaWxsIFJvYWQsIE5vcnRoIFBvdG9tYWMsIE1ELCBVbml0ZWQgU3RhdGVz",
+                 "reference" : "CkQ1AAAAuZloRLctLqk_5pamcERC_lzsNNe93r4Rx6PxcgioidEJTXZrDGwwYb9Yffxb9svU7Q-fFfpUOFbMoHTzosjhIBIQBf34LlFRoa4ge084Ps5QJRoUbaS1_WG8GGLv9BaKdSWa7p8rjBM",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Mill Road"
+                    },
+                    {
+                       "offset" : 17,
+                       "value" : "North Potomac"
+                    },
+                    {
+                       "offset" : 32,
+                       "value" : "MD"
+                    },
+                    {
+                       "offset" : 36,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              },
+              {
+                 "description" : "Query Informatica SL, Elx, Spain",
+                 "id" : "0357130b70ae2437136b148adcd3ceb38b6082e6",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "ChIJQTfY7OW2Yw0RvxQ95TfRT_w",
+                 "reference" : "CjQvAAAApvcoeCX_1iIvh5wSGaBMA-SHiXNdRaxfebYjHzv7XTJ3afltvq0cIYlnoGcZ2G8oEhCOKvIL7RiabLoS0v-rSfuzGhSrGnPW2ul6tqb3emBP2ZL9QApY1w",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Informatica SL"
+                    },
+                    {
+                       "offset" : 22,
+                       "value" : "Elx"
+                    },
+                    {
+                       "offset" : 27,
+                       "value" : "Spain"
+                    }
+                 ],
+                 "types" : [ "establishment" ]
+              },
+              {
+                 "description" : "Query Road, Hiddenite, NC, United States",
+                 "id" : "3049e3f7657ee5f16b6cc5dbf53891731ce6dc90",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "ChIJzSq3L_NpUYgRB0KicXEjkA4",
+                 "reference" : "CjQsAAAAxBuOX82EhxNlv5L3JIsLhSBVMkInz1Gwu9-1Bnrw8vWEYXwHba5yBMgk2tmNVnZ7EhD8apMuICCYW2NbQCYLuN8hGhRukyqfs1bjW-oFfIUBZcn36gvvEw",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Road"
+                    },
+                    {
+                       "offset" : 12,
+                       "value" : "Hiddenite"
+                    },
+                    {
+                       "offset" : 23,
+                       "value" : "NC"
+                    },
+                    {
+                       "offset" : 27,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Sat, 01 Nov 2014 22:53:55 GMT
 recorded_with: VCR 2.9.2
