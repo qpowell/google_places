@@ -15,18 +15,20 @@ describe GooglePlaces::Spot do
       @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :rankby => "prominence", :radius => @radius)
     end
 
-    it 'should send radius and rankby options' do  
-      GooglePlaces::Spot.should_receive(:multi_pages_request).with(:spots, false,
-        { 
-          :location=>"-33.86705220,151.19573620", 
-          :radius=>200, 
-          :rankby=>"prominence", 
-          :key=>RSPEC_API_KEY, 
-          :name=>nil, 
-          :language=>nil, 
-          :keyword=>nil, 
-          :retry_options=>{}
-        } )
+    it 'should send radius and rankby options' do
+      expect(GooglePlaces::Spot).to receive(:multi_pages_request).with(
+        :spots,
+        false,
+        {
+          location: "-33.86705220,151.19573620",
+          radius: 200,
+          rankby: "prominence",
+          key: RSPEC_API_KEY,
+          name: nil,
+          language: nil,
+          keyword: nil,
+          retry_options: {}
+        })
     end
 
   end
