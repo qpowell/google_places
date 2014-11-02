@@ -10,6 +10,29 @@ describe GooglePlaces::Spot do
     @place_id = 'ChIJN1t_tDeuEmsRUsoyG83frY4'
   end
 
+  context 'List spots options', vcr: { cassette_name: 'list_spots_rankby_and_radius' } do
+    after :each do
+      @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :rankby => "prominence", :radius => @radius)
+    end
+
+    it 'should send radius and rankby options' do
+      expect(GooglePlaces::Spot).to receive(:multi_pages_request).with(
+        :spots,
+        false,
+        {
+          :location=>"-33.86705220,151.19573620",
+          :radius=>200,
+          :rankby=>"prominence",
+          :key=>RSPEC_API_KEY,
+          :name=>nil,
+          :language=>nil,
+          :keyword=>nil,
+          :retry_options=>{}
+        })
+    end
+
+  end
+
   context 'List spots', vcr: { cassette_name: 'list_spots' } do
 
     after(:each) do
