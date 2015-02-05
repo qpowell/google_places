@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'webmock/rspec'
 
 describe GooglePlaces::Request do
 
@@ -205,11 +206,11 @@ describe GooglePlaces::Request do
             :keyword => @keyword,
             :radius => @radius,
             :key => api_key
-          ) 
+          )
           expect(response['results']).to_not be_empty
         end
       end
-      
+
       context 'with name' do
         it do
           response = GooglePlaces::Request.spots_by_radar(
@@ -272,6 +273,21 @@ describe GooglePlaces::Request do
           end
         end
       end
+    end
+  end
+
+  context 'with an API key not authorized to use the Places API' do
+    it 'includes the error_message in the exception' do
+      stub_request(:get, "https://maps.googleapis.com/maps/api/place/details/json").
+        with(query: { reference: @reference, key: api_key }).
+        to_return(body: JSON.dump({ status: 'REQUEST_DENIED', error_message: 'This API project is not authorized to use this API. Please ensure that this API is activated in the APIs Console: Learn more: https://code.google.com/apis/console' }))
+
+      expect(lambda {
+        GooglePlaces::Request.spot(
+          :reference => @reference,
+          :key => api_key
+        )
+      }).to raise_error GooglePlaces::RequestDeniedError, 'This API project is not authorized to use this API. Please ensure that this API is activated in the APIs Console: Learn more: https://code.google.com/apis/console'
     end
   end
 
