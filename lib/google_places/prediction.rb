@@ -35,6 +35,7 @@ module GooglePlaces
       radius = options.delete(:radius)
       retry_options = options.delete(:retry_options) || {}
       types  = options.delete(:types)
+      components = options.delete(:components)
 
       options = {
         :input => input,
@@ -55,6 +56,10 @@ module GooglePlaces
 
       if language
         options[:language] = language
+      end
+
+      if components
+	options[:components] = components
       end
 
       request(:predictions_by_input, options)
