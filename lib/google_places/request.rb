@@ -79,7 +79,7 @@ module GooglePlaces
     # @option options [Integer] :retry_options[:max] (0) the maximum retries
     # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
     def self.spot(options = {})
-      request = new(DETAILS_URL, options)
+      request = new(NEARBY_SEARCH_URL, options)
       request.parsed_response
     end
 
@@ -127,6 +127,12 @@ module GooglePlaces
       request.parsed_response
     end
 
+    ##TODO: NNE TO DOCUMENT
+    def self.spots_by_bounds(options = {})
+
+      request = new(TEXT_SEARCH_URL, options)
+      request.parsed_response
+    end
     # Search for Spots with a query
     #
     # @return [Array<Spot>]
@@ -268,7 +274,6 @@ module GooglePlaces
       retry_options[:status] ||= []
       retry_options[:max]    ||= 0
       retry_options[:delay]  ||= 5
-
       retry_options[:status] = [retry_options[:status]] unless retry_options[:status].is_a?(Array)
       @response = self.class.get(url, :query => options, :follow_redirects => follow_redirects)
 

@@ -149,6 +149,9 @@ module GooglePlaces
       Spot.list_by_query(query, @api_key, @options.merge(options))
     end
 
+    def spots_by_bounds(bounds, options = {})
+      Spot.list_by_bounds(bounds, @api_key, @options.merge(options))
+    end
     # Search for Spots with a pagetoken
     #
     # @return [Array<Spot>]

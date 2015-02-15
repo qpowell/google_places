@@ -1,5 +1,5 @@
 require 'google_places/review'
-
+require 'google_places'
 module GooglePlaces
   class Spot
     attr_accessor :lat, :lng, :viewport, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours, :events, :utc_offset, :place_id
@@ -82,7 +82,37 @@ module GooglePlaces
 
       request(:spots, multipage_request, exclude, options)
     end
+    #TODO: NEED TO DOCUMENT
+    def self.list_by_bounds(bounds, api_key, options = {})
+      multipage_request = !!options.delete(:multipage)
+      rankby = options.delete(:rankby)
+      rect = Rectangle.new(bounds[:sw][:lat], bounds[:sw][:lng],bounds[:ne][:lat], bounds[:ne][:lng])
+      query  = options.delete(:query)
+      name  = options.delete(:name)
+      language  = options.delete(:language)
+      exclude = options.delete(:exclude) || []
+      retry_options = options.delete(:retry_options) || {}
+      zagat_selected = options.delete(:zagat_selected) || false
+      exclude = [exclude] unless exclude.is_a?(Array)
 
+
+      options = {
+        :bounds => rect.format,
+        :key => api_key,
+        :language => language,
+        :retry_options => retry_options
+      }
+
+      options[:zagatselected] = zagat_selected if zagat_selected
+
+      # Accept Types as a string or array
+      if query
+        query = (query.is_a?(Array) ? query.join('|') : query)
+        options.merge!(:query => query)
+      end
+
+      request(:spots_by_bounds, multipage_request, exclude, options)
+    end
     # Search for Spots using Radar Search. Spots will only include reference and lat/lng information. You can send a Place Details request for more information about any of them.
     #
     # @return [Array<Spot>]
