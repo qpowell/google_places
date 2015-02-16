@@ -8,8 +8,11 @@ module GooglePlaces
     end
 
     def format
+      #SW point of rectangle
       a1 = [@lat1, @lat2].join (',')
+      #NE point of rectangle
       a2 = [@lat2, @lng2].join(',')
+      #Bounds must be separated by a '|'
       [a1, a2].join('|')
     end
   end
