@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'httparty'
 
-%w(client location prediction request spot error photo).each do |file|
+%w(client location rectangle prediction request spot error photo).each do |file|
   require File.join(File.dirname(__FILE__), 'google_places', file)
 end
 

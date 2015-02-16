@@ -1,5 +1,5 @@
 require 'google_places/review'
-
+require 'google_places'
 module GooglePlaces
   class Spot
     attr_accessor :lat, :lng, :viewport, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours, :events, :utc_offset, :place_id
@@ -82,7 +82,67 @@ module GooglePlaces
 
       request(:spots, multipage_request, exclude, options)
     end
+      # Search for Spots within a give SW|NE bounds with query
+      #
+      # @return [Array<Spot>]
+      # @param [Hash] bounds
+      # @param [String] api_key the provided api key
+      # @param [Hash] options
+      # @option bounds [String, Integer] :se
+      #   the southeast lat|lng pair
+      # @option bounds [:se][String, Integer] :lat
+      #   the SE latitude
+      # @option bounds [:se][String, Integer] :lng
+      #   the SE longitude
+      # @option bounds [:se][String, Integer] :lat
+      #   the SE latitude
+      # @option bounds [:se][String, Integer] :lng
+      #   the SE longitude
+      # @option options [String,Array] :query
+      #   Restricts the results to Spots matching term(s) in the specified query
+      # @option options [String] :language
+      #   The language code, indicating in which language the results should be returned, if possible.
+      # @option options [String,Array<String>] :exclude ([])
+      #   A String or an Array of <b>types</b> to exclude from results
+      #
+      # @option options [Hash] :retry_options ({})
+      #   A Hash containing parameters for search retries
+      # @option options [Object] :retry_options[:status] ([])
+      # @option options [Integer] :retry_options[:max] (0) the maximum retries
+      # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
+      #
+      # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
+      # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
+    def self.list_by_bounds(bounds, api_key, options = {})
+      multipage_request = !!options.delete(:multipage)
+      rankby = options.delete(:rankby)
+      rect = Rectangle.new(bounds[:sw][:lat], bounds[:sw][:lng],bounds[:ne][:lat], bounds[:ne][:lng])
+      query  = options.delete(:query)
+      name  = options.delete(:name)
+      language  = options.delete(:language)
+      exclude = options.delete(:exclude) || []
+      retry_options = options.delete(:retry_options) || {}
+      zagat_selected = options.delete(:zagat_selected) || false
+      exclude = [exclude] unless exclude.is_a?(Array)
 
+
+      options = {
+        :bounds => rect.format,
+        :key => api_key,
+        :language => language,
+        :retry_options => retry_options
+      }
+
+      options[:zagatselected] = zagat_selected if zagat_selected
+
+      # Accept Types as a string or array
+      if query
+        query = (query.is_a?(Array) ? query.join('|') : query)
+        options.merge!(:query => query)
+      end
+
+      request(:spots_by_bounds, multipage_request, exclude, options)
+    end
     # Search for Spots using Radar Search. Spots will only include reference and lat/lng information. You can send a Place Details request for more information about any of them.
     #
     # @return [Array<Spot>]
