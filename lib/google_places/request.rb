@@ -127,6 +127,41 @@ module GooglePlaces
       request.parsed_response
     end
 
+    # Search for Spots within a give SW|NE bounds with query
+    #
+    # @return [Array<Spot>]
+    # @param [Hash] bounds
+    # @param [String] api_key the provided api key
+    # @param [Hash] options
+    # @option bounds [String, Integer] :se
+    #   the southeast lat|lng pair
+    # @option bounds [:se][String, Integer] :lat
+    #   the SE latitude
+    # @option bounds [:se][String, Integer] :lng
+    #   the SE longitude
+    # @option bounds [:se][String, Integer] :lat
+    #   the SE latitude
+    # @option bounds [:se][String, Integer] :lng
+    #   the SE longitude
+    # @option options [String,Array] :query
+    #   Restricts the results to Spots matching term(s) in the specified query
+    # @option options [String] :language
+    #   The language code, indicating in which language the results should be returned, if possible.
+    # @option options [String,Array<String>] :exclude ([])
+    #   A String or an Array of <b>types</b> to exclude from results
+    #
+    # @option options [Hash] :retry_options ({})
+    #   A Hash containing parameters for search retries
+    # @option options [Object] :retry_options[:status] ([])
+    # @option options [Integer] :retry_options[:max] (0) the maximum retries
+    # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
+    #
+    # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
+    # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
+    def self.spots_by_bounds(options = {})
+      request = new(TEXT_SEARCH_URL, options)
+      request.parsed_response
+    end
     # Search for Spots with a query
     #
     # @return [Array<Spot>]
@@ -268,7 +303,6 @@ module GooglePlaces
       retry_options[:status] ||= []
       retry_options[:max]    ||= 0
       retry_options[:delay]  ||= 5
-
       retry_options[:status] = [retry_options[:status]] unless retry_options[:status].is_a?(Array)
       @response = self.class.get(url, :query => options, :follow_redirects => follow_redirects)
 
