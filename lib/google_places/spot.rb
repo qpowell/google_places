@@ -1,5 +1,4 @@
 require 'google_places/review'
-require 'google_places'
 module GooglePlaces
   class Spot
     attr_accessor :lat, :lng, :viewport, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours, :events, :utc_offset, :place_id
@@ -88,16 +87,20 @@ module GooglePlaces
       # @param [Hash] bounds
       # @param [String] api_key the provided api key
       # @param [Hash] options
-      # @option bounds [String, Integer] :se
-      #   the southeast lat|lng pair
-      # @option bounds [:se][String, Integer] :lat
-      #   the SE latitude
-      # @option bounds [:se][String, Integer] :lng
-      #   the SE longitude
-      # @option bounds [:se][String, Integer] :lat
-      #   the SE latitude
-      # @option bounds [:se][String, Integer] :lng
-      #   the SE longitude
+      # @option bounds [String, Array] :start_point
+      #   An array that contains the lat/lng pair for the first
+      #     point in the bounds (rectangle)
+      # @option bounds [:start_point][String, Integer] :lat
+      #   The starting point coordinates latitude value
+      # @option bounds [:start_point][String, Integer] :lng
+      #   The starting point coordinates longitude value
+      # @option bounds [String, Array] :end_point
+      #   An array that contains the lat/lng pair for the end
+      #     point in the bounds (rectangle)
+      # @option bounds [:end_point][String, Integer] :lat
+      #   The end point coordinates latitude value
+      # @option bounds [:end_point][String, Integer] :lng
+      #   The end point coordinates longitude value
       # @option options [String,Array] :query
       #   Restricts the results to Spots matching term(s) in the specified query
       # @option options [String] :language
@@ -111,12 +114,15 @@ module GooglePlaces
       # @option options [Integer] :retry_options[:max] (0) the maximum retries
       # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
       #
-      # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
       # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def self.list_by_bounds(bounds, api_key, options = {})
+      start_lat = bounds[:start_point][:lat]
+      start_lng = bounds[:start_point][:lng]
+      end_lat = bounds[:end_point][:lat]
+      end_lng = bounds[:end_point][:lng]
+      rect = Rectangle.new(start_lat, start_lng, end_lat, end_lng)
       multipage_request = !!options.delete(:multipage)
       rankby = options.delete(:rankby)
-      rect = Rectangle.new(bounds[:sw][:lat], bounds[:sw][:lng],bounds[:ne][:lat], bounds[:ne][:lng])
       query  = options.delete(:query)
       name  = options.delete(:name)
       language  = options.delete(:language)

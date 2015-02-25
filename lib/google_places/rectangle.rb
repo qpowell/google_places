@@ -1,19 +1,13 @@
 module GooglePlaces
   class Rectangle
-    def initialize(lat1, lng1, lat2, lng2)
-      @lat1 = ("%.8f"%lat1)
-      @lng1 = ("%.8f"%lng1)
-      @lat2 = ("%.8f"%lat2)
-      @lng2 = ("%.8f"%lng2)
+    #The start_lat/lng pair values indicate the starting point of the rectangle
+    #The end_lat/lng pair values indicate the end point of the rectangle
+    def initialize(start_lat, start_lng, end_lat, end_lng)
+      @start_point, @end_point = [ ("%.8f"%start_lat), ("%.8f"%start_lng)], [("%.8f"%end_lat), ("%.8f"%end_lng) ]
     end
 
     def format
-      #SW point of rectangle
-      a1 = [@lat1, @lat2].join (',')
-      #NE point of rectangle
-      a2 = [@lat2, @lng2].join(',')
-      #Bounds must be separated by a '|'
-      [a1, a2].join('|')
+      [ @start_point.join(','), @end_point.join(',') ].join('|')
     end
   end
 end

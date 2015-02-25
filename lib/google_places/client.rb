@@ -154,30 +154,32 @@ module GooglePlaces
     # @param [Hash] bounds
     # @param [String] api_key the provided api key
     # @param [Hash] options
-    # @option bounds [String, Integer] :se
-    #   the southeast lat|lng pair
-    # @option bounds [:se][String, Integer] :lat
-    #   the SE latitude
-    # @option bounds [:se][String, Integer] :lng
-    #   the SE longitude
-    # @option bounds [:se][String, Integer] :lat
-    #   the SE latitude
-    # @option bounds [:se][String, Integer] :lng
-    #   the SE longitude
+    # @option bounds [String, Array] :start_point
+    #   An array that contains the lat/lng pair for the first
+    #     point in the bounds (rectangle)
+    # @option bounds [:start_point][String, Integer] :lat
+    #   The starting point coordinates latitude value
+    # @option bounds [:start_point][String, Integer] :lng
+    #   The starting point coordinates longitude value
+    # @option bounds [String, Array] :end_point
+    #   An array that contains the lat/lng pair for the end
+    #     point in the bounds (rectangle)
+    # @option bounds [:end_point][String, Integer] :lat
+    #   The end point coordinates latitude value
+    # @option bounds [:end_point][String, Integer] :lng
+    #   The end point coordinates longitude value
     # @option options [String,Array] :query
     #   Restricts the results to Spots matching term(s) in the specified query
     # @option options [String] :language
     #   The language code, indicating in which language the results should be returned, if possible.
     # @option options [String,Array<String>] :exclude ([])
     #   A String or an Array of <b>types</b> to exclude from results
-    #
     # @option options [Hash] :retry_options ({})
     #   A Hash containing parameters for search retries
     # @option options [Object] :retry_options[:status] ([])
     # @option options [Integer] :retry_options[:max] (0) the maximum retries
     # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
     #
-    # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def spots_by_bounds(bounds, options = {})
       Spot.list_by_bounds(bounds, @api_key, @options.merge(options))
