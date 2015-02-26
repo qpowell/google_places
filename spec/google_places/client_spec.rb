@@ -29,7 +29,14 @@ describe GooglePlaces::Client do
 
     @client.spots_by_query(query)
   end
-
+  it 'should request spots by bounds' do
+    query = 'pizza'
+    bounds = {:start_point => {:lat => '36.06686213257888', :lng => '-86.94168090820312'},
+              :end_point => {:lat => '36.268635800737876', :lng => '-86.66152954101562'}}
+    @client = GooglePlaces::Client.new(api_key)
+    expect(GooglePlaces::Spot).to receive(:list_by_bounds).with(bounds, api_key, {:query => query})
+    res = @client.spots_by_bounds(bounds, :query => query)
+  end
   it 'should request spots by radar' do
     keywords = 'landmarks'
     lat, lng = '51.511627', '-0.183778'

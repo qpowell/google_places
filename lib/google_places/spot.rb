@@ -1,5 +1,4 @@
 require 'google_places/review'
-
 module GooglePlaces
   class Spot
     attr_accessor :lat, :lng, :viewport, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours, :events, :utc_offset, :place_id
@@ -82,7 +81,74 @@ module GooglePlaces
 
       request(:spots, multipage_request, exclude, options)
     end
+      # Search for Spots within a give SW|NE bounds with query
+      #
+      # @return [Array<Spot>]
+      # @param [Hash] bounds
+      # @param [String] api_key the provided api key
+      # @param [Hash] options
+      # @option bounds [String, Array] :start_point
+      #   An array that contains the lat/lng pair for the first
+      #     point in the bounds (rectangle)
+      # @option bounds [:start_point][String, Integer] :lat
+      #   The starting point coordinates latitude value
+      # @option bounds [:start_point][String, Integer] :lng
+      #   The starting point coordinates longitude value
+      # @option bounds [String, Array] :end_point
+      #   An array that contains the lat/lng pair for the end
+      #     point in the bounds (rectangle)
+      # @option bounds [:end_point][String, Integer] :lat
+      #   The end point coordinates latitude value
+      # @option bounds [:end_point][String, Integer] :lng
+      #   The end point coordinates longitude value
+      # @option options [String,Array] :query
+      #   Restricts the results to Spots matching term(s) in the specified query
+      # @option options [String] :language
+      #   The language code, indicating in which language the results should be returned, if possible.
+      # @option options [String,Array<String>] :exclude ([])
+      #   A String or an Array of <b>types</b> to exclude from results
+      #
+      # @option options [Hash] :retry_options ({})
+      #   A Hash containing parameters for search retries
+      # @option options [Object] :retry_options[:status] ([])
+      # @option options [Integer] :retry_options[:max] (0) the maximum retries
+      # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
+      #
+      # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
+    def self.list_by_bounds(bounds, api_key, options = {})
+      start_lat = bounds[:start_point][:lat]
+      start_lng = bounds[:start_point][:lng]
+      end_lat = bounds[:end_point][:lat]
+      end_lng = bounds[:end_point][:lng]
+      rect = Rectangle.new(start_lat, start_lng, end_lat, end_lng)
+      multipage_request = !!options.delete(:multipage)
+      rankby = options.delete(:rankby)
+      query  = options.delete(:query)
+      name  = options.delete(:name)
+      language  = options.delete(:language)
+      exclude = options.delete(:exclude) || []
+      retry_options = options.delete(:retry_options) || {}
+      zagat_selected = options.delete(:zagat_selected) || false
+      exclude = [exclude] unless exclude.is_a?(Array)
 
+
+      options = {
+        :bounds => rect.format,
+        :key => api_key,
+        :language => language,
+        :retry_options => retry_options
+      }
+
+      options[:zagatselected] = zagat_selected if zagat_selected
+
+      # Accept Types as a string or array
+      if query
+        query = (query.is_a?(Array) ? query.join('|') : query)
+        options.merge!(:query => query)
+      end
+
+      request(:spots_by_bounds, multipage_request, exclude, options)
+    end
     # Search for Spots using Radar Search. Spots will only include reference and lat/lng information. You can send a Place Details request for more information about any of them.
     #
     # @return [Array<Spot>]

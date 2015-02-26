@@ -148,7 +148,42 @@ module GooglePlaces
     def spots_by_query(query, options = {})
       Spot.list_by_query(query, @api_key, @options.merge(options))
     end
-
+    # Search for Spots within a give SW|NE bounds with query
+    #
+    # @return [Array<Spot>]
+    # @param [Hash] bounds
+    # @param [String] api_key the provided api key
+    # @param [Hash] options
+    # @option bounds [String, Array] :start_point
+    #   An array that contains the lat/lng pair for the first
+    #     point in the bounds (rectangle)
+    # @option bounds [:start_point][String, Integer] :lat
+    #   The starting point coordinates latitude value
+    # @option bounds [:start_point][String, Integer] :lng
+    #   The starting point coordinates longitude value
+    # @option bounds [String, Array] :end_point
+    #   An array that contains the lat/lng pair for the end
+    #     point in the bounds (rectangle)
+    # @option bounds [:end_point][String, Integer] :lat
+    #   The end point coordinates latitude value
+    # @option bounds [:end_point][String, Integer] :lng
+    #   The end point coordinates longitude value
+    # @option options [String,Array] :query
+    #   Restricts the results to Spots matching term(s) in the specified query
+    # @option options [String] :language
+    #   The language code, indicating in which language the results should be returned, if possible.
+    # @option options [String,Array<String>] :exclude ([])
+    #   A String or an Array of <b>types</b> to exclude from results
+    # @option options [Hash] :retry_options ({})
+    #   A Hash containing parameters for search retries
+    # @option options [Object] :retry_options[:status] ([])
+    # @option options [Integer] :retry_options[:max] (0) the maximum retries
+    # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
+    #
+    # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
+    def spots_by_bounds(bounds, options = {})
+      Spot.list_by_bounds(bounds, @api_key, @options.merge(options))
+    end
     # Search for Spots with a pagetoken
     #
     # @return [Array<Spot>]
