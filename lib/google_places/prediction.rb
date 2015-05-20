@@ -4,11 +4,15 @@ module GooglePlaces
     attr_accessor(
       :description,
       :place_id,
+      :terms,
+      :types
     )
 
     def initialize(json_result_object)
       @description = json_result_object['description']
       @place_id = json_result_object['place_id']
+      @terms = json_result_object['terms']
+      @types = json_result_object['types']
     end
 
     # Query for Predictions (optionally at the provided location)
@@ -59,7 +63,7 @@ module GooglePlaces
       end
 
       if components
-	options[:components] = components
+        options[:components] = components
       end
 
       request(:predictions_by_input, options)
