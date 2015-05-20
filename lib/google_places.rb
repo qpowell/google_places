@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'erb'
 require 'httparty'
 
 %w(client location rectangle prediction request spot error photo).each do |file|
