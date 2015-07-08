@@ -1,7 +1,12 @@
 require 'google_places/review'
 module GooglePlaces
   class Spot
-    attr_accessor :lat, :lng, :viewport, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours, :events, :utc_offset, :place_id
+    attr_accessor :lat, :lng, :viewport, :name, :icon, :reference, :vicinity, :types,
+                  :id, :formatted_phone_number, :international_phone_number, :formatted_address,
+                  :address_components, :street_number, :street, :city, :region, :postal_code,
+                  :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected,
+                  :zagat_reviewed, :photos, :review_summary, :nextpagetoken, :price_level,
+                  :opening_hours, :events, :utc_offset, :place_id
 
     # Search for Spots at the provided location
     #
