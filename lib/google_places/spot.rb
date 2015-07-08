@@ -492,7 +492,15 @@ module GooglePlaces
     end
 
     def events_component(json_events)
-      json_events.to_a.map{ |r| {event_id: r['event_id'], summary: r['summary'], url: r['url'], start_time: r['start_time']} }
+      json_events.to_a.map do |r|
+        {
+          event_id: r['event_id'],
+          summary: r['summary'],
+          url: r['url'],
+          start_time: r['start_time']
+        }
+      end
     end
+
   end
 end
