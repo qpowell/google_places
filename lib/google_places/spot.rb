@@ -1,7 +1,7 @@
 require 'google_places/review'
 module GooglePlaces
   class Spot
-    attr_accessor :lat, :lng, :viewport, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours, :events, :utc_offset, :place_id, :permanently_closed
+    attr_accessor :lat, :lng, :viewport, :name, :icon, :reference, :vicinity, :types, :scope, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :floor, :street_number, :street, :city, :region, :postal_code, :country, :country_iso2, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours, :events, :utc_offset, :place_id, :permanently_closed
 
     # Search for Spots at the provided location
     #
@@ -411,35 +411,38 @@ module GooglePlaces
       @vicinity                   = json_result_object['vicinity']
       @lat                        = json_result_object['geometry']['location']['lat']
       @lng                        = json_result_object['geometry']['location']['lng']
-      @viewport                   = json_result_object['geometry']['viewport']
+      @viewport                   = json_result_object['geometry']['viewport'] # 31.05.2016 NOT LONGER IMPLEMENTED
       @name                       = json_result_object['name']
       @icon                       = json_result_object['icon']
       @types                      = json_result_object['types']
+      @scope                      = json_result_object['scope']
       @id                         = json_result_object['id']
       @formatted_phone_number     = json_result_object['formatted_phone_number']
       @international_phone_number = json_result_object['international_phone_number']
       @formatted_address          = json_result_object['formatted_address']
       @address_components         = json_result_object['address_components']
+      @floor                      = address_component(:floor, 'long_name')
       @street_number              = address_component(:street_number, 'short_name')
       @street                     = address_component(:route, 'long_name')
       @city                       = address_component(:locality, 'long_name')
       @region                     = address_component(:administrative_area_level_1, 'long_name')
       @postal_code                = address_component(:postal_code, 'long_name')
       @country                    = address_component(:country, 'long_name')
+      @country_iso2               = address_component(:country, 'short_name')
       @rating                     = json_result_object['rating']
       @price_level                = json_result_object['price_level']
       @opening_hours              = json_result_object['opening_hours']
       @url                        = json_result_object['url']
       @cid                        = json_result_object['url'].to_i
       @website                    = json_result_object['website']
-      @zagat_reviewed             = json_result_object['zagat_reviewed']
-      @zagat_selected             = json_result_object['zagat_selected']
+      @zagat_reviewed             = json_result_object['zagat_reviewed'] # 31.05.2016 NOT LONGER IMPLEMENTED
+      @zagat_selected             = json_result_object['zagat_selected'] # 31.05.2016 NOT LONGER IMPLEMENTED
       @aspects                    = aspects_component(json_result_object['aspects'])
-      @review_summary             = json_result_object['review_summary']
+      @review_summary             = json_result_object['review_summary']  # 31.05.2016 NOT LONGER IMPLEMENTED
       @photos                     = photos_component(json_result_object['photos'], api_key)
       @reviews                    = reviews_component(json_result_object['reviews'])
       @nextpagetoken              = json_result_object['nextpagetoken']
-      @events                     = events_component(json_result_object['events'])
+      @events                     = events_component(json_result_object['events']) # 31.05.2016 NOT LONGER IMPLEMENTED
       @utc_offset                 = json_result_object['utc_offset']
       @permanently_closed         = json_result_object['permanently_closed']
     end
@@ -463,11 +466,13 @@ module GooglePlaces
         json_reviews.map { |r|
           Review.new(
               r['rating'],
-              r['type'],
+              r['type'], # ?? 31.05.2016 NOT LONGER IMPLEMENTED
               r['author_name'],
               r['author_url'],
               r['text'],
-              r['time'].to_i
+              r['time'].to_i,
+              r['language'],
+              r['profile_photo_url']
           )
         }
       else []

@@ -161,7 +161,8 @@ describe GooglePlaces::Spot do
     it 'should be a Spot' do
       expect(@spot.class).to eq(GooglePlaces::Spot)
     end
-    %w(reference vicinity lat lng viewport name icon types id formatted_phone_number international_phone_number formatted_address address_components street_number street city region postal_code country rating url types website price_level opening_hours events utc_offset place_id permanently_closed).each do |attribute|
+    %w(reference vicinity lat lng viewport name icon types scope id formatted_phone_number international_phone_number formatted_address address_components floor street_number street city region postal_code country country_iso2 rating url types website price_level opening_hours events utc_offset place_id permanently_closed).each do |attribute|
+
       it "should have the attribute: #{attribute}" do
         expect(@spot.respond_to?(attribute)).to eq(true)
       end
@@ -177,7 +178,7 @@ describe GooglePlaces::Spot do
     it 'should contain 5 reviews' do
       @spot.reviews.size == 5
     end
-    %w(rating type author_name author_url text time).each do |attribute|
+    %w(rating type author_name author_url text time language profile_photo_url).each do |attribute|
       it "should have the review attribute: #{attribute}" do
         expect(@spot.reviews[0].respond_to?(attribute)).to eq(true)
       end
