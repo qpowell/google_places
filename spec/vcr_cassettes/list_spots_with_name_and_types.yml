@@ -648,4 +648,200 @@ http_interactions:
         }
     http_version: 
   recorded_at: Sat, 01 Nov 2014 22:56:33 GMT
-recorded_with: VCR 2.9.2
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyAKeN0XMV5LqJmqBrZZ1K8qMipFW7-Eybg&keyword=&language=&location=-33.86705220,151.19573620&name=italian&radius=200&rankby=&types=food%7Cestablishment
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 10 Oct 2016 18:51:13 GMT
+      Expires:
+      - Mon, 10 Oct 2016 18:56:13 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - pablo
+      Content-Length:
+      - '2535'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34,33,32"
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8680309,
+                       "lng" : 151.1955118
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.86780835,
+                          "lng" : 151.1960651
+                       },
+                       "southwest" : {
+                          "lat" : -33.86869855,
+                          "lng" : 151.1938519
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+                 "id" : "08c0f74375ca1956d8ae2919512171adcd8266d7",
+                 "name" : "Balla",
+                 "opening_hours" : {
+                    "open_now" : false,
+                    "weekday_text" : []
+                 },
+                 "photos" : [
+                    {
+                       "height" : 2448,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/102285453928483381941/photos\"\u003eVinay Goel\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CoQBcwAAAAOTOEyKBpLtnMGvx2JYdtGov8jPijZAfqFs7lLVsu9-JEQ44UmaihaYO5OXWLxfZYShC-tQ6H4cnyMgrwBCsKbbaenuBOF1cyTiyzBRfMQX-fLFLCNKSFmDxV7m3_8LoZqACW3krf3KuEbTrkKYNvDPjLzZCZFshAUxcrIjHFidEhDnyCL8DfsvQoWHFoDj9oJWGhRg-FEUuY-azTOOmSzAi7Yv1lUZSw",
+                       "width" : 3264
+                    }
+                 ],
+                 "place_id" : "ChIJ1-v38TauEmsRFBHuvMmwNyA",
+                 "price_level" : 3,
+                 "rating" : 3.7,
+                 "reference" : "CmRYAAAAerrUgnPgdYaIcwM4uOdXc6CNtjmjhHNUA3irN2FW2T7-0xYF8rCawcGtuyqZyihbPv_8GQhO56Qv22hoOlsFFbmmR_mj9a0AI-XrKcMwHEyA9o7Rz-wNEFOTjgAc0SENEhD6nLmEqlSGxxL8SgfGDGF0GhSlJiIHlWMq9iy3ATxJDlbpPdJIMg",
+                 "scope" : "GOOGLE",
+                 "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+                 "vicinity" : "The Star, G, 80 Pyrmont Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.866381,
+                       "lng" : 151.195793
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+                 "id" : "2de2d85c0465dafc9a75e0304859c5ceedb4a679",
+                 "name" : "Signorelli Gastronomia",
+                 "opening_hours" : {
+                    "open_now" : false,
+                    "weekday_text" : []
+                 },
+                 "photos" : [
+                    {
+                       "height" : 608,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/116750797999944764767/photos\"\u003eJessica Pfund\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CoQBcwAAAEtiq65KiWUOIDIELxQi_ViqYHjHCO9XtZKHMTlL5gAa9uoTtpsUUD9kGhmt8Ebggp_iYXl2M15yqIjwFgZiy9Iyn4PsyScUnlXY8Wmygnewco_0p5ZShpBvS2de-_PSe_2jozpVpbMWtMqLe244TF21-EMFmrw8_iqYYRgnhLKIEhAwEcDsZzXEeEQUJORKU_mtGhRI1JjmeVJGF_Xq3SjE7QP4GxhkcQ",
+                       "width" : 1080
+                    }
+                 ],
+                 "place_id" : "ChIJFcJDMzauEmsRy81NJCujoY8",
+                 "price_level" : 2,
+                 "rating" : 4,
+                 "reference" : "CnRqAAAAPRByPpdT0f8E_Uss53VzU2PNO_Rv5JpJES2l29NSSHZMsOFwFNnWZjr5Y27zouF6Hnd_qJu0excWWyYkigwT5S7yKxTJC-XNz8jScuU5ZDv0tr5mnOKN9spKDy50mPe11vjPkC6s-bjaiHHQbyn5yBIQlsCAN26I7jz6lVYweasG4RoUOp3jsji0CvxzQ-Eu_ENvuZ0g50o",
+                 "scope" : "GOOGLE",
+                 "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+                 "vicinity" : "Ground Floor of Accenture/Google Building,Trouton Place, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.86679699999999,
+                       "lng" : 151.1973652
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.86669799999999,
+                          "lng" : 151.1983189
+                       },
+                       "southwest" : {
+                          "lat" : -33.867094,
+                          "lng" : 151.1970473
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+                 "id" : "dd030d236b8ccdc525f7a40893eb492f8fc5d55d",
+                 "name" : "LuMi Bar & Dining",
+                 "opening_hours" : {
+                    "open_now" : false,
+                    "weekday_text" : []
+                 },
+                 "photos" : [
+                    {
+                       "height" : 1296,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/104200466008610392938/photos\"\u003eLuMi Bar &amp; Dining\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CoQBcwAAAAG93ZORnvKMaSLu1ng2Q59SFqysbkVQ3wDDIKzO17Kyb1kOFFor2OBEeeObCz3r4YjHBl5lJt6q2xXB4UmMiBjgtDxHVt9rEdgikQ94YSNfbIArYtekFcdzt8pTCHvooybWYnnE8OwwtUAks6DPBPNn7pcOvZAl4lJ_ye5BvdVAEhDQZ5KAW3DebQow1CN2v2LPGhTYPSw9nzaL-tiH_CYZzXa1tu26ug",
+                       "width" : 1299
+                    }
+                 ],
+                 "place_id" : "ChIJDZzo5DeuEmsRsi1wzrIp6HY",
+                 "price_level" : 3,
+                 "rating" : 4.1,
+                 "reference" : "CnRkAAAAVn7yWswyeD_U2q_4AgWSa0kNeA9-FFyRZNjCCmztbPteHWO-5HkVzw2cH6FheN0dNa8du4QLYTrrqrX3iGn06pVXg75K4Fjux-IqG-IgxY8JGFhPtO2uEelR3LuMFZfL9YJYJ35pnMT9XzIRcOer9xIQH6Hm_xpjupjOmcfWcF6j7RoU-CGvZgWIhIc-HtIpsgzgrlnwY90",
+                 "scope" : "GOOGLE",
+                 "types" : [ "restaurant", "bar", "food", "point_of_interest", "establishment" ],
+                 "vicinity" : "56 Pirrama Road, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8678337,
+                       "lng" : 151.1958116
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+                 "id" : "f138865c7ac72dcc2cbd0491710aa6203ebc595f",
+                 "name" : "Pizzaperta",
+                 "opening_hours" : {
+                    "open_now" : false,
+                    "weekday_text" : []
+                 },
+                 "photos" : [
+                    {
+                       "height" : 529,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/104840538435120775749/photos\"\u003ePizzaperta\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CoQBcwAAAJkyUeoZtweizoK0sKV44izhWoWVYZBU1khl0ocCvgQ7xnajbYZ5YeaWUmBal57GgDLld2stJ4RcnCcop8uV6lkXDBt5Aoq7X1VnKIURQg7bzAeEqDXcQquq9vyrQ2JD6cKs1snHn_xYOFOApVnXWenksEK1OPXOFKC2amDcVKUlEhDcSpGqiR201ntBhwUGV4vjGhTNU4pq5O_s_qeA-vc9lZIZZt1Jhg",
+                       "width" : 530
+                    }
+                 ],
+                 "place_id" : "ChIJA6-_qzeuEmsRiV9SAHIbzh4",
+                 "rating" : 3.6,
+                 "reference" : "CmRdAAAAL2Q_NhVkmyTm7puiufushYCDHOUyQYIXoInr4UVhnQizsm5EUtyBHPvu5xj6Opoo3AiSsDUFOcdXVRrW2TNaBrA2FIihhTwrAOl5JQtFLXrAUGr-UaRLMtSMZ9U3x-3CEhBct7nZkbLX5hWUg4bfSXQqGhSvd8oTscjO1DoVyw5_RsQ8BRqMGQ",
+                 "scope" : "GOOGLE",
+                 "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+                 "vicinity" : "The Star Sydney, Harbourside Entry, Pirrama Rd, Pyrmont NSW 2009, Sydney"
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Mon, 10 Oct 2016 18:51:13 GMT
+recorded_with: VCR 2.9.3
