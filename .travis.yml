@@ -5,3 +5,5 @@ rvm:
 script: bundle exec rspec
 before_script: cp spec/api_key.travis.rb spec/api_key.rb
 after_script: rm spec/api_key.rb
+before_install:
+  - gem install bundler -v 1.13.2
