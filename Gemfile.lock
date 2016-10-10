@@ -28,8 +28,8 @@ GEM
     rspec-mocks (3.0.2)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.2)
-    safe_yaml (1.0.3)
-    vcr (2.9.2)
+    safe_yaml (1.0.4)
+    vcr (2.9.3)
     webmock (1.18.0)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -40,5 +40,8 @@ PLATFORMS
 DEPENDENCIES
   google_places!
   rspec (~> 3.0.0)
-  vcr (~> 2.9.2)
+  vcr (~> 2.9.3)
   webmock (~> 1.18.0)
+
+BUNDLED WITH
+   1.12.5
