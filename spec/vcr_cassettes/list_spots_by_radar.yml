@@ -2700,4 +2700,508 @@ http_interactions:
         }
     http_version: 
   recorded_at: Sat, 01 Nov 2014 22:54:38 GMT
-recorded_with: VCR 2.9.2
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/radarsearch/json?key=AIzaSyAKeN0XMV5LqJmqBrZZ1K8qMipFW7-Eybg&keyword=attractions&location=-33.86705220,151.19573620&radius=200
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 10 Oct 2016 18:50:47 GMT
+      Expires:
+      - Mon, 10 Oct 2016 18:55:47 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - pablo
+      Content-Length:
+      - '860'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34,33,32"
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.86766899999999,
+                       "lng" : 151.198098
+                    }
+                 },
+                 "id" : "4350104e7c0197a9cbd769782e0509cd76623fc7",
+                 "place_id" : "ChIJVVUVkTeuEmsREx6jD41IUGw",
+                 "reference" : "CnRoAAAA5E8rMHQbsRK-0txRcbMoUb6ufADgwRnB_2vpGRusWBAi7ovxZzw74EjclOWE_5VLmbXkmVXx43cAZxzygEi42PhxTK-965fnJ-UHvF6CwSNkpTRnbAvrlAYDbk4vrx6TCQsYHWFiyeFRS77KSZpqwBIQvYdg1fSOMoD_xcyPgNNXThoU6CQ1D_t355_d1h7FKuMPZsSaCdM"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8685682,
+                       "lng" : 151.1962433
+                    }
+                 },
+                 "id" : "172b11b0164ac9ae1f16c6802ed759445f6eacb7",
+                 "place_id" : "ChIJ1-v38TauEmsRxXV8BJ53Fq4",
+                 "reference" : "CnRoAAAAHVSMtyK6VaicNtuRlNQpdGojBSRlmqSsmGiqFTLfzIj16or4kG6aWju4NOxpdKmxlj8eZXfUKWBARJ6ni89RY8moh3KLRg14gK4F9CFqRTRWe2x3LeJ7nr-9kxF2ecpziZ1rbmiD30GTQZEkO4vK9xIQ66IVtB1557NBigFlqyr_7BoUVljGazgTFFd7toftdSsnezq1AoQ"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8679724,
+                       "lng" : 151.1952317
+                    }
+                 },
+                 "id" : "44fdc977984610cd873c790a7d850e8185ed0e5e",
+                 "place_id" : "ChIJq6qq6jauEmsRJAf7FjrKnXI",
+                 "reference" : "CmRbAAAASFqfPX1oStbyqcrh1lojHANUGuEfclgq1skTRj0oHCkWNMh33jmz24ZJUfpvkmhEoTbd2aPNRitkPKxSBhzjwQTL4bNlsrVLLaMuSel-qed-8sEm11-21X2mroruTMB5EhD3XpuHaJyT9hNiIwq9jR8NGhSQfcumvQwtlhaKU8jJmSTmeHhdEQ"
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Mon, 10 Oct 2016 18:50:47 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/radarsearch/json?key=AIzaSyAKeN0XMV5LqJmqBrZZ1K8qMipFW7-Eybg&location=-33.86705220,151.19573620&name=park&radius=200
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 10 Oct 2016 18:50:47 GMT
+      Expires:
+      - Mon, 10 Oct 2016 18:55:47 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - pablo
+      Content-Length:
+      - '2377'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34,33,32"
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8658495,
+                       "lng" : 151.1958561
+                    }
+                 },
+                 "id" : "a4d68c2fd5ab56d686de82ac49bc69b43d50c032",
+                 "place_id" : "ChIJaac90jeuEmsR0Evy-Wh9AQ8",
+                 "reference" : "CmRgAAAAZO0TQIR5qmOQ0rqGrxd-IzfuyUqFjQLGIb-4T4enshKsikp6jil-WyQA0d95JpRH7pHDziSvIdvz-uskdqgS9HGd8W2Kp9ZsIXrNwp-OXDRwcfwoabqMqi-ORLo-RB2pEhARXIyZTaTsX5VoRoqjpDBPGhR58W5vAx9uk8n2qnUCpsOmaI7q7w"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8683855,
+                       "lng" : 151.1962778
+                    }
+                 },
+                 "id" : "b755ea50a134c566088d1afeec0f40683221dbca",
+                 "place_id" : "ChIJczMP1jCuEmsR3r6mDL6XR_8",
+                 "reference" : "CnRnAAAA67SsF27SzfGp1ICb93JhlHPBnYL7bBQl_EZ7Ktv_QZVr9G89_Zjz41V8Q43TOmgb1jeGk-EsBPJleDXkybhucoSxSmJNJW0XEtFKQ9aJf2t4nv3-leZVEO6Vs5IKekICEJP-amXFScUaeWfjvHG5YRIQZQlV9m28iB36RW4y1B6blBoU3Q4i4FREFka3-l4sXlLnYf9o7OA"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8679724,
+                       "lng" : 151.1952317
+                    }
+                 },
+                 "id" : "44fdc977984610cd873c790a7d850e8185ed0e5e",
+                 "place_id" : "ChIJq6qq6jauEmsRJAf7FjrKnXI",
+                 "reference" : "CmRbAAAAFwfLuNeX58eTQ5yXDbl38u-rQRPu17UZ2Si__CDXLQtH2gm0sF5zreSe6rADJXUjO1DjAOCmJVy0mEHB9VMYnEYvHwGQAKrUNTg6uI1zoVmDMeIK-CDgDO6dhs48sP7eEhBqfJ3xaTnxU5y8f8jf-bG9GhQf0Q22N52uemeS7MaTVbQqMUL9xw"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8670236,
+                       "lng" : 151.1958671
+                    }
+                 },
+                 "id" : "27e84d1acda19c14b9c7f5271242796891bc9c9e",
+                 "place_id" : "ChIJ5xQ7szeuEmsR7xYE6_PLHlI",
+                 "reference" : "CmRcAAAAiYFfmVyRQEjVz_AsT-MAB0ftK-GyT-7IVGLDN1oXox1nX_LCdH4m333WxIDgC_itFb2z4I9xq-SQ3dw1GEQZjZP5tFPWHQYyGfoDOQ_IeTZ1aooGtn6bg-pP08Kzk8-XEhDwufCz3F5C0ddp4HSrjkAUGhS54GkHlqGbX9mWSLgIElSDwReJpg"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8685682,
+                       "lng" : 151.1962433
+                    }
+                 },
+                 "id" : "172b11b0164ac9ae1f16c6802ed759445f6eacb7",
+                 "place_id" : "ChIJ1-v38TauEmsRxXV8BJ53Fq4",
+                 "reference" : "CnRoAAAArSK8mPXily-WRVk3E28XpXF9C0qWYjwNwEnV11CtrScCoVZaRD-jAVHJ9jIgPP-vD1W25g6owCFnGoDFx8V2YDpapgsjir0teVTVGLKj9luBqaEMX2GZEqmZ75n4K8KMEWRDty8usNfngkkRAJVuIhIQey2lf1iM45tsMz9Bp2QoqhoU1CWXOMDcgQ8f7ArMZklOsgcDId0"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8681997,
+                       "lng" : 151.1945856
+                    }
+                 },
+                 "id" : "b6d138cae8e7e7ecb8c7e162d8f800e9889977f1",
+                 "place_id" : "ChIJ1-v38TauEmsRoMrAVxPq1ng",
+                 "reference" : "CnRqAAAAZqBmzczfaIKT3AzPb_1Ne5IRkjQdnf0ZAUvfPN-IgH-VHl30Bjl9Q3-wEW8634rRyU2HXDQLbtiCa6CzH2PQ7Lw8NhISjEIv3pRin8ewae-rLh4LwSmcxAX2wfm8Bh8XDu4WWHoKKvkdIBPm8quZEBIQUUsCVmoZhoqGwcwGPthxyxoU2TDU-Ja2IQ6IJqE-HXrp3OflTOQ"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.868169,
+                       "lng" : 151.1941047
+                    }
+                 },
+                 "id" : "b14bfc4474d0af98fed46501a37e456c67f0712f",
+                 "place_id" : "ChIJAS6XkjauEmsR_9FMZz62cdk",
+                 "reference" : "CoQBcQAAAK1NQHQnc46XLsjPb0lJ5-2erVtp_h0Ystw4pZ9B1F0m1EnJe0ZfT1S6ljComHgM-Co1SGM3w4vLO63fctbl65LVSxSXixnrKygaz3WM6ekck6SBrPSS6NeXb3BntOMw-J7mIe2U9b_TkjqGsGozgylXGS9Smp_nz3eMOKaYMyr0EhD-LNBbLKtsSfmTxPulLcVjGhQFXVlYPrqfqEyV4Q9D9WpwRB0TRg"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8677499,
+                       "lng" : 151.1956285
+                    }
+                 },
+                 "id" : "61f6d719f3d208ab2875bb2bfa164029c609c797",
+                 "place_id" : "ChIJHTvh5jauEmsRRVTSKo0XD94",
+                 "reference" : "CmRYAAAAvElzKeQLn_QHKvV0fdAePDvY_CaWj6Bbui2YiAUfhKBx49XZUKbU1sjx7FaGpSoPbJTrjHJwmNDj191TCazK1vnnDXXaI_fuERDAnllXgMmooCgSZEmTJ1IdFfegs2rCEhD3W5N2KSMoCiY-t_SHdfk2GhQo4F6AV3xXHz0zyGhu2TSJ5A8INg"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8677499,
+                       "lng" : 151.1956285
+                    }
+                 },
+                 "id" : "55ad0a1e455c6a64808d0267cc59057954f26056",
+                 "place_id" : "ChIJS_-h7TauEmsRCgs155yyVyY",
+                 "reference" : "CnRnAAAAUXYO6OJ5RTLpV_DH_xO-zO9Glakk9myGw5IfjDkOh8GUi_u8HUTPhLO9kuxLoEgRQdKySoLuj4g1ffOzRonoSSTe67r6RwbVmKjRvAl2iIGJdkUJoYxgKQyVk64Plz6kBSkIusq4Vzb2txiXu9Dd6RIQNk9Tm7GgpV7N43LUcA_PIxoUaHLwDr_xlZ-MydRe61zZXM1IR0E"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8685087,
+                       "lng" : 151.1937235
+                    }
+                 },
+                 "id" : "b0e404c091e654d745e91fe6936d14d1bb5644b4",
+                 "place_id" : "ChIJj2lYljauEmsRR1N8GhftSyg",
+                 "reference" : "CnRhAAAALfgWsJyiBGj9HPgjWElMusL6Y3PVngxzUzuqvLYs1MZqt1Ovha5mNtb_Wx6V-XuG_8sELgqBZoGOBMEF6TRs8GD9QZzYzqLySALUDrPRvOzHAFsmVizRXd-flqqZ8wtajik3TcB6i7CrvV3hNb7gcBIQwuUELaiIji5WAV7-mpDZWRoUUWLEdqEg3Jt0SEt5lLu76AO6UAQ"
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Mon, 10 Oct 2016 18:50:47 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/radarsearch/json?key=AIzaSyAKeN0XMV5LqJmqBrZZ1K8qMipFW7-Eybg&location=-33.86705220,151.19573620&radius=200
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 10 Oct 2016 18:50:48 GMT
+      Expires:
+      - Mon, 10 Oct 2016 18:55:48 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - pablo
+      Content-Length:
+      - '86'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34,33,32"
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [],
+           "status" : "INVALID_REQUEST"
+        }
+    http_version: 
+  recorded_at: Mon, 10 Oct 2016 18:50:48 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/radarsearch/json?key=AIzaSyAKeN0XMV5LqJmqBrZZ1K8qMipFW7-Eybg&location=-33.86705220,151.19573620&radius=200
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 10 Oct 2016 18:50:49 GMT
+      Expires:
+      - Mon, 10 Oct 2016 18:55:49 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - pablo
+      Content-Length:
+      - '86'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34,33,32"
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [],
+           "status" : "INVALID_REQUEST"
+        }
+    http_version: 
+  recorded_at: Mon, 10 Oct 2016 18:50:49 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/radarsearch/json?key=AIzaSyAKeN0XMV5LqJmqBrZZ1K8qMipFW7-Eybg&location=-33.86705220,151.19573620&radius=200
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 10 Oct 2016 18:50:50 GMT
+      Expires:
+      - Mon, 10 Oct 2016 18:55:50 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - pablo
+      Content-Length:
+      - '86'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34,33,32"
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [],
+           "status" : "INVALID_REQUEST"
+        }
+    http_version: 
+  recorded_at: Mon, 10 Oct 2016 18:50:50 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/radarsearch/json?key=AIzaSyAKeN0XMV5LqJmqBrZZ1K8qMipFW7-Eybg&location=-33.86705220,151.19573620&radius=200
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 10 Oct 2016 18:50:51 GMT
+      Expires:
+      - Mon, 10 Oct 2016 18:55:51 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - pablo
+      Content-Length:
+      - '86'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34,33,32"
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [],
+           "status" : "INVALID_REQUEST"
+        }
+    http_version: 
+  recorded_at: Mon, 10 Oct 2016 18:50:51 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/radarsearch/json?key=AIzaSyAKeN0XMV5LqJmqBrZZ1K8qMipFW7-Eybg&keyword=attractions&location=48.85670000,2.35080000&name=&radius=200
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 10 Oct 2016 18:51:18 GMT
+      Expires:
+      - Mon, 10 Oct 2016 18:56:18 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - pablo
+      Content-Length:
+      - '653'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34,33,32"
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 48.85806849999999,
+                       "lng" : 2.3489072
+                    }
+                 },
+                 "id" : "9d83b4e7650b36af51055d757acf90618b83582d",
+                 "place_id" : "ChIJGxZyXh5u5kcRLmPA07LoheA",
+                 "reference" : "CnRnAAAAdMOYgzUt4KczY_3Y3aSVO62sJjp4Zhh2uYcsyP7DMPwZJ4-U0wilhW-I_OZR2M8WzZTkGrEbGXU_OxnNJeTKDc00G_Sp3H18CcTyeVK2pS-d0K3e-Mpt4_nE_LVnHMtgFcJoJnYRvTmzkcdBIWMuXBIQoU4I4qEMG9QN-r-BoqKJ1xoUoWYN8e11FmodI1-X9_VBRQeZqmo"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 48.8564826,
+                       "lng" : 2.3524135
+                    }
+                 },
+                 "id" : "f758f6265bb14726c148fb64075f3126a839f4bd",
+                 "place_id" : "ChIJi1uPs_1x5kcRbh8M8XJSNMA",
+                 "reference" : "CnRjAAAAbxP5jVfZgk9SspQstjOBYFwTngZrGdLG8MT5YluQ6Ct-ZEv6o-qa1ZRM-Ip_LxTJmw7egnAd-qE-ct0TSqUD-TkizDvisJM9e0Np0Ufdo0o4Z7jE10IFiHIEdPRdI3OjM5fdaNaJn-XuUkahEwEU5BIQvjgAq3bGaO5Nn472SyRp1BoUumbv5pUb3zb7iirVfzGXavW2u4w"
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Mon, 10 Oct 2016 18:51:18 GMT
+recorded_with: VCR 2.9.3

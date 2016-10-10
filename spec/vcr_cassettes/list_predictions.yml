@@ -1035,4 +1035,211 @@ http_interactions:
         }
     http_version: 
   recorded_at: Sat, 01 Nov 2014 22:53:55 GMT
-recorded_with: VCR 2.9.2
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/autocomplete/json?input=query&key=AIzaSyAKeN0XMV5LqJmqBrZZ1K8qMipFW7-Eybg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 10 Oct 2016 19:26:15 GMT
+      Expires:
+      - Mon, 10 Oct 2016 19:26:15 GMT
+      Cache-Control:
+      - private, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - pablo
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34,33,32"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "predictions" : [
+              {
+                 "description" : "Query Street, New Bedford, MA, United States",
+                 "id" : "7ec01a04e7ff7a326e0de7e787c5fd03de916371",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "EixRdWVyeSBTdHJlZXQsIE5ldyBCZWRmb3JkLCBNQSwgVW5pdGVkIFN0YXRlcw",
+                 "reference" : "CjQwAAAAfS2EiHvP2toPD4TgmBTq2jKXh3LxTINTuGvGCLsOBw8hrpaT3MPP3es2CyhuKCgXEhAeF7a6IGbELXFsbRlzdpXqGhSOVAfi1VfsqYVIuAkZUfdAhSXIDw",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Street"
+                    },
+                    {
+                       "offset" : 14,
+                       "value" : "New Bedford"
+                    },
+                    {
+                       "offset" : 27,
+                       "value" : "MA"
+                    },
+                    {
+                       "offset" : 31,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              },
+              {
+                 "description" : "Query Mill Road, North Potomac, MD, United States",
+                 "id" : "684b9d636594b43a973e1d259ec5d35ee61117d8",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "EjFRdWVyeSBNaWxsIFJvYWQsIE5vcnRoIFBvdG9tYWMsIE1ELCBVbml0ZWQgU3RhdGVz",
+                 "reference" : "CkQ1AAAA4uQ3Lr63LoxcTll4nln0q136L1K2h0RlCmryIgSHVMC6iSA6P1mtwYiOfsSzhcmrEYt2vbXcaFrpZQlG_xOgTBIQcTH2_w5i2fz1ZK6pAuoWNhoUTxZGUKYoA1pKBx84Gr4ygIKfGZg",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Mill Road"
+                    },
+                    {
+                       "offset" : 17,
+                       "value" : "North Potomac"
+                    },
+                    {
+                       "offset" : 32,
+                       "value" : "MD"
+                    },
+                    {
+                       "offset" : 36,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              },
+              {
+                 "description" : "Query Foundry, Carlton Street, Chippendale, New South Wales, Australia",
+                 "id" : "fff85a645e5c83ec3b23d3c38b47d10379e5fead",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "ChIJr2I0UyauEmsR3C78GDGV5Z4",
+                 "reference" : "CmRVAAAABY4G_aDWhEKoX74rKQGGwBup3EtvIAAzQupSCUUxiD52AbSHdY_DFTwKG5jai7pmWfKkvaf1W9iQ3bPS0_qpTqvJsswz_G0gvfNWVi1Q4JnfJiP_KrbMQgH7azagQfAhEhDwNf_7s1h_wgEC8p7PwHn_GhSBV5rA8VsFW7ElmTVhkwTiT1gQng",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Foundry"
+                    },
+                    {
+                       "offset" : 15,
+                       "value" : "Carlton Street"
+                    },
+                    {
+                       "offset" : 31,
+                       "value" : "Chippendale"
+                    },
+                    {
+                       "offset" : 44,
+                       "value" : "New South Wales"
+                    },
+                    {
+                       "offset" : 61,
+                       "value" : "Australia"
+                    }
+                 ],
+                 "types" : [ "establishment" ]
+              },
+              {
+                 "description" : "Query Road, Hiddenite, NC, United States",
+                 "id" : "3049e3f7657ee5f16b6cc5dbf53891731ce6dc90",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "EihRdWVyeSBSb2FkLCBIaWRkZW5pdGUsIE5DLCBVbml0ZWQgU3RhdGVz",
+                 "reference" : "CjQsAAAAwVSVLxYSajquuhstU6a0ZqGLuvsqIWLkUMOgzeJZl2fWAzDlih07ZPgtRc7RoBi0EhC7JNbjeMGDis-a5pQR6iZ2GhRympZftOrdmGBefpcL4iDlL84w-w",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "Query Road"
+                    },
+                    {
+                       "offset" : 12,
+                       "value" : "Hiddenite"
+                    },
+                    {
+                       "offset" : 23,
+                       "value" : "NC"
+                    },
+                    {
+                       "offset" : 27,
+                       "value" : "United States"
+                    }
+                 ],
+                 "types" : [ "route", "geocode" ]
+              },
+              {
+                 "description" : "QueryClick, Castle Street, Edinburgh, United Kingdom",
+                 "id" : "2bb7f04ba7070419236317b89c4d06e45c7e3ae5",
+                 "matched_substrings" : [
+                    {
+                       "length" : 5,
+                       "offset" : 0
+                    }
+                 ],
+                 "place_id" : "ChIJeRnauY3Hh0gRB08EgsulTNg",
+                 "reference" : "ClRDAAAAuKvy6fc8UVX5RYZo3X239Xd7GzJyjHAvS8rFaxeF75qkU-QCE3eYZYInVmdfOMck41cdyWORNtD5KwUuXxR7meZx-Ju5BdUj1h2HyYs-d0USEDpYV40cYza77iHg4o4hHiMaFE7BOAVQecXmlgeu9QUB7CD5Qm0l",
+                 "terms" : [
+                    {
+                       "offset" : 0,
+                       "value" : "QueryClick"
+                    },
+                    {
+                       "offset" : 12,
+                       "value" : "Castle Street"
+                    },
+                    {
+                       "offset" : 27,
+                       "value" : "Edinburgh"
+                    },
+                    {
+                       "offset" : 38,
+                       "value" : "United Kingdom"
+                    }
+                 ],
+                 "types" : [ "establishment" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Mon, 10 Oct 2016 19:26:15 GMT
+recorded_with: VCR 2.9.3

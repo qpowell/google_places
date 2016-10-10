@@ -104,22 +104,22 @@ describe GooglePlaces::Spot do
   context 'Multiple page request', vcr: { cassette_name: 'multiple_page_request' } do
 
     it 'should return >20 results when :multipage_request is true' do
-      @collection = GooglePlaces::Spot.list_by_query('wolfgang', api_key, :lat => '40.808235', :lng => '-73.948733', :radius => @radius, :multipage => true)
+      @collection = GooglePlaces::Spot.list_by_query('coffee', api_key, :lat => '40.808235', :lng => '-73.948733', :radius => @radius, :multipage => true)
       expect(@collection.size).to be >= 21
     end
 
     it 'should return at most 20 results when :multipage is false' do
-      @collection = GooglePlaces::Spot.list_by_query('wolfgang', api_key, :lat => '40.808235', :lng => '-73.948733', :radius => @radius, :multipage => false)
+      @collection = GooglePlaces::Spot.list_by_query('coffee', api_key, :lat => '40.808235', :lng => '-73.948733', :radius => @radius, :multipage => false)
       expect(@collection.size).to be <= 20
     end
 
     it 'should return at most 20 results when :multipage is not present' do
-      @collection = GooglePlaces::Spot.list_by_query('wolfgang', api_key, :lat => '40.808235', :lng => '-73.948733', :radius => @radius)
+      @collection = GooglePlaces::Spot.list_by_query('coffee', api_key, :lat => '40.808235', :lng => '-73.948733', :radius => @radius)
       expect(@collection.size).to be <= 20
     end
 
     it 'should return a pagetoken when there is more than 20 results and :multipage is false' do
-      @collection = GooglePlaces::Spot.list_by_query('wolfgang', api_key, :lat => '40.808235', :lng => '-73.948733', :radius => @radius, :multipage => false)
+      @collection = GooglePlaces::Spot.list_by_query('coffee', api_key, :lat => '40.808235', :lng => '-73.948733', :radius => @radius, :multipage => false)
       expect(@collection.last.nextpagetoken).to_not be_nil
     end
 
