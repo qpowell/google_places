@@ -54,4 +54,16 @@ describe GooglePlaces::Client do
 
     @client.predictions_by_input(input)
   end
+
+  context 'List detailed spots', vcr: { cassette_name: 'list_spots_with_detail' } do
+    it 'should request detailed_spots' do
+      lat, lng = '-33.8670522', '151.1957362'
+      place_id = "ChIJfeDYPyB_54gR0Ft0OAcS7fo"
+      @client = GooglePlaces::Client.new(api_key)
+
+      spots = @client.detailed_spots(lat, lng)
+      expect(spots).to_not be_nil
+      expect(spots.length).to eq 20
+    end
+  end
 end
