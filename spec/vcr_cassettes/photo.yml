@@ -19,7 +19,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Mon, 06 Feb 2017 22:00:11 GMT
+      - Tue, 07 Feb 2017 16:15:56 GMT
       Pragma:
       - no-cache
       Expires:
@@ -46,5 +46,5 @@ http_interactions:
         Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
         HREF=\"https://lh4.googleusercontent.com/-1wzlVdxiW14/USSFZnhNqxI/AAAAAAAABGw/YpdANqaoGh4/s1600-w400/Google%2BSydney\">here</A>.\r\n</BODY></HTML>\r\n"
     http_version: 
-  recorded_at: Mon, 06 Feb 2017 22:00:11 GMT
+  recorded_at: Tue, 07 Feb 2017 16:15:57 GMT
 recorded_with: VCR 2.9.3
