@@ -1,7 +1,12 @@
 require 'google_places/review'
 module GooglePlaces
   class Spot
-    attr_accessor :lat, :lng, :viewport, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours, :events, :utc_offset, :place_id
+    attr_accessor :lat, :lng, :viewport, :name, :icon, :reference, :vicinity, :types,
+                  :id, :formatted_phone_number, :international_phone_number, :formatted_address,
+                  :address_components, :street_number, :street, :city, :region, :postal_code,
+                  :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected,
+                  :zagat_reviewed, :photos, :review_summary, :nextpagetoken, :price_level,
+                  :opening_hours, :events, :utc_offset, :place_id
 
     # Search for Spots at the provided location
     #
@@ -47,28 +52,28 @@ module GooglePlaces
     # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def self.list(lat, lng, api_key, options = {})
-      location = Location.new(lat, lng)
+      location          = Location.new(lat, lng)
       multipage_request = !!options.delete(:multipage)
-      rankby = options.delete(:rankby)
-      radius = options.delete(:radius) || 1000 if rankby.nil? || rankby =~ /prominence/
-      types  = options.delete(:types)
-      name  = options.delete(:name)
-      keyword = options.delete(:keyword)
-      language  = options.delete(:language)
-      exclude = options.delete(:exclude) || []
-      retry_options = options.delete(:retry_options) || {}
-      zagat_selected = options.delete(:zagat_selected) || false
-      exclude = [exclude] unless exclude.is_a?(Array)
+      rankby            = options.delete(:rankby)
+      radius            = options.delete(:radius) || 1000 if rankby.nil? || rankby =~ /prominence/
+      types             = options.delete(:types)
+      name              = options.delete(:name)
+      keyword           = options.delete(:keyword)
+      language          = options.delete(:language)
+      exclude           = options.delete(:exclude) || []
+      retry_options     = options.delete(:retry_options) || {}
+      zagat_selected    = options.delete(:zagat_selected) || false
+      exclude           = [exclude] unless exclude.is_a?(Array)
 
       options = {
-        :location => location.format,
-        :radius => radius,
-        :rankby => rankby,
-        :key => api_key,
-        :name => name,
-        :language => language,
-        :keyword => keyword,
-        :retry_options => retry_options
+        location: location.format,
+        radius: radius,
+        rankby: rankby,
+        key: api_key,
+        name: name,
+        language: language,
+        keyword: keyword,
+        retry_options: retry_options
       }
 
       options[:zagatselected] = zagat_selected if zagat_selected
@@ -76,7 +81,7 @@ module GooglePlaces
       # Accept Types as a string or array
       if types
         types = (types.is_a?(Array) ? types.join('|') : types)
-        options.merge!(:types => types)
+        options.merge!(types: types)
       end
 
       request(:spots, multipage_request, exclude, options)
@@ -116,27 +121,27 @@ module GooglePlaces
       #
       # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def self.list_by_bounds(bounds, api_key, options = {})
-      start_lat = bounds[:start_point][:lat]
-      start_lng = bounds[:start_point][:lng]
-      end_lat = bounds[:end_point][:lat]
-      end_lng = bounds[:end_point][:lng]
-      rect = Rectangle.new(start_lat, start_lng, end_lat, end_lng)
+      start_lat         = bounds[:start_point][:lat]
+      start_lng         = bounds[:start_point][:lng]
+      end_lat           = bounds[:end_point][:lat]
+      end_lng           = bounds[:end_point][:lng]
+      rect              = Rectangle.new(start_lat, start_lng, end_lat, end_lng)
       multipage_request = !!options.delete(:multipage)
-      rankby = options.delete(:rankby)
-      query  = options.delete(:query)
-      name  = options.delete(:name)
-      language  = options.delete(:language)
-      exclude = options.delete(:exclude) || []
-      retry_options = options.delete(:retry_options) || {}
-      zagat_selected = options.delete(:zagat_selected) || false
-      exclude = [exclude] unless exclude.is_a?(Array)
+      rankby            = options.delete(:rankby)
+      query             = options.delete(:query)
+      name              = options.delete(:name)
+      language          = options.delete(:language)
+      exclude           = options.delete(:exclude) || []
+      retry_options     = options.delete(:retry_options) || {}
+      zagat_selected    = options.delete(:zagat_selected) || false
+      exclude           = [exclude] unless exclude.is_a?(Array)
 
 
       options = {
-        :bounds => rect.format,
-        :key => api_key,
-        :language => language,
-        :retry_options => retry_options
+        bounds: rect.format,
+        key: api_key,
+        language: language,
+        retry_options: retry_options
       }
 
       options[:zagatselected] = zagat_selected if zagat_selected
@@ -144,7 +149,7 @@ module GooglePlaces
       # Accept Types as a string or array
       if query
         query = (query.is_a?(Array) ? query.join('|') : query)
-        options.merge!(:query => query)
+        options.merge!(query: query)
       end
 
       request(:spots_by_bounds, multipage_request, exclude, options)
@@ -190,26 +195,26 @@ module GooglePlaces
     # @see https://developers.google.com/places/documentation/search#RadarSearchRequests Radar Search
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def self.list_by_radar(lat, lng, api_key, options = {})
-      location = Location.new(lat, lng)
+      location          = Location.new(lat, lng)
       multipage_request = !!options.delete(:multipage)
-      radius = options.delete(:radius) || 1000
-      types  = options.delete(:types)
-      name  = options.delete(:name)
-      keyword = options.delete(:keyword)
-      retry_options = options.delete(:retry_options) || {}
-      zagat_selected = options.delete(:zagat_selected) || false
-      opennow = options.delete(:opennow) || false
-      minprice = options.delete(:minprice) || false
-      maxprice = options.delete(:maxprice) || false
-      exclude = []
+      radius            = options.delete(:radius) || 1000
+      types             = options.delete(:types)
+      name              = options.delete(:name)
+      keyword           = options.delete(:keyword)
+      retry_options     = options.delete(:retry_options) || {}
+      zagat_selected    = options.delete(:zagat_selected) || false
+      opennow           = options.delete(:opennow) || false
+      minprice          = options.delete(:minprice) || false
+      maxprice          = options.delete(:maxprice) || false
+      exclude           = []
 
       options = {
-        :location => location.format,
-        :radius => radius,
-        :key => api_key,
-        :name => name,
-        :keyword => keyword,
-        :retry_options => retry_options
+        location: location.format,
+        radius: radius,
+        key: api_key,
+        name: name,
+        keyword: keyword,
+        retry_options: retry_options
       }
 
       options[:zagatselected] = zagat_selected if zagat_selected
@@ -220,7 +225,7 @@ module GooglePlaces
       # Accept Types as a string or array
       if types
         types = (types.is_a?(Array) ? types.join('|') : types)
-        options.merge!(:types => types)
+        options.merge!(types: types)
       end
 
       request(:spots_by_radar, multipage_request, exclude, options)
@@ -243,17 +248,15 @@ module GooglePlaces
     # @option options [Integer] :retry_options[:max] (0) the maximum retries
     # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
     def self.find(place_id, api_key, options = {})
-      language  = options.delete(:language)
+      language      = options.delete(:language)
       retry_options = options.delete(:retry_options) || {}
-      extensions = options.delete(:review_summary) ? 'review_summary' : nil
+      extensions    = options.delete(:review_summary) ? 'review_summary' : nil
 
-      response = Request.spot(
-        :placeid => place_id,
-        :key => api_key,
-        :language => language,
-        :extensions => extensions,
-        :retry_options => retry_options
-      )
+      response = Request.spot(placeid: place_id,
+                              key: api_key,
+                              language: language,
+                              extensions: extensions,
+                              retry_options: retry_options)
 
       self.new(response['result'], api_key)
     end
@@ -269,8 +272,8 @@ module GooglePlaces
       exclude = [exclude] unless exclude.is_a?(Array)
 
       options = {
-          :pagetoken => pagetoken,
-          :key => api_key
+          pagetoken: pagetoken,
+          key: api_key
       }
 
       request(:spots_by_pagetoken, false, exclude, options)
@@ -322,31 +325,27 @@ module GooglePlaces
         with_location = false
       end
 
-      if options.has_key?(:radius)
-        with_radius = true
-      else
-        with_radius = false
-      end
+      with_radius       = options.has_key?(:radius) ? true : false
 
-      query = query
+      query             = query
       multipage_request = !!options.delete(:multipage)
-      location = Location.new(options.delete(:lat), options.delete(:lng)) if with_location
-      radius = options.delete(:radius) if with_radius
-      rankby = options.delete(:rankby)
-      language = options.delete(:language)
-      types = options.delete(:types)
-      exclude = options.delete(:exclude) || []
-      retry_options = options.delete(:retry_options) || {}
+      location          = Location.new(options.delete(:lat), options.delete(:lng)) if with_location
+      radius            = options.delete(:radius) if with_radius
+      rankby            = options.delete(:rankby)
+      language          = options.delete(:language)
+      types             = options.delete(:types)
+      exclude           = options.delete(:exclude) || []
+      retry_options     = options.delete(:retry_options) || {}
 
-      exclude = [exclude] unless exclude.is_a?(Array)
+      exclude           = [exclude] unless exclude.is_a?(Array)
 
       options = {
-        :query => query,
-        :key => api_key,
-        :rankby => rankby,
-        :language => language,
-        :retry_options => retry_options
-      }
+          query: query,
+          key: api_key,
+          rankby: rankby,
+          language: language,
+          retry_options: retry_options
+        }
 
       options[:location] = location.format if with_location
       options[:radius] = radius if with_radius
@@ -354,7 +353,7 @@ module GooglePlaces
       # Accept Types as a string or array
       if types
         types = (types.is_a?(Array) ? types.join('|') : types)
-        options.merge!(:types => types)
+        options.merge!(types: types)
       end
 
       request(:spots_by_query, multipage_request, exclude, options)
@@ -388,9 +387,9 @@ module GooglePlaces
         next_page = false
         if multipage_request && !response["next_page_token"].nil?
           options = {
-            :pagetoken => response["next_page_token"],
-            :key => options[:key]
-          }
+              pagetoken:  response["next_page_token"],
+              key:        options[:key]
+            }
 
           # There is a short delay between when a next_page_token is issued, and when it will become valid.
           # If requested too early, it will result in InvalidRequestError.
@@ -474,7 +473,7 @@ module GooglePlaces
     end
 
     def aspects_component(json_aspects)
-      json_aspects.to_a.map{ |r| { :type => r['type'], :rating => r['rating'] } }
+      json_aspects.to_a.map{ |r| { type: r['type'], rating: r['rating'] } }
     end
 
     def photos_component(json_photos, api_key)
@@ -493,7 +492,15 @@ module GooglePlaces
     end
 
     def events_component(json_events)
-      json_events.to_a.map{ |r| {:event_id => r['event_id'], :summary => r['summary'], :url => r['url'], :start_time => r['start_time']} }
+      json_events.to_a.map do |r|
+        {
+          event_id: r['event_id'],
+          summary: r['summary'],
+          url: r['url'],
+          start_time: r['start_time']
+        }
+      end
     end
+
   end
 end
