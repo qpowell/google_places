@@ -40,6 +40,11 @@ objects has these attributes:
 * *rating*: the rating of this spot on Google Places
 * *url*: the url of this spot on Google Places
 
+However <tt>address_components</tt>, <tt>city</tt>, <tt>country</tt>, <tt>formatted_address</tt>, <tt>region</tt> and <tt>url</tt> are <tt>nil</tt>.
+
+* To get these values: You can use <tt>@client.spot(place_id)</tt>. This returns the complete information for the spot by making an extra API call per returned spot.
+* To get a collection of these detailed spots: You can use <tt>@client.spots(lat, lng, detail: true)</tt>. This makes an extra call per each spot and returns a collection of the detailed spots.
+
 === Retrieving a list of spots
 
 First register a new Client:
@@ -81,6 +86,10 @@ Search in a radius (in meters):
 Get results in specific language:
 
   @client.spots(-33.8670522, 151.1957362, :language => 'en')
+
+Get detailed spots(This makes an extra call for each spot and returns a collection of the detailed spots.):
+
+  @client.spots(-33.8670522, 151.1957362, :detail => true)
 
 === Retrieving spots based on query
 
