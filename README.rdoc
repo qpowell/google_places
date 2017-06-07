@@ -99,6 +99,20 @@ Search by multiple types and exclude multiple types
 
   @client.spots_by_query('Pizza near Miami Florida', :types => ['restaurant', 'food'], :exclude => ['cafe', 'establishment'])
 
+=== Retrieving a collection of spots with complete details
+
+Google limits the details that are returned in any API calls for a collection,
+so you'll often find that details such as phone numbers are missing in a
+collection of spots, but are filled in when retrieving a single spot.
+
+If you require these extra details to be completed when retrieving a number of
+results, you can pass in the <tt>detail: true</tt> option to any method that returns
+a collection of spots.
+
+This option should be used with care, as it adds an additional API call
+for EACH spot in the collection. E.g. a spots collection of 100 spots
+will use 101 API calls when the <tt>detail: true</tt> option is set.
+
 === Retrieving a single spot
 
 First register a new Client:
