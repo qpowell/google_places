@@ -96,7 +96,7 @@ module GooglePlaces
       detail = @options.merge!(options).delete(:detail)
       collection_detail_level(
         Spot.list(lat, lng, @api_key, @options),
-        detail: detail
+        detail
       )
     end
 
@@ -160,7 +160,7 @@ module GooglePlaces
       detail = @options.merge!(options).delete(:detail)
       collection_detail_level(
         Spot.list_by_query(query, @api_key, @options),
-        detail: detail
+        detail
       )
     end
     # Search for Spots within a give SW|NE bounds with query
@@ -203,7 +203,7 @@ module GooglePlaces
       detail = @options.merge!(options).delete(:detail)
       collection_detail_level(
         Spot.list_by_bounds(bounds, @api_key, @options),
-        detail: detail
+        detail
       )
     end
     # Search for Spots with a pagetoken
@@ -227,7 +227,7 @@ module GooglePlaces
       detail = @options.merge!(options).delete(:detail)
       collection_detail_level(
         Spot.list_by_pagetoken(pagetoken, @api_key, @options),
-        detail: detail
+        detail
       )
     end
 
@@ -271,7 +271,7 @@ module GooglePlaces
       detail = @options.merge!(options).delete(:detail)
       collection_detail_level(
         Spot.list_by_radar(lat, lng, @api_key, @options),
-        detail: detail
+        detail
       )
     end
 
@@ -300,9 +300,10 @@ module GooglePlaces
 
     private
 
-    def collection_detail_level(spots, detail: false)
+    def collection_detail_level(spots, detail = false)
       if detail
         spots.map do |spot|
+          Spot.find(spot.place_id, @api_key, @options)
         end
       else
         spots
