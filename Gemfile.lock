@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    google_places (0.34.1)
+    google_places (0.34.2)
       httparty (>= 0.13.1, < 0.14.1)
 
 GEM
@@ -46,4 +46,4 @@ DEPENDENCIES
   webmock (~> 1.18)
 
 BUNDLED WITH
-   1.14.4
+   1.14.6
