@@ -1,3 +1,9 @@
+## 1.0.0
+
+- Upgraded httparty 0.14.0 -> 0.15.6
+- Dropped support for Ruby 1.9.x (required for the httparty upgrade)
+- Upgraded RSpec 3.5.0 -> 3.6.0
+
 ## 0.34.2
 
 - Add the `matched_substrings` attribute to the Prediction results (for autocomplete results)
