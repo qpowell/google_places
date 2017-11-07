@@ -291,4 +291,16 @@ describe GooglePlaces::Request do
     end
   end
 
+  context 'with an HTTP 502 response', vcr: { cassette_name: 'http_502' } do
+    it 'correctly handles the exception' do
+      stub_const("GooglePlaces::Request::DETAILS_URL", 'http://httpstat.us/502')
+
+      expect(lambda {
+        GooglePlaces::Request.spot(
+          :reference => @reference,
+          :key => api_key
+        )
+      }).to raise_error GooglePlaces::APIConnectionError
+    end
+  end
 end
