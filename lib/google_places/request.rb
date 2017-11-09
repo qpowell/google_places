@@ -347,7 +347,8 @@ module GooglePlaces
     # @raise [NotFoundError] when server response object includes 'NOT_FOUND'
     # @return [String] the response from the server as JSON
     def parsed_response
-      return @response.headers["location"] if @response.code >= 300 and @response.code < 400
+      return @response.headers["location"] if @response.code >= 300 && @response.code < 400
+      raise APIConnectionError.new(@response) if @response.code >= 500 && @response.code < 600
       case @response.parsed_response['status']
       when 'OK', 'ZERO_RESULTS'
         @response.parsed_response
@@ -363,6 +364,5 @@ module GooglePlaces
         raise NotFoundError.new(@response)
       end
     end
-
   end
 end

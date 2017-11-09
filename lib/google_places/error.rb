@@ -34,4 +34,12 @@ module GooglePlaces
 
   class NotFoundError < HTTParty::ResponseError
   end
+
+  # Thrown when the server returns any 5xx error
+  #
+  # This can be the case when:
+  # - There is a network problem between this gem and Google's API servers
+  # - Google's API is broken
+  class APIConnectionError < HTTParty::ResponseError
+  end
 end
