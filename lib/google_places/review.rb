@@ -1,14 +1,16 @@
 module GooglePlaces
   class Review
-    attr_accessor :rating, :type, :author_name, :author_url, :text, :time
+    attr_accessor :rating, :type, :author_name, :author_url, :text, :time, :language, :profile_photo_url
 
-    def initialize(rating, type, author_name, author_url, text, time)
+    def initialize(rating, type, author_name, author_url, text, time, language, profile_photo_url)
       @rating       = rating
       @type         = type
       @author_name  = author_name
       @author_url   = author_url
       @text         = text
       @time         = time
+      @language     = language
+      @profile_photo_url     = profile_photo_url
     end
   end
 end
