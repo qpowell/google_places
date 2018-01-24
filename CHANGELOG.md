@@ -1,3 +1,8 @@
+## 1.1.0
+
+- Include the profile_photo_url attribute for the GooglePlaces::Review object
+- Gracefully handle HTTP 500 errors from the Google API
+
 ## 1.0.0
 
 - Upgraded httparty 0.14.0 -> 0.15.6
