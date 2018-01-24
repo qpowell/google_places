@@ -2318,4 +2318,184 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 07 Feb 2017 16:16:33 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyAKeN0XMV5LqJmqBrZZ1K8qMipFW7-Eybg&language=&query=Statue%20of%20liberty,%20New%20York&rankby=&region=ca
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 24 Jan 2018 12:18:14 GMT
+      Expires:
+      - Wed, 24 Jan 2018 12:23:14 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '949'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [
+              {
+                 "formatted_address" : "New York, NY, United States",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 40.6892494,
+                       "lng" : -74.04450039999999
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 40.71823,
+                          "lng" : -73.99872490000001
+                       },
+                       "southwest" : {
+                          "lat" : 40.6795892,
+                          "lng" : -74.05975889999998
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+                 "id" : "5a0d7e67078e35af0c456a277df9ffba7c1e4da6",
+                 "name" : "Statue of Liberty National Monument",
+                 "opening_hours" : {
+                    "open_now" : false,
+                    "weekday_text" : []
+                 },
+                 "photos" : [
+                    {
+                       "height" : 667,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/114885487034263057803/photos\"\u003eManish Sharma\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRZAAAApIdeJ7LZhzqa-SfazEF4feWIFXt09HK-g8xV90QE1Y7qkyjFdtiM7meBrsWZ_i_-2Wbr5LPNpoO4AMVpRNDjsZbh3yCGRuTvKU43rcKdX_31ktO-rDtNps9t23WOBiF4EhBWFUzvr4jjtQ--j5PHX9UXGhQ03NED1g5rdXui4yMazYKFiKKC-A",
+                       "width" : 1000
+                    }
+                 ],
+                 "place_id" : "ChIJPTacEpBQwokRKwIlDXelxkA",
+                 "rating" : 4.6,
+                 "reference" : "CmRRAAAALN3WhgFKsd3Zwc8OuQZsFiKk3KYfwqd6jys7771vFQNoKFTwULh4l911ax0Sce1XywmtqFKoREYVaN6mzeqKD9SUa8bERwYQMtsCDYmSIBSZuOYQUVDOJdNBXZ49CsxgEhAgMeVxYVCP8AdoyXyoezmXGhTf5UmS27ih7GQL7Cnz44xlEHtx9A",
+                 "types" : [ "park", "point_of_interest", "establishment" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version:
+  recorded_at: Wed, 24 Jan 2018 12:18:14 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyAKeN0XMV5LqJmqBrZZ1K8qMipFW7-Eybg&language=&query=Statue%20of%20liberty,%20New%20York&rankby=&region=us
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 24 Jan 2018 12:18:15 GMT
+      Expires:
+      - Wed, 24 Jan 2018 12:23:15 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '939'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [
+              {
+                 "formatted_address" : "New York, NY",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 40.6892494,
+                       "lng" : -74.04450039999999
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 40.71823,
+                          "lng" : -73.99872490000001
+                       },
+                       "southwest" : {
+                          "lat" : 40.6795892,
+                          "lng" : -74.05975889999998
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+                 "id" : "5a0d7e67078e35af0c456a277df9ffba7c1e4da6",
+                 "name" : "Statue of Liberty National Monument",
+                 "opening_hours" : {
+                    "open_now" : false,
+                    "weekday_text" : []
+                 },
+                 "photos" : [
+                    {
+                       "height" : 667,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/114885487034263057803/photos\"\u003eManish Sharma\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRZAAAAWX4o1rEMvvWFN4QMewxBGxi-aAFTY42528CaKXiwPa7emFYaj0Wg-9skfqkQehjf1xTTKQi7q5VrbMjmmAlpmABf8v6YRcaIbpZG6QWOXO70EnbrO0Eht2OS3bsplrmZEhAPAr0iUM2kcMJQcEYkL0eLGhQ71THLSgBL7YPwFtKCqWa3S4iUeA",
+                       "width" : 1000
+                    }
+                 ],
+                 "place_id" : "ChIJPTacEpBQwokRKwIlDXelxkA",
+                 "rating" : 4.6,
+                 "reference" : "CmRRAAAAwPI8lLjxL_DyyktO_JdjvdEiNXho7mMyB8UMV3R904Un27yS5lqCT0ulfvPLF0uE2f87Ayosb34vZq0T23h9zxZ1H4oN4uASk7mOV0QlXldh2fm53mlgYcAkLy9Zr8kXEhDcmwk0tyU1rWCqJzRvtFArGhRXRyC-f_tRlJVmFTsDketKi0U1EA",
+                 "types" : [ "park", "point_of_interest", "establishment" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version:
+  recorded_at: Wed, 24 Jan 2018 12:18:15 GMT
 recorded_with: VCR 2.9.3
