@@ -467,7 +467,8 @@ module GooglePlaces
               r['author_name'],
               r['author_url'],
               r['text'],
-              r['time'].to_i
+              r['time'].to_i,
+              r['profile_photo_url']
           )
         }
       else []
