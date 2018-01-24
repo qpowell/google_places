@@ -254,14 +254,15 @@ module GooglePlaces
       retry_options = options.delete(:retry_options) || {}
       extensions = options.delete(:review_summary) ? 'review_summary' : nil
 
-      response = Request.spot(
+      request_options = {
         :placeid => place_id,
         :key => api_key,
         :language => language,
-        :region => region,
         :extensions => extensions,
         :retry_options => retry_options
-      )
+      }
+      request_options[:region] = region unless region.nil?
+      response = Request.spot(request_options)
 
       self.new(response['result'], api_key)
     end
@@ -360,12 +361,12 @@ module GooglePlaces
         :key => api_key,
         :rankby => rankby,
         :language => language,
-        :region => region,
         :retry_options => retry_options
       }
 
       options[:location] = location.format if with_location
       options[:radius] = radius if with_radius
+      options[:region] = region unless region.nil?
 
       # Accept Types as a string or array
       if types
