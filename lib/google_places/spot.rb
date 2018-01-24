@@ -236,6 +236,12 @@ module GooglePlaces
     # @param [Hash] options
     # @option options [String] :language
     #   The language code, indicating in which language the results should be returned, if possible.
+    # @option options [String] :region
+    #   The region code, specified as a ccTLD (country code top-level domain) two-character value. Most ccTLD
+    #   codes are identical to ISO 3166-1 codes, with some exceptions. This parameter will only influence, not
+    #   fully restrict, search results. If more relevant results exist outside of the specified region, they may
+    #   be included. When this parameter is used, the country name is omitted from the resulting formatted_address
+    #   for results in the specified region.
     #
     # @option options [Hash] :retry_options ({})
     #   A Hash containing parameters for search retries
@@ -244,16 +250,19 @@ module GooglePlaces
     # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
     def self.find(place_id, api_key, options = {})
       language  = options.delete(:language)
+      region = options.delete(:region)
       retry_options = options.delete(:retry_options) || {}
       extensions = options.delete(:review_summary) ? 'review_summary' : nil
 
-      response = Request.spot(
+      request_options = {
         :placeid => place_id,
         :key => api_key,
         :language => language,
         :extensions => extensions,
         :retry_options => retry_options
-      )
+      }
+      request_options[:region] = region unless region.nil?
+      response = Request.spot(request_options)
 
       self.new(response['result'], api_key)
     end
@@ -304,6 +313,12 @@ module GooglePlaces
     #   Restricts the results to Spots matching at least one of the specified types
     # @option options [String] :language
     #   The language code, indicating in which language the results should be returned, if possible.
+    # @option options [String] :region
+    #   The region code, specified as a ccTLD (country code top-level domain) two-character value. Most ccTLD
+    #   codes are identical to ISO 3166-1 codes, with some exceptions. This parameter will only influence, not
+    #   fully restrict, search results. If more relevant results exist outside of the specified region, they may
+    #   be included. When this parameter is used, the country name is omitted from the resulting formatted_address
+    #   for results in the specified region.
     # @option options [String,Array<String>] :exclude ([])
     #   A String or an Array of <b>types</b> to exclude from results
     #
@@ -334,6 +349,7 @@ module GooglePlaces
       radius = options.delete(:radius) if with_radius
       rankby = options.delete(:rankby)
       language = options.delete(:language)
+      region = options.delete(:region)
       types = options.delete(:types)
       exclude = options.delete(:exclude) || []
       retry_options = options.delete(:retry_options) || {}
@@ -350,6 +366,7 @@ module GooglePlaces
 
       options[:location] = location.format if with_location
       options[:radius] = radius if with_radius
+      options[:region] = region unless region.nil?
 
       # Accept Types as a string or array
       if types

@@ -140,6 +140,20 @@ describe GooglePlaces::Spot do
       @collection = GooglePlaces::Spot.list_by_query('Statue of liberty, New York', api_key)
     end
 
+    it 'should include country in formatted address' do
+      @collection = GooglePlaces::Spot.list_by_query('Statue of liberty, New York', api_key, region: 'ca')
+      @collection.each do |spot|
+        expect(spot.formatted_address).to end_with('United States')
+      end
+    end
+
+    it 'should not include country in formatted address' do
+      @collection = GooglePlaces::Spot.list_by_query('Statue of liberty, New York', api_key, region: 'us')
+      @collection.each do |spot|
+        expect(spot.formatted_address).to_not end_with('United States')
+      end
+    end
+
   end
 
   context 'List spots by radar', vcr: { cassette_name: 'list_spots_by_radar' } do
@@ -181,6 +195,18 @@ describe GooglePlaces::Spot do
       it "should have the review attribute: #{attribute}" do
         expect(@spot.reviews[0].respond_to?(attribute)).to eq(true)
       end
+    end
+  end
+
+  context 'Find a single spot with region parameter', vcr: { cassette_name: 'single_spot' } do
+    it 'should include country name in formatted address' do
+      @spot = GooglePlaces::Spot.find(@place_id, api_key, region: 'nz')
+      expect(@spot.formatted_address).to end_with('Australia')
+    end
+
+    it 'should not include country name in formatted address' do
+      @spot = GooglePlaces::Spot.find(@place_id, api_key, region: 'au')
+      expect(@spot.formatted_address).to_not end_with('Australia')
     end
   end
 end
