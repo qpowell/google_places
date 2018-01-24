@@ -147,7 +147,7 @@ describe GooglePlaces::Spot do
       end
     end
 
-    it 'should be a collection of Spots' do
+    it 'should not include country in formatted address' do
       @collection = GooglePlaces::Spot.list_by_query('Statue of liberty, New York', api_key, region: 'us')
       @collection.each do |spot|
         expect(spot.formatted_address).to_not end_with('United States')
