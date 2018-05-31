@@ -93,9 +93,10 @@ module GooglePlaces
     # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def spots(lat, lng, options = {})
-      detail = @options.merge!(options).delete(:detail)
+      options = @options.merge(options)
+      detail = options.delete(:detail)
       collection_detail_level(
-        Spot.list(lat, lng, @api_key, @options),
+        Spot.list(lat, lng, @api_key, options),
         detail
       )
     end
@@ -157,9 +158,10 @@ module GooglePlaces
     # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def spots_by_query(query, options = {})
-      detail = @options.merge!(options).delete(:detail)
+      options = @options.merge(options)
+      detail = options.delete(:detail)
       collection_detail_level(
-        Spot.list_by_query(query, @api_key, @options),
+        Spot.list_by_query(query, @api_key, options),
         detail
       )
     end
@@ -200,9 +202,10 @@ module GooglePlaces
     #
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def spots_by_bounds(bounds, options = {})
-      detail = @options.merge!(options).delete(:detail)
+      options = @options.merge(options)
+      detail = options.delete(:detail)
       collection_detail_level(
-        Spot.list_by_bounds(bounds, @api_key, @options),
+        Spot.list_by_bounds(bounds, @api_key, options),
         detail
       )
     end
@@ -224,9 +227,10 @@ module GooglePlaces
     #
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def spots_by_pagetoken(pagetoken, options = {})
-      detail = @options.merge!(options).delete(:detail)
+      options = @options.merge(options)
+      detail = options.delete(:detail)
       collection_detail_level(
-        Spot.list_by_pagetoken(pagetoken, @api_key, @options),
+        Spot.list_by_pagetoken(pagetoken, @api_key, options),
         detail
       )
     end
@@ -268,9 +272,10 @@ module GooglePlaces
     #
     # @see https://developers.google.com/places/documentation/search#RadarSearchRequests
     def spots_by_radar(lat, lng, options = {})
-      detail = @options.merge!(options).delete(:detail)
+      options = @options.merge(options)
+      detail = options.delete(:detail)
       collection_detail_level(
-        Spot.list_by_radar(lat, lng, @api_key, @options),
+        Spot.list_by_radar(lat, lng, @api_key, options),
         detail
       )
     end
