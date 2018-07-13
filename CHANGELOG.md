@@ -1,3 +1,10 @@
+## 1.2.0
+### Added
+- Add a region option to the `spots` and `spots_by_query` methods
+
+### Fixed
+- Fix spots* method options leaking to other methods
+
 ## 1.1.0
 
 - Include the profile_photo_url attribute for the GooglePlaces::Review object
