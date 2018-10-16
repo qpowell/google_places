@@ -7,9 +7,7 @@ not support OAuth authentication and will only work with an API key.
 == Obtaining an API key
 
 To be able to use this gem, you'll need a Google Places API key. To request an API key, point your browser to
-https://code.google.com/apis/console and follow the instructions there. You'll find your API key on the
-*API Access* tab under *Simple API Access*.
-
+https://developers.google.com/places/web-service/get-api-key and follow the instructions there.
 
 == Installing the gem
 
