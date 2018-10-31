@@ -1,7 +1,10 @@
 require 'google_places/review'
 module GooglePlaces
   class Spot
-    attr_accessor :lat, :lng, :viewport, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number, :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region, :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed, :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours, :events, :utc_offset, :place_id, :permanently_closed
+    attr_accessor :lat, :lng, :viewport, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number,
+    :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region,
+    :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed,
+    :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours, :events, :utc_offset, :place_id, :permanently_closed
 
     # Search for Spots at the provided location
     #
@@ -249,6 +252,7 @@ module GooglePlaces
     # @option options [Integer] :retry_options[:max] (0) the maximum retries
     # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
     def self.find(place_id, api_key, options = {})
+      fields = options.delete(:fields)
       language  = options.delete(:language)
       region = options.delete(:region)
       retry_options = options.delete(:retry_options) || {}
@@ -259,7 +263,8 @@ module GooglePlaces
         :key => api_key,
         :language => language,
         :extensions => extensions,
-        :retry_options => retry_options
+        :retry_options => retry_options,
+        :fields => fields
       }
       request_options[:region] = region unless region.nil?
       response = Request.spot(request_options)
@@ -426,9 +431,9 @@ module GooglePlaces
       @reference                  = json_result_object['reference']
       @place_id                   = json_result_object['place_id']
       @vicinity                   = json_result_object['vicinity']
-      @lat                        = json_result_object['geometry']['location']['lat']
-      @lng                        = json_result_object['geometry']['location']['lng']
-      @viewport                   = json_result_object['geometry']['viewport']
+      @lat                        = json_result_object.dig(:geometry, :location, :lat)
+      @lng                        = json_result_object.dig(:geometry, :location, :lng)
+      @viewport                   = json_result_object.dig(:geometry, :viewport)
       @name                       = json_result_object['name']
       @icon                       = json_result_object['icon']
       @types                      = json_result_object['types']
