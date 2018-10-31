@@ -162,47 +162,6 @@ describe GooglePlaces::Client do
     end
   end
 
-  describe '::spots_by_radar' do
-    let(:keywords) { 'landmarks' }
-    let(:lat) { '51.511627' }
-    let(:lng) { '-0.183778' }
-    let(:radius) { 5000 }
-
-    it 'should request spots by radar' do
-      expect(GooglePlaces::Spot).to receive(:list_by_radar).with(lat, lng, api_key, radius: radius, keyword: keywords)
-      client.spots_by_radar(lat, lng, radius: radius, keyword: keywords)
-    end
-
-    it 'does not call find on GooglePlces::Spot' do
-      allow(GooglePlaces::Spot).to receive(:list_by_radar) { [fake_spot] }
-      expect(GooglePlaces::Spot).not_to receive(:find)
-      client.spots_by_radar(lat, lng, radius: radius, keyword: keywords)
-    end
-
-    context 'with detail set to true' do
-      it 'calls find on GooglePlaces::Spot' do
-        allow(GooglePlaces::Spot).to receive(:list_by_radar) { [fake_spot] }
-        expect(GooglePlaces::Spot).to receive(:find)
-        client.spots_by_radar(
-          lat,
-          lng,
-          radius: radius,
-          keyword: keywords,
-          detail: true
-        )
-      end
-    end
-
-    context 'with options' do
-      let(:client_options) { {radius: 1000} }
-      let(:method_options) { {radius: radius, keyword: keywords} }
-      it 'preserves client options while merging with method options' do
-        allow(GooglePlaces::Spot).to receive(:list_by_radar).with(lat, lng, api_key, method_options)
-        expect { client.spots_by_radar(lat, lng, method_options) }.not_to change(client, :options)
-      end
-    end
-  end
-
   describe '::predictions_by_input' do
     let(:input) { 'Atlanta' }
 

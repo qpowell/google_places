@@ -235,7 +235,6 @@ module GooglePlaces
       )
     end
 
-    # Radar Search Service allows you to search for up to 200 Places at once, but with less detail than is typically returned from a Text Search or Nearby Search request. The search response will include up to 200 Places, identified only by their geographic coordinates and reference. You can send a Place Details request for more information about any of them.
     #
     # @return [Array<Spot>]
     # @param [String,Integer] lat the latitude for the search
@@ -270,15 +269,6 @@ module GooglePlaces
     #   A boolean to return spots with full detail information(its complete address, phone number, user rating, reviews, etc)
     #   Note) This makes an extra call for each spot for more information.
     #
-    # @see https://developers.google.com/places/documentation/search#RadarSearchRequests
-    def spots_by_radar(lat, lng, options = {})
-      options = @options.merge(options)
-      detail = options.delete(:detail)
-      collection_detail_level(
-        Spot.list_by_radar(lat, lng, @api_key, options),
-        detail
-      )
-    end
 
     # Query for Place Predictions
     #
