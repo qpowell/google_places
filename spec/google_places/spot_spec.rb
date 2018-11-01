@@ -62,7 +62,7 @@ describe GooglePlaces::Spot do
 
       it 'should have Spots with specific types' do
         @collection.each do |spot|
-          expect(spot.types & ["atm", "lodging"]).to be_any
+          expect(spot.types & ['atm', 'lodging']).to be_any
         end
       end
     end
