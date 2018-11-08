@@ -431,9 +431,9 @@ module GooglePlaces
       @reference                  = json_result_object['reference']
       @place_id                   = json_result_object['place_id']
       @vicinity                   = json_result_object['vicinity']
-      @lat                        = json_result_object.dig(:geometry, :location, :lat)
-      @lng                        = json_result_object.dig(:geometry, :location, :lng)
-      @viewport                   = json_result_object.dig(:geometry, :viewport)
+      @lat                        = json_result_object&.[](:geometry)&.[](:location)&.[](:lat)
+      @lng                        = json_result_object&.[](:geometry)&.[](:location)&.[](:lng)
+      @viewport                   = json_result_object&.[](:geometry)&.[](:viewport)
       @name                       = json_result_object['name']
       @icon                       = json_result_object['icon']
       @types                      = json_result_object['types']
