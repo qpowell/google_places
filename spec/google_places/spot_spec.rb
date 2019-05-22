@@ -209,4 +209,15 @@ describe GooglePlaces::Spot do
       expect(@spot.formatted_address).to_not end_with('Australia')
     end
   end
+
+  context 'Find a single spot including only requested fields', vcr: { cassette_name: 'single_spot' } do
+    it 'should only include the requested fields' do
+      @spot = GooglePlaces::Spot.find(@place_id, api_key, fields: ['place_id'])
+      expect(@spot.place_id).to eq(@place_id)
+      expect(@spot.reference).to be_nil
+      expect(@spot.cid).to be_nil
+      expect(@spot.lat).to be_nil
+      expect(@spot.lng).to be_nil
+    end
+  end
 end

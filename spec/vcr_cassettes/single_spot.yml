@@ -374,7 +374,7 @@ http_interactions:
         Um9hZCwgUHlybW9udCIsCiAgICAgICJ3ZWJzaXRlIiA6ICJodHRwczovL3d3
         dy5nb29nbGUuY29tLmF1L2Fib3V0L2NhcmVlcnMvbG9jYXRpb25zL3N5ZG5l
         eS8iCiAgIH0sCiAgICJzdGF0dXMiIDogIk9LIgp9Cg==
-    http_version: 
+    http_version:
   recorded_at: Tue, 07 Feb 2017 16:16:08 GMT
 - request:
     method: get
@@ -421,7 +421,7 @@ http_interactions:
            "html_attributions" : [],
            "status" : "NOT_FOUND"
         }
-    http_version: 
+    http_version:
   recorded_at: Tue, 07 Feb 2017 16:16:09 GMT
 - request:
     method: get
@@ -468,7 +468,7 @@ http_interactions:
            "html_attributions" : [],
            "status" : "INVALID_REQUEST"
         }
-    http_version: 
+    http_version:
   recorded_at: Tue, 07 Feb 2017 16:16:09 GMT
 - request:
     method: get
@@ -515,7 +515,7 @@ http_interactions:
            "html_attributions" : [],
            "status" : "INVALID_REQUEST"
         }
-    http_version: 
+    http_version:
   recorded_at: Tue, 07 Feb 2017 16:16:10 GMT
 - request:
     method: get
@@ -562,7 +562,7 @@ http_interactions:
            "html_attributions" : [],
            "status" : "INVALID_REQUEST"
         }
-    http_version: 
+    http_version:
   recorded_at: Tue, 07 Feb 2017 16:16:11 GMT
 - request:
     method: get
@@ -609,7 +609,7 @@ http_interactions:
            "html_attributions" : [],
            "status" : "INVALID_REQUEST"
         }
-    http_version: 
+    http_version:
   recorded_at: Tue, 07 Feb 2017 16:16:12 GMT
 - request:
     method: get
@@ -989,7 +989,7 @@ http_interactions:
         UGlycmFtYSBSb2FkLCBQeXJtb250IiwKICAgICAgIndlYnNpdGUiIDogImh0
         dHBzOi8vd3d3Lmdvb2dsZS5jb20uYXUvYWJvdXQvY2FyZWVycy9sb2NhdGlv
         bnMvc3lkbmV5LyIKICAgfSwKICAgInN0YXR1cyIgOiAiT0siCn0K
-    http_version: 
+    http_version:
   recorded_at: Tue, 07 Feb 2017 16:16:34 GMT
 - request:
     method: get
@@ -1717,4 +1717,52 @@ http_interactions:
         Igp9Cg==
     http_version:
   recorded_at: Wed, 24 Jan 2018 12:01:42 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/details/json?extensions=&fields=place_id&key=AIzaSyAKeN0XMV5LqJmqBrZZ1K8qMipFW7-Eybg&language=&placeid=ChIJN1t_tDeuEmsRUsoyG83frY4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 22 May 2019 15:42:06 GMT
+      Expires:
+      - Wed, 22 May 2019 15:47:06 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '122'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=191
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,44,43,39"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICAiaHRtbF9hdHRyaWJ1dGlvbnMiIDogW10sCiAgICJyZXN1bHQiIDog
+        ewogICAgICAicGxhY2VfaWQiIDogIkNoSUpOMXRfdERldUVtc1JVc295Rzgz
+        ZnJZNCIKICAgfSwKICAgInN0YXR1cyIgOiAiT0siCn0=
+    http_version:
+  recorded_at: Wed, 22 May 2019 15:42:06 GMT
 recorded_with: VCR 2.9.3

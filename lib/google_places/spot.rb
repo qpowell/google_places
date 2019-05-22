@@ -248,11 +248,14 @@ module GooglePlaces
     # @option options [Object] :retry_options[:status] ([])
     # @option options [Integer] :retry_options[:max] (0) the maximum retries
     # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
+    # @option options [Hash] :fields ([])
+    #   An Array containing the types of place data to return
     def self.find(place_id, api_key, options = {})
       language  = options.delete(:language)
       region = options.delete(:region)
       retry_options = options.delete(:retry_options) || {}
       extensions = options.delete(:review_summary) ? 'review_summary' : nil
+      requested_fields = options.delete(:fields)
 
       request_options = {
         :placeid => place_id,
@@ -261,7 +264,10 @@ module GooglePlaces
         :extensions => extensions,
         :retry_options => retry_options
       }
+
+      request_options[:fields] = requested_fields.join(',') unless requested_fields.nil?
       request_options[:region] = region unless region.nil?
+
       response = Request.spot(request_options)
 
       self.new(response['result'], api_key)
@@ -426,9 +432,9 @@ module GooglePlaces
       @reference                  = json_result_object['reference']
       @place_id                   = json_result_object['place_id']
       @vicinity                   = json_result_object['vicinity']
-      @lat                        = json_result_object['geometry']['location']['lat']
-      @lng                        = json_result_object['geometry']['location']['lng']
-      @viewport                   = json_result_object['geometry']['viewport']
+      @lat                        = json_result_object.dig('geometry', 'location', 'lat')
+      @lng                        = json_result_object.dig('geometry', 'location', 'lng')
+      @viewport                   = json_result_object.dig('geometry', 'viewport')
       @name                       = json_result_object['name']
       @icon                       = json_result_object['icon']
       @types                      = json_result_object['types']
@@ -447,7 +453,7 @@ module GooglePlaces
       @price_level                = json_result_object['price_level']
       @opening_hours              = json_result_object['opening_hours']
       @url                        = json_result_object['url']
-      @cid                        = json_result_object['url'].to_i
+      @cid                        = json_result_object['url']&.to_i
       @website                    = json_result_object['website']
       @zagat_reviewed             = json_result_object['zagat_reviewed']
       @zagat_selected             = json_result_object['zagat_selected']
