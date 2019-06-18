@@ -1,10 +1,8 @@
 language: ruby
 rvm:
-  - 2.1.3
-  - 2.2.5
-  - 2.3.1
+  - 2.4.6
+  - 2.5.5
+  - 2.6.3
 script: bundle exec rspec
 before_script: cp spec/api_key.travis.rb spec/api_key.rb
 after_script: rm spec/api_key.rb
-before_install:
-  - gem install bundler -v 1.14.6
