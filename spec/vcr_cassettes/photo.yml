@@ -96,4 +96,53 @@ http_interactions:
         HREF=\"https://lh4.googleusercontent.com/-1wzlVdxiW14/USSFZnhNqxI/AAAAAAAABGw/YpdANqaoGh4/s1600-w400/Google%2BSydney\">here</A>.\r\n</BODY></HTML>\r\n"
     http_version: 
   recorded_at: Tue, 18 Jun 2019 10:16:59 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=<API_KEY>&maxwidth=400&photoreference=CnRtAAAACQQXR83Jc3Pffxt1Zx7QbCe6AfY2negSNzkk2IeSf0q5nxHgartLzkr1fltSlkEDSS-EZqswWAW2eQDbiOl12J-V4Rmn_JNko9e9gSnMwxHBdmScu_84NMSe-0RwB9BM6AEqE8sENXQ8cpWaiEsC_RIQLzIJxpRdoqSPrPtrjTrOhxoUWb8uwObkV4duXfKIiNB20gfnu88
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 18 Jun 2019 10:44:39 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh4.googleusercontent.com/-1wzlVdxiW14/USSFZnhNqxI/AAAAAAAABGw/YpdANqaoGh4/s1600-w400/Google%2BSydney
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '306'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=11
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,44,43,39"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh4.googleusercontent.com/-1wzlVdxiW14/USSFZnhNqxI/AAAAAAAABGw/YpdANqaoGh4/s1600-w400/Google%2BSydney\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version: 
+  recorded_at: Tue, 18 Jun 2019 10:44:39 GMT
 recorded_with: VCR 2.9.3

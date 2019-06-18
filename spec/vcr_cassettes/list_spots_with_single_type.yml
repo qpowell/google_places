@@ -1778,4 +1778,933 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 18 Jun 2019 10:22:21 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=<API_KEY>&keyword=&language=&location=-33.86705220,151.19573620&name=&radius=500&rankby=&types=cafe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 18 Jun 2019 10:44:55 GMT
+      Expires:
+      - Tue, 18 Jun 2019 10:49:55 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '6816'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=283
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,44,43,39"
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "html_attributions" : [],
+           "next_page_token" : "CpQEAgIAAEZLCzziX9hOc4y1DNRSm0FZmXwnwNTEYXOC4t_JZv0-mALkR4jrDC0YyjGao3UggO4o7dCxW1jt--kzmbavMLA3d5xoEKxO62C1wRWj4R88j3il7GGNyydAP2F4Okv8eVrpffDMcNPrCL9TOQJfzzayIjb0L1ozGVN5d3vTCSh2UyifGW0awuj4ksdqKqtQlBaQ4AXUsXdfTQtoQwiMSwJsC4oJR_xTAu021aze6NBsQXnTodqE0-_V-wcMbI86UEWF41tj4V8RUFQmair5VkpVY6l_iYj2rTbXGtv0tx74Ra4AovCobBNUbAPV5jighHd5nh-HiP_vwF6pdeoVWKgaW_fz41ZsmMu5imMs9VE9FWBTPxBfdr-szi6WlrROtesZs3Hht6VqWiuwSef85S4oPFQBl4ASn2Tctb4T3d5UutvBpo1FZ9zo-7oqJevxFTin9BbUb-ojGLLsfSqQ8gzQ5sD3U2qH1fquSGSw3DKOQmTxW1asnLtFWeUErsGs9f-4A9ufbUf2nBCHG5HtMLKZYSyvUcJXW1Bp0-NAebIkkWt4MI-U2-VORav1xEzn1AYe-9TLZWJkChAh3HnqHr1mq_judXWSzrUL-ZC_k3GwKKDNbQMLyFErqM_r2H3puuOO2zx4RY7ms5OpZmdjYBnB4Sw_-PzYTJO0SiRyT8Us0n-vqEadGcjKJbvLWte7jhIQnT_LD6fh80Eb75A1CtIesRoUwDWyoTdtlqoL52y-OC5Hwsz7Lew",
+           "results" : [
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8679022,
+                       "lng" : 151.1951276
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.86672741970849,
+                          "lng" : 151.1960542802915
+                       },
+                       "southwest" : {
+                          "lat" : -33.86942538029149,
+                          "lng" : 151.1933563197085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "0761a21e23eda2598330d428413cb59431316a61",
+                 "name" : "Lobby Lounge",
+                 "opening_hours" : {
+                    "open_now" : true
+                 },
+                 "photos" : [
+                    {
+                       "height" : 1632,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/108880141686602353602/photos\"\u003eAndrei Setiawan Yohannes\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAA0X8ibB_rIzBQH58HhEjGjyvxhR6Q-0yBQq5hLlian8HnUNMisCFxshp74cbQ9ZnUjH-PRc_fT9VLFglVDNAu9Ciubo56yk-jVUWAWmFs3CXhYJZ0bABPpFA6hHEQWAy5EhBBf5oZTA0DsoppZBQvGuJbGhT3x0rBQR-E441oqMnMvlB26PPcVw",
+                       "width" : 920
+                    }
+                 ],
+                 "place_id" : "ChIJ1-v38TauEmsRHbUt24abGq8",
+                 "plus_code" : {
+                    "compound_code" : "45JW+R3 Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45JW+R3"
+                 },
+                 "rating" : 3.6,
+                 "reference" : "ChIJ1-v38TauEmsRHbUt24abGq8",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 14,
+                 "vicinity" : "80 Pyrmont Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8636923,
+                       "lng" : 151.1947332
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8626470197085,
+                          "lng" : 151.1954773302915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8653449802915,
+                          "lng" : 151.1927793697085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "7f4a3fdd07bb7911b51838d1c9055b08ee1c9293",
+                 "name" : "Cafe Morso",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "photos" : [
+                    {
+                       "height" : 4032,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/109124500510284889906/photos\"\u003eDavid Maddison\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAAK6YEgam5HLryO1rJCrbJdnB9ZOK1n2tSKigBVocVxpji863owfVWrbVXmRopzH1fww40_m3WgR5Q0qrrqauIgPEZZUcJf5PQEk88KSLgnCOfVDw7H4IHsB9vHg9LLfHREhCgWdTPKgMiLTrboK6gk8jvGhRSRRgf3x4eYlNvUGH6VCGXe9lp5w",
+                       "width" : 3024
+                    }
+                 ],
+                 "place_id" : "ChIJz2EHuEmuEmsRN_yScfn88Ec",
+                 "plus_code" : {
+                    "compound_code" : "45PV+GV Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45PV+GV"
+                 },
+                 "price_level" : 2,
+                 "rating" : 4.3,
+                 "reference" : "ChIJz2EHuEmuEmsRN_yScfn88Ec",
+                 "scope" : "GOOGLE",
+                 "types" : [
+                    "cafe",
+                    "bar",
+                    "restaurant",
+                    "food",
+                    "store",
+                    "point_of_interest",
+                    "establishment"
+                 ],
+                 "user_ratings_total" : 268,
+                 "vicinity" : "108/26-32 Pirrama Road, Jones Bay Wharf, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8669667,
+                       "lng" : 151.1958862
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8656646697085,
+                          "lng" : 151.1970863302915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8683626302915,
+                          "lng" : 151.1943883697085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "7eaf747a3f6dc078868cd65efc8d3bc62fff77d7",
+                 "name" : "Biaggio Cafe",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "photos" : [
+                    {
+                       "height" : 3024,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/102509464988728112776/photos\"\u003ePatrick Catanzariti\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAARyq8y_IoAOewNV-6qPiSSz5SKMUV8rVMCescWXQMbuyR9hobEZV5C1hTmvP5_vNQlpp8EpXixKu0xmzosxUZ2hPTUxuLFib4dB2cr3jpW0Z0ww8DBGJxGjOBo6gV3kckEhC-Cva0gq7gfSm8e_pE_whdGhQgXDa9jO8AwgQahlDlOWREtYxFBw",
+                       "width" : 4032
+                    }
+                 ],
+                 "place_id" : "ChIJIfBAsjeuEmsRdgu9Pl1Ps48",
+                 "plus_code" : {
+                    "compound_code" : "45MW+69 Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45MW+69"
+                 },
+                 "price_level" : 1,
+                 "rating" : 3.5,
+                 "reference" : "ChIJIfBAsjeuEmsRdgu9Pl1Ps48",
+                 "scope" : "GOOGLE",
+                 "types" : [
+                    "cafe",
+                    "restaurant",
+                    "food",
+                    "store",
+                    "point_of_interest",
+                    "establishment"
+                 ],
+                 "user_ratings_total" : 45,
+                 "vicinity" : "48 Pirrama Road, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8676706,
+                       "lng" : 151.1929673
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8663544697085,
+                          "lng" : 151.1942387802915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8690524302915,
+                          "lng" : 151.1915408197085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "cc257914637d90f4fdb34ed5eb8a10a36b8a0921",
+                 "name" : "Bar Zini",
+                 "opening_hours" : {
+                    "open_now" : true
+                 },
+                 "photos" : [
+                    {
+                       "height" : 2448,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/108542579794317059042/photos\"\u003eTim Owen\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAAzcME1No3GDH7suN-OZcV369L5Wqf5QGrxLq4XedDzsLJN47AnIatarw4GB1drksdosF5l0t-eQa3LIzv-Xe6CK1WiqJlXE4jTcvHc6MFYgQ4NvH3n4Umw4krC7hdakaDEhCnebIWN3oKtJX4NkCzjWt0GhQB_umh7XKhYHzINUiRf7012hvgNA",
+                       "width" : 3264
+                    }
+                 ],
+                 "place_id" : "ChIJw0zvgjauEmsRn87G6O_b07M",
+                 "plus_code" : {
+                    "compound_code" : "45JV+W5 Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45JV+W5"
+                 },
+                 "price_level" : 2,
+                 "rating" : 4.5,
+                 "reference" : "ChIJw0zvgjauEmsRn87G6O_b07M",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "bar", "food", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 159,
+                 "vicinity" : "78 Harris Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8702839,
+                       "lng" : 151.1975198
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8689545697085,
+                          "lng" : 151.1989716302915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8716525302915,
+                          "lng" : 151.1962736697085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "33c33938e4fbd92a59278533ac6f4d48b4ce1675",
+                 "name" : "Cherry Beans Coffee",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "photos" : [
+                    {
+                       "height" : 1536,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/103648263431730774408/photos\"\u003eJane Jeong\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAAPUmV1OWu9ETZrTjUDYsFO9fVO6SAwRLkt0p7qjI1Lil1Q74fISKfaPD5kjOw1cLQS4-WfSDTG-OavPVu-efCeyEF403ZXxZZBa2zNkK1oGnnfWS89ppVe8P7DgRqPP1_EhDLhN1vjFDKxXyD41QQPHO6GhTeF92hRwXfrFXWF2t9b4YqT0X-0w",
+                       "width" : 2048
+                    }
+                 ],
+                 "place_id" : "ChIJ6_17TzeuEmsRtefgrSKwoSk",
+                 "plus_code" : {
+                    "compound_code" : "45HX+V2 Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45HX+V2"
+                 },
+                 "price_level" : 2,
+                 "rating" : 4.1,
+                 "reference" : "ChIJ6_17TzeuEmsRtefgrSKwoSk",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "food", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 52,
+                 "vicinity" : "1/45 Murray Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8677499,
+                       "lng" : 151.1956285
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8666730697085,
+                          "lng" : 151.1963177802915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8693710302915,
+                          "lng" : 151.1936198197085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "5895b175f4c2a8535294f5587fe089fc7d5135ea",
+                 "name" : "Pulse Express",
+                 "opening_hours" : {
+                    "open_now" : true
+                 },
+                 "photos" : [
+                    {
+                       "height" : 992,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/111520138479080816365/photos\"\u003ePulse Express\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAAkIQXPxZEiQoUjqEElcPFDOGLNJp1_JLX2xyuxeaNZ8o21f-Pf0lxhufgnKk81u7DP6TUbI5n7msckVHxU-UK__Prt643ug8Emu76dgkY1YWLWBhSXKRymaelkUhf1lepEhD12Ny9JwCWgtEudu40Fs4kGhRfpDAGHRnhSDuN3R5vjFfs9Xj9Aw",
+                       "width" : 1618
+                    }
+                 ],
+                 "place_id" : "ChIJ1-v38TauEmsRJxe1QBBHBGU",
+                 "plus_code" : {
+                    "compound_code" : "45JW+W7 Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45JW+W7"
+                 },
+                 "price_level" : 2,
+                 "rating" : 2.7,
+                 "reference" : "ChIJ1-v38TauEmsRJxe1QBBHBGU",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "restaurant", "food", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 22,
+                 "vicinity" : "80 Pyrmont Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8687244,
+                       "lng" : 151.1955032
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8675303697085,
+                          "lng" : 151.1964765802915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8702283302915,
+                          "lng" : 151.1937786197085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+                 "id" : "df8498c40e304679e2e066fb9f47b8e6ab578b48",
+                 "name" : "Food Quarter",
+                 "opening_hours" : {
+                    "open_now" : true
+                 },
+                 "photos" : [
+                    {
+                       "height" : 3024,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/105126867314301911733/photos\"\u003eAndro Sydney\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAAQz0a0xfopd7Qy8st5wtcmqeCL8Nz-ZyfED5OYIG1G2lCUExYWnzXMLvO5Fks2kZFomJpn9y-75xrcU_9veyYQiywHzjlDFXswL4hhS57VLBs0I-AwYMJre0fQrObRXT3EhDRj11KaFdvc8r31A47E83RGhQU8G4ZkFf6g4s2-ovIyNWRK4KRLw",
+                       "width" : 4032
+                    }
+                 ],
+                 "place_id" : "ChIJ1-v38TauEmsRP8ap8MBE1Bs",
+                 "plus_code" : {
+                    "compound_code" : "45JW+G6 Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45JW+G6"
+                 },
+                 "rating" : 3.1,
+                 "reference" : "ChIJ1-v38TauEmsRP8ap8MBE1Bs",
+                 "scope" : "GOOGLE",
+                 "types" : [
+                    "restaurant",
+                    "cafe",
+                    "food",
+                    "store",
+                    "point_of_interest",
+                    "establishment"
+                 ],
+                 "user_ratings_total" : 28,
+                 "vicinity" : "The Star, 1, 80 Pyrmont Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8681732,
+                       "lng" : 151.1946516
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8668928697085,
+                          "lng" : 151.1958342302915
+                       },
+                       "southwest" : {
+                          "lat" : -33.86959083029149,
+                          "lng" : 151.1931362697085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "dcc2d5fcdc143f1b328dbcb823357b4f2b74998a",
+                 "name" : "Cafe Court",
+                 "photos" : [
+                    {
+                       "height" : 2941,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/110144645851596754881/photos\"\u003eG MV\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAA8CsiTZNbLVB74CkBD3dZ3lcqSdJTgH4J8IkJ2-567TMHUvGEhbA3xnL1dEsA3H8thBfLoBgH81gu1ZSspain1pUoh2yNa0ct1rXNXSImOWziZv8p0OsMvIz_7Ksj8h9NEhAD5xuqv7zSVE9s3ZOMCadcGhRRUMbdwrOcmvDX3zuCnbseE5lXvw",
+                       "width" : 3740
+                    }
+                 ],
+                 "place_id" : "ChIJ1-v38TauEmsRCO5mmZZfvXs",
+                 "plus_code" : {
+                    "compound_code" : "45JV+PV Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45JV+PV"
+                 },
+                 "rating" : 4,
+                 "reference" : "ChIJ1-v38TauEmsRCO5mmZZfvXs",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "food", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 5,
+                 "vicinity" : "80 Pyrmont Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8694969,
+                       "lng" : 151.1952266
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8682100197085,
+                          "lng" : 151.1965632302915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8709079802915,
+                          "lng" : 151.1938652697085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "b4a4e9d4f9643172bf1a1899acdb7315dd26c5ba",
+                 "name" : "Antidote",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "photos" : [
+                    {
+                       "height" : 3024,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/109124500510284889906/photos\"\u003eDavid Maddison\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAAlhsrLQg0_jPkiLpAgGd_JxN65sHe8qALWujl23E9dTP_GIMsJru46hmsLHx2wq7N72T43ZPzm59M3cysVhjGdsnxmyMCAVWg-UzOvUXk3CSqx8lRRyf94Of84bT-ZuQcEhDJN4e8EGtockYmLK9iF-HeGhS78Y8KFRBpucweHSSRym0wrTGl3w",
+                       "width" : 4032
+                    }
+                 ],
+                 "place_id" : "ChIJ1-v38TauEmsRzUP4C3m6_do",
+                 "plus_code" : {
+                    "compound_code" : "45JW+63 Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45JW+63"
+                 },
+                 "rating" : 4.5,
+                 "reference" : "ChIJ1-v38TauEmsRzUP4C3m6_do",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 151,
+                 "vicinity" : "80 Pyrmont Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.868837,
+                       "lng" : 151.1975361
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8674266697085,
+                          "lng" : 151.1990218802915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8701246302915,
+                          "lng" : 151.1963239197085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "7c42cc1d3cf9094a283967b2b99b85e5e2b22b7b",
+                 "name" : "Cafe Tango Espresso",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "place_id" : "ChIJ7QyCbjeuEmsRR-dkWc2Xf1U",
+                 "plus_code" : {
+                    "compound_code" : "45JX+F2 Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45JX+F2"
+                 },
+                 "rating" : 4.7,
+                 "reference" : "ChIJ7QyCbjeuEmsRR-dkWc2Xf1U",
+                 "scope" : "GOOGLE",
+                 "types" : [
+                    "cafe",
+                    "meal_takeaway",
+                    "restaurant",
+                    "food",
+                    "store",
+                    "point_of_interest",
+                    "establishment"
+                 ],
+                 "user_ratings_total" : 15,
+                 "vicinity" : "1-27 Murray Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8654589,
+                       "lng" : 151.1962134
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8639530197085,
+                          "lng" : 151.1971797302915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8666509802915,
+                          "lng" : 151.1944817697085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "6eb2ce2c7da69a217c7b368188ce3bdf6a82a8d2",
+                 "name" : "Park Lane",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "place_id" : "ChIJfWbVKUiuEmsRbBZZu6H77s4",
+                 "plus_code" : {
+                    "compound_code" : "45MW+RF Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45MW+RF"
+                 },
+                 "rating" : 5,
+                 "reference" : "ChIJfWbVKUiuEmsRbBZZu6H77s4",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "food", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 6,
+                 "vicinity" : "Google Level, 2/1 Darling Island Road, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8694549,
+                       "lng" : 151.1966959
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.86827966970851,
+                          "lng" : 151.1980144802915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8709776302915,
+                          "lng" : 151.1953165197085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "e3fe0535c5865fa0b66373dac8a8f684463fde33",
+                 "name" : "The Messenger Cafe",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "photos" : [
+                    {
+                       "height" : 3024,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/100122895780603709329/photos\"\u003eMichael Bouda\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAALND0umCnyVc6GvwUh9kaH2JzibDpdKPUHSA0NlLWGhpNzx3UGaG8GgJ_8r98WbUzRtUcRr23Tp2g-WaGKUXvjuEgKnLadKjbW6u9B2Nw6OGsmyICRqeI7zGNAQi9I6k3EhB-TjAqk9Y-Y6hnyF_bqDlOGhS5J5Yddc2qaGWN5-eMTdBlzRA1fA",
+                       "width" : 4032
+                    }
+                 ],
+                 "place_id" : "ChIJ1zMqOTeuEmsR09Y1vmU6EAU",
+                 "plus_code" : {
+                    "compound_code" : "45JW+6M Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45JW+6M"
+                 },
+                 "rating" : 4.3,
+                 "reference" : "ChIJ1zMqOTeuEmsR09Y1vmU6EAU",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "food", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 41,
+                 "vicinity" : "t05/60 Union Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8630883,
+                       "lng" : 151.1950355
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8621026697085,
+                          "lng" : 151.19597005
+                       },
+                       "southwest" : {
+                          "lat" : -33.8648006302915,
+                          "lng" : 151.19223185
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "690cb6fd182c876bb36061e170e809815a62606d",
+                 "name" : "Two Fratelli Cafe",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "photos" : [
+                    {
+                       "height" : 1080,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/100434836908295201535/photos\"\u003eTwo Fratelli Cafe\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAAh7Kx6NRVqRUfjL58dcGdmPspNhMGKsA2J0J1oYP5ZsyYgQjmhapp5ZiVgyEulG51b2sM4voCpHhOVYOLJ4Qj3BOLCdn0bYQJk27cOGYbdJPQ2kiL-1r5lMtuqvo_2Q6lEhDfyJnNEuxOHJUy3BzepRS-GhTxmxtPSvch0IJ2OrI7IJdsCAQTEA",
+                       "width" : 1080
+                    }
+                 ],
+                 "place_id" : "ChIJyWEHuEmuEmsRa-8rQ6TTc20",
+                 "plus_code" : {
+                    "compound_code" : "45PW+Q2 Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45PW+Q2"
+                 },
+                 "price_level" : 2,
+                 "rating" : 4.2,
+                 "reference" : "ChIJyWEHuEmuEmsRa-8rQ6TTc20",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "food", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 14,
+                 "vicinity" : "Suite 80, 26/32 Pirrama Road, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8670097,
+                       "lng" : 151.1959641
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.86566071970849,
+                          "lng" : 151.1973130802915
+                       },
+                       "southwest" : {
+                          "lat" : -33.86835868029149,
+                          "lng" : 151.1946151197085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "3fd0710a635cc975fe3bab31f6d03a74a526deb2",
+                 "name" : "Baggios",
+                 "place_id" : "ChIJTVawZ9mvEmsRxZwZN_GD6S0",
+                 "plus_code" : {
+                    "compound_code" : "45MW+59 Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45MW+59"
+                 },
+                 "reference" : "ChIJTVawZ9mvEmsRxZwZN_GD6S0",
+                 "types" : [ "cafe", "food", "point_of_interest", "establishment" ],
+                 "vicinity" : "Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8662322,
+                       "lng" : 151.1945581
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8648693697085,
+                          "lng" : 151.1959497802915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8675673302915,
+                          "lng" : 151.1932518197085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+                 "id" : "7501fca2fd726963a0f5b79f8e86a8006b48f968",
+                 "name" : "Astoria Sydney",
+                 "photos" : [
+                    {
+                       "height" : 2048,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/102060647562261549859/photos\"\u003eLewys Martin\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAAWwnZ41hy9JoHp5SMf51eNVKvsvwNEej_3vzd_POkweEhwKg_IQb0PRnAAxf2dkJ0inhufoZeHvQZRuB8yFhmc4tHtq351UN0uSrdIqx2uadZr104cYP1jhOcByAQYn2oEhBO7SwdFpFdaPtLHmhaVeWoGhTvTh0ZHvNScvKOMn6zBtbQPlYAXA",
+                       "width" : 1536
+                    }
+                 ],
+                 "place_id" : "ChIJhRs1RzauEmsRLE2K9do7mcg",
+                 "plus_code" : {
+                    "compound_code" : "45MV+GR Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45MV+GR"
+                 },
+                 "price_level" : 1,
+                 "rating" : 4.3,
+                 "reference" : "ChIJhRs1RzauEmsRLE2K9do7mcg",
+                 "scope" : "GOOGLE",
+                 "types" : [ "restaurant", "cafe", "food", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 16,
+                 "vicinity" : "8 Jones Bay Road, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8680201,
+                       "lng" : 151.1945391
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8667363197085,
+                          "lng" : 151.1957300802915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8694342802915,
+                          "lng" : 151.1930321197085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "27bfda2f03176700cdd85013ab53bbb092770bee",
+                 "name" : "G&Tea",
+                 "opening_hours" : {
+                    "open_now" : true
+                 },
+                 "photos" : [
+                    {
+                       "height" : 1856,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/103710548592024253191/photos\"\u003eG&amp;Tea\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAAshirjTM62K5SYKoYi0usCXBBk_BjLR5mdNRDrExTNm2BCJifgXmD2d2CA3sdHp0qVlIMZHEqwuqzwQ1b8y-dELI_F3lreNpB59FT7ePRwOKRdRucNvISrrreDjNGqERoEhCHqQ1rvmwGbI3xJHc9BDPGGhRhTV4L9tHPUIRjAOrUPPSheEEvvw",
+                       "width" : 2784
+                    }
+                 ],
+                 "place_id" : "ChIJPVWXxeCvEmsRR1F_Lm4hmZQ",
+                 "plus_code" : {
+                    "compound_code" : "45JV+QR Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45JV+QR"
+                 },
+                 "rating" : 5,
+                 "reference" : "ChIJPVWXxeCvEmsRR1F_Lm4hmZQ",
+                 "types" : [ "cafe", "bar", "food", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 1,
+                 "vicinity" : "80 Pyrmont Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8686283,
+                       "lng" : 151.194705
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8673117197085,
+                          "lng" : 151.1959753802915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8700096802915,
+                          "lng" : 151.1932774197085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "name" : "Joe joes Cafe",
+                 "place_id" : "ChIJV1_UZduvEmsRIWnYpUB6QZg",
+                 "plus_code" : {
+                    "compound_code" : "45JV+GV Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45JV+GV"
+                 },
+                 "reference" : "ChIJV1_UZduvEmsRIWnYpUB6QZg",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "food", "point_of_interest", "establishment" ],
+                 "vicinity" : "6 Pyrmont Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8650802,
+                       "lng" : 151.1959948
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8636207697085,
+                          "lng" : 151.1971920802915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8663187302915,
+                          "lng" : 151.1944941197085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "fae3157418ceaca243cdc11dff779d6dc1de4bf5",
+                 "name" : "Cafe Laneway",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "photos" : [
+                    {
+                       "height" : 2048,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/112860740202184755379/photos\"\u003ePaul Toogood\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAA1Jh94DBCQB3xLCh9uqlLnOD7rk6nc394WTCuH8TWWlojH86JT4yIPp_RR8ufQT3KWFyoniwGhxjVIpptIc91qay0Op_KC7XnKDdxwRUX24MbbUWUY0OH4cNa7a0LOvxoEhCf5Oy_yzyo0MjkTnQwhzoKGhTNCNHa6ojmZAItdyh6kCEuye1YBw",
+                       "width" : 1536
+                    }
+                 ],
+                 "place_id" : "ChIJpWVSKEiuEmsR2xgW7hRnQfM",
+                 "plus_code" : {
+                    "compound_code" : "45MW+X9 Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45MW+X9"
+                 },
+                 "rating" : 4.7,
+                 "reference" : "ChIJpWVSKEiuEmsR2xgW7hRnQfM",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "food", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 15,
+                 "vicinity" : "2, 1 Darling Island Road, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8684676,
+                       "lng" : 151.1934013
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8671443197085,
+                          "lng" : 151.1946862802915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8698422802915,
+                          "lng" : 151.1919883197085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "name" : "Stockroom Cafe",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "photos" : [
+                    {
+                       "height" : 1080,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/108022830825501556623/photos\"\u003eStockroom Cafe\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAAkgmv-eAdy0c5ZOkvrGR4C-aePhi-f5ZiXGpNOIMQ6-I86rshLG8qc_WODv4JuBq8LdZh_US5iWTiJ7DxJAPGwtCHLY76TFqzdP2nehYttbIcygnejG0tVC9RncAvN1G0EhA6nKu5ha3RvWeDvQSn8TUbGhSILNlZBgUceFHTOWXjoWn2-FtYAQ",
+                       "width" : 1920
+                    }
+                 ],
+                 "place_id" : "ChIJISDEljauEmsRKWLjogeJHWo",
+                 "plus_code" : {
+                    "compound_code" : "45JV+J9 Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45JV+J9"
+                 },
+                 "rating" : 4.4,
+                 "reference" : "ChIJISDEljauEmsRKWLjogeJHWo",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "food", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 21,
+                 "vicinity" : "100 Harris Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8691383,
+                       "lng" : 151.1972814
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8677871197085,
+                          "lng" : 151.1989477302915
+                       },
+                       "southwest" : {
+                          "lat" : -33.87048508029149,
+                          "lng" : 151.1962497697085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+                 "id" : "bf8ae6fa7c03c13a4b8050c9cdfad7a1f998d9d4",
+                 "name" : "KIOSK5 CAFE",
+                 "opening_hours" : {
+                    "open_now" : false
+                 },
+                 "photos" : [
+                    {
+                       "height" : 3744,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/101559231798023827432/photos\"\u003eKIOSK5 CAFE\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAAAF9eMzlFfDsnSjuVeq9SgtXGk1UHudkRsaY2qb8XTnteA-k0bVvCJ_Si7536-d_5I4Je4IMA39wkMrjoVysd1QTGF2kzZzoRd5UheKP6VjVI97QBJ5wOLdKPje9Aobv5EhARd_KEe58vNoCulzFMgt9wGhSj3S-x5Wh1R-AX0O90z_tIUkbr6g",
+                       "width" : 3721
+                    }
+                 ],
+                 "place_id" : "ChIJ163StNSvEmsRYtjvxaK17Ls",
+                 "plus_code" : {
+                    "compound_code" : "45JW+8W Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45JW+8W"
+                 },
+                 "rating" : 5,
+                 "reference" : "ChIJ163StNSvEmsRYtjvxaK17Ls",
+                 "scope" : "GOOGLE",
+                 "types" : [ "cafe", "food", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 4,
+                 "vicinity" : "Shop 5/1-27 Murray Street, Pyrmont"
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Tue, 18 Jun 2019 10:44:55 GMT
 recorded_with: VCR 2.9.3
