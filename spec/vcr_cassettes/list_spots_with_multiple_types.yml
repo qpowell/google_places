@@ -864,4 +864,354 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 07 Feb 2017 16:16:21 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyD9vqH-0-sVgX2jhXteunpS_mVWTqRUadE&keyword=&language=&location=-33.86705220,151.19573620&name=&radius=200&rankby=&types=atm%7Clodging
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 18 Jun 2019 10:17:15 GMT
+      Expires:
+      - Tue, 18 Jun 2019 10:22:15 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '83'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=38
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,44,43,39"
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [],
+           "status" : "ZERO_RESULTS"
+        }
+    http_version: 
+  recorded_at: Tue, 18 Jun 2019 10:17:15 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyD9vqH-0-sVgX2jhXteunpS_mVWTqRUadE&keyword=&language=&location=-33.86705220,151.19573620&name=&radius=500&rankby=&types=atm%7Clodging
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 18 Jun 2019 10:22:22 GMT
+      Expires:
+      - Tue, 18 Jun 2019 10:27:22 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '2157'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=181
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,44,43,39"
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8693652,
+                       "lng" : 151.194084
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8681376697085,
+                          "lng" : 151.1955027302915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8708356302915,
+                          "lng" : 151.1928047697085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/atm-71.png",
+                 "id" : "6c49664eae2fd39063c4c4c163f94e60c52deab3",
+                 "name" : "CBA ATM",
+                 "opening_hours" : {
+                    "open_now" : true
+                 },
+                 "photos" : [
+                    {
+                       "height" : 2988,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/111462673989508629224/photos\"\u003eJames Wong\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAA_hFtQekKf1ctgEumcLfte4KHe-Ae_umvEg9lREpyBOPeWHf5eRH9A7Z28G7g_cFDUTwJPDSdsSHSkj5PMKMxlr7mUeQcPIUm_oYUcJv6qvKrfxlBYtDcHzjsWT2ekqDEEhA4LdnqKcKMzTKCfzZ6brwFGhRJvtF26xFCU5HFW6WTt1mXag9bwg",
+                       "width" : 5312
+                    }
+                 ],
+                 "place_id" : "ChIJdfnCtjauEmsR7PVSGk5n5e4",
+                 "plus_code" : {
+                    "compound_code" : "45JV+7J Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45JV+7J"
+                 },
+                 "rating" : 4.3,
+                 "reference" : "ChIJdfnCtjauEmsR7PVSGk5n5e4",
+                 "scope" : "GOOGLE",
+                 "types" : [ "atm", "bank", "finance", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 8,
+                 "vicinity" : "2 Union Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8697087,
+                       "lng" : 151.1973586
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8684763697085,
+                          "lng" : 151.1987115302915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8711743302915,
+                          "lng" : 151.1960135697085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/atm-71.png",
+                 "id" : "20b30765be97d304d9ca98f44fe94ef7656428d2",
+                 "name" : "Cashcard ATM",
+                 "opening_hours" : {
+                    "open_now" : true
+                 },
+                 "photos" : [
+                    {
+                       "height" : 4032,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/114182739407198369642/photos\"\u003eNorman Pongracz\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAAaRHAziPD99BReiNVEXcgPR12o7-JF5smIUVHEellO8dNNWlYM-dAObkj-8tHF9fMp_kXdRiPShwJHMUCGKtMudN9Qf82A3PPpDSCiSrbKxtgbodRGRz4aTDKp3l03oIMEhCGhIcbDuiymA3rY4TpNxYGGhTmF9HA4xXMptEO6BA7q2ENee8wLw",
+                       "width" : 3024
+                    }
+                 ],
+                 "place_id" : "ChIJ5SS4ODeuEmsRp_Mg8nA7mEg",
+                 "plus_code" : {
+                    "compound_code" : "45JW+4W Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45JW+4W"
+                 },
+                 "rating" : 4,
+                 "reference" : "ChIJ5SS4ODeuEmsRp_Mg8nA7mEg",
+                 "types" : [ "atm", "finance", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 1,
+                 "vicinity" : "84 Union Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8705655,
+                       "lng" : 151.1930026
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8690097697085,
+                          "lng" : 151.1942327302915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8717077302915,
+                          "lng" : 151.1915347697085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/atm-71.png",
+                 "id" : "7df85f8cbad9187982cff9bd2057bcc2feffdd6c",
+                 "name" : "Cashcard ATM",
+                 "place_id" : "ChIJARgn_TOuEmsRKi12r-bCcMA",
+                 "plus_code" : {
+                    "compound_code" : "45HV+Q6 Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45HV+Q6"
+                 },
+                 "reference" : "ChIJARgn_TOuEmsRKi12r-bCcMA",
+                 "scope" : "GOOGLE",
+                 "types" : [ "atm", "finance", "point_of_interest", "establishment" ],
+                 "vicinity" : "63 Miller Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.869628,
+                       "lng" : 151.1963347
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8683466697085,
+                          "lng" : 151.1976718302915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8710446302915,
+                          "lng" : 151.1949738697085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/atm-71.png",
+                 "id" : "e9f336187ce996c1ccf941645fe070daeb7f868b",
+                 "name" : "Commonwealth Bank ATM",
+                 "opening_hours" : {
+                    "open_now" : true
+                 },
+                 "place_id" : "ChIJ2_9bIzeuEmsRgs-RTe4ndoU",
+                 "plus_code" : {
+                    "compound_code" : "45JW+4G Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45JW+4G"
+                 },
+                 "reference" : "ChIJ2_9bIzeuEmsRgs-RTe4ndoU",
+                 "scope" : "GOOGLE",
+                 "types" : [ "atm", "finance", "point_of_interest", "establishment" ],
+                 "vicinity" : "50 Union Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.87048799999999,
+                       "lng" : 151.195773
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.86917181970851,
+                          "lng" : 151.1970391302915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8718697802915,
+                          "lng" : 151.1943411697085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+                 "id" : "63e1378e655a5287a2f9b05d0bbb75d07b3330d3",
+                 "name" : "Pyrmont Express",
+                 "opening_hours" : {
+                    "open_now" : true
+                 },
+                 "photos" : [
+                    {
+                       "height" : 4032,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/102087671605708270094/photos\"\u003ePyrmont Express\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAAhkSmpJaNyZCOutEP9owOLODYZkgFgDmssce-Jp4GCNf11zFDY7zfpuGE8Vd3BDGfuyXfKh9io4RwiYbCVt3hsRkLoPZHJnEodp5jeTx_CEvL1hVS8sFui3QU8BwJX2N9EhDBhkgXG93LYeiI7syavHQbGhRhlcetyh75x29XvkdvM5TKUWS1sA",
+                       "width" : 3024
+                    }
+                 ],
+                 "place_id" : "ChIJK2k21TCuEmsROroGVOv_9c4",
+                 "plus_code" : {
+                    "compound_code" : "45HW+R8 Pyrmont, New South Wales, Australia",
+                    "global_code" : "4RRH45HW+R8"
+                 },
+                 "rating" : 5,
+                 "reference" : "ChIJK2k21TCuEmsROroGVOv_9c4",
+                 "scope" : "GOOGLE",
+                 "types" : [
+                    "grocery_or_supermarket",
+                    "atm",
+                    "convenience_store",
+                    "finance",
+                    "food",
+                    "store",
+                    "point_of_interest",
+                    "establishment"
+                 ],
+                 "user_ratings_total" : 3,
+                 "vicinity" : "2/104 Pyrmont Street, Pyrmont"
+              },
+              {
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -33.8705096,
+                       "lng" : 151.1986314
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -33.8692275697085,
+                          "lng" : 151.2000169802915
+                       },
+                       "southwest" : {
+                          "lat" : -33.8719255302915,
+                          "lng" : 151.1973190197085
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/atm-71.png",
+                 "id" : "2849e6a9bf96a9b91e3d5aced7a3d74b15c245fb",
+                 "name" : "ATM",
+                 "opening_hours" : {
+                    "open_now" : true
+                 },
+                 "photos" : [
+                    {
+                       "height" : 4048,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/106395258427521727618/photos\"\u003eDamian Duran\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CmRaAAAA4dYrPH0uqRQgqy1hxJIf44qphWA94RC0gfDXkSutPuRjKLtJTk4jpf5Avp3x1jFivyIZM_FOlBxpMy46gUO0JDqKFZY-tacI0n1bLRfAhWYsviQF6y3EfM-4Ceg7oYuYEhA9I_PvxgrZD0es6RtllXVfGhRhe8yupURhnvlaxX6QzW1iFdgrmQ",
+                       "width" : 3036
+                    }
+                 ],
+                 "place_id" : "ChIJK06l4jmuEmsRIc-xZ6oKX14",
+                 "plus_code" : {
+                    "compound_code" : "45HX+QF Sydney, New South Wales, Australia",
+                    "global_code" : "4RRH45HX+QF"
+                 },
+                 "reference" : "ChIJK06l4jmuEmsRIc-xZ6oKX14",
+                 "scope" : "GOOGLE",
+                 "types" : [ "atm", "finance", "point_of_interest", "establishment" ],
+                 "vicinity" : "1A Darling Drive, Sydney"
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Tue, 18 Jun 2019 10:22:22 GMT
 recorded_with: VCR 2.9.3

@@ -5,7 +5,7 @@ describe GooglePlaces::Spot do
   before :each do
     @lat = '-33.8670522'
     @lng = '151.1957362'
-    @radius = 200
+    @radius = 500
     @pagetoken = 'CmRVAAAAqKK43TjXKnyEx4-XTWd4bC-iBq88Olspwga_JQbEpznYpfwXYbWBrxmb-1QYD4DMtq8gym5YruCEVjByOlKn8PWKQO5fHvuYD8rWKHUeBvMleM7k3oh9TUG8zqcyuhPmEhCG_C2XuypmkQ20hRvxro4sGhQN3nbWCjgpjyG_E_ayjVIoTGbViw'
     @place_id = 'ChIJN1t_tDeuEmsRUsoyG83frY4'
   end
@@ -21,7 +21,7 @@ describe GooglePlaces::Spot do
         false,
         {
           location: "-33.86705220,151.19573620",
-          radius: 200,
+          radius: 500,
           rankby: "prominence",
           key: RSPEC_API_KEY,
           name: nil,
@@ -30,11 +30,9 @@ describe GooglePlaces::Spot do
           retry_options: {}
         })
     end
-
   end
 
   context 'List spots', vcr: { cassette_name: 'list_spots' } do
-
     after(:each) do
       expect(@collection.map(&:class).uniq).to eq [GooglePlaces::Spot]
     end
@@ -188,7 +186,7 @@ describe GooglePlaces::Spot do
     it 'should include the specified params in the response' do
       @spot = GooglePlaces::Spot.find(@place_id, api_key, fields:'place_id,name')
       expect(@spot.place_id).to eq(@place_id)
-      expect(@spot.name).to eq('Google')
+      expect(@spot.name).to eq('Google Australia')
     end
 
     it 'should not include unspecified fields' do
