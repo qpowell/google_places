@@ -42,6 +42,8 @@ However <tt>address_components</tt>, <tt>city</tt>, <tt>country</tt>, <tt>format
 
 * To get these values: You can use <tt>@client.spot(place_id)</tt>. This returns the complete information for the spot by making an extra API call per returned spot.
 * To get a collection of these detailed spots: You can use <tt>@client.spots(lat, lng, detail: true)</tt>. This makes an extra call per each spot and returns a collection of the detailed spots.
+* To only retrieve specific fields for an individual spot, use a comma delimited string of acceptable fields <tt>@client.spot(place_id, fields:'place_id,name')</tt>
+
 
 === Retrieving a list of spots
 

@@ -5,7 +5,7 @@ describe GooglePlaces::Spot do
   before :each do
     @lat = '-33.8670522'
     @lng = '151.1957362'
-    @radius = 200
+    @radius = 500
     @pagetoken = 'CmRVAAAAqKK43TjXKnyEx4-XTWd4bC-iBq88Olspwga_JQbEpznYpfwXYbWBrxmb-1QYD4DMtq8gym5YruCEVjByOlKn8PWKQO5fHvuYD8rWKHUeBvMleM7k3oh9TUG8zqcyuhPmEhCG_C2XuypmkQ20hRvxro4sGhQN3nbWCjgpjyG_E_ayjVIoTGbViw'
     @place_id = 'ChIJN1t_tDeuEmsRUsoyG83frY4'
   end
@@ -21,7 +21,7 @@ describe GooglePlaces::Spot do
         false,
         {
           location: "-33.86705220,151.19573620",
-          radius: 200,
+          radius: 500,
           rankby: "prominence",
           key: RSPEC_API_KEY,
           name: nil,
@@ -30,11 +30,9 @@ describe GooglePlaces::Spot do
           retry_options: {}
         })
     end
-
   end
 
   context 'List spots', vcr: { cassette_name: 'list_spots' } do
-
     after(:each) do
       expect(@collection.map(&:class).uniq).to eq [GooglePlaces::Spot]
     end
@@ -57,25 +55,12 @@ describe GooglePlaces::Spot do
 
     describe 'with multiple types', vcr: { cassette_name: 'list_spots_with_multiple_types' } do
       before(:each) do
-        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :types => ['food','establishment'])
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :types => ["atm", "lodging"])
       end
 
       it 'should have Spots with specific types' do
         @collection.each do |spot|
-          expect(spot.types & ['food', 'establishment']).to be_any
-        end
-      end
-    end
-
-    describe 'searching by name and types', vcr: { cassette_name: 'list_spots_with_name_and_types' } do
-
-      before(:each) do
-        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :types => ['food','establishment'], :name => 'italian')
-      end
-
-      it 'should have Spots with specific types' do
-        @collection.each do |spot|
-          expect(spot.types & ['food', 'establishment']).to be_any
+          expect(spot.types & ['atm', 'lodging']).to be_any
         end
       end
     end
@@ -83,7 +68,7 @@ describe GooglePlaces::Spot do
     describe 'searching by types with exclusion', vcr: { cassette_name: 'list_spots_with_types_and_exclusion' } do
 
       it 'should exclude spots with type "restaurant"' do
-        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :types => ['food','establishment'], :exclude => 'restaurant')
+        @collection = GooglePlaces::Spot.list(@lat, @lng, api_key, :radius => @radius, :types => ['atm','lodging'], :exclude => 'restaurant')
 
         @collection.map(&:types).each do |types|
           expect(types).to_not include('restaurant')
@@ -143,29 +128,16 @@ describe GooglePlaces::Spot do
     it 'should include country in formatted address' do
       @collection = GooglePlaces::Spot.list_by_query('Statue of liberty, New York', api_key, region: 'ca')
       @collection.each do |spot|
-        expect(spot.formatted_address).to end_with('United States')
+        expect(spot.formatted_address).to end_with('USA')
       end
     end
 
     it 'should not include country in formatted address' do
       @collection = GooglePlaces::Spot.list_by_query('Statue of liberty, New York', api_key, region: 'us')
       @collection.each do |spot|
-        expect(spot.formatted_address).to_not end_with('United States')
+        expect(spot.formatted_address).to_not end_with('USA')
       end
     end
-
-  end
-
-  context 'List spots by radar', vcr: { cassette_name: 'list_spots_by_radar' } do
-
-    after(:each) do
-      expect(@collection.map(&:class).uniq).to eq [GooglePlaces::Spot]
-    end
-
-    it 'should be a collection of Spots' do
-      @collection = GooglePlaces::Spot.list_by_radar('48.8567', '2.3508', api_key, :radius => @radius, :keyword => 'attractions')
-    end
-
   end
 
   context 'Find a single spot', vcr: { cassette_name: 'single_spot' } do
@@ -207,6 +179,22 @@ describe GooglePlaces::Spot do
     it 'should not include country name in formatted address' do
       @spot = GooglePlaces::Spot.find(@place_id, api_key, region: 'au')
       expect(@spot.formatted_address).to_not end_with('Australia')
+    end
+  end
+
+  context 'Find a single spot with specified params', vcr: { cassette_name: 'single_spot_with_specified_params' } do
+    it 'should include the specified params in the response' do
+      @spot = GooglePlaces::Spot.find(@place_id, api_key, fields:'place_id,name')
+      expect(@spot.place_id).to eq(@place_id)
+      expect(@spot.name).to eq('Google Australia')
+    end
+
+    it 'should not include unspecified fields' do
+      @spot = GooglePlaces::Spot.find(@place_id, api_key, region: 'place_id,name')
+      spot_instance_variable_return_values = (@spot.instance_variables - [@place_id, @name]).map do |iv|
+        @post.instance_variable_get(iv.to_sym)
+      end
+      expect(spot_instance_variable_return_values.compact).to eq([])
     end
   end
 end
