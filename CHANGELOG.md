@@ -1,3 +1,7 @@
+## 2.0.0
+### Breaking Changes for 2.0.0:
+- Removed the `spots_by_radar` method
+
 ## 1.2.0
 ### Added
 - Add a region option to the `spots` and `spots_by_query` methods
