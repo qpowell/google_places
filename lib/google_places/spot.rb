@@ -4,7 +4,8 @@ module GooglePlaces
     attr_accessor :lat, :lng, :viewport, :name, :icon, :reference, :vicinity, :types, :id, :formatted_phone_number,
     :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region,
     :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed,
-    :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours, :events, :utc_offset, :place_id, :permanently_closed
+    :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours, :events, :utc_offset, :place_id, :permanently_closed,
+    :json_result_object
 
     # Search for Spots at the provided location
     #
@@ -428,6 +429,7 @@ module GooglePlaces
     # @param [JSON] json_result_object a JSON object to create a Spot from
     # @return [Spot] a newly created spot
     def initialize(json_result_object, api_key)
+      @json_result_object         = json_result_object
       @reference                  = json_result_object['reference']
       @place_id                   = json_result_object['place_id']
       @vicinity                   = json_result_object['vicinity']
