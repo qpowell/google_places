@@ -1,6 +1,7 @@
 ## 2.0.0
 ### Breaking Changes for 2.0.0:
 - Removed the `spots_by_radar` method
+- Remove support for all unsupported versions of Ruby (< 2.4)
 
 ## 1.2.0
 ### Added
