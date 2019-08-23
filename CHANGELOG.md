@@ -3,6 +3,9 @@
 - Removed the `spots_by_radar` method
 - Remove support for all unsupported versions of Ruby (< 2.4)
 
+### Added
+- Expose the `json_result_object` field on a Spot object
+
 ## 1.2.0
 ### Added
 - Add a region option to the `spots` and `spots_by_query` methods
