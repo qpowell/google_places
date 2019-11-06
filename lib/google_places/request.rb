@@ -8,13 +8,14 @@ module GooglePlaces
     include ::HTTParty
     format :json
 
-    NEARBY_SEARCH_URL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json'
-    DETAILS_URL       = 'https://maps.googleapis.com/maps/api/place/details/json'
-    PHOTO_URL         = 'https://maps.googleapis.com/maps/api/place/photo'
-    TEXT_SEARCH_URL   = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
-    PAGETOKEN_URL     = 'https://maps.googleapis.com/maps/api/place/search/json'
-    RADAR_SEARCH_URL  = 'https://maps.googleapis.com/maps/api/place/radarsearch/json'
-    AUTOCOMPLETE_URL  = 'https://maps.googleapis.com/maps/api/place/autocomplete/json'
+    NEARBY_SEARCH_URL        = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json'
+    DETAILS_URL              = 'https://maps.googleapis.com/maps/api/place/details/json'
+    PHOTO_URL                = 'https://maps.googleapis.com/maps/api/place/photo'
+    TEXT_SEARCH_URL          = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
+    PAGETOKEN_URL            = 'https://maps.googleapis.com/maps/api/place/search/json'
+    RADAR_SEARCH_URL         = 'https://maps.googleapis.com/maps/api/place/radarsearch/json'
+    AUTOCOMPLETE_URL         = 'https://maps.googleapis.com/maps/api/place/autocomplete/json'
+    FIND_PLACE_FROM_TEXT_URL = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json'
 
     # Search for Spots at the provided location
     #
@@ -168,34 +169,13 @@ module GooglePlaces
       request = new(TEXT_SEARCH_URL, options)
       request.parsed_response
     end
+
     # Search for Spots with a query
     #
     # @return [Array<Spot>]
     # @param [String] query the query to search for
     # @param [String] api_key the provided api key
     # @param [Hash] options
-    # @option options [String,Integer] :lat
-    #   the latitude for the search
-    # @option options [String,Integer] :lng
-    #   the longitude for the search
-    # @option options [Integer] :radius
-    #   Defines the distance (in meters) within which to return Place results.
-    #   The maximum allowed radius is 50,000 meters.
-    #   Note that radius must not be included if <b>:rankby</b> is specified
-    #   <b>Note that this is a mandatory parameter</b>
-    # @option options [String,Array] :types
-    #   Restricts the results to Spots matching at least one of the specified types
-    # @option options [String] :language
-    #   The language code, indicating in which language the results should be returned, if possible.
-    # @option options [String] :region
-    #   The region code, specified as a ccTLD (country code top-level domain) two-character value. Most ccTLD
-    #   codes are identical to ISO 3166-1 codes, with some exceptions. This parameter will only influence, not
-    #   fully restrict, search results. If more relevant results exist outside of the specified region, they may
-    #   be included. When this parameter is used, the country name is omitted from the resulting formatted_address
-    #   for results in the specified region.
-    # @option options [String,Array<String>] :exclude ([])
-    #   A String or an Array of <b>types</b> to exclude from results
-    #
     # @option options [Hash] :retry_options ({})
     #   A Hash containing parameters for search retries
     # @option options [Object] :retry_options[:status] ([])
@@ -206,6 +186,27 @@ module GooglePlaces
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def self.spots_by_query(options = {})
       request = new(TEXT_SEARCH_URL, options)
+      request.parsed_response
+    end
+
+    # Search for a Spot with a query
+    #
+    # @return [Array<Spot>]
+    # @param [String] query the query to search for
+    # @param [String] api_key the provided api key
+    # @param [Hash] options
+    # @option options [String] :inputtype (textquery) The type of input to query (textquery or phonenumber)
+    # @option options [Hash] :retry_options ({})
+    # @option options [Hash] :retry_options ({})
+    #   A Hash containing parameters for search retries
+    # @option options [Object] :retry_options[:status] ([])
+    # @option options [Integer] :retry_options[:max] (0) the maximum retries
+    # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
+    #
+    # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
+    # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
+    def self.spot_by_query(options = {})
+      request = new(FIND_PLACE_FROM_TEXT_URL, options)
       request.parsed_response
     end
 

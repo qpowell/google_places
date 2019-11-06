@@ -383,6 +383,33 @@ module GooglePlaces
       request(:spots_by_query, multipage_request, exclude, options)
     end
 
+    # Search for a Spot with a query
+    #
+    # @return [Spot]
+    # @param [String] query the query to search for
+    # @param [String] api_key the provided api key
+    # @param [Hash] options
+    # @option options [String] :inputtype (textquery) The type of input to query (textquery or phonenumber)
+    # @option options [Hash] :retry_options ({})
+    #   A Hash containing parameters for search retries
+    # @option options [Object] :retry_options[:status] ([])
+    # @option options [Integer] :retry_options[:max] (0) the maximum retries
+    # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
+    def self.by_query(query, api_key, options = {})
+      inputtype = options.delete(:inputtype) || 'textquery'
+      retry_options = options.delete(:retry_options) || {}
+
+      options = {
+        :input => query,
+        :inputtype => inputtype,
+        :key => api_key,
+        :retry_options => retry_options,
+        :results_key => 'candidates'
+      }
+
+      request(:spot_by_query, false, [], options).first
+    end
+
     def self.request(method, multipage_request, exclude, options)
       results = []
 
@@ -398,8 +425,10 @@ module GooglePlaces
 
     def self.multi_pages_request(method, multipage_request, options)
       begin
+        results_key = options.delete(:results_key) || 'results'
         response = Request.send(method, options)
-        response['results'].each do |result|
+        results = response[results_key]
+        results.each do |result|
           if !multipage_request && !response["next_page_token"].nil? && result == response['results'].last
             # add next page token on the last result
             result.merge!("nextpagetoken" => response["next_page_token"])
