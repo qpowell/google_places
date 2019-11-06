@@ -8,13 +8,14 @@ module GooglePlaces
     include ::HTTParty
     format :json
 
-    NEARBY_SEARCH_URL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json'
-    DETAILS_URL       = 'https://maps.googleapis.com/maps/api/place/details/json'
-    PHOTO_URL         = 'https://maps.googleapis.com/maps/api/place/photo'
-    TEXT_SEARCH_URL   = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
-    PAGETOKEN_URL     = 'https://maps.googleapis.com/maps/api/place/search/json'
-    RADAR_SEARCH_URL  = 'https://maps.googleapis.com/maps/api/place/radarsearch/json'
-    AUTOCOMPLETE_URL  = 'https://maps.googleapis.com/maps/api/place/autocomplete/json'
+    NEARBY_SEARCH_URL        = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json'
+    DETAILS_URL              = 'https://maps.googleapis.com/maps/api/place/details/json'
+    PHOTO_URL                = 'https://maps.googleapis.com/maps/api/place/photo'
+    TEXT_SEARCH_URL          = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
+    PAGETOKEN_URL            = 'https://maps.googleapis.com/maps/api/place/search/json'
+    RADAR_SEARCH_URL         = 'https://maps.googleapis.com/maps/api/place/radarsearch/json'
+    AUTOCOMPLETE_URL         = 'https://maps.googleapis.com/maps/api/place/autocomplete/json'
+    FIND_PLACE_FROM_TEXT_URL = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json'
 
     # Search for Spots at the provided location
     #
@@ -168,6 +169,7 @@ module GooglePlaces
       request = new(TEXT_SEARCH_URL, options)
       request.parsed_response
     end
+
     # Search for Spots with a query
     #
     # @return [Array<Spot>]
@@ -206,6 +208,27 @@ module GooglePlaces
     # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
     def self.spots_by_query(options = {})
       request = new(TEXT_SEARCH_URL, options)
+      request.parsed_response
+    end
+
+    # Search for a Spot with a query
+    #
+    # @return [Array<Spot>]
+    # @param [String] query the query to search for
+    # @param [String] api_key the provided api key
+    # @param [Hash] options
+    # @option options [String] :inputtype (textquery) The type of input to query (textquery or phonenumber)
+    # @option options [Hash] :retry_options ({})
+    # @option options [Hash] :retry_options ({})
+    #   A Hash containing parameters for search retries
+    # @option options [Object] :retry_options[:status] ([])
+    # @option options [Integer] :retry_options[:max] (0) the maximum retries
+    # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
+    #
+    # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
+    # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
+    def self.spot_by_query(options = {})
+      request = new(FIND_PLACE_FROM_TEXT_URL, options)
       request.parsed_response
     end
 

@@ -165,6 +165,34 @@ module GooglePlaces
         detail
       )
     end
+
+    # Search for a Spot with a query
+    #
+    # @return [Spot]
+    # @param [String] query the query to search for
+    # @param [Hash] options
+    # @option options [String] :inputtype (textquery) The type of input to query (textquery or phonenumber)
+    # @option options [Hash] :retry_options ({})
+    #   A Hash containing parameters for search retries
+    # @option options [Object] :retry_options[:status] ([])
+    # @option options [Integer] :retry_options[:max] (0) the maximum retries
+    # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
+    # @option options [Boolean] :detail
+    #   A boolean to return spots with full detail information(its complete address, phone number, user rating, reviews, etc)
+    #   Note) This makes an extra call for each spot for more information.
+    #
+    # @see http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1 List of supported languages
+    # @see https://developers.google.com/maps/documentation/places/supported_types List of supported types
+    def spot_by_query(query, options = {})
+      options = @options.merge(options)
+      detail = options.delete(:detail)
+      collection_detail_level(
+        Spot.by_query(query, @api_key, options),
+        detail
+      )
+    end
+
+
     # Search for Spots within a give SW|NE bounds with query
     #
     # @return [Array<Spot>]
