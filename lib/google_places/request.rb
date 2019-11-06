@@ -176,6 +176,28 @@ module GooglePlaces
     # @param [String] query the query to search for
     # @param [String] api_key the provided api key
     # @param [Hash] options
+    # @option options [String,Integer] :lat
+    #   the latitude for the search
+    # @option options [String,Integer] :lng
+    #   the longitude for the search
+    # @option options [Integer] :radius
+    #   Defines the distance (in meters) within which to return Place results.
+    #   The maximum allowed radius is 50,000 meters.
+    #   Note that radius must not be included if <b>:rankby</b> is specified
+    #   <b>Note that this is a mandatory parameter</b>
+    # @option options [String,Array] :types
+    #   Restricts the results to Spots matching at least one of the specified types
+    # @option options [String] :language
+    #   The language code, indicating in which language the results should be returned, if possible.
+    # @option options [String] :region
+    #   The region code, specified as a ccTLD (country code top-level domain) two-character value. Most ccTLD
+    #   codes are identical to ISO 3166-1 codes, with some exceptions. This parameter will only influence, not
+    #   fully restrict, search results. If more relevant results exist outside of the specified region, they may
+    #   be included. When this parameter is used, the country name is omitted from the resulting formatted_address
+    #   for results in the specified region.
+    # @option options [String,Array<String>] :exclude ([])
+    #   A String or an Array of <b>types</b> to exclude from results
+    #
     # @option options [Hash] :retry_options ({})
     #   A Hash containing parameters for search retries
     # @option options [Object] :retry_options[:status] ([])
