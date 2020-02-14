@@ -5,7 +5,7 @@ module GooglePlaces
     :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region,
     :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed,
     :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours, :events, :utc_offset, :place_id, :permanently_closed,
-    :json_result_object
+    :json_result_object, :user_ratings_total
 
     # Search for Spots at the provided location
     #
@@ -451,6 +451,7 @@ module GooglePlaces
       @postal_code                = address_component(:postal_code, 'long_name')
       @country                    = address_component(:country, 'long_name')
       @rating                     = json_result_object['rating']
+      @user_ratings_total         = json_result_object['user_ratings_total']
       @price_level                = json_result_object['price_level']
       @opening_hours              = json_result_object['opening_hours']
       @url                        = json_result_object['url']
