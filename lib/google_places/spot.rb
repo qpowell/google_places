@@ -5,7 +5,7 @@ module GooglePlaces
     :international_phone_number, :formatted_address, :address_components, :street_number, :street, :city, :region,
     :postal_code, :country, :rating, :url, :cid, :website, :reviews, :aspects, :zagat_selected, :zagat_reviewed,
     :photos, :review_summary, :nextpagetoken, :price_level, :opening_hours, :events, :utc_offset, :place_id, :permanently_closed,
-    :json_result_object
+    :json_result_object, :business_status
 
     # Search for Spots at the provided location
     #
@@ -466,6 +466,7 @@ module GooglePlaces
       @events                     = events_component(json_result_object['events'])
       @utc_offset                 = json_result_object['utc_offset']
       @permanently_closed         = json_result_object['permanently_closed']
+      @business_status            = json_result_object['business_status']
     end
 
     def [] (key)
