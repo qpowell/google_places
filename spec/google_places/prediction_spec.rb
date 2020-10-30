@@ -19,6 +19,20 @@ describe GooglePlaces::Prediction, vcr: { cassette_name: 'list_predictions'}  do
       GooglePlaces::Prediction.list_by_input('query', api_key, lat: 1, lng: 2, radius: 20)
     end
 
+    it "initiates a request with `location` instead of `lat`/`lng`" do
+      options = request_params(radius: 20, location: "1.00000000,2.00000000")
+      expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
+
+      GooglePlaces::Prediction.list_by_input('query', api_key, location: "1.00000000,2.00000000", radius: 20)
+    end
+
+    it "initiates a request with `origin`" do
+      options = request_params(radius: 20, origin: "1.00000000,2.00000000", location: "1.00000000,2.00000000")
+      expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
+
+      GooglePlaces::Prediction.list_by_input('query', api_key, origin: "1.00000000,2.00000000", location: "1.00000000,2.00000000", radius: 20)
+    end
+
     it "initiates a request with `types`" do
       options = request_params(types: '(cities)')
       expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
@@ -52,6 +66,13 @@ describe GooglePlaces::Prediction, vcr: { cassette_name: 'list_predictions'}  do
       expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
 
       GooglePlaces::Prediction.list_by_input('query', api_key, components: 'country:in')
+    end
+
+    it "initiates a request with bonus field `crazy-feature`" do
+      options = request_params('crazy-feature': 'secret-bases')
+      expect(GooglePlaces::Request).to receive(:predictions_by_input).with(options)
+
+      GooglePlaces::Prediction.list_by_input('query', api_key, 'crazy-feature': 'secret-bases')
     end
 
   end
