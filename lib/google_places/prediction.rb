@@ -3,6 +3,7 @@ module GooglePlaces
 
     attr_accessor(
       :description,
+      :distance_meters,
       :place_id,
       :terms,
       :types,
@@ -12,6 +13,7 @@ module GooglePlaces
 
     def initialize(json_result_object)
       @description = json_result_object['description']
+      @distance_meters = json_result_object['distance_meters']
       @place_id = json_result_object['place_id']
       @terms = json_result_object['terms']
       @types = json_result_object['types']
@@ -23,6 +25,9 @@ module GooglePlaces
     #
     # @option [String,Integer] :lat the latitude for the search
     # @option [String,Integer] :lng the longitude for the search
+    # @option [String,Integer] :location the "lat,long" as a string
+    # @option [String,Integer] :origin the "lat,long" as a string
+    #   Google returns distance_meters for each prediction from this origin
     # @option options [Integer] :radius (1000)
     #   Defines the distance (in meters) within which to return Place results.
     #   The maximum allowed radius is 50,000 meters.
@@ -37,37 +42,21 @@ module GooglePlaces
     # @option options [Integer] :retry_options[:max] (0) the maximum retries
     # @option options [Integer] :retry_options[:delay] (5) the delay between each retry in seconds
     def self.list_by_input(input, api_key, options = {})
+      options[:input] = input
+      options[:key] = api_key
+      options[:retry_options] ||= {}
+
       lat = options.delete(:lat)
       lng = options.delete(:lng)
-      language = options.delete(:language)
-      radius = options.delete(:radius)
-      retry_options = options.delete(:retry_options) || {}
-      types  = options.delete(:types)
-      components = options.delete(:components)
-
-      options = {
-        :input => input,
-        :key => api_key,
-        :retry_options => retry_options
-      }
 
       if lat && lng
-        options[:location] = Location.new(lat, lng).format
-        options[:radius] = radius if radius
+        options[:location] ||= Location.new(lat, lng).format
       end
 
       # Accept Types as a string or array
-      if types
+      if types = options.delete(:types)
         types = (types.is_a?(Array) ? types.join('|') : types)
         options[:types] = types
-      end
-
-      if language
-        options[:language] = language
-      end
-
-      if components
-        options[:components] = components
       end
 
       request(:predictions_by_input, options)
